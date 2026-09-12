@@ -234,7 +234,7 @@ export const StudentProfilePage: React.FC = () => {
                 <label className="text-slate-700 dark:text-slate-300 font-semibold">Year of Study:</label>
                 <select
                   value={formData.yearOfStudy}
-                  onChange={(e) => setFormData({ ...formData, yearOfStudy: Number(e.target.value) })}
+                  onChange={(e: React.ChangeEvent<HTMLSelectElement>) => setFormData({ ...formData, yearOfStudy: Number(e.target.value) })}
                   className="w-full rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 p-2.5 text-slate-900 dark:text-slate-100 focus:border-blue-500 focus:outline-none"
                 >
                   <option value={1}>1st Year (Freshman)</option>
@@ -253,7 +253,7 @@ export const StudentProfilePage: React.FC = () => {
                   min="0"
                   max="10"
                   value={formData.cgpa}
-                  onChange={(e) => setFormData({ ...formData, cgpa: Number(e.target.value) })}
+                  onChange={(e: React.ChangeEvent<HTMLInputElement>) => setFormData({ ...formData, cgpa: Number(e.target.value) })}
                   className="w-full rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 p-2.5 text-slate-900 dark:text-slate-100 focus:border-blue-500 focus:outline-none font-mono"
                 />
               </div>
@@ -273,10 +273,10 @@ export const StudentProfilePage: React.FC = () => {
               <label className="text-slate-700 dark:text-slate-300 font-semibold">Primary Target Career Goal:</label>
               <select
                 value={formData.targetCareerId}
-                onChange={(e) => setFormData({ ...formData, targetCareerId: e.target.value })}
+                onChange={(e: React.ChangeEvent<HTMLSelectElement>) => setFormData({ ...formData, targetCareerId: e.target.value })}
                 className="w-full rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 p-2.5 text-slate-900 dark:text-slate-100 focus:border-blue-500 focus:outline-none font-semibold"
               >
-                {allCareers.map(c => (
+                {allCareers.map((c: Career) => (
                   <option key={c.id} value={c.id}>
                     {c.title} ({c.discipline})
                   </option>
@@ -292,7 +292,7 @@ export const StudentProfilePage: React.FC = () => {
                   min="2"
                   max="40"
                   value={formData.weeklyHoursCommitted}
-                  onChange={(e) => setFormData({ ...formData, weeklyHoursCommitted: Number(e.target.value) })}
+                  onChange={(e: React.ChangeEvent<HTMLInputElement>) => setFormData({ ...formData, weeklyHoursCommitted: Number(e.target.value) })}
                   className="w-full rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 p-2.5 text-slate-900 dark:text-slate-100 focus:border-blue-500 focus:outline-none font-mono"
                 />
               </div>
@@ -301,7 +301,7 @@ export const StudentProfilePage: React.FC = () => {
                 <label className="text-slate-700 dark:text-slate-300 font-semibold">Learning Pace:</label>
                 <select
                   value={formData.learningPace}
-                  onChange={(e) => setFormData({ ...formData, learningPace: e.target.value as any })}
+                  onChange={(e: React.ChangeEvent<HTMLSelectElement>) => setFormData({ ...formData, learningPace: e.target.value as any })}
                   className="w-full rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 p-2.5 text-slate-900 dark:text-slate-100 focus:border-blue-500 focus:outline-none capitalize"
                 >
                   <option value="steady">Steady (5h/wk)</option>
@@ -321,7 +321,7 @@ export const StudentProfilePage: React.FC = () => {
               Interests & Domains
             </h3>
             <div className="flex flex-wrap gap-1.5 min-h-[40px]">
-              {formData.interests.map(item => (
+              {formData.interests.map((item: string) => (
                 <span
                   key={item}
                   className="rounded-lg bg-slate-100 dark:bg-slate-950 px-2.5 py-1 text-xs font-medium text-slate-800 dark:text-slate-300 border border-slate-200 dark:border-slate-800 flex items-center gap-1.5"
@@ -338,7 +338,7 @@ export const StudentProfilePage: React.FC = () => {
                 type="text"
                 placeholder="Add interest tag..."
                 value={newInterest}
-                onChange={(e) => setNewInterest(e.target.value)}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) => setNewInterest(e.target.value)}
                 className="flex-1 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 px-3 py-1.5 text-xs text-slate-900 dark:text-slate-100 focus:outline-none"
               />
               <button
@@ -357,7 +357,7 @@ export const StudentProfilePage: React.FC = () => {
               Verified Certifications
             </h3>
             <div className="flex flex-wrap gap-1.5 min-h-[40px]">
-              {formData.certifications.map(item => (
+              {formData.certifications.map((item: string) => (
                 <span
                   key={item}
                   className="rounded-lg bg-blue-50 dark:bg-blue-950/40 px-2.5 py-1 text-xs font-medium text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-900/60 flex items-center gap-1.5"
@@ -374,7 +374,7 @@ export const StudentProfilePage: React.FC = () => {
                 type="text"
                 placeholder="Add certification name..."
                 value={newCert}
-                onChange={(e) => setNewCert(e.target.value)}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) => setNewCert(e.target.value)}
                 className="flex-1 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 px-3 py-1.5 text-xs text-slate-900 dark:text-slate-100 focus:outline-none"
               />
               <button
