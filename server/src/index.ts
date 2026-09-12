@@ -16,6 +16,7 @@ import { adminRouter } from './routes/adminRoutes.js';
 import { mobileRouter } from './routes/mobileRoutes.js';
 import { guidanceRouter } from './routes/guidanceRoutes.js';
 import { placementRouter } from './routes/placementRoutes.js';
+import { recommendationRouter } from './routes/recommendationRoutes.js';
 
 dotenv.config();
 
@@ -46,6 +47,7 @@ app.use('/api/admin', adminRouter);
 app.use('/api/mobile', mobileRouter);
 app.use('/api/guidance', guidanceRouter);
 app.use('/api/placements', placementRouter);
+app.use('/api/recommendations', recommendationRouter);
 
 app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString(), platform: 'CareerBridge API v1.0' });

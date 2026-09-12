@@ -181,8 +181,15 @@ roadmapRouter.get('/:studentId/resources', (req, res) => {
       true; // show rich catalog
   });
 
+  // Student course recommendations
+  const studentRecs = db.getCourseRecommendations({ studentId: profile.id });
+  const pendingRecommendations = studentRecs.filter(r => r.status === 'pending_approval');
+  const approvedRecommendations = studentRecs.filter(r => r.status === 'approved');
+
   res.json({
     resources: curated,
+    pendingRecommendations,
+    approvedRecommendations,
     completedResourceIds: profile.completedResourceIds || [],
     careerTitle: career.title,
     discipline: career.discipline
@@ -201,6 +208,21 @@ roadmapRouter.post('/:studentId/resources/:resourceId/complete', (req, res) => {
   }
 
   const resourceId = req.params.resourceId;
+  const resource = db.getResourceById(resourceId);
+  const rec = db.getCourseRecommendationById(resourceId);
+
+  // Enforce mentor approval requirement: Cannot mark unapproved AI courses complete!
+  if (rec && rec.status === 'pending_approval') {
+    return res.status(403).json({
+      error: 'This AI course suggestion is awaiting faculty review by Dr. Balu Prasath. It must be approved before completion.'
+    });
+  }
+  if (resource && resource.approvalStatus === 'pending_approval') {
+    return res.status(403).json({
+      error: 'This courseware is pending academic review. Your faculty mentor must approve it before completion.'
+    });
+  }
+
   const isCompleted = profile.completedResourceIds.includes(resourceId);
 
   if (isCompleted) {
@@ -209,7 +231,6 @@ roadmapRouter.post('/:studentId/resources/:resourceId/complete', (req, res) => {
     profile.completedResourceIds.push(resourceId);
 
     // Boost matching skill level
-    const resource = db.getResourceById(resourceId);
     if (resource) {
       const matchingSkill = db.getSkills().find(s =>
         resource.id.includes(s.id.replace('skill-', '')) ||

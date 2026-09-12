@@ -15,7 +15,8 @@ import {
   DoubtQuery,
   DoubtReply,
   PlacementCompanyDrive,
-  PlacementApplication
+  PlacementApplication,
+  CourseRecommendation
 } from '../types/shared.js';
 import {
   SEED_CAREERS,
@@ -29,7 +30,8 @@ import {
   SEED_NOTIFICATIONS,
   SEED_DOUBTS,
   SEED_PLACEMENT_DRIVES,
-  SEED_PLACEMENT_APPLICATIONS
+  SEED_PLACEMENT_APPLICATIONS,
+  SEED_COURSE_RECOMMENDATIONS
 } from './seedData.js';
 
 interface DatabaseSchema {
@@ -45,6 +47,7 @@ interface DatabaseSchema {
   doubts: DoubtQuery[];
   placementDrives: PlacementCompanyDrive[];
   placementApplications: PlacementApplication[];
+  courseRecommendations: CourseRecommendation[];
   chatHistory: Record<string, AIMessage[]>; // studentId -> AIMessage[]
 }
 
@@ -96,6 +99,9 @@ class DatabaseService {
           if (!parsed.placementApplications || parsed.placementApplications.length === 0) {
             parsed.placementApplications = SEED_PLACEMENT_APPLICATIONS;
           }
+          if (!parsed.courseRecommendations || parsed.courseRecommendations.length === 0) {
+            parsed.courseRecommendations = SEED_COURSE_RECOMMENDATIONS;
+          }
           this.saveData(parsed);
           return parsed;
         }
@@ -117,6 +123,7 @@ class DatabaseService {
       doubts: SEED_DOUBTS,
       placementDrives: SEED_PLACEMENT_DRIVES,
       placementApplications: SEED_PLACEMENT_APPLICATIONS,
+      courseRecommendations: SEED_COURSE_RECOMMENDATIONS,
       chatHistory: {}
     };
 
@@ -222,6 +229,18 @@ class DatabaseService {
 
   public getResourceById(id: string): Resource | undefined {
     return this.data.resources.find(r => r.id === id);
+  }
+
+  public saveResource(resource: Resource): Resource {
+    if (!this.data.resources) this.data.resources = [];
+    const idx = this.data.resources.findIndex(r => r.id === resource.id);
+    if (idx >= 0) {
+      this.data.resources[idx] = resource;
+    } else {
+      this.data.resources.unshift(resource);
+    }
+    this.saveData();
+    return resource;
   }
 
   // --- Profiles ---
@@ -376,6 +395,34 @@ class DatabaseService {
     return app;
   }
 
+  // --- Course Recommendations & Mentor Approval ---
+  public getCourseRecommendations(filter?: { studentId?: string; status?: string }): CourseRecommendation[] {
+    let recs = this.data.courseRecommendations || [];
+    if (filter?.studentId) {
+      recs = recs.filter(r => r.studentId === filter.studentId);
+    }
+    if (filter?.status) {
+      recs = recs.filter(r => r.status === filter.status);
+    }
+    return recs;
+  }
+
+  public getCourseRecommendationById(id: string): CourseRecommendation | undefined {
+    return (this.data.courseRecommendations || []).find(r => r.id === id);
+  }
+
+  public saveCourseRecommendation(rec: CourseRecommendation): CourseRecommendation {
+    if (!this.data.courseRecommendations) this.data.courseRecommendations = [];
+    const idx = this.data.courseRecommendations.findIndex(r => r.id === rec.id);
+    if (idx >= 0) {
+      this.data.courseRecommendations[idx] = rec;
+    } else {
+      this.data.courseRecommendations.unshift(rec);
+    }
+    this.saveData();
+    return rec;
+  }
+
   public resetToSeed(): void {
     this.data = {
       users: SEED_USERS,
@@ -390,6 +437,7 @@ class DatabaseService {
       doubts: SEED_DOUBTS,
       placementDrives: SEED_PLACEMENT_DRIVES,
       placementApplications: SEED_PLACEMENT_APPLICATIONS,
+      courseRecommendations: SEED_COURSE_RECOMMENDATIONS,
       chatHistory: {}
     };
     this.saveData();

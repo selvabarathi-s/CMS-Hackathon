@@ -17,7 +17,8 @@ import {
   DoubtReply,
   PlacementCompanyDrive,
   PlacementApplication,
-  PlacementAnalyticsSummary
+  PlacementAnalyticsSummary,
+  CourseRecommendation
 } from '../../../shared/types.js';
 
 const API_BASE = (typeof import.meta !== 'undefined' && (import.meta as any).env && (import.meta as any).env.VITE_API_BASE) || '/api';
@@ -221,6 +222,8 @@ export const api = {
     const res = await fetch(`${API_BASE}/roadmaps/${studentId}/resources`);
     return res.json() as Promise<{
       resources: Resource[];
+      pendingRecommendations?: CourseRecommendation[];
+      approvedRecommendations?: CourseRecommendation[];
       completedResourceIds: string[];
       careerTitle: string;
       discipline: string;
@@ -429,5 +432,53 @@ export const api = {
   async getPlacementAnalytics() {
     const res = await fetch(`${API_BASE}/placements/analytics`);
     return res.json() as Promise<{ summary: PlacementAnalyticsSummary }>;
+  },
+
+  // Course Recommendations & Mentor Approval Desk
+  async getCourseRecommendations(params?: { studentId?: string; status?: string }) {
+    const qs = new URLSearchParams();
+    if (params) {
+      Object.entries(params).forEach(([k, v]) => {
+        if (v) qs.append(k, v);
+      });
+    }
+    const res = await fetch(`${API_BASE}/recommendations?${qs.toString()}`);
+    return res.json() as Promise<{ recommendations: CourseRecommendation[] }>;
+  },
+
+  async requestCourseRecommendation(data: {
+    studentId: string;
+    skillGapName: string;
+    courseTitle?: string;
+    provider?: string;
+    type?: string;
+    difficulty?: string;
+    courseUrl?: string;
+    aiRationale?: string;
+  }) {
+    const res = await fetch(`${API_BASE}/recommendations/request`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+    return res.json() as Promise<{ success: boolean; recommendation: CourseRecommendation }>;
+  },
+
+  async approveCourseRecommendation(id: string, data?: { mentorId?: string; mentorName?: string; mentorFeedback?: string }) {
+    const res = await fetch(`${API_BASE}/recommendations/${id}/approve`, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data || {})
+    });
+    return res.json() as Promise<{ success: boolean; recommendation: CourseRecommendation; resource?: Resource }>;
+  },
+
+  async rejectCourseRecommendation(id: string, data?: { mentorId?: string; mentorName?: string; mentorFeedback?: string }) {
+    const res = await fetch(`${API_BASE}/recommendations/${id}/reject`, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data || {})
+    });
+    return res.json() as Promise<{ success: boolean; recommendation: CourseRecommendation }>;
   }
 };

@@ -75,6 +75,10 @@ export interface Resource {
   rating: number;
   whyRecommended?: string;
   embedType?: 'internal_reader' | 'sandbox' | 'external';
+  approvalStatus?: 'approved' | 'pending_approval' | 'rejected';
+  approvedByMentorName?: string;
+  approvedAt?: string;
+  aiRationale?: string;
 }
 
 export interface PracticeExercise {
@@ -419,4 +423,29 @@ export interface PlacementAnalyticsSummary {
     placedStudents: number;
     placementPercentage: number;
   }[];
+}
+
+// --- AI Course Material Suggestion & Mentor Approval Models ---
+export interface CourseRecommendation {
+  id: string;
+  studentId: string;
+  studentName: string;
+  studentEmail: string;
+  department: string;
+  targetCareer: string;
+  skillGapName: string;
+  courseTitle: string;
+  provider: string;
+  courseUrl: string;
+  type: 'video' | 'interactive' | 'documentation' | 'article' | 'repo' | 'course';
+  durationMinutes: number;
+  difficulty: 'beginner' | 'intermediate' | 'advanced';
+  rating: number;
+  aiRationale: string;
+  status: 'pending_approval' | 'approved' | 'rejected';
+  mentorId?: string;
+  mentorName?: string;
+  mentorFeedback?: string;
+  requestedAt: string;
+  reviewedAt?: string;
 }
