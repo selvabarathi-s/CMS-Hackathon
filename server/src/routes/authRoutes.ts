@@ -8,49 +8,59 @@ export const authRouter = Router();
 export const DEFAULT_CREDENTIALS = [
   {
     portal: 'Student Portal',
-    name: 'Maya Chen',
+    name: 'Selva',
     role: 'student' as const,
-    stream: 'Engineering & CS',
+    stream: 'Artificial Intelligence & Data Science',
+    goal: 'AI & Machine Learning Engineer',
+    email: 'selva@college.edu',
+    password: 'password123',
+    studentId: 'STU-ENG-2024-001'
+  },
+  {
+    portal: 'Student Portal',
+    name: 'Kalai',
+    role: 'student' as const,
+    stream: 'Computer Science & Engineering',
     goal: 'Data Analyst & BI Specialist',
-    email: 'maya.chen@college.edu',
+    email: 'kalai@college.edu',
     password: 'password123',
-    studentId: 'STU-ENG-2024-042'
+    studentId: 'STU-ENG-2024-008'
   },
   {
     portal: 'Student Portal',
-    name: 'Rajesh Kumar',
+    name: 'Sabari',
     role: 'student' as const,
-    stream: 'B.Sc Agriculture',
-    goal: 'Precision AgTech & IoT Specialist',
-    email: 'rajesh.kumar@agri-univ.edu',
+    stream: 'Computer Science & Engineering / IT',
+    goal: 'Cloud DevOps & Site Reliability Engineer',
+    email: 'sabari@college.edu',
     password: 'password123',
-    studentId: 'STU-AGR-2023-118'
+    studentId: 'STU-ENG-2024-002'
   },
   {
     portal: 'Student Portal',
-    name: 'Priya Sharma',
+    name: 'Ram',
     role: 'student' as const,
-    stream: 'Paramedical MLT',
-    goal: 'Clinical Health Informatics',
-    email: 'priya.s@med-academy.edu',
+    stream: 'Cybersecurity & Network Systems',
+    goal: 'Cybersecurity Architect & SOC Analyst',
+    email: 'ram@college.edu',
     password: 'password123',
-    studentId: 'STU-MED-2024-089'
+    studentId: 'STU-ENG-2024-003'
   },
   {
     portal: 'Faculty / Mentor Portal',
-    name: 'Dr. Alan Vance',
+    name: 'Dr. Balu Prasath',
     role: 'mentor' as const,
-    stream: 'Department Faculty Advisor',
+    stream: 'Department Faculty Advisor & Mentor',
     goal: 'Cohort Interventions & Advising',
-    email: 'alan.vance@university.edu',
+    email: 'balu.prasath@university.edu',
     password: 'password123',
     studentId: 'FAC-ENG-904'
   },
   {
     portal: 'Institution / Admin Portal',
-    name: 'Elena Rostova',
+    name: 'Ms. Anjali Govindh',
     role: 'admin' as const,
-    stream: 'Dean of Curriculum & Academics',
+    stream: 'Dean of Academic Intelligence & Curriculum Alignment',
     goal: 'Campus-wide Gap Intelligence',
     email: 'admin@careerbridge.io',
     password: 'password123',

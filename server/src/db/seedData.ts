@@ -1567,115 +1567,520 @@ export const SEED_RESOURCES: Resource[] = [
 ];
 
 export const SEED_USERS: UserAccount[] = [
+  // 7 Male Students
   {
-    id: 'user-maya',
-    profileId: 'student-maya',
-    name: 'Maya Chen',
-    email: 'maya.chen@college.edu',
+    id: 'user-selva',
+    profileId: 'student-selva',
+    name: 'Selva',
+    email: 'selva@college.edu',
     password: 'password123',
     role: 'student',
     discipline: 'engineering',
-    stream: 'Computer Science & Engineering',
-    studentId: 'STU-ENG-2024-042',
-    avatarUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80',
+    stream: 'Artificial Intelligence & Data Science',
+    studentId: 'STU-ENG-2024-001',
+    avatarUrl: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=150&auto=format&fit=crop&q=80',
+    createdAt: '2024-01-10T08:00:00.000Z'
+  },
+  {
+    id: 'user-sabari',
+    profileId: 'student-sabari',
+    name: 'Sabari',
+    email: 'sabari@college.edu',
+    password: 'password123',
+    role: 'student',
+    discipline: 'engineering',
+    stream: 'Computer Science & Engineering / IT',
+    studentId: 'STU-ENG-2024-002',
+    avatarUrl: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&auto=format&fit=crop&q=80',
+    createdAt: '2024-01-12T08:00:00.000Z'
+  },
+  {
+    id: 'user-ram',
+    profileId: 'student-ram',
+    name: 'Ram',
+    email: 'ram@college.edu',
+    password: 'password123',
+    role: 'student',
+    discipline: 'engineering',
+    stream: 'Computer Science & Engineering / IT',
+    studentId: 'STU-ENG-2024-003',
+    avatarUrl: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80',
     createdAt: '2024-01-15T08:00:00.000Z'
   },
   {
-    id: 'user-rajesh',
-    profileId: 'student-rajesh',
-    name: 'Rajesh Kumar',
-    email: 'rajesh.kumar@agri-univ.edu',
+    id: 'user-gokul',
+    profileId: 'student-gokul',
+    name: 'Gokul',
+    email: 'gokul@college.edu',
     password: 'password123',
     role: 'student',
-    discipline: 'agriculture',
-    stream: 'B.Sc (Hons) Agronomy & AgTech',
-    studentId: 'STU-AGR-2023-118',
-    avatarUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80',
+    discipline: 'engineering',
+    stream: 'Electrical & Electronics Engineering (EEE)',
+    studentId: 'STU-ENG-2024-004',
+    avatarUrl: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150&auto=format&fit=crop&q=80',
+    createdAt: '2024-01-18T08:00:00.000Z'
+  },
+  {
+    id: 'user-sanjay',
+    profileId: 'student-sanjay',
+    name: 'Sanjay',
+    email: 'sanjay@college.edu',
+    password: 'password123',
+    role: 'student',
+    discipline: 'engineering',
+    stream: 'Mechanical & Robotics Engineering',
+    studentId: 'STU-ENG-2024-005',
+    avatarUrl: 'https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=150&auto=format&fit=crop&q=80',
     createdAt: '2024-01-20T08:00:00.000Z'
   },
   {
-    id: 'user-priya',
-    profileId: 'student-priya',
-    name: 'Priya Sharma',
-    email: 'priya.s@med-academy.edu',
+    id: 'user-kishore',
+    profileId: 'student-kishore',
+    name: 'Kishore',
+    email: 'kishore@college.edu',
     password: 'password123',
     role: 'student',
-    discipline: 'paramedical',
-    stream: 'Medical Laboratory Technology (B.Sc MLT)',
-    studentId: 'STU-MED-2024-089',
+    discipline: 'engineering',
+    stream: 'Electronics & Communication (ECE)',
+    studentId: 'STU-ENG-2024-006',
+    avatarUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80',
+    createdAt: '2024-01-22T08:00:00.000Z'
+  },
+  {
+    id: 'user-karthick',
+    profileId: 'student-karthick',
+    name: 'Karthick',
+    email: 'karthick@college.edu',
+    password: 'password123',
+    role: 'student',
+    discipline: 'engineering',
+    stream: 'Computer Science & Engineering / IT',
+    studentId: 'STU-ENG-2024-007',
+    avatarUrl: 'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=150&auto=format&fit=crop&q=80',
+    createdAt: '2024-01-25T08:00:00.000Z'
+  },
+
+  // 5 Female Students
+  {
+    id: 'user-kalai',
+    profileId: 'student-kalai',
+    name: 'Kalai',
+    email: 'kalai@college.edu',
+    password: 'password123',
+    role: 'student',
+    discipline: 'engineering',
+    stream: 'Computer Science & Engineering / IT',
+    studentId: 'STU-ENG-2024-008',
+    avatarUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80',
+    createdAt: '2024-01-28T08:00:00.000Z'
+  },
+  {
+    id: 'user-deepa',
+    profileId: 'student-deepa',
+    name: 'Deepa',
+    email: 'deepa@college.edu',
+    password: 'password123',
+    role: 'student',
+    discipline: 'engineering',
+    stream: 'Artificial Intelligence & Data Science',
+    studentId: 'STU-ENG-2024-009',
     avatarUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&auto=format&fit=crop&q=80',
     createdAt: '2024-02-01T08:00:00.000Z'
   },
   {
-    id: 'user-alan',
+    id: 'user-seetha',
+    profileId: 'student-seetha',
+    name: 'Seetha',
+    email: 'seetha@college.edu',
+    password: 'password123',
+    role: 'student',
+    discipline: 'engineering',
+    stream: 'Electronics & Communication (ECE)',
+    studentId: 'STU-ENG-2024-010',
+    avatarUrl: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&auto=format&fit=crop&q=80',
+    createdAt: '2024-02-03T08:00:00.000Z'
+  },
+  {
+    id: 'user-sathya',
+    profileId: 'student-sathya',
+    name: 'Sathya',
+    email: 'sathya@college.edu',
+    password: 'password123',
+    role: 'student',
+    discipline: 'engineering',
+    stream: 'Computer Science & Engineering / IT',
+    studentId: 'STU-ENG-2024-011',
+    avatarUrl: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&auto=format&fit=crop&q=80',
+    createdAt: '2024-02-05T08:00:00.000Z'
+  },
+  {
+    id: 'user-saranya',
+    profileId: 'student-saranya',
+    name: 'Saranya',
+    email: 'saranya@college.edu',
+    password: 'password123',
+    role: 'student',
+    discipline: 'engineering',
+    stream: 'Civil & Environmental Engineering',
+    studentId: 'STU-ENG-2024-012',
+    avatarUrl: 'https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?w=150&auto=format&fit=crop&q=80',
+    createdAt: '2024-02-08T08:00:00.000Z'
+  },
+
+  // Faculty Mentor & Admin
+  {
+    id: 'user-mentor-1',
     profileId: '',
-    name: 'Dr. Alan Vance',
-    email: 'alan.vance@university.edu',
+    name: 'Dr. Balu Prasath',
+    email: 'balu.prasath@university.edu',
     password: 'password123',
     role: 'mentor',
     discipline: 'engineering',
-    stream: 'Department of Computing & Information Sciences',
+    stream: 'Department of Computing & Engineering Sciences',
     studentId: 'FAC-ENG-904',
-    avatarUrl: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&auto=format&fit=crop&q=80',
     createdAt: '2023-09-01T08:00:00.000Z'
   },
   {
-    id: 'user-elena',
+    id: 'user-admin-1',
     profileId: '',
-    name: 'Elena Rostova',
+    name: 'Ms. Anjali Govindh',
     email: 'admin@careerbridge.io',
     password: 'password123',
     role: 'admin',
     discipline: 'engineering',
     stream: 'Dean of Academic Intelligence & Curriculum Alignment',
     studentId: 'ADM-EXEC-001',
-    avatarUrl: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=150&auto=format&fit=crop&q=80',
     createdAt: '2023-08-01T08:00:00.000Z'
   }
 ];
 
 export const SEED_PROFILES: StudentProfile[] = [
-  // 1. Maya Chen - Computer Science targeting Data Analyst & BI
+  // 1. Selva - AI & Data Science
   {
-    id: 'student-maya',
-    userId: 'user-maya',
-    fullName: 'Maya Chen',
-    email: 'maya.chen@college.edu',
-    avatarUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80',
+    id: 'student-selva',
+    userId: 'user-selva',
+    fullName: 'Selva',
+    email: 'selva@college.edu',
+    avatarUrl: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=150&auto=format&fit=crop&q=80',
     discipline: 'engineering',
-    stream: 'Computer Science & Engineering',
-    degree: 'B.Tech in Computer Science & Engineering',
+    stream: 'Artificial Intelligence & Data Science',
+    degree: 'B.Tech in Artificial Intelligence & Data Science',
     yearOfStudy: 3,
-    cgpa: 8.7,
-    targetCareerId: 'career-data-analyst',
-    interests: ['Data Analytics', 'Business Intelligence', 'Python Automation', 'Executive Dashboards'],
+    cgpa: 8.85,
+    targetCareerId: 'career-ai-engineer',
+    interests: ['Deep Learning', 'Generative AI', 'Computer Vision', 'PyTorch Automation'],
     skills: [
-      { skillId: 'skill-python', skillName: 'Python Programming', level: 75, verified: true, lastAssessedAt: '2024-03-01' },
-      { skillId: 'skill-sql', skillName: 'SQL & Relational Databases', level: 50, verified: false, lastAssessedAt: '2024-02-15' },
-      { skillId: 'skill-stats', skillName: 'Applied Statistics & Probability', level: 65, verified: true, lastAssessedAt: '2024-03-05' },
-      { skillId: 'skill-data-viz', skillName: 'Data Visualization & BI', level: 40, verified: false }
+      { skillId: 'skill-python', skillName: 'Python Programming', level: 85, verified: true, lastAssessedAt: '2024-03-01' },
+      { skillId: 'skill-stats', skillName: 'Applied Statistics & Probability', level: 80, verified: true, lastAssessedAt: '2024-03-05' },
+      { skillId: 'skill-data-viz', skillName: 'Data Visualization & BI', level: 70, verified: true },
+      { skillId: 'skill-sql', skillName: 'SQL & Relational Databases', level: 65, verified: false }
     ],
     projects: [
       {
-        id: 'proj-1',
-        title: 'Customer Churn Analysis in Retail',
-        description: 'Exploratory data analysis using Pandas, Matplotlib, and scikit-learn on a Kaggle customer dataset.',
-        technologies: ['Python', 'Pandas', 'Matplotlib'],
+        id: 'proj-selva-1',
+        title: 'Transformer-Based Code Comprehension Engine',
+        description: 'Fine-tuned open-source small language models with LoRA and evaluated inference speed with vLLM.',
+        technologies: ['Python', 'PyTorch', 'HuggingFace', 'Transformers'],
         verified: true,
-        link: 'https://github.com/example/churn-analysis'
+        link: 'https://github.com/selva/code-llm'
       }
     ],
-    certifications: ['Google Data Analytics Professional Certificate'],
+    certifications: ['DeepLearning.AI Machine Learning Specialization', 'NVIDIA Deep Learning Institute Certificate'],
     assessmentScores: {
-      'assess-sql-diagnostic': 68,
-      'assess-python-diagnostic': 82
+      'assess-python-diagnostic': 88,
+      'assess-sql-diagnostic': 70
+    },
+    uncertaintyScore: 10,
+    readinessScore: {
+      overallPercentage: 78,
+      technicalScore: 82,
+      projectScore: 75,
+      problemSolvingScore: 80,
+      softSkillScore: 75,
+      status: 'competent'
+    },
+    learningPace: 'accelerated',
+    weeklyHoursCommitted: 14,
+    learningStyle: 'hands_on',
+    targetTimeline: 'immediate',
+    completedMilestoneIds: ['ms-ai-1', 'ms-ai-2'],
+    completedResourceIds: ['res-py-1', 'res-math-1']
+  },
+
+  // 2. Sabari - Computer Science & Engineering (Cloud DevOps)
+  {
+    id: 'student-sabari',
+    userId: 'user-sabari',
+    fullName: 'Sabari',
+    email: 'sabari@college.edu',
+    avatarUrl: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&auto=format&fit=crop&q=80',
+    discipline: 'engineering',
+    stream: 'Computer Science & Engineering / IT',
+    degree: 'B.Tech in Computer Science & Engineering',
+    yearOfStudy: 4,
+    cgpa: 8.4,
+    targetCareerId: 'career-cloud-devops',
+    interests: ['Cloud Architecture', 'Kubernetes Clusters', 'CI/CD Pipelines', 'Site Reliability'],
+    skills: [
+      { skillId: 'skill-cloud', skillName: 'Cloud Architecture & DevOps', level: 85, verified: true, lastAssessedAt: '2024-03-02' },
+      { skillId: 'skill-python', skillName: 'Python Programming', level: 78, verified: true },
+      { skillId: 'skill-sql', skillName: 'SQL & Relational Databases', level: 72, verified: true },
+      { skillId: 'skill-stats', skillName: 'Applied Statistics & Probability', level: 60, verified: false }
+    ],
+    projects: [
+      {
+        id: 'proj-sabari-1',
+        title: 'GitOps Continuous Deployment on Multi-Node K8s',
+        description: 'Built zero-downtime Canary release pipelines using ArgoCD, Prometheus alerts, and Terraform.',
+        technologies: ['Kubernetes', 'Docker', 'Terraform', 'ArgoCD'],
+        verified: true,
+        link: 'https://github.com/sabari/gitops-infra'
+      }
+    ],
+    certifications: ['AWS Certified Solutions Architect - Associate', 'Certified Kubernetes Administrator (CKA)'],
+    assessmentScores: {
+      'assess-cloud-k8s': 86,
+      'assess-python-diagnostic': 80
     },
     uncertaintyScore: 12,
     readinessScore: {
-      overallPercentage: 62,
+      overallPercentage: 82,
+      technicalScore: 85,
+      projectScore: 84,
+      problemSolvingScore: 80,
+      softSkillScore: 78,
+      status: 'career_ready'
+    },
+    learningPace: 'steady',
+    weeklyHoursCommitted: 12,
+    learningStyle: 'hands_on',
+    targetTimeline: 'immediate',
+    completedMilestoneIds: ['ms-cloud-1'],
+    completedResourceIds: ['res-cloud-1']
+  },
+
+  // 3. Ram - Cybersecurity & Network Systems
+  {
+    id: 'student-ram',
+    userId: 'user-ram',
+    fullName: 'Ram',
+    email: 'ram@college.edu',
+    avatarUrl: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80',
+    discipline: 'engineering',
+    stream: 'Computer Science & Engineering / IT',
+    degree: 'B.Tech in Cybersecurity & Network Systems',
+    yearOfStudy: 3,
+    cgpa: 8.1,
+    targetCareerId: 'career-cybersec-architect',
+    interests: ['Ethical Hacking', 'SOC Monitoring', 'Incident Triage', 'Cloud Security'],
+    skills: [
+      { skillId: 'skill-python', skillName: 'Python Programming', level: 70, verified: true },
+      { skillId: 'skill-cloud', skillName: 'Cloud Architecture & DevOps', level: 60, verified: false },
+      { skillId: 'skill-sql', skillName: 'SQL & Relational Databases', level: 55, verified: false },
+      { skillId: 'skill-stats', skillName: 'Applied Statistics & Probability', level: 50, verified: false }
+    ],
+    projects: [
+      {
+        id: 'proj-ram-1',
+        title: 'SOC Telemetry Pipeline & Suspicious Packet Analyzer',
+        description: 'Developed real-time network traffic sniffer with automated Suricata IDS signature matches.',
+        technologies: ['Python', 'Suricata', 'Wireshark', 'Elasticsearch'],
+        verified: true
+      }
+    ],
+    certifications: ['CompTIA Security+', 'Cisco Certified CyberOps Associate'],
+    assessmentScores: {
+      'assess-cyber-soc': 74
+    },
+    uncertaintyScore: 18,
+    readinessScore: {
+      overallPercentage: 65,
       technicalScore: 68,
-      projectScore: 55,
-      problemSolvingScore: 70,
+      projectScore: 62,
+      problemSolvingScore: 65,
+      softSkillScore: 72,
+      status: 'building'
+    },
+    learningPace: 'accelerated',
+    weeklyHoursCommitted: 10,
+    learningStyle: 'hands_on',
+    targetTimeline: 'skill_building'
+  },
+
+  // 4. Gokul - Electrical & Electronics Engineering
+  {
+    id: 'student-gokul',
+    userId: 'user-gokul',
+    fullName: 'Gokul',
+    email: 'gokul@college.edu',
+    avatarUrl: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150&auto=format&fit=crop&q=80',
+    discipline: 'engineering',
+    stream: 'Electrical & Electronics Engineering (EEE)',
+    degree: 'B.Tech in Electrical & Electronics Engineering',
+    yearOfStudy: 2,
+    cgpa: 7.6,
+    targetCareerId: 'career-biomedical-engineer',
+    interests: ['Embedded Systems', 'Microcontrollers', 'IoT Sensors', 'Power Electronics'],
+    skills: [
+      { skillId: 'skill-soil-sensors', skillName: 'Soil Sensor & Telemetry Integration', level: 50, verified: false },
+      { skillId: 'skill-python', skillName: 'Python Programming', level: 45, verified: false },
+      { skillId: 'skill-smart-irrigation', skillName: 'Automated Irrigation & Climate Control', level: 40, verified: false }
+    ],
+    projects: [],
+    certifications: [],
+    assessmentScores: {
+      'assess-ee-circuits': 52
+    },
+    uncertaintyScore: 38,
+    readinessScore: {
+      overallPercentage: 48,
+      technicalScore: 50,
+      projectScore: 40,
+      problemSolvingScore: 50,
+      softSkillScore: 65,
+      status: 'starting'
+    },
+    learningPace: 'steady',
+    weeklyHoursCommitted: 8,
+    learningStyle: 'interactive',
+    targetTimeline: 'skill_building'
+  },
+
+  // 5. Sanjay - Mechanical & Robotics Engineering
+  {
+    id: 'student-sanjay',
+    userId: 'user-sanjay',
+    fullName: 'Sanjay',
+    email: 'sanjay@college.edu',
+    avatarUrl: 'https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=150&auto=format&fit=crop&q=80',
+    discipline: 'engineering',
+    stream: 'Mechanical & Robotics Engineering',
+    degree: 'B.Tech in Mechanical & Robotics Engineering',
+    yearOfStudy: 3,
+    cgpa: 8.2,
+    targetCareerId: 'career-ai-engineer',
+    interests: ['Autonomous Robotics', 'Kinematics', 'ROS 2', 'Computer Vision'],
+    skills: [
+      { skillId: 'skill-python', skillName: 'Python Programming', level: 74, verified: true },
+      { skillId: 'skill-stats', skillName: 'Applied Statistics & Probability', level: 65, verified: true },
+      { skillId: 'skill-data-viz', skillName: 'Data Visualization & BI', level: 60, verified: false }
+    ],
+    projects: [
+      {
+        id: 'proj-sanjay-1',
+        title: '6-DOF Robotic Arm Inverse Kinematics Controller',
+        description: 'Simulated Pick-and-Place trajectories in Gazebo with Python kinematic solvers.',
+        technologies: ['ROS 2', 'Gazebo', 'Python', 'C++'],
+        verified: true
+      }
+    ],
+    certifications: ['Certified SOLIDWORKS Associate (CSWA)'],
+    assessmentScores: {
+      'assess-python-diagnostic': 76
+    },
+    uncertaintyScore: 15,
+    readinessScore: {
+      overallPercentage: 68,
+      technicalScore: 70,
+      projectScore: 68,
+      problemSolvingScore: 72,
+      softSkillScore: 70,
+      status: 'building'
+    },
+    learningPace: 'accelerated',
+    weeklyHoursCommitted: 12,
+    learningStyle: 'hands_on',
+    targetTimeline: 'immediate'
+  },
+
+  // 6. Kishore - Electronics & Communication Engineering
+  {
+    id: 'student-kishore',
+    userId: 'user-kishore',
+    fullName: 'Kishore',
+    email: 'kishore@college.edu',
+    avatarUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80',
+    discipline: 'engineering',
+    stream: 'Electronics & Communication (ECE)',
+    degree: 'B.Tech in Electronics & Communication Engineering',
+    yearOfStudy: 3,
+    cgpa: 8.0,
+    targetCareerId: 'career-cloud-devops',
+    interests: ['Embedded Linux', 'Edge Computing', 'Wireless Telemetry', 'Docker Containers'],
+    skills: [
+      { skillId: 'skill-cloud', skillName: 'Cloud Architecture & DevOps', level: 62, verified: true },
+      { skillId: 'skill-python', skillName: 'Python Programming', level: 68, verified: true },
+      { skillId: 'skill-soil-sensors', skillName: 'Soil Sensor & Telemetry Integration', level: 65, verified: false }
+    ],
+    projects: [
+      {
+        id: 'proj-kishore-1',
+        title: 'LoRaWAN Edge Gateway with Cellular Failover',
+        description: 'Deployed an open-source gateway transmitting field telemetry to cloud time-series DB.',
+        technologies: ['Raspberry Pi', 'LoRaWAN', 'Python', 'MQTT'],
+        verified: true
+      }
+    ],
+    certifications: ['AWS Certified Cloud Practitioner'],
+    assessmentScores: {
+      'assess-cloud-k8s': 65
+    },
+    uncertaintyScore: 20,
+    readinessScore: {
+      overallPercentage: 61,
+      technicalScore: 64,
+      projectScore: 60,
+      problemSolvingScore: 62,
+      softSkillScore: 70,
+      status: 'building'
+    },
+    learningPace: 'steady',
+    weeklyHoursCommitted: 10,
+    learningStyle: 'hands_on',
+    targetTimeline: 'skill_building'
+  },
+
+  // 7. Karthick - Computer Science & Business Systems
+  {
+    id: 'student-karthick',
+    userId: 'user-karthick',
+    fullName: 'Karthick',
+    email: 'karthick@college.edu',
+    avatarUrl: 'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=150&auto=format&fit=crop&q=80',
+    discipline: 'engineering',
+    stream: 'Computer Science & Engineering / IT',
+    degree: 'B.Tech in Computer Science & Business Systems',
+    yearOfStudy: 4,
+    cgpa: 8.6,
+    targetCareerId: 'career-data-analyst',
+    interests: ['Business Intelligence', 'Enterprise SQL', 'Cohort Retention', 'Financial Modeling'],
+    skills: [
+      { skillId: 'skill-sql', skillName: 'SQL & Relational Databases', level: 78, verified: true, lastAssessedAt: '2024-03-04' },
+      { skillId: 'skill-data-viz', skillName: 'Data Visualization & BI', level: 75, verified: true },
+      { skillId: 'skill-python', skillName: 'Python Programming', level: 70, verified: true },
+      { skillId: 'skill-stats', skillName: 'Applied Statistics & Probability', level: 68, verified: false }
+    ],
+    projects: [
+      {
+        id: 'proj-karthick-1',
+        title: 'SaaS Churn and Net Revenue Retention Engine',
+        description: 'Constructed recursive SQL views and automated Tableau dashboards to pinpoint churn triggers.',
+        technologies: ['PostgreSQL', 'Tableau', 'Python', 'Pandas'],
+        verified: true
+      }
+    ],
+    certifications: ['Microsoft Certified: Power BI Data Analyst Associate'],
+    assessmentScores: {
+      'assess-sql-diagnostic': 82
+    },
+    uncertaintyScore: 14,
+    readinessScore: {
+      overallPercentage: 74,
+      technicalScore: 76,
+      projectScore: 72,
+      problemSolvingScore: 75,
       softSkillScore: 78,
       status: 'building'
     },
@@ -1685,46 +2090,145 @@ export const SEED_PROFILES: StudentProfile[] = [
     targetTimeline: 'immediate'
   },
 
-  // 2. Rajesh Kumar - Agriculture targeting AgTech IoT Specialist
+  // 8. Kalai - Computer Science & Engineering
   {
-    id: 'student-rajesh',
-    userId: 'user-rajesh',
-    fullName: 'Rajesh Kumar',
-    email: 'rajesh.kumar@agri-univ.edu',
-    avatarUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80',
-    discipline: 'agriculture',
-    stream: 'B.Sc (Hons) Agronomy & AgTech',
-    degree: 'B.Sc (Hons) Agriculture & Agronomy',
-    yearOfStudy: 4,
-    cgpa: 8.3,
-    targetCareerId: 'career-agtech-analyst',
-    interests: ['Precision Agriculture', 'LoRaWAN Soil Telemetry', 'Drone Remote Sensing', 'Smart Irrigation'],
+    id: 'student-kalai',
+    userId: 'user-kalai',
+    fullName: 'Kalai',
+    email: 'kalai@college.edu',
+    avatarUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80',
+    discipline: 'engineering',
+    stream: 'Computer Science & Engineering / IT',
+    degree: 'B.Tech in Computer Science & Engineering',
+    yearOfStudy: 3,
+    cgpa: 8.9,
+    targetCareerId: 'career-data-analyst',
+    interests: ['Data Analytics', 'Business Intelligence', 'Python Automation', 'Executive Dashboards'],
     skills: [
-      { skillId: 'skill-soil-sensors', skillName: 'Soil Sensor & Telemetry Integration', level: 78, verified: true, lastAssessedAt: '2024-02-28' },
-      { skillId: 'skill-smart-irrigation', skillName: 'Automated Irrigation & Climate Control', level: 60, verified: true },
-      { skillId: 'skill-crop-analytics', skillName: 'GIS & Crop Yield Predictive Modeling', level: 35, verified: false },
-      { skillId: 'skill-stats', skillName: 'Applied Statistics & Probability', level: 50, verified: false }
+      { skillId: 'skill-python', skillName: 'Python Programming', level: 80, verified: true, lastAssessedAt: '2024-03-01' },
+      { skillId: 'skill-sql', skillName: 'SQL & Relational Databases', level: 62, verified: false, lastAssessedAt: '2024-02-15' },
+      { skillId: 'skill-stats', skillName: 'Applied Statistics & Probability', level: 74, verified: true, lastAssessedAt: '2024-03-05' },
+      { skillId: 'skill-data-viz', skillName: 'Data Visualization & BI', level: 68, verified: false }
     ],
     projects: [
       {
-        id: 'proj-agri-1',
-        title: 'Solar-Powered ESP32 Soil Moisture Node',
-        description: 'Built a field node using capacitive sensors and LoRaWAN to broadcast hourly volumetric water content.',
-        technologies: ['ESP32', 'LoRaWAN', 'C++', 'Capacitive Sensors'],
+        id: 'proj-kalai-1',
+        title: 'Customer Churn Analysis in Retail Banking',
+        description: 'Exploratory data analysis using Pandas, Matplotlib, and scikit-learn on a Kaggle customer dataset.',
+        technologies: ['Python', 'Pandas', 'Matplotlib'],
+        verified: true,
+        link: 'https://github.com/kalai/churn-analysis'
+      }
+    ],
+    certifications: ['Google Data Analytics Professional Certificate'],
+    assessmentScores: {
+      'assess-sql-diagnostic': 72,
+      'assess-python-diagnostic': 84
+    },
+    uncertaintyScore: 12,
+    readinessScore: {
+      overallPercentage: 72,
+      technicalScore: 74,
+      projectScore: 68,
+      problemSolvingScore: 75,
+      softSkillScore: 80,
+      status: 'building'
+    },
+    learningPace: 'accelerated',
+    weeklyHoursCommitted: 12,
+    learningStyle: 'hands_on',
+    targetTimeline: 'immediate',
+    completedMilestoneIds: ['ms-da-1'],
+    completedResourceIds: ['res-sql-1']
+  },
+
+  // 9. Deepa - AI & Machine Learning
+  {
+    id: 'student-deepa',
+    userId: 'user-deepa',
+    fullName: 'Deepa',
+    email: 'deepa@college.edu',
+    avatarUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&auto=format&fit=crop&q=80',
+    discipline: 'engineering',
+    stream: 'Artificial Intelligence & Data Science',
+    degree: 'B.Tech in Artificial Intelligence & Machine Learning',
+    yearOfStudy: 4,
+    cgpa: 9.2,
+    targetCareerId: 'career-ai-engineer',
+    interests: ['Natural Language Processing', 'Computer Vision', 'PyTorch', 'MLOps'],
+    skills: [
+      { skillId: 'skill-python', skillName: 'Python Programming', level: 90, verified: true, lastAssessedAt: '2024-03-06' },
+      { skillId: 'skill-stats', skillName: 'Applied Statistics & Probability', level: 88, verified: true },
+      { skillId: 'skill-data-viz', skillName: 'Data Visualization & BI', level: 75, verified: true },
+      { skillId: 'skill-cloud', skillName: 'Cloud Architecture & DevOps', level: 70, verified: false }
+    ],
+    projects: [
+      {
+        id: 'proj-deepa-1',
+        title: 'Real-Time Medical Image Segmentation with U-Net',
+        description: 'Trained neural networks for CT-scan lesion segmentation reaching 0.91 Dice coefficient.',
+        technologies: ['PyTorch', 'OpenCV', 'FastAPI', 'Docker'],
         verified: true
       }
     ],
-    certifications: ['Certified Smart Agronomy Specialist (CSAS)'],
+    certifications: ['TensorFlow Developer Certificate', 'AWS Certified Machine Learning - Specialty'],
     assessmentScores: {
-      'assess-agtech-telemetry': 84
+      'assess-python-diagnostic': 94
     },
-    uncertaintyScore: 18,
+    uncertaintyScore: 8,
     readinessScore: {
-      overallPercentage: 58,
-      technicalScore: 62,
+      overallPercentage: 86,
+      technicalScore: 90,
+      projectScore: 85,
+      problemSolvingScore: 88,
+      softSkillScore: 82,
+      status: 'career_ready'
+    },
+    learningPace: 'intensive',
+    weeklyHoursCommitted: 15,
+    learningStyle: 'hands_on',
+    targetTimeline: 'immediate'
+  },
+
+  // 10. Seetha - Biomedical Engineering
+  {
+    id: 'student-seetha',
+    userId: 'user-seetha',
+    fullName: 'Seetha',
+    email: 'seetha@college.edu',
+    avatarUrl: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&auto=format&fit=crop&q=80',
+    discipline: 'engineering',
+    stream: 'Electronics & Communication (ECE)',
+    degree: 'B.Tech in Biomedical Engineering',
+    yearOfStudy: 3,
+    cgpa: 8.5,
+    targetCareerId: 'career-biomedical-engineer',
+    interests: ['Biosensors', 'Medical Instrumentation', 'Digital Signal Processing', 'Telehealth Devices'],
+    skills: [
+      { skillId: 'skill-soil-sensors', skillName: 'Soil Sensor & Telemetry Integration', level: 70, verified: true },
+      { skillId: 'skill-python', skillName: 'Python Programming', level: 65, verified: false },
+      { skillId: 'skill-stats', skillName: 'Applied Statistics & Probability', level: 60, verified: false }
+    ],
+    projects: [
+      {
+        id: 'proj-seetha-1',
+        title: 'Bluetooth Low Energy PPG Heart-Rate Monitor',
+        description: 'Engineered filtering algorithms in Python to suppress motion artifacts in optical pulse readings.',
+        technologies: ['C++', 'Python', 'BLE', 'Digital Signal Processing'],
+        verified: true
+      }
+    ],
+    certifications: ['Biomedical Device Quality & Regulatory Compliance'],
+    assessmentScores: {
+      'assess-health-fhir': 70
+    },
+    uncertaintyScore: 16,
+    readinessScore: {
+      overallPercentage: 64,
+      technicalScore: 66,
       projectScore: 65,
-      problemSolvingScore: 55,
-      softSkillScore: 72,
+      problemSolvingScore: 62,
+      softSkillScore: 74,
       status: 'building'
     },
     learningPace: 'steady',
@@ -1733,61 +2237,99 @@ export const SEED_PROFILES: StudentProfile[] = [
     targetTimeline: 'skill_building'
   },
 
-  // 3. Priya Sharma - Paramedical MLT targeting Clinical Health Informatics
+  // 11. Sathya - Information Technology
   {
-    id: 'student-priya',
-    userId: 'user-priya',
-    fullName: 'Priya Sharma',
-    email: 'priya.s@med-academy.edu',
-    avatarUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&auto=format&fit=crop&q=80',
-    discipline: 'paramedical',
-    stream: 'Medical Laboratory Technology (B.Sc MLT)',
-    degree: 'B.Sc in Medical Laboratory Technology (MLT)',
-    yearOfStudy: 3,
-    cgpa: 8.9,
-    targetCareerId: 'career-health-informatics',
-    interests: ['Clinical Health Informatics', 'Hospital Information Systems', 'FHIR Interoperability', 'Biostatistics'],
+    id: 'student-sathya',
+    userId: 'user-sathya',
+    fullName: 'Sathya',
+    email: 'sathya@college.edu',
+    avatarUrl: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&auto=format&fit=crop&q=80',
+    discipline: 'engineering',
+    stream: 'Computer Science & Engineering / IT',
+    degree: 'B.Tech in Information Technology',
+    yearOfStudy: 4,
+    cgpa: 8.7,
+    targetCareerId: 'career-cybersec-architect',
+    interests: ['Cloud Infrastructure Defense', 'Penetration Testing', 'Identity & Access Management', 'DevSecOps'],
     skills: [
-      { skillId: 'skill-biomed-diagnostics', skillName: 'Biomedical Diagnostic Systems & Quality', level: 85, verified: true, lastAssessedAt: '2024-03-02' },
-      { skillId: 'skill-ehr-systems', skillName: 'EHR & Health Protocols (HL7/FHIR)', level: 45, verified: false },
-      { skillId: 'skill-clinical-stats', skillName: 'Biostatistics & Clinical Trial Analytics', level: 55, verified: false },
-      { skillId: 'skill-sql', skillName: 'SQL & Relational Databases', level: 30, verified: false }
+      { skillId: 'skill-cloud', skillName: 'Cloud Architecture & DevOps', level: 80, verified: true },
+      { skillId: 'skill-python', skillName: 'Python Programming', level: 78, verified: true },
+      { skillId: 'skill-sql', skillName: 'SQL & Relational Databases', level: 70, verified: false }
     ],
     projects: [
       {
-        id: 'proj-med-1',
-        title: 'Laboratory Quality Control & Westgard Rules Tracker',
-        description: 'Analyzed clinical chemistry QC variance data and authored automated outlier flags in Excel/SQL.',
-        technologies: ['Biochemistry IQC', 'Westgard Rules', 'Excel Analytics'],
+        id: 'proj-sathya-1',
+        title: 'Automated IAM Least Privilege Analyzer in AWS',
+        description: 'Parsed CloudTrail access logs to flag over-permissive IAM roles and suggest surgical policies.',
+        technologies: ['AWS IAM', 'Python', 'CloudTrail', 'Boto3'],
         verified: true
       }
     ],
-    certifications: ['Hospital Lab Quality & NABL Accreditation Training'],
+    certifications: ['Certified Information Systems Security Professional (Associate)', 'AWS Certified Security - Specialty'],
     assessmentScores: {
-      'assess-health-fhir': 72
+      'assess-cloud-k8s': 78
     },
-    uncertaintyScore: 14,
+    uncertaintyScore: 11,
     readinessScore: {
-      overallPercentage: 54,
-      technicalScore: 56,
-      projectScore: 48,
-      problemSolvingScore: 60,
-      softSkillScore: 80,
-      status: 'starting'
+      overallPercentage: 79,
+      technicalScore: 82,
+      projectScore: 78,
+      problemSolvingScore: 78,
+      softSkillScore: 82,
+      status: 'competent'
     },
     learningPace: 'accelerated',
-    weeklyHoursCommitted: 10,
-    learningStyle: 'interactive',
+    weeklyHoursCommitted: 12,
+    learningStyle: 'hands_on',
     targetTimeline: 'immediate'
+  },
+
+  // 12. Saranya - Civil & Environmental Engineering
+  {
+    id: 'student-saranya',
+    userId: 'user-saranya',
+    fullName: 'Saranya',
+    email: 'saranya@college.edu',
+    avatarUrl: 'https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?w=150&auto=format&fit=crop&q=80',
+    discipline: 'engineering',
+    stream: 'Civil & Environmental Engineering',
+    degree: 'B.Tech in Civil & Smart Infrastructure Technology',
+    yearOfStudy: 2,
+    cgpa: 7.4,
+    targetCareerId: 'career-data-analyst',
+    interests: ['Smart City Sensors', 'GIS Mapping', 'Spatial Analytics', 'Infrastructure BI'],
+    skills: [
+      { skillId: 'skill-data-viz', skillName: 'Data Visualization & BI', level: 55, verified: false },
+      { skillId: 'skill-sql', skillName: 'SQL & Relational Databases', level: 40, verified: false },
+      { skillId: 'skill-python', skillName: 'Python Programming', level: 42, verified: false }
+    ],
+    projects: [],
+    certifications: ['AutoCAD Certified User'],
+    assessmentScores: {
+      'assess-sql-diagnostic': 45
+    },
+    uncertaintyScore: 42,
+    readinessScore: {
+      overallPercentage: 45,
+      technicalScore: 46,
+      projectScore: 38,
+      problemSolvingScore: 48,
+      softSkillScore: 68,
+      status: 'starting'
+    },
+    learningPace: 'steady',
+    weeklyHoursCommitted: 8,
+    learningStyle: 'visual',
+    targetTimeline: 'skill_building'
   }
 ];
 
 export const SEED_NOTIFICATIONS: NotificationItem[] = [
   {
     id: 'notif-1',
-    userId: 'user-maya',
-    title: 'New Diagnostic Milestone Ready',
-    message: 'Your SQL & Relational Databases roadmap module is waiting. Take the practice drill to unlock project building.',
+    userId: 'user-selva',
+    title: 'New Advanced Milestone Ready',
+    message: 'Your Deep Learning & LLM Fine-Tuning roadmap module is waiting. Take the diagnostic drill to benchmark your skills.',
     type: 'milestone',
     read: false,
     createdAt: '10 mins ago',
@@ -1795,9 +2337,9 @@ export const SEED_NOTIFICATIONS: NotificationItem[] = [
   },
   {
     id: 'notif-2',
-    userId: 'user-maya',
+    userId: 'user-selva',
     title: 'Faculty Intervention: Advisor Note',
-    message: 'Dr. Alan Vance reviewed your profile and recommended focusing on window functions before upcoming campus placement drives.',
+    message: 'Dr. Balu Prasath reviewed your profile and recommended focusing on distributed model inference architectures.',
     type: 'mentor',
     read: false,
     createdAt: '2 hours ago',
@@ -1805,9 +2347,9 @@ export const SEED_NOTIFICATIONS: NotificationItem[] = [
   },
   {
     id: 'notif-3',
-    userId: 'user-rajesh',
-    title: 'AgTech GIS Module Unlocked',
-    message: 'Satellite NDVI Crop Analytics module is ready for your Precision Farming roadmap.',
+    userId: 'user-kalai',
+    title: 'SQL Milestone Unlocked',
+    message: 'Advanced Window Functions & CTE practice is ready in your Adaptive Roadmap.',
     type: 'milestone',
     read: false,
     createdAt: '1 day ago',
@@ -1818,25 +2360,36 @@ export const SEED_NOTIFICATIONS: NotificationItem[] = [
 export const SEED_INTERVENTIONS: MentorIntervention[] = [
   {
     id: 'int-1',
-    studentId: 'student-maya',
-    studentName: 'Maya Chen',
-    studentEmail: 'maya.chen@college.edu',
-    targetCareer: 'Data Analyst & BI Specialist',
-    reason: 'persistent_gap',
-    status: 'addressed',
-    notes: 'Assigned 3 advanced window function drills and recommended the Interactive SQL Sandbox. Maya is excelling in Python (82%) but needs stronger relational database indexing fundamentals for technical interviews.',
+    studentId: 'student-gokul',
+    studentName: 'Gokul',
+    studentEmail: 'gokul@college.edu',
+    targetCareer: 'Biomedical Devices & Robotics Engineer',
+    reason: 'high_uncertainty',
+    status: 'open',
+    notes: 'High uncertainty flagged (38) with stalled project building. Scheduled 1-on-1 mentoring to review embedded electronics fundamentals and bridge microcontroller labs into biomedical robotics prototyping.',
     createdAt: '2024-03-08T10:30:00.000Z'
   },
   {
     id: 'int-2',
-    studentId: 'student-priya',
-    studentName: 'Priya Sharma',
-    studentEmail: 'priya.s@med-academy.edu',
-    targetCareer: 'Clinical Health Informatics Specialist',
+    studentId: 'student-saranya',
+    studentName: 'Saranya',
+    studentEmail: 'saranya@college.edu',
+    targetCareer: 'Data Analyst & BI Specialist',
     reason: 'persistent_gap',
     status: 'open',
-    notes: 'Guided onto FHIR JSON API starter repository and recommended basic SQL joins. Priya has outstanding pathology diagnostic foundations (85%); developing her healthcare data schema competencies will make her a top candidate.',
+    notes: 'Low readiness score (45%) on foundational SQL and spatial analytics. Assigned the SQL Practice Sandbox and recommended pairing with Kalai for peer-assisted learning.',
     createdAt: '2024-03-09T14:15:00.000Z'
+  },
+  {
+    id: 'int-3',
+    studentId: 'student-selva',
+    studentName: 'Selva',
+    studentEmail: 'selva@college.edu',
+    targetCareer: 'AI & Machine Learning Engineer',
+    reason: 'persistent_gap',
+    status: 'addressed',
+    notes: 'Exceptional progress across PyTorch and Deep Learning (78% readiness). Recommended advancing to high-scale model serving and exploring national hackathon challenges.',
+    createdAt: '2024-03-10T11:00:00.000Z'
   }
 ];
 

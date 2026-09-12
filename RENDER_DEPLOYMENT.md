@@ -106,8 +106,8 @@ Once Render shows **`Your service is live 🎉`**:
 2. **Landing Page**: Open `https://<your-app>.onrender.com/` $\rightarrow$ CareerBridge homepage should render in Default Light Theme.
 3. **Student Registration**: Click **"Get Started"** or **"Register"** $\rightarrow$ Complete the 5-step questionnaire to generate a dynamic personalized workspace.
 4. **Multi-Portal Sign-In**:
-   - Student: `maya.chen@college.edu` / `password123`
-   - Faculty: `alan.vance@university.edu` / `password123`
+   - Student: `selva@college.edu` (or `kalai@college.edu`) / `password123`
+   - Faculty: `balu.prasath@university.edu` / `password123`
    - Admin: `admin@careerbridge.io` / `password123`
 5. **AI Mentor & Diagnostic Arena**: Take a diagnostic quiz and test the real-time AI Career Mentor chat.
 

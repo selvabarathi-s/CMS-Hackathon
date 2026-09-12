@@ -28,7 +28,7 @@ export const ResourceHubPage: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [updatingId, setUpdatingId] = useState<string | null>(null);
 
-  const studentId = profile?.id || 'student-maya';
+  const studentId = profile?.id || 'student-selva';
 
   useEffect(() => {
     setLoading(true);

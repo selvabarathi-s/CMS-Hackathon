@@ -191,13 +191,14 @@ CareerBridge is fully configured for zero-friction cloud deployment on [Render.c
 
 | Portal | Role | Name | Login Email / ID | Password | Stream & Focus |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Student Portal** | Student | Maya Chen | `maya.chen@college.edu` | `password123` | Engineering → Data Analyst |
-| **Student Portal** | Student | Rajesh Kumar | `rajesh.kumar@agri-univ.edu` | `password123` | Agriculture → Precision AgTech |
-| **Student Portal** | Student | Priya Sharma | `priya.s@med-academy.edu` | `password123` | Paramedical MLT → Health Informatics |
-| **Faculty / Mentor** | Mentor | Dr. Alan Vance | `alan.vance@university.edu` | `password123` | Department Advisor → Cohort Interventions |
-| **Institution Admin** | Admin | Elena Rostova | `admin@careerbridge.io` | `password123` | Dean of Academics → Curriculum Intelligence |
+| **Student Portal** | Student | Selva | `selva@college.edu` | `password123` | B.Tech AI & Data Science → AI Engineer |
+| **Student Portal** | Student | Kalai | `kalai@college.edu` | `password123` | B.Tech Computer Science → Data Analyst |
+| **Student Portal** | Student | Sabari | `sabari@college.edu` | `password123` | B.Tech CSE / IT → Cloud DevOps Engineer |
+| **Student Portal** | Student | Ram | `ram@college.edu` | `password123` | B.Tech Cyber Security → Security Architect |
+| **Faculty / Mentor** | Mentor | Dr. Balu Prasath | `balu.prasath@university.edu` | `password123` | Department Advisor → Cohort Interventions |
+| **Institution Admin** | Admin | Ms. Anjali Govindh | `admin@careerbridge.io` | `password123` | Dean of Academics → Curriculum Intelligence |
 
-*Note: New students can also click **"Register New Student Account"** on the login page to experience the interactive 5-step personalization questionnaire.*
+*Note: The platform includes a complete cohort of 12 engineering students (Male: Selva, Sabari, Ram, Gokul, Sanjay, Kishore, Karthick; Female: Kalai, Deepa, Seetha, Sathya, Saranya) across diverse branches (AI&DS, CSE, Cyber Security, EEE, Mechanical & Robotics, ECE, CSBS, AI&ML, Biomedical, IT, Smart Infrastructure & Civil). All student passwords are `password123`.*
 
 ---
 

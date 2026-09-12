@@ -39,43 +39,52 @@ interface TestCredential {
 const TEST_CREDENTIALS: TestCredential[] = [
   {
     portal: 'student',
-    name: 'Maya Chen',
-    email: 'maya.chen@college.edu',
+    name: 'Selva',
+    email: 'selva@college.edu',
     role: 'student',
-    stream: 'Engineering & CS',
+    stream: 'Artificial Intelligence & Data Science',
+    goal: 'AI & Machine Learning Engineer',
+    studentId: 'STU-ENG-2024-001'
+  },
+  {
+    portal: 'student',
+    name: 'Kalai',
+    email: 'kalai@college.edu',
+    role: 'student',
+    stream: 'Computer Science & Engineering',
     goal: 'Data Analyst & BI Specialist',
-    studentId: 'STU-ENG-2024-042'
+    studentId: 'STU-ENG-2024-008'
   },
   {
     portal: 'student',
-    name: 'Rajesh Kumar',
-    email: 'rajesh.kumar@agri-univ.edu',
+    name: 'Sabari',
+    email: 'sabari@college.edu',
     role: 'student',
-    stream: 'B.Sc Agriculture',
-    goal: 'Precision AgTech & IoT Specialist',
-    studentId: 'STU-AGR-2023-118'
+    stream: 'Computer Science & Engineering / IT',
+    goal: 'Cloud DevOps & Site Reliability Engineer',
+    studentId: 'STU-ENG-2024-002'
   },
   {
     portal: 'student',
-    name: 'Priya Sharma',
-    email: 'priya.s@med-academy.edu',
+    name: 'Ram',
+    email: 'ram@college.edu',
     role: 'student',
-    stream: 'Paramedical MLT',
-    goal: 'Clinical Health Informatics',
-    studentId: 'STU-MED-2024-089'
+    stream: 'Cybersecurity & Network Systems',
+    goal: 'Cybersecurity Architect & SOC Analyst',
+    studentId: 'STU-ENG-2024-003'
   },
   {
     portal: 'mentor',
-    name: 'Dr. Alan Vance',
-    email: 'alan.vance@university.edu',
+    name: 'Dr. Balu Prasath',
+    email: 'balu.prasath@university.edu',
     role: 'mentor',
-    stream: 'Department Faculty Advisor',
+    stream: 'Faculty Mentor & Advisor',
     goal: 'Cohort Interventions & Advising',
     studentId: 'FAC-ENG-904'
   },
   {
     portal: 'admin',
-    name: 'Elena Rostova',
+    name: 'Ms. Anjali Govindh',
     email: 'admin@careerbridge.io',
     role: 'admin',
     stream: 'Dean of Curriculum & Academics',
@@ -90,7 +99,7 @@ export const LoginPage: React.FC = () => {
 
   // Active portal tab: 'student' | 'mentor' | 'admin'
   const [activePortal, setActivePortal] = useState<'student' | 'mentor' | 'admin'>('student');
-  const [email, setEmail] = useState('maya.chen@college.edu');
+  const [email, setEmail] = useState('selva@college.edu');
   const [password, setPassword] = useState('password123');
   const [showPassword, setShowPassword] = useState(false);
   const [rememberMe, setRememberMe] = useState(true);
@@ -103,10 +112,10 @@ export const LoginPage: React.FC = () => {
     setActivePortal(portal);
     setErrorMsg(null);
     if (portal === 'student') {
-      setEmail('maya.chen@college.edu');
+      setEmail('selva@college.edu');
       setPassword('password123');
     } else if (portal === 'mentor') {
-      setEmail('alan.vance@university.edu');
+      setEmail('balu.prasath@university.edu');
       setPassword('password123');
     } else {
       setEmail('admin@careerbridge.io');

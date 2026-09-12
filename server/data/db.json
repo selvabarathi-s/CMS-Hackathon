@@ -1,172 +1,186 @@
 {
   "users": [
     {
-      "id": "user-maya",
-      "profileId": "student-maya",
-      "name": "Maya Chen",
-      "email": "maya.chen@college.edu",
+      "id": "user-selva",
+      "profileId": "student-selva",
+      "name": "Selva",
+      "email": "selva@college.edu",
       "password": "password123",
       "role": "student",
       "discipline": "engineering",
-      "stream": "Computer Science & Engineering",
-      "studentId": "STU-ENG-2024-042",
-      "avatarUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80",
-      "createdAt": "2026-08-15T10:00:00Z"
+      "stream": "Artificial Intelligence & Data Science",
+      "studentId": "STU-ENG-2024-001",
+      "avatarUrl": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=150&auto=format&fit=crop&q=80",
+      "createdAt": "2024-01-10T08:00:00.000Z"
     },
     {
-      "id": "user-rajesh",
-      "profileId": "student-rajesh",
-      "name": "Rajesh Kumar",
-      "email": "rajesh.kumar@agri-univ.edu",
+      "id": "user-sabari",
+      "profileId": "student-sabari",
+      "name": "Sabari",
+      "email": "sabari@college.edu",
       "password": "password123",
       "role": "student",
-      "discipline": "agriculture",
-      "stream": "B.Sc (Hons) Agronomy & AgTech",
-      "studentId": "STU-AGR-2023-118",
+      "discipline": "engineering",
+      "stream": "Computer Science & Engineering / IT",
+      "studentId": "STU-ENG-2024-002",
+      "avatarUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&auto=format&fit=crop&q=80",
+      "createdAt": "2024-01-12T08:00:00.000Z"
+    },
+    {
+      "id": "user-ram",
+      "profileId": "student-ram",
+      "name": "Ram",
+      "email": "ram@college.edu",
+      "password": "password123",
+      "role": "student",
+      "discipline": "engineering",
+      "stream": "Computer Science & Engineering / IT",
+      "studentId": "STU-ENG-2024-003",
+      "avatarUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80",
+      "createdAt": "2024-01-15T08:00:00.000Z"
+    },
+    {
+      "id": "user-gokul",
+      "profileId": "student-gokul",
+      "name": "Gokul",
+      "email": "gokul@college.edu",
+      "password": "password123",
+      "role": "student",
+      "discipline": "engineering",
+      "stream": "Electrical & Electronics Engineering (EEE)",
+      "studentId": "STU-ENG-2024-004",
+      "avatarUrl": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150&auto=format&fit=crop&q=80",
+      "createdAt": "2024-01-18T08:00:00.000Z"
+    },
+    {
+      "id": "user-sanjay",
+      "profileId": "student-sanjay",
+      "name": "Sanjay",
+      "email": "sanjay@college.edu",
+      "password": "password123",
+      "role": "student",
+      "discipline": "engineering",
+      "stream": "Mechanical & Robotics Engineering",
+      "studentId": "STU-ENG-2024-005",
+      "avatarUrl": "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=150&auto=format&fit=crop&q=80",
+      "createdAt": "2024-01-20T08:00:00.000Z"
+    },
+    {
+      "id": "user-kishore",
+      "profileId": "student-kishore",
+      "name": "Kishore",
+      "email": "kishore@college.edu",
+      "password": "password123",
+      "role": "student",
+      "discipline": "engineering",
+      "stream": "Electronics & Communication (ECE)",
+      "studentId": "STU-ENG-2024-006",
       "avatarUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80",
-      "createdAt": "2026-08-18T10:00:00Z"
+      "createdAt": "2024-01-22T08:00:00.000Z"
     },
     {
-      "id": "user-priya",
-      "profileId": "student-priya",
-      "name": "Priya Sharma",
-      "email": "priya.s@med-academy.edu",
+      "id": "user-karthick",
+      "profileId": "student-karthick",
+      "name": "Karthick",
+      "email": "karthick@college.edu",
       "password": "password123",
       "role": "student",
-      "discipline": "paramedical",
-      "stream": "Medical Laboratory Technology (B.Sc MLT)",
-      "studentId": "STU-MED-2024-089",
+      "discipline": "engineering",
+      "stream": "Computer Science & Engineering / IT",
+      "studentId": "STU-ENG-2024-007",
+      "avatarUrl": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=150&auto=format&fit=crop&q=80",
+      "createdAt": "2024-01-25T08:00:00.000Z"
+    },
+    {
+      "id": "user-kalai",
+      "profileId": "student-kalai",
+      "name": "Kalai",
+      "email": "kalai@college.edu",
+      "password": "password123",
+      "role": "student",
+      "discipline": "engineering",
+      "stream": "Computer Science & Engineering / IT",
+      "studentId": "STU-ENG-2024-008",
+      "avatarUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80",
+      "createdAt": "2024-01-28T08:00:00.000Z"
+    },
+    {
+      "id": "user-deepa",
+      "profileId": "student-deepa",
+      "name": "Deepa",
+      "email": "deepa@college.edu",
+      "password": "password123",
+      "role": "student",
+      "discipline": "engineering",
+      "stream": "Artificial Intelligence & Data Science",
+      "studentId": "STU-ENG-2024-009",
       "avatarUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&auto=format&fit=crop&q=80",
-      "createdAt": "2026-08-20T10:00:00Z"
+      "createdAt": "2024-02-01T08:00:00.000Z"
+    },
+    {
+      "id": "user-seetha",
+      "profileId": "student-seetha",
+      "name": "Seetha",
+      "email": "seetha@college.edu",
+      "password": "password123",
+      "role": "student",
+      "discipline": "engineering",
+      "stream": "Electronics & Communication (ECE)",
+      "studentId": "STU-ENG-2024-010",
+      "avatarUrl": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&auto=format&fit=crop&q=80",
+      "createdAt": "2024-02-03T08:00:00.000Z"
+    },
+    {
+      "id": "user-sathya",
+      "profileId": "student-sathya",
+      "name": "Sathya",
+      "email": "sathya@college.edu",
+      "password": "password123",
+      "role": "student",
+      "discipline": "engineering",
+      "stream": "Computer Science & Engineering / IT",
+      "studentId": "STU-ENG-2024-011",
+      "avatarUrl": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&auto=format&fit=crop&q=80",
+      "createdAt": "2024-02-05T08:00:00.000Z"
+    },
+    {
+      "id": "user-saranya",
+      "profileId": "student-saranya",
+      "name": "Saranya",
+      "email": "saranya@college.edu",
+      "password": "password123",
+      "role": "student",
+      "discipline": "engineering",
+      "stream": "Civil & Environmental Engineering",
+      "studentId": "STU-ENG-2024-012",
+      "avatarUrl": "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?w=150&auto=format&fit=crop&q=80",
+      "createdAt": "2024-02-08T08:00:00.000Z"
     },
     {
       "id": "user-mentor-1",
-      "profileId": "mentor-1",
-      "name": "Dr. Alan Vance",
-      "email": "alan.vance@university.edu",
+      "profileId": "",
+      "name": "Dr. Balu Prasath",
+      "email": "balu.prasath@university.edu",
       "password": "password123",
       "role": "mentor",
       "discipline": "engineering",
-      "stream": "Department of Computing & Information Sciences",
+      "stream": "Department of Computing & Engineering Sciences",
       "studentId": "FAC-ENG-904",
-      "avatarUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80",
-      "createdAt": "2026-07-01T10:00:00Z"
+      "avatarUrl": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&auto=format&fit=crop&q=80",
+      "createdAt": "2023-09-01T08:00:00.000Z"
     },
     {
       "id": "user-admin-1",
-      "profileId": "admin-1",
-      "name": "Elena Rostova",
+      "profileId": "",
+      "name": "Ms. Anjali Govindh",
       "email": "admin@careerbridge.io",
       "password": "password123",
       "role": "admin",
       "discipline": "engineering",
       "stream": "Dean of Academic Intelligence & Curriculum Alignment",
       "studentId": "ADM-EXEC-001",
-      "avatarUrl": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&auto=format&fit=crop&q=80",
-      "createdAt": "2026-06-01T10:00:00Z"
-    },
-    {
-      "id": "user-1789184726179",
-      "profileId": "student-1789184726179",
-      "name": "Alex Morgan",
-      "email": "student.alex.1789184726175@college.edu",
-      "password": "password123",
-      "role": "student",
-      "discipline": "engineering",
-      "studentId": "STU-TEST-992",
-      "avatarUrl": "https://api.dicebear.com/7.x/initials/svg?seed=Alex%20Morgan",
-      "createdAt": "2026-09-12T03:45:26.179Z"
-    },
-    {
-      "id": "user-1789187493590",
-      "profileId": "student-1789187493590",
-      "name": "Samira Al-Hassan",
-      "email": "samira.hassan.1789187489264@college.edu",
-      "password": "password123",
-      "role": "student",
-      "discipline": "arts_science",
-      "stream": "Biotechnology & Computational Biology",
-      "studentId": "STU-BIO-2024-901",
-      "avatarUrl": "https://api.dicebear.com/7.x/initials/svg?seed=Samira%20Al-Hassan",
-      "createdAt": "2026-09-12T04:31:33.591Z"
-    },
-    {
-      "id": "user-1789187562646",
-      "profileId": "student-1789187562647",
-      "name": "test user",
-      "email": "test@user.in",
-      "password": "testuser",
-      "role": "student",
-      "discipline": "engineering",
-      "stream": "Computer Science & Engineering / IT",
-      "studentId": "STU-2024-113",
-      "avatarUrl": "https://api.dicebear.com/7.x/initials/svg?seed=test%20user",
-      "createdAt": "2026-09-12T04:32:42.647Z"
-    },
-    {
-      "id": "user-1789187646159",
-      "profileId": "student-1789187646159",
-      "name": "Samira Al-Hassan",
-      "email": "samira.hassan.1789187641539@college.edu",
-      "password": "password123",
-      "role": "student",
-      "discipline": "arts_science",
-      "stream": "Biotechnology & Computational Biology",
-      "studentId": "STU-BIO-2024-901",
-      "avatarUrl": "https://api.dicebear.com/7.x/initials/svg?seed=Samira%20Al-Hassan",
-      "createdAt": "2026-09-12T04:34:06.159Z"
-    },
-    {
-      "id": "user-1789187827164",
-      "profileId": "student-1789187827164",
-      "name": "Samira Al-Hassan",
-      "email": "samira.hassan.1789187822812@college.edu",
-      "password": "password123",
-      "role": "student",
-      "discipline": "arts_science",
-      "stream": "Biotechnology & Computational Biology",
-      "studentId": "STU-BIO-2024-901",
-      "avatarUrl": "https://api.dicebear.com/7.x/initials/svg?seed=Samira%20Al-Hassan",
-      "createdAt": "2026-09-12T04:37:07.164Z"
-    },
-    {
-      "id": "user-1789187888656",
-      "profileId": "student-1789187888656",
-      "name": "Samira Al-Hassan",
-      "email": "samira.hassan.1789187884329@college.edu",
-      "password": "password123",
-      "role": "student",
-      "discipline": "arts_science",
-      "stream": "Biotechnology & Computational Biology",
-      "studentId": "STU-BIO-2024-901",
-      "avatarUrl": "https://api.dicebear.com/7.x/initials/svg?seed=Samira%20Al-Hassan",
-      "createdAt": "2026-09-12T04:38:08.656Z"
-    },
-    {
-      "id": "user-1789192096320",
-      "profileId": "student-1789192096320",
-      "name": "test student 2",
-      "email": "test@student2.com",
-      "password": "teststudent",
-      "role": "student",
-      "discipline": "engineering",
-      "stream": "Electrical & Electronics Engineering (EEE)",
-      "studentId": "STU-2024-101",
-      "avatarUrl": "https://api.dicebear.com/7.x/initials/svg?seed=test%20student%202",
-      "createdAt": "2026-09-12T05:48:16.321Z"
-    },
-    {
-      "id": "user-1789195679888",
-      "profileId": "student-1789195679888",
-      "name": "wert",
-      "email": "selva@mcet.in",
-      "password": "selva123",
-      "role": "student",
-      "discipline": "engineering",
-      "stream": "Computer Science & Engineering / IT",
-      "studentId": "qqq",
-      "avatarUrl": "https://api.dicebear.com/7.x/initials/svg?seed=wert",
-      "createdAt": "2026-09-12T06:47:59.889Z"
+      "avatarUrl": "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=150&auto=format&fit=crop&q=80",
+      "createdAt": "2023-08-01T08:00:00.000Z"
     }
   ],
   "careers": [
@@ -2892,731 +2906,949 @@
   ],
   "profiles": [
     {
-      "id": "student-maya",
-      "userId": "user-maya",
-      "fullName": "Maya Chen",
-      "email": "maya.chen@college.edu",
-      "avatarUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80",
+      "id": "student-selva",
+      "userId": "user-selva",
+      "fullName": "Selva",
+      "email": "selva@college.edu",
+      "avatarUrl": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=150&auto=format&fit=crop&q=80",
       "discipline": "engineering",
-      "degree": "B.Tech in Computer Science & Engineering",
+      "stream": "Artificial Intelligence & Data Science",
+      "degree": "B.Tech in Artificial Intelligence & Data Science",
       "yearOfStudy": 3,
-      "cgpa": 8.6,
-      "targetCareerId": "career-data-analyst",
-      "targetRoleId": "role-da-junior",
+      "cgpa": 8.85,
+      "targetCareerId": "career-ai-engineer",
       "interests": [
-        "Data Analytics",
-        "Business Intelligence",
-        "Machine Learning",
-        "Cloud Systems"
+        "Deep Learning",
+        "Generative AI",
+        "Computer Vision",
+        "PyTorch Automation"
       ],
       "skills": [
         {
           "skillId": "skill-python",
           "skillName": "Python Programming",
-          "level": 75,
+          "level": 85,
           "verified": true,
-          "lastAssessedAt": "2026-09-01"
-        },
-        {
-          "skillId": "skill-sql",
-          "skillName": "SQL & Relational Databases",
-          "level": 65,
-          "verified": true,
-          "lastAssessedAt": "2026-09-12"
+          "lastAssessedAt": "2024-03-01"
         },
         {
           "skillId": "skill-stats",
           "skillName": "Applied Statistics & Probability",
-          "level": 68,
+          "level": 80,
           "verified": true,
-          "lastAssessedAt": "2026-09-05"
+          "lastAssessedAt": "2024-03-05"
         },
         {
           "skillId": "skill-data-viz",
           "skillName": "Data Visualization & BI",
-          "level": 52,
-          "verified": false
-        }
-      ],
-      "projects": [
-        {
-          "id": "proj-1",
-          "title": "E-Commerce Customer Behavior Analysis",
-          "description": "Exploratory data analysis of 500k transaction records using Python Pandas and Matplotlib.",
-          "technologies": [
-            "Python",
-            "Pandas",
-            "Matplotlib"
-          ],
-          "verified": true,
-          "link": "https://github.com/mayachen/ecommerce-eda"
-        }
-      ],
-      "certifications": [
-        "Python for Data Science (Coursera)"
-      ],
-      "assessmentScores": {
-        "assess-sql-diagnostic": 50,
-        "assess-stats-diagnostic": 70,
-        "assess-python-diagnostic": 80
-      },
-      "uncertaintyScore": 18,
-      "readinessScore": {
-        "overallPercentage": 61,
-        "technicalScore": 65,
-        "projectScore": 50,
-        "problemSolvingScore": 73,
-        "softSkillScore": 75,
-        "status": "building"
-      },
-      "learningPace": "accelerated",
-      "weeklyHoursCommitted": 12,
-      "completedResourceIds": [
-        "res-sql-interactive"
-      ],
-      "completedMilestoneIds": [
-        "ms-skill-sql-learn"
-      ]
-    },
-    {
-      "id": "student-rajesh",
-      "userId": "user-rajesh",
-      "fullName": "Rajesh Kumar",
-      "email": "rajesh.kumar@agri-univ.edu",
-      "avatarUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80",
-      "discipline": "agriculture",
-      "degree": "B.Sc. (Hons) in Agriculture",
-      "yearOfStudy": 4,
-      "cgpa": 8.2,
-      "targetCareerId": "career-agtech-analyst",
-      "targetRoleId": "role-agtech-field",
-      "interests": [
-        "Precision Farming",
-        "IoT Telemetry",
-        "Drone Remote Sensing",
-        "Sustainable Agribusiness"
-      ],
-      "skills": [
-        {
-          "skillId": "skill-soil-sensors",
-          "skillName": "Soil Sensor & Telemetry Integration",
-          "level": 82,
-          "verified": true
-        },
-        {
-          "skillId": "skill-smart-irrigation",
-          "skillName": "Automated Irrigation & Climate Control",
-          "level": 74,
-          "verified": true
-        },
-        {
-          "skillId": "skill-stats",
-          "skillName": "Applied Statistics & Probability",
-          "level": 40,
-          "verified": true
-        },
-        {
-          "skillId": "skill-crop-analytics",
-          "skillName": "GIS & Crop Yield Predictive Modeling",
-          "level": 48,
-          "verified": false
-        }
-      ],
-      "projects": [
-        {
-          "id": "proj-ag-1",
-          "title": "Microcontroller Soil Moisture Drip Controller",
-          "description": "Built an Arduino automated solenoid valve irrigation controller with NPK threshold alerts.",
-          "technologies": [
-            "Arduino",
-            "Soil Sensors",
-            "Relays"
-          ],
-          "verified": true
-        }
-      ],
-      "certifications": [
-        "Precision Agriculture Fundamentals (ICAR)"
-      ],
-      "assessmentScores": {
-        "assess-agtech-diagnostic": 85,
-        "assess-stats-diagnostic": 42
-      },
-      "uncertaintyScore": 22,
-      "readinessScore": {
-        "overallPercentage": 68,
-        "technicalScore": 72,
-        "projectScore": 70,
-        "problemSolvingScore": 62,
-        "softSkillScore": 70,
-        "status": "building"
-      },
-      "learningPace": "steady",
-      "weeklyHoursCommitted": 10
-    },
-    {
-      "id": "student-priya",
-      "userId": "user-priya",
-      "fullName": "Priya Sharma",
-      "email": "priya.s@med-academy.edu",
-      "avatarUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&auto=format&fit=crop&q=80",
-      "discipline": "paramedical",
-      "degree": "B.Sc. Medical Lab Technology",
-      "yearOfStudy": 3,
-      "cgpa": 8.9,
-      "targetCareerId": "career-health-informatics",
-      "targetRoleId": "role-health-ehrs",
-      "interests": [
-        "Hospital Informatics",
-        "Digital Diagnostics",
-        "EHR Protocols",
-        "Biomedical Devices"
-      ],
-      "skills": [
-        {
-          "skillId": "skill-ehr-systems",
-          "skillName": "EHR & Health Informatics Protocols (HL7/FHIR)",
-          "level": 80,
+          "level": 70,
           "verified": true
         },
         {
           "skillId": "skill-sql",
           "skillName": "SQL & Relational Databases",
-          "level": 35,
+          "level": 65,
+          "verified": false
+        }
+      ],
+      "projects": [
+        {
+          "id": "proj-selva-1",
+          "title": "Transformer-Based Code Comprehension Engine",
+          "description": "Fine-tuned open-source small language models with LoRA and evaluated inference speed with vLLM.",
+          "technologies": [
+            "Python",
+            "PyTorch",
+            "HuggingFace",
+            "Transformers"
+          ],
+          "verified": true,
+          "link": "https://github.com/selva/code-llm"
+        }
+      ],
+      "certifications": [
+        "DeepLearning.AI Machine Learning Specialization",
+        "NVIDIA Deep Learning Institute Certificate"
+      ],
+      "assessmentScores": {
+        "assess-python-diagnostic": 88,
+        "assess-sql-diagnostic": 70
+      },
+      "uncertaintyScore": 10,
+      "readinessScore": {
+        "overallPercentage": 78,
+        "technicalScore": 82,
+        "projectScore": 75,
+        "problemSolvingScore": 80,
+        "softSkillScore": 75,
+        "status": "competent"
+      },
+      "learningPace": "accelerated",
+      "weeklyHoursCommitted": 14,
+      "learningStyle": "hands_on",
+      "targetTimeline": "immediate",
+      "completedMilestoneIds": [
+        "ms-ai-1",
+        "ms-ai-2"
+      ],
+      "completedResourceIds": [
+        "res-py-1",
+        "res-math-1"
+      ]
+    },
+    {
+      "id": "student-sabari",
+      "userId": "user-sabari",
+      "fullName": "Sabari",
+      "email": "sabari@college.edu",
+      "avatarUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&auto=format&fit=crop&q=80",
+      "discipline": "engineering",
+      "stream": "Computer Science & Engineering / IT",
+      "degree": "B.Tech in Computer Science & Engineering",
+      "yearOfStudy": 4,
+      "cgpa": 8.4,
+      "targetCareerId": "career-cloud-devops",
+      "interests": [
+        "Cloud Architecture",
+        "Kubernetes Clusters",
+        "CI/CD Pipelines",
+        "Site Reliability"
+      ],
+      "skills": [
+        {
+          "skillId": "skill-cloud",
+          "skillName": "Cloud Architecture & DevOps",
+          "level": 85,
+          "verified": true,
+          "lastAssessedAt": "2024-03-02"
+        },
+        {
+          "skillId": "skill-python",
+          "skillName": "Python Programming",
+          "level": 78,
           "verified": true
         },
         {
-          "skillId": "skill-clinical-stats",
-          "skillName": "Biostatistics & Clinical Trial Analytics",
-          "level": 65,
+          "skillId": "skill-sql",
+          "skillName": "SQL & Relational Databases",
+          "level": 72,
           "verified": true
-        }
-      ],
-      "projects": [],
-      "certifications": [
-        "Hospital Information Systems (HIS) Compliance"
-      ],
-      "assessmentScores": {
-        "assess-health-diagnostic": 80,
-        "assess-sql-diagnostic": 35
-      },
-      "uncertaintyScore": 45,
-      "readinessScore": {
-        "overallPercentage": 54,
-        "technicalScore": 50,
-        "projectScore": 40,
-        "problemSolvingScore": 65,
-        "softSkillScore": 80,
-        "status": "starting"
-      },
-      "learningPace": "steady",
-      "weeklyHoursCommitted": 8
-    },
-    {
-      "id": "student-1789184726179",
-      "userId": "user-1789184726179",
-      "fullName": "Alex Morgan",
-      "email": "student.alex.1789184726175@college.edu",
-      "avatarUrl": "https://api.dicebear.com/7.x/initials/svg?seed=Alex%20Morgan",
-      "discipline": "engineering",
-      "degree": "B.Tech AI & Data Engineering",
-      "yearOfStudy": 3,
-      "cgpa": 8.8,
-      "targetCareerId": "career-data-analyst",
-      "interests": [
-        "Career Exploration",
-        "Applied Learning"
-      ],
-      "skills": [],
-      "projects": [],
-      "certifications": [],
-      "assessmentScores": {},
-      "uncertaintyScore": 15,
-      "readinessScore": {
-        "overallPercentage": 45,
-        "technicalScore": 40,
-        "projectScore": 30,
-        "problemSolvingScore": 50,
-        "softSkillScore": 70,
-        "status": "starting"
-      },
-      "learningPace": "accelerated",
-      "weeklyHoursCommitted": 10
-    },
-    {
-      "id": "student-1789187493590",
-      "userId": "user-1789187493590",
-      "fullName": "Samira Al-Hassan",
-      "email": "samira.hassan.1789187489264@college.edu",
-      "avatarUrl": "https://api.dicebear.com/7.x/initials/svg?seed=Samira%20Al-Hassan",
-      "discipline": "arts_science",
-      "stream": "Biotechnology & Computational Biology",
-      "specialization": "Biotechnology & Computational Biology",
-      "degree": "B.Sc Biotechnology & Bioinformatics",
-      "yearOfStudy": 3,
-      "cgpa": 8.9,
-      "targetCareerId": "career-computational-biologist",
-      "interests": [
-        "Biotechnology & Computational Biology",
-        "Bioinformatics",
-        "Adaptive Learning"
-      ],
-      "skills": [
+        },
         {
           "skillId": "skill-stats",
           "skillName": "Applied Statistics & Probability",
           "level": 60,
-          "verified": false,
-          "lastAssessedAt": "2026-09-12T04:31:33.590Z"
-        },
-        {
-          "skillId": "skill-clinical-stats",
-          "skillName": "Biostatistics & Clinical Trial Analytics",
-          "level": 60,
-          "verified": false,
-          "lastAssessedAt": "2026-09-12T04:31:33.590Z"
+          "verified": false
         }
       ],
-      "projects": [],
-      "certifications": [],
-      "assessmentScores": {},
-      "uncertaintyScore": 25,
-      "readinessScore": {
-        "overallPercentage": 56,
-        "technicalScore": 60,
-        "projectScore": 20,
-        "problemSolvingScore": 65,
-        "softSkillScore": 75,
-        "status": "building"
+      "projects": [
+        {
+          "id": "proj-sabari-1",
+          "title": "GitOps Continuous Deployment on Multi-Node K8s",
+          "description": "Built zero-downtime Canary release pipelines using ArgoCD, Prometheus alerts, and Terraform.",
+          "technologies": [
+            "Kubernetes",
+            "Docker",
+            "Terraform",
+            "ArgoCD"
+          ],
+          "verified": true,
+          "link": "https://github.com/sabari/gitops-infra"
+        }
+      ],
+      "certifications": [
+        "AWS Certified Solutions Architect - Associate",
+        "Certified Kubernetes Administrator (CKA)"
+      ],
+      "assessmentScores": {
+        "assess-cloud-k8s": 86,
+        "assess-python-diagnostic": 80
       },
-      "learningPace": "accelerated",
-      "weeklyHoursCommitted": 10,
+      "uncertaintyScore": 12,
+      "readinessScore": {
+        "overallPercentage": 82,
+        "technicalScore": 85,
+        "projectScore": 84,
+        "problemSolvingScore": 80,
+        "softSkillScore": 78,
+        "status": "career_ready"
+      },
+      "learningPace": "steady",
+      "weeklyHoursCommitted": 12,
       "learningStyle": "hands_on",
-      "targetTimeline": "skill_building",
-      "priorExperience": "2 skills tagged during onboarding"
+      "targetTimeline": "immediate",
+      "completedMilestoneIds": [
+        "ms-cloud-1"
+      ],
+      "completedResourceIds": [
+        "res-cloud-1"
+      ]
     },
     {
-      "id": "student-1789187562647",
-      "userId": "user-1789187562646",
-      "fullName": "test user",
-      "email": "test@user.in",
-      "avatarUrl": "https://api.dicebear.com/7.x/initials/svg?seed=test%20user",
+      "id": "student-ram",
+      "userId": "user-ram",
+      "fullName": "Ram",
+      "email": "ram@college.edu",
+      "avatarUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80",
       "discipline": "engineering",
       "stream": "Computer Science & Engineering / IT",
-      "specialization": "Computer Science & Engineering / IT",
-      "degree": "B.Tech / B.E. Computer Science & Engineering",
+      "degree": "B.Tech in Cybersecurity & Network Systems",
       "yearOfStudy": 3,
-      "cgpa": 8.4,
-      "targetCareerId": "career-ai-engineer",
+      "cgpa": 8.1,
+      "targetCareerId": "career-cybersec-architect",
       "interests": [
-        "Computer Science & Engineering / IT",
-        "Artificial Intelligence",
-        "Adaptive Learning"
+        "Ethical Hacking",
+        "SOC Monitoring",
+        "Incident Triage",
+        "Cloud Security"
       ],
       "skills": [
         {
           "skillId": "skill-python",
           "skillName": "Python Programming",
-          "level": 75,
-          "verified": false,
-          "lastAssessedAt": "2026-09-12T04:32:42.647Z"
-        },
-        {
-          "skillId": "skill-sql",
-          "skillName": "SQL & Relational Databases",
-          "level": 75,
-          "verified": false,
-          "lastAssessedAt": "2026-09-12T04:32:42.647Z"
+          "level": 70,
+          "verified": true
         },
         {
           "skillId": "skill-cloud",
           "skillName": "Cloud Architecture & DevOps",
-          "level": 75,
-          "verified": false,
-          "lastAssessedAt": "2026-09-12T04:32:42.647Z"
+          "level": 60,
+          "verified": false
         },
         {
-          "skillId": "skill-data-viz",
-          "skillName": "Data Visualization & BI",
-          "level": 75,
-          "verified": false,
-          "lastAssessedAt": "2026-09-12T04:32:42.647Z"
+          "skillId": "skill-sql",
+          "skillName": "SQL & Relational Databases",
+          "level": 55,
+          "verified": false
         },
         {
-          "skillId": "skill-fin-compliance",
-          "skillName": "Anti-Money Laundering & RegTech Compliance",
-          "level": 75,
-          "verified": false,
-          "lastAssessedAt": "2026-09-12T04:32:42.647Z"
+          "skillId": "skill-stats",
+          "skillName": "Applied Statistics & Probability",
+          "level": 50,
+          "verified": false
         }
       ],
-      "projects": [],
-      "certifications": [],
-      "assessmentScores": {},
-      "uncertaintyScore": 10,
+      "projects": [
+        {
+          "id": "proj-ram-1",
+          "title": "SOC Telemetry Pipeline & Suspicious Packet Analyzer",
+          "description": "Developed real-time network traffic sniffer with automated Suricata IDS signature matches.",
+          "technologies": [
+            "Python",
+            "Suricata",
+            "Wireshark",
+            "Elasticsearch"
+          ],
+          "verified": true
+        }
+      ],
+      "certifications": [
+        "CompTIA Security+",
+        "Cisco Certified CyberOps Associate"
+      ],
+      "assessmentScores": {
+        "assess-cyber-soc": 74
+      },
+      "uncertaintyScore": 18,
       "readinessScore": {
         "overallPercentage": 65,
-        "technicalScore": 80,
-        "projectScore": 56,
-        "problemSolvingScore": 59,
-        "softSkillScore": 70,
-        "status": "building"
-      },
-      "learningPace": "intensive",
-      "weeklyHoursCommitted": 20,
-      "learningStyle": "hands_on",
-      "targetTimeline": "skill_building",
-      "priorExperience": "5 skills tagged during onboarding"
-    },
-    {
-      "id": "student-1789187646159",
-      "userId": "user-1789187646159",
-      "fullName": "Samira Al-Hassan",
-      "email": "samira.hassan.1789187641539@college.edu",
-      "avatarUrl": "https://api.dicebear.com/7.x/initials/svg?seed=Samira%20Al-Hassan",
-      "discipline": "arts_science",
-      "stream": "Biotechnology & Computational Biology",
-      "specialization": "Biotechnology & Computational Biology",
-      "degree": "B.Sc Biotechnology & Bioinformatics",
-      "yearOfStudy": 3,
-      "cgpa": 8.9,
-      "targetCareerId": "career-computational-biologist",
-      "interests": [
-        "Biotechnology & Computational Biology",
-        "Bioinformatics",
-        "Adaptive Learning"
-      ],
-      "skills": [
-        {
-          "skillId": "skill-stats",
-          "skillName": "Applied Statistics & Probability",
-          "level": 60,
-          "verified": false,
-          "lastAssessedAt": "2026-09-12T04:34:06.159Z"
-        },
-        {
-          "skillId": "skill-clinical-stats",
-          "skillName": "Biostatistics & Clinical Trial Analytics",
-          "level": 60,
-          "verified": false,
-          "lastAssessedAt": "2026-09-12T04:34:06.159Z"
-        },
-        {
-          "skillId": "skill-sql",
-          "skillName": "SQL & Relational Databases",
-          "level": 0,
-          "verified": true,
-          "lastAssessedAt": "2026-09-12"
-        }
-      ],
-      "projects": [],
-      "certifications": [],
-      "assessmentScores": {
-        "assess-sql-diagnostic": 0
-      },
-      "uncertaintyScore": 25,
-      "readinessScore": {
-        "overallPercentage": 45,
-        "technicalScore": 40,
-        "projectScore": 20,
-        "problemSolvingScore": 45,
-        "softSkillScore": 75,
+        "technicalScore": 68,
+        "projectScore": 62,
+        "problemSolvingScore": 65,
+        "softSkillScore": 72,
         "status": "building"
       },
       "learningPace": "accelerated",
       "weeklyHoursCommitted": 10,
       "learningStyle": "hands_on",
-      "targetTimeline": "skill_building",
-      "priorExperience": "2 skills tagged during onboarding"
+      "targetTimeline": "skill_building"
     },
     {
-      "id": "student-1789187827164",
-      "userId": "user-1789187827164",
-      "fullName": "Samira Al-Hassan",
-      "email": "samira.hassan.1789187822812@college.edu",
-      "avatarUrl": "https://api.dicebear.com/7.x/initials/svg?seed=Samira%20Al-Hassan",
-      "discipline": "arts_science",
-      "stream": "Biotechnology & Computational Biology",
-      "specialization": "Biotechnology & Computational Biology",
-      "degree": "B.Sc Biotechnology & Bioinformatics",
-      "yearOfStudy": 3,
-      "cgpa": 8.9,
-      "targetCareerId": "career-computational-biologist",
-      "interests": [
-        "Biotechnology & Computational Biology",
-        "Bioinformatics",
-        "Adaptive Learning"
-      ],
-      "skills": [
-        {
-          "skillId": "skill-stats",
-          "skillName": "Applied Statistics & Probability",
-          "level": 60,
-          "verified": false,
-          "lastAssessedAt": "2026-09-12T04:37:07.164Z"
-        },
-        {
-          "skillId": "skill-clinical-stats",
-          "skillName": "Biostatistics & Clinical Trial Analytics",
-          "level": 60,
-          "verified": false,
-          "lastAssessedAt": "2026-09-12T04:37:07.164Z"
-        },
-        {
-          "skillId": "skill-sql",
-          "skillName": "SQL & Relational Databases",
-          "level": 0,
-          "verified": true,
-          "lastAssessedAt": "2026-09-12"
-        }
-      ],
-      "projects": [],
-      "certifications": [],
-      "assessmentScores": {
-        "assess-sql-diagnostic": 0
-      },
-      "uncertaintyScore": 25,
-      "readinessScore": {
-        "overallPercentage": 45,
-        "technicalScore": 40,
-        "projectScore": 20,
-        "problemSolvingScore": 45,
-        "softSkillScore": 75,
-        "status": "building"
-      },
-      "learningPace": "accelerated",
-      "weeklyHoursCommitted": 10,
-      "learningStyle": "hands_on",
-      "targetTimeline": "skill_building",
-      "priorExperience": "2 skills tagged during onboarding"
-    },
-    {
-      "id": "student-1789187888656",
-      "userId": "user-1789187888656",
-      "fullName": "Samira Al-Hassan",
-      "email": "samira.hassan.1789187884329@college.edu",
-      "avatarUrl": "https://api.dicebear.com/7.x/initials/svg?seed=Samira%20Al-Hassan",
-      "discipline": "arts_science",
-      "stream": "Biotechnology & Computational Biology",
-      "specialization": "Biotechnology & Computational Biology",
-      "degree": "B.Sc Biotechnology & Bioinformatics",
-      "yearOfStudy": 3,
-      "cgpa": 8.9,
-      "targetCareerId": "career-computational-biologist",
-      "interests": [
-        "Biotechnology & Computational Biology",
-        "Bioinformatics",
-        "Adaptive Learning"
-      ],
-      "skills": [
-        {
-          "skillId": "skill-stats",
-          "skillName": "Applied Statistics & Probability",
-          "level": 60,
-          "verified": false,
-          "lastAssessedAt": "2026-09-12T04:38:08.656Z"
-        },
-        {
-          "skillId": "skill-clinical-stats",
-          "skillName": "Biostatistics & Clinical Trial Analytics",
-          "level": 60,
-          "verified": false,
-          "lastAssessedAt": "2026-09-12T04:38:08.656Z"
-        },
-        {
-          "skillId": "skill-sql",
-          "skillName": "SQL & Relational Databases",
-          "level": 0,
-          "verified": true,
-          "lastAssessedAt": "2026-09-12"
-        }
-      ],
-      "projects": [],
-      "certifications": [],
-      "assessmentScores": {
-        "assess-sql-diagnostic": 0
-      },
-      "uncertaintyScore": 25,
-      "readinessScore": {
-        "overallPercentage": 45,
-        "technicalScore": 40,
-        "projectScore": 20,
-        "problemSolvingScore": 45,
-        "softSkillScore": 75,
-        "status": "building"
-      },
-      "learningPace": "accelerated",
-      "weeklyHoursCommitted": 10,
-      "learningStyle": "hands_on",
-      "targetTimeline": "skill_building",
-      "priorExperience": "2 skills tagged during onboarding"
-    },
-    {
-      "id": "student-1789192096320",
-      "userId": "user-1789192096320",
-      "fullName": "test student 2",
-      "email": "test@student2.com",
-      "avatarUrl": "https://api.dicebear.com/7.x/initials/svg?seed=test%20student%202",
+      "id": "student-gokul",
+      "userId": "user-gokul",
+      "fullName": "Gokul",
+      "email": "gokul@college.edu",
+      "avatarUrl": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150&auto=format&fit=crop&q=80",
       "discipline": "engineering",
       "stream": "Electrical & Electronics Engineering (EEE)",
-      "specialization": "Electrical & Electronics Engineering (EEE)",
-      "degree": "B.Tech Electrical & Electronics Engineering",
+      "degree": "B.Tech in Electrical & Electronics Engineering",
       "yearOfStudy": 2,
-      "cgpa": 7,
-      "targetCareerId": "career-data-analyst",
+      "cgpa": 7.6,
+      "targetCareerId": "career-biomedical-engineer",
       "interests": [
-        "Electrical & Electronics Engineering (EEE)",
-        "Smart Agriculture",
-        "Adaptive Learning"
+        "Embedded Systems",
+        "Microcontrollers",
+        "IoT Sensors",
+        "Power Electronics"
       ],
       "skills": [
         {
           "skillId": "skill-soil-sensors",
           "skillName": "Soil Sensor & Telemetry Integration",
           "level": 50,
-          "verified": true,
-          "lastAssessedAt": "2026-09-12"
-        },
-        {
-          "skillId": "skill-smart-irrigation",
-          "skillName": "Automated Irrigation & Climate Control",
-          "level": 45,
-          "verified": false,
-          "lastAssessedAt": "2026-09-12T05:48:16.321Z"
+          "verified": false
         },
         {
           "skillId": "skill-python",
           "skillName": "Python Programming",
           "level": 45,
-          "verified": false,
-          "lastAssessedAt": "2026-09-12T05:48:16.321Z"
+          "verified": false
         },
         {
-          "skillId": "skill-algo-trading",
-          "skillName": "Quantitative Risk & Algorithmic Trading",
-          "level": 45,
-          "verified": false,
-          "lastAssessedAt": "2026-09-12T05:48:16.321Z"
-        },
-        {
-          "skillId": "skill-sql",
-          "skillName": "SQL & Relational Databases",
-          "level": 33,
-          "verified": true,
-          "lastAssessedAt": "2026-09-12"
+          "skillId": "skill-smart-irrigation",
+          "skillName": "Automated Irrigation & Climate Control",
+          "level": 40,
+          "verified": false
         }
       ],
       "projects": [],
       "certifications": [],
       "assessmentScores": {
-        "assess-agtech-telemetry": 50,
-        "assess-sql-diagnostic": 33
+        "assess-ee-circuits": 52
       },
-      "uncertaintyScore": 10,
+      "uncertaintyScore": 38,
       "readinessScore": {
-        "overallPercentage": 43,
-        "technicalScore": 44,
-        "projectScore": 20,
-        "problemSolvingScore": 49,
-        "softSkillScore": 75,
+        "overallPercentage": 48,
+        "technicalScore": 50,
+        "projectScore": 40,
+        "problemSolvingScore": 50,
+        "softSkillScore": 65,
         "status": "starting"
       },
-      "learningPace": "accelerated",
-      "weeklyHoursCommitted": 10,
-      "learningStyle": "visual",
-      "targetTimeline": "skill_building",
-      "priorExperience": "4 skills tagged during onboarding"
+      "learningPace": "steady",
+      "weeklyHoursCommitted": 8,
+      "learningStyle": "interactive",
+      "targetTimeline": "skill_building"
     },
     {
-      "id": "student-1789195679888",
-      "userId": "user-1789195679888",
-      "fullName": "wert",
-      "email": "selva@mcet.in",
-      "avatarUrl": "https://api.dicebear.com/7.x/initials/svg?seed=wert",
+      "id": "student-sanjay",
+      "userId": "user-sanjay",
+      "fullName": "Sanjay",
+      "email": "sanjay@college.edu",
+      "avatarUrl": "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=150&auto=format&fit=crop&q=80",
       "discipline": "engineering",
-      "stream": "Computer Science & Engineering / IT",
-      "specialization": "Computer Science & Engineering / IT",
-      "degree": "B.Tech / B.E. Computer Science & Engineering",
+      "stream": "Mechanical & Robotics Engineering",
+      "degree": "B.Tech in Mechanical & Robotics Engineering",
       "yearOfStudy": 3,
-      "cgpa": 8.4,
-      "targetCareerId": "career-data-analyst",
+      "cgpa": 8.2,
+      "targetCareerId": "career-ai-engineer",
       "interests": [
-        "Computer Science & Engineering / IT",
-        "Data & Analytics",
-        "Adaptive Learning"
+        "Autonomous Robotics",
+        "Kinematics",
+        "ROS 2",
+        "Computer Vision"
       ],
       "skills": [
         {
           "skillId": "skill-python",
           "skillName": "Python Programming",
-          "level": 45,
-          "verified": false,
-          "lastAssessedAt": "2026-09-12T06:47:59.888Z"
+          "level": 74,
+          "verified": true
         },
         {
-          "skillId": "skill-sql",
-          "skillName": "SQL & Relational Databases",
-          "level": 45,
-          "verified": false,
-          "lastAssessedAt": "2026-09-12T06:47:59.888Z"
-        },
-        {
-          "skillId": "skill-cloud",
-          "skillName": "Cloud Architecture & DevOps",
-          "level": 45,
-          "verified": false,
-          "lastAssessedAt": "2026-09-12T06:47:59.888Z"
+          "skillId": "skill-stats",
+          "skillName": "Applied Statistics & Probability",
+          "level": 65,
+          "verified": true
         },
         {
           "skillId": "skill-data-viz",
           "skillName": "Data Visualization & BI",
-          "level": 45,
-          "verified": false,
-          "lastAssessedAt": "2026-09-12T06:47:59.888Z"
+          "level": 60,
+          "verified": false
         }
       ],
-      "projects": [],
-      "certifications": [],
-      "assessmentScores": {},
-      "uncertaintyScore": 10,
+      "projects": [
+        {
+          "id": "proj-sanjay-1",
+          "title": "6-DOF Robotic Arm Inverse Kinematics Controller",
+          "description": "Simulated Pick-and-Place trajectories in Gazebo with Python kinematic solvers.",
+          "technologies": [
+            "ROS 2",
+            "Gazebo",
+            "Python",
+            "C++"
+          ],
+          "verified": true
+        }
+      ],
+      "certifications": [
+        "Certified SOLIDWORKS Associate (CSWA)"
+      ],
+      "assessmentScores": {
+        "assess-python-diagnostic": 76
+      },
+      "uncertaintyScore": 15,
       "readinessScore": {
-        "overallPercentage": 61,
-        "technicalScore": 72,
-        "projectScore": 50,
-        "problemSolvingScore": 55,
+        "overallPercentage": 68,
+        "technicalScore": 70,
+        "projectScore": 68,
+        "problemSolvingScore": 72,
         "softSkillScore": 70,
         "status": "building"
       },
       "learningPace": "accelerated",
+      "weeklyHoursCommitted": 12,
+      "learningStyle": "hands_on",
+      "targetTimeline": "immediate"
+    },
+    {
+      "id": "student-kishore",
+      "userId": "user-kishore",
+      "fullName": "Kishore",
+      "email": "kishore@college.edu",
+      "avatarUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80",
+      "discipline": "engineering",
+      "stream": "Electronics & Communication (ECE)",
+      "degree": "B.Tech in Electronics & Communication Engineering",
+      "yearOfStudy": 3,
+      "cgpa": 8,
+      "targetCareerId": "career-cloud-devops",
+      "interests": [
+        "Embedded Linux",
+        "Edge Computing",
+        "Wireless Telemetry",
+        "Docker Containers"
+      ],
+      "skills": [
+        {
+          "skillId": "skill-cloud",
+          "skillName": "Cloud Architecture & DevOps",
+          "level": 62,
+          "verified": true
+        },
+        {
+          "skillId": "skill-python",
+          "skillName": "Python Programming",
+          "level": 68,
+          "verified": true
+        },
+        {
+          "skillId": "skill-soil-sensors",
+          "skillName": "Soil Sensor & Telemetry Integration",
+          "level": 65,
+          "verified": false
+        }
+      ],
+      "projects": [
+        {
+          "id": "proj-kishore-1",
+          "title": "LoRaWAN Edge Gateway with Cellular Failover",
+          "description": "Deployed an open-source gateway transmitting field telemetry to cloud time-series DB.",
+          "technologies": [
+            "Raspberry Pi",
+            "LoRaWAN",
+            "Python",
+            "MQTT"
+          ],
+          "verified": true
+        }
+      ],
+      "certifications": [
+        "AWS Certified Cloud Practitioner"
+      ],
+      "assessmentScores": {
+        "assess-cloud-k8s": 65
+      },
+      "uncertaintyScore": 20,
+      "readinessScore": {
+        "overallPercentage": 61,
+        "technicalScore": 64,
+        "projectScore": 60,
+        "problemSolvingScore": 62,
+        "softSkillScore": 70,
+        "status": "building"
+      },
+      "learningPace": "steady",
       "weeklyHoursCommitted": 10,
       "learningStyle": "hands_on",
-      "targetTimeline": "skill_building",
-      "priorExperience": "4 skills tagged during onboarding"
+      "targetTimeline": "skill_building"
+    },
+    {
+      "id": "student-karthick",
+      "userId": "user-karthick",
+      "fullName": "Karthick",
+      "email": "karthick@college.edu",
+      "avatarUrl": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=150&auto=format&fit=crop&q=80",
+      "discipline": "engineering",
+      "stream": "Computer Science & Engineering / IT",
+      "degree": "B.Tech in Computer Science & Business Systems",
+      "yearOfStudy": 4,
+      "cgpa": 8.6,
+      "targetCareerId": "career-data-analyst",
+      "interests": [
+        "Business Intelligence",
+        "Enterprise SQL",
+        "Cohort Retention",
+        "Financial Modeling"
+      ],
+      "skills": [
+        {
+          "skillId": "skill-sql",
+          "skillName": "SQL & Relational Databases",
+          "level": 78,
+          "verified": true,
+          "lastAssessedAt": "2024-03-04"
+        },
+        {
+          "skillId": "skill-data-viz",
+          "skillName": "Data Visualization & BI",
+          "level": 75,
+          "verified": true
+        },
+        {
+          "skillId": "skill-python",
+          "skillName": "Python Programming",
+          "level": 70,
+          "verified": true
+        },
+        {
+          "skillId": "skill-stats",
+          "skillName": "Applied Statistics & Probability",
+          "level": 68,
+          "verified": false
+        }
+      ],
+      "projects": [
+        {
+          "id": "proj-karthick-1",
+          "title": "SaaS Churn and Net Revenue Retention Engine",
+          "description": "Constructed recursive SQL views and automated Tableau dashboards to pinpoint churn triggers.",
+          "technologies": [
+            "PostgreSQL",
+            "Tableau",
+            "Python",
+            "Pandas"
+          ],
+          "verified": true
+        }
+      ],
+      "certifications": [
+        "Microsoft Certified: Power BI Data Analyst Associate"
+      ],
+      "assessmentScores": {
+        "assess-sql-diagnostic": 82
+      },
+      "uncertaintyScore": 14,
+      "readinessScore": {
+        "overallPercentage": 74,
+        "technicalScore": 76,
+        "projectScore": 72,
+        "problemSolvingScore": 75,
+        "softSkillScore": 78,
+        "status": "building"
+      },
+      "learningPace": "accelerated",
+      "weeklyHoursCommitted": 12,
+      "learningStyle": "hands_on",
+      "targetTimeline": "immediate"
+    },
+    {
+      "id": "student-kalai",
+      "userId": "user-kalai",
+      "fullName": "Kalai",
+      "email": "kalai@college.edu",
+      "avatarUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80",
+      "discipline": "engineering",
+      "stream": "Computer Science & Engineering / IT",
+      "degree": "B.Tech in Computer Science & Engineering",
+      "yearOfStudy": 3,
+      "cgpa": 8.9,
+      "targetCareerId": "career-data-analyst",
+      "interests": [
+        "Data Analytics",
+        "Business Intelligence",
+        "Python Automation",
+        "Executive Dashboards"
+      ],
+      "skills": [
+        {
+          "skillId": "skill-python",
+          "skillName": "Python Programming",
+          "level": 80,
+          "verified": true,
+          "lastAssessedAt": "2024-03-01"
+        },
+        {
+          "skillId": "skill-sql",
+          "skillName": "SQL & Relational Databases",
+          "level": 62,
+          "verified": false,
+          "lastAssessedAt": "2024-02-15"
+        },
+        {
+          "skillId": "skill-stats",
+          "skillName": "Applied Statistics & Probability",
+          "level": 74,
+          "verified": true,
+          "lastAssessedAt": "2024-03-05"
+        },
+        {
+          "skillId": "skill-data-viz",
+          "skillName": "Data Visualization & BI",
+          "level": 68,
+          "verified": false
+        }
+      ],
+      "projects": [
+        {
+          "id": "proj-kalai-1",
+          "title": "Customer Churn Analysis in Retail Banking",
+          "description": "Exploratory data analysis using Pandas, Matplotlib, and scikit-learn on a Kaggle customer dataset.",
+          "technologies": [
+            "Python",
+            "Pandas",
+            "Matplotlib"
+          ],
+          "verified": true,
+          "link": "https://github.com/kalai/churn-analysis"
+        }
+      ],
+      "certifications": [
+        "Google Data Analytics Professional Certificate"
+      ],
+      "assessmentScores": {
+        "assess-sql-diagnostic": 72,
+        "assess-python-diagnostic": 84
+      },
+      "uncertaintyScore": 12,
+      "readinessScore": {
+        "overallPercentage": 72,
+        "technicalScore": 74,
+        "projectScore": 68,
+        "problemSolvingScore": 75,
+        "softSkillScore": 80,
+        "status": "building"
+      },
+      "learningPace": "accelerated",
+      "weeklyHoursCommitted": 12,
+      "learningStyle": "hands_on",
+      "targetTimeline": "immediate",
+      "completedMilestoneIds": [
+        "ms-da-1"
+      ],
+      "completedResourceIds": [
+        "res-sql-1"
+      ]
+    },
+    {
+      "id": "student-deepa",
+      "userId": "user-deepa",
+      "fullName": "Deepa",
+      "email": "deepa@college.edu",
+      "avatarUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&auto=format&fit=crop&q=80",
+      "discipline": "engineering",
+      "stream": "Artificial Intelligence & Data Science",
+      "degree": "B.Tech in Artificial Intelligence & Machine Learning",
+      "yearOfStudy": 4,
+      "cgpa": 9.2,
+      "targetCareerId": "career-ai-engineer",
+      "interests": [
+        "Natural Language Processing",
+        "Computer Vision",
+        "PyTorch",
+        "MLOps"
+      ],
+      "skills": [
+        {
+          "skillId": "skill-python",
+          "skillName": "Python Programming",
+          "level": 90,
+          "verified": true,
+          "lastAssessedAt": "2024-03-06"
+        },
+        {
+          "skillId": "skill-stats",
+          "skillName": "Applied Statistics & Probability",
+          "level": 88,
+          "verified": true
+        },
+        {
+          "skillId": "skill-data-viz",
+          "skillName": "Data Visualization & BI",
+          "level": 75,
+          "verified": true
+        },
+        {
+          "skillId": "skill-cloud",
+          "skillName": "Cloud Architecture & DevOps",
+          "level": 70,
+          "verified": false
+        }
+      ],
+      "projects": [
+        {
+          "id": "proj-deepa-1",
+          "title": "Real-Time Medical Image Segmentation with U-Net",
+          "description": "Trained neural networks for CT-scan lesion segmentation reaching 0.91 Dice coefficient.",
+          "technologies": [
+            "PyTorch",
+            "OpenCV",
+            "FastAPI",
+            "Docker"
+          ],
+          "verified": true
+        }
+      ],
+      "certifications": [
+        "TensorFlow Developer Certificate",
+        "AWS Certified Machine Learning - Specialty"
+      ],
+      "assessmentScores": {
+        "assess-python-diagnostic": 94
+      },
+      "uncertaintyScore": 8,
+      "readinessScore": {
+        "overallPercentage": 86,
+        "technicalScore": 90,
+        "projectScore": 85,
+        "problemSolvingScore": 88,
+        "softSkillScore": 82,
+        "status": "career_ready"
+      },
+      "learningPace": "intensive",
+      "weeklyHoursCommitted": 15,
+      "learningStyle": "hands_on",
+      "targetTimeline": "immediate"
+    },
+    {
+      "id": "student-seetha",
+      "userId": "user-seetha",
+      "fullName": "Seetha",
+      "email": "seetha@college.edu",
+      "avatarUrl": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&auto=format&fit=crop&q=80",
+      "discipline": "engineering",
+      "stream": "Electronics & Communication (ECE)",
+      "degree": "B.Tech in Biomedical Engineering",
+      "yearOfStudy": 3,
+      "cgpa": 8.5,
+      "targetCareerId": "career-biomedical-engineer",
+      "interests": [
+        "Biosensors",
+        "Medical Instrumentation",
+        "Digital Signal Processing",
+        "Telehealth Devices"
+      ],
+      "skills": [
+        {
+          "skillId": "skill-soil-sensors",
+          "skillName": "Soil Sensor & Telemetry Integration",
+          "level": 70,
+          "verified": true
+        },
+        {
+          "skillId": "skill-python",
+          "skillName": "Python Programming",
+          "level": 65,
+          "verified": false
+        },
+        {
+          "skillId": "skill-stats",
+          "skillName": "Applied Statistics & Probability",
+          "level": 60,
+          "verified": false
+        }
+      ],
+      "projects": [
+        {
+          "id": "proj-seetha-1",
+          "title": "Bluetooth Low Energy PPG Heart-Rate Monitor",
+          "description": "Engineered filtering algorithms in Python to suppress motion artifacts in optical pulse readings.",
+          "technologies": [
+            "C++",
+            "Python",
+            "BLE",
+            "Digital Signal Processing"
+          ],
+          "verified": true
+        }
+      ],
+      "certifications": [
+        "Biomedical Device Quality & Regulatory Compliance"
+      ],
+      "assessmentScores": {
+        "assess-health-fhir": 70
+      },
+      "uncertaintyScore": 16,
+      "readinessScore": {
+        "overallPercentage": 64,
+        "technicalScore": 66,
+        "projectScore": 65,
+        "problemSolvingScore": 62,
+        "softSkillScore": 74,
+        "status": "building"
+      },
+      "learningPace": "steady",
+      "weeklyHoursCommitted": 10,
+      "learningStyle": "hands_on",
+      "targetTimeline": "skill_building"
+    },
+    {
+      "id": "student-sathya",
+      "userId": "user-sathya",
+      "fullName": "Sathya",
+      "email": "sathya@college.edu",
+      "avatarUrl": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&auto=format&fit=crop&q=80",
+      "discipline": "engineering",
+      "stream": "Computer Science & Engineering / IT",
+      "degree": "B.Tech in Information Technology",
+      "yearOfStudy": 4,
+      "cgpa": 8.7,
+      "targetCareerId": "career-cybersec-architect",
+      "interests": [
+        "Cloud Infrastructure Defense",
+        "Penetration Testing",
+        "Identity & Access Management",
+        "DevSecOps"
+      ],
+      "skills": [
+        {
+          "skillId": "skill-cloud",
+          "skillName": "Cloud Architecture & DevOps",
+          "level": 80,
+          "verified": true
+        },
+        {
+          "skillId": "skill-python",
+          "skillName": "Python Programming",
+          "level": 78,
+          "verified": true
+        },
+        {
+          "skillId": "skill-sql",
+          "skillName": "SQL & Relational Databases",
+          "level": 70,
+          "verified": false
+        }
+      ],
+      "projects": [
+        {
+          "id": "proj-sathya-1",
+          "title": "Automated IAM Least Privilege Analyzer in AWS",
+          "description": "Parsed CloudTrail access logs to flag over-permissive IAM roles and suggest surgical policies.",
+          "technologies": [
+            "AWS IAM",
+            "Python",
+            "CloudTrail",
+            "Boto3"
+          ],
+          "verified": true
+        }
+      ],
+      "certifications": [
+        "Certified Information Systems Security Professional (Associate)",
+        "AWS Certified Security - Specialty"
+      ],
+      "assessmentScores": {
+        "assess-cloud-k8s": 78
+      },
+      "uncertaintyScore": 11,
+      "readinessScore": {
+        "overallPercentage": 79,
+        "technicalScore": 82,
+        "projectScore": 78,
+        "problemSolvingScore": 78,
+        "softSkillScore": 82,
+        "status": "competent"
+      },
+      "learningPace": "accelerated",
+      "weeklyHoursCommitted": 12,
+      "learningStyle": "hands_on",
+      "targetTimeline": "immediate"
+    },
+    {
+      "id": "student-saranya",
+      "userId": "user-saranya",
+      "fullName": "Saranya",
+      "email": "saranya@college.edu",
+      "avatarUrl": "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?w=150&auto=format&fit=crop&q=80",
+      "discipline": "engineering",
+      "stream": "Civil & Environmental Engineering",
+      "degree": "B.Tech in Civil & Smart Infrastructure Technology",
+      "yearOfStudy": 2,
+      "cgpa": 7.4,
+      "targetCareerId": "career-data-analyst",
+      "interests": [
+        "Smart City Sensors",
+        "GIS Mapping",
+        "Spatial Analytics",
+        "Infrastructure BI"
+      ],
+      "skills": [
+        {
+          "skillId": "skill-data-viz",
+          "skillName": "Data Visualization & BI",
+          "level": 55,
+          "verified": false
+        },
+        {
+          "skillId": "skill-sql",
+          "skillName": "SQL & Relational Databases",
+          "level": 40,
+          "verified": false
+        },
+        {
+          "skillId": "skill-python",
+          "skillName": "Python Programming",
+          "level": 42,
+          "verified": false
+        }
+      ],
+      "projects": [],
+      "certifications": [
+        "AutoCAD Certified User"
+      ],
+      "assessmentScores": {
+        "assess-sql-diagnostic": 45
+      },
+      "uncertaintyScore": 42,
+      "readinessScore": {
+        "overallPercentage": 45,
+        "technicalScore": 46,
+        "projectScore": 38,
+        "problemSolvingScore": 48,
+        "softSkillScore": 68,
+        "status": "starting"
+      },
+      "learningPace": "steady",
+      "weeklyHoursCommitted": 8,
+      "learningStyle": "visual",
+      "targetTimeline": "skill_building"
     }
   ],
   "interventions": [
     {
-      "id": "interv-1",
-      "studentId": "student-priya",
-      "studentName": "Priya Sharma",
-      "studentEmail": "priya.s@med-academy.edu",
-      "targetCareer": "Clinical Health Informatics Specialist",
+      "id": "int-1",
+      "studentId": "student-gokul",
+      "studentName": "Gokul",
+      "studentEmail": "gokul@college.edu",
+      "targetCareer": "Biomedical Devices & Robotics Engineer",
       "reason": "high_uncertainty",
       "status": "open",
-      "notes": "Student scored low in SQL relational queries for FHIR databases; expressed hesitation around tech pivot from MLT degree.",
-      "createdAt": "2026-09-08"
+      "notes": "High uncertainty flagged (38) with stalled project building. Scheduled 1-on-1 mentoring to review embedded electronics fundamentals and bridge microcontroller labs into biomedical robotics prototyping.",
+      "createdAt": "2024-03-08T10:30:00.000Z"
     },
     {
-      "id": "interv-2",
-      "studentId": "student-maya",
-      "studentName": "Maya Chen",
-      "studentEmail": "maya.chen@college.edu",
+      "id": "int-2",
+      "studentId": "student-saranya",
+      "studentName": "Saranya",
+      "studentEmail": "saranya@college.edu",
       "targetCareer": "Data Analyst & BI Specialist",
       "reason": "persistent_gap",
+      "status": "open",
+      "notes": "Low readiness score (45%) on foundational SQL and spatial analytics. Assigned the SQL Practice Sandbox and recommended pairing with Kalai for peer-assisted learning.",
+      "createdAt": "2024-03-09T14:15:00.000Z"
+    },
+    {
+      "id": "int-3",
+      "studentId": "student-selva",
+      "studentName": "Selva",
+      "studentEmail": "selva@college.edu",
+      "targetCareer": "AI & Machine Learning Engineer",
+      "reason": "persistent_gap",
       "status": "addressed",
-      "notes": "Recommended SQL Joins interactive practice module. Re-evaluation scheduled for next Monday.",
-      "createdAt": "2026-09-04",
-      "lastActionAt": "2026-09-07"
+      "notes": "Exceptional progress across PyTorch and Deep Learning (78% readiness). Recommended advancing to high-scale model serving and exploring national hackathon challenges.",
+      "createdAt": "2024-03-10T11:00:00.000Z"
     }
   ],
   "curriculumGaps": [
@@ -3673,90 +3905,10 @@
   ],
   "notifications": [
     {
-      "id": "notif-welcome-1789195679892",
-      "userId": "user-1789195679888",
-      "title": "Welcome wert! Your Computer Science & Engineering / IT Roadmap is Ready",
-      "message": "We've personalized your roadmap and skill gap matrix for Data Analyst & BI Specialist. Explore your milestones and launch your diagnostic arena!",
-      "type": "system",
-      "read": false,
-      "createdAt": "Just now",
-      "link": "/dashboard"
-    },
-    {
-      "id": "notif-welcome-1789192096328",
-      "userId": "user-1789192096320",
-      "title": "Welcome test student 2! Your Electrical & Electronics Engineering (EEE) Roadmap is Ready",
-      "message": "We've personalized your roadmap and skill gap matrix for Precision AgTech & IoT Specialist. Explore your milestones and launch your diagnostic arena!",
-      "type": "system",
-      "read": true,
-      "createdAt": "Just now",
-      "link": "/dashboard"
-    },
-    {
-      "id": "notif-welcome-1789187888659",
-      "userId": "user-1789187888656",
-      "title": "Welcome Samira Al-Hassan! Your Biotechnology & Computational Biology Roadmap is Ready",
-      "message": "We've personalized your roadmap and skill gap matrix for Computational Biologist & Genomics Scientist. Explore your milestones and launch your diagnostic arena!",
-      "type": "system",
-      "read": false,
-      "createdAt": "Just now",
-      "link": "/dashboard"
-    },
-    {
-      "id": "notif-welcome-1789187827166",
-      "userId": "user-1789187827164",
-      "title": "Welcome Samira Al-Hassan! Your Biotechnology & Computational Biology Roadmap is Ready",
-      "message": "We've personalized your roadmap and skill gap matrix for Computational Biologist & Genomics Scientist. Explore your milestones and launch your diagnostic arena!",
-      "type": "system",
-      "read": false,
-      "createdAt": "Just now",
-      "link": "/dashboard"
-    },
-    {
-      "id": "notif-welcome-1789187646163",
-      "userId": "user-1789187646159",
-      "title": "Welcome Samira Al-Hassan! Your Biotechnology & Computational Biology Roadmap is Ready",
-      "message": "We've personalized your roadmap and skill gap matrix for Computational Biologist & Genomics Scientist. Explore your milestones and launch your diagnostic arena!",
-      "type": "system",
-      "read": false,
-      "createdAt": "Just now",
-      "link": "/dashboard"
-    },
-    {
-      "id": "notif-welcome-1789187562653",
-      "userId": "user-1789187562646",
-      "title": "Welcome test user! Your Computer Science & Engineering / IT Roadmap is Ready",
-      "message": "We've personalized your roadmap and skill gap matrix for AI & Machine Learning Engineer. Explore your milestones and launch your diagnostic arena!",
-      "type": "system",
-      "read": false,
-      "createdAt": "Just now",
-      "link": "/dashboard"
-    },
-    {
-      "id": "notif-welcome-1789187493594",
-      "userId": "user-1789187493590",
-      "title": "Welcome Samira Al-Hassan! Your Biotechnology & Computational Biology Roadmap is Ready",
-      "message": "We've personalized your roadmap and skill gap matrix for Computational Biologist & Genomics Scientist. Explore your milestones and launch your diagnostic arena!",
-      "type": "system",
-      "read": false,
-      "createdAt": "Just now",
-      "link": "/dashboard"
-    },
-    {
-      "id": "notif-welcome-1789184726181",
-      "userId": "user-1789184726179",
-      "title": "Welcome to CareerBridge!",
-      "message": "Your profile has been created. Take your first skill diagnostic to personalize your roadmap.",
-      "type": "system",
-      "read": false,
-      "createdAt": "Just now",
-      "link": "/assessments"
-    },
-    {
       "id": "notif-1",
-      "userId": "user-maya",
-      "title": "New Milestone Unlocked",
-      "message": "Stage 2: Interactive SQL Joins Problem Drills is now ready in your roadmap.",
+      "userId": "user-selva",
+      "title": "New Advanced Milestone Ready",
+      "message": "Your Deep Learning & LLM Fine-Tuning roadmap module is waiting. Take the diagnostic drill to benchmark your skills.",
       "type": "milestone",
       "read": false,
       "createdAt": "10 mins ago",
@@ -3764,208 +3916,40 @@
     },
     {
       "id": "notif-2",
-      "userId": "user-maya",
-      "title": "Diagnostic Evaluation Recommended",
-      "message": "Take your Applied Statistics diagnostic to verify your benchmark readiness.",
-      "type": "assessment",
+      "userId": "user-selva",
+      "title": "Faculty Intervention: Advisor Note",
+      "message": "Dr. Balu Prasath reviewed your profile and recommended focusing on distributed model inference architectures.",
+      "type": "mentor",
       "read": false,
       "createdAt": "2 hours ago",
-      "link": "/assessments"
+      "link": "/skills"
     },
     {
       "id": "notif-3",
-      "userId": "user-maya",
-      "title": "Faculty Advisor Update",
-      "message": "Dr. Alan Vance scheduled a technical review for your cohort roadmap.",
-      "type": "mentor",
-      "read": true,
+      "userId": "user-kalai",
+      "title": "SQL Milestone Unlocked",
+      "message": "Advanced Window Functions & CTE practice is ready in your Adaptive Roadmap.",
+      "type": "milestone",
+      "read": false,
       "createdAt": "1 day ago",
-      "link": "/dashboard"
+      "link": "/roadmap"
     }
   ],
   "chatHistory": {
-    "student-1789187646159": [
+    "student-selva": [
       {
-        "id": "msg-user-1789187657545",
-        "sender": "user",
-        "content": "Why is this career recommended for my background?",
-        "timestamp": "2026-09-12T04:34:17.545Z"
-      },
-      {
-        "id": "msg-1789187657545",
-        "sender": "assistant",
-        "content": "Hello Samira Al-Hassan! As your CareerBridge Mentor, I'm tracking your roadmap for **Computational Biologist & Genomics Scientist** tailored to your **Biotechnology & Computational Biology** background.\n\nYou are currently **45% Career-Ready** (building) committing ~10 hrs/week. Your fastest lever to unlock the next milestone is closing the gap in **Computational Genomics & Bioinformatics**.\n\nHow can I help you today? You can ask me to explain why this path fits you, suggest high-impact resume projects, or generate practice scenarios.",
-        "timestamp": "2026-09-12T04:34:17.545Z",
-        "suggestedActions": [
-          "What should I learn today?",
-          "Why is this career recommended for me?",
-          "Recommend a standout project"
-        ],
-        "contextSnapshot": {
-          "careerTitle": "Computational Biologist & Genomics Scientist",
-          "topGapSkill": "Computational Genomics & Bioinformatics",
-          "readiness": 45
-        }
+        "id": "chat-selva-1",
+        "role": "assistant",
+        "content": "Hello Selva! As your AI Career Mentor, I'm tracking your roadmap for **AI & Machine Learning Engineer** tailored to your **B.Tech in Artificial Intelligence & Data Science** background.\n\nYou are currently **78% Career-Ready** committing ~14 hrs/week. Your fastest lever to unlock the next milestone is deploying your fine-tuned Transformer model to a cloud endpoint.\n\nHow can I help you today? You can ask me to review your resume projects, explain complex model architectures, or generate practice scenarios.",
+        "timestamp": "2026-09-12T07:51:41.200Z"
       }
     ],
-    "student-1789187827164": [
+    "student-kalai": [
       {
-        "id": "msg-user-1789187838616",
-        "sender": "user",
-        "content": "Why is this career recommended for my background?",
-        "timestamp": "2026-09-12T04:37:18.616Z"
-      },
-      {
-        "id": "msg-1789187838616",
-        "sender": "assistant",
-        "content": "Hello Samira Al-Hassan! As your CareerBridge Mentor, I'm tracking your roadmap for **Computational Biologist & Genomics Scientist** tailored to your **Biotechnology & Computational Biology** background.\n\nYou are currently **45% Career-Ready** (building) committing ~10 hrs/week. Your fastest lever to unlock the next milestone is closing the gap in **Computational Genomics & Bioinformatics**.\n\nHow can I help you today? You can ask me to explain why this path fits you, suggest high-impact resume projects, or generate practice scenarios.",
-        "timestamp": "2026-09-12T04:37:18.616Z",
-        "suggestedActions": [
-          "What should I learn today?",
-          "Why is this career recommended for me?",
-          "Recommend a standout project"
-        ],
-        "contextSnapshot": {
-          "careerTitle": "Computational Biologist & Genomics Scientist",
-          "topGapSkill": "Computational Genomics & Bioinformatics",
-          "readiness": 45
-        }
-      }
-    ],
-    "student-1789187888656": [
-      {
-        "id": "msg-user-1789187900017",
-        "sender": "user",
-        "content": "Why is this career recommended for my background?",
-        "timestamp": "2026-09-12T04:38:20.017Z"
-      },
-      {
-        "id": "msg-1789187900017",
-        "sender": "assistant",
-        "content": "Hello Samira Al-Hassan! As your CareerBridge Mentor, I'm tracking your roadmap for **Computational Biologist & Genomics Scientist** tailored to your **Biotechnology & Computational Biology** background.\n\nYou are currently **45% Career-Ready** (building) committing ~10 hrs/week. Your fastest lever to unlock the next milestone is closing the gap in **Computational Genomics & Bioinformatics**.\n\nHow can I help you today? You can ask me to explain why this path fits you, suggest high-impact resume projects, or generate practice scenarios.",
-        "timestamp": "2026-09-12T04:38:20.017Z",
-        "suggestedActions": [
-          "What should I learn today?",
-          "Why is this career recommended for me?",
-          "Recommend a standout project"
-        ],
-        "contextSnapshot": {
-          "careerTitle": "Computational Biologist & Genomics Scientist",
-          "topGapSkill": "Computational Genomics & Bioinformatics",
-          "readiness": 45
-        }
-      }
-    ],
-    "student-maya": [
-      {
-        "id": "msg-user-1789191817642",
-        "sender": "user",
-        "content": "How can I pivot to an adjacent role?",
-        "timestamp": "2026-09-12T05:43:37.642Z"
-      },
-      {
-        "id": "msg-1789191817642",
-        "sender": "assistant",
-        "content": "You can definitely pivot from **engineering**! Your foundation transfers directly into adjacent tracks like AI & Machine Learning Engineer or FinTech Quantitative Analyst or Precision AgTech & IoT Specialist. I recommend running a scenario in our **Career Simulator** to inspect exact month-by-month bridge roadmaps.",
-        "timestamp": "2026-09-12T05:43:37.642Z",
-        "suggestedActions": [
-          "Launch Career Simulator",
-          "Compare with AI Engineer",
-          "Compare with AgTech Specialist"
-        ],
-        "contextSnapshot": {
-          "careerTitle": "Data Analyst & BI Specialist",
-          "topGapSkill": "SQL & Relational Databases",
-          "readiness": 62
-        }
-      },
-      {
-        "id": "msg-user-1789191817918",
-        "sender": "user",
-        "content": "How can I pivot to an adjacent role?",
-        "timestamp": "2026-09-12T05:43:37.918Z"
-      },
-      {
-        "id": "msg-1789191817918",
-        "sender": "assistant",
-        "content": "You can definitely pivot from **engineering**! Your foundation transfers directly into adjacent tracks like AI & Machine Learning Engineer or FinTech Quantitative Analyst or Precision AgTech & IoT Specialist. I recommend running a scenario in our **Career Simulator** to inspect exact month-by-month bridge roadmaps.",
-        "timestamp": "2026-09-12T05:43:37.918Z",
-        "suggestedActions": [
-          "Launch Career Simulator",
-          "Compare with AI Engineer",
-          "Compare with AgTech Specialist"
-        ],
-        "contextSnapshot": {
-          "careerTitle": "Data Analyst & BI Specialist",
-          "topGapSkill": "SQL & Relational Databases",
-          "readiness": 62
-        }
-      },
-      {
-        "id": "msg-user-1789191820276",
-        "sender": "user",
-        "content": "What should I learn today?",
-        "timestamp": "2026-09-12T05:43:40.276Z"
-      },
-      {
-        "id": "msg-1789191820275",
-        "sender": "assistant",
-        "content": "Hello Maya Chen! As your CareerBridge Mentor, I'm tracking your roadmap for **Data Analyst & BI Specialist** tailored to your **B.Tech in Computer Science & Engineering** background.\n\nYou are currently **62% Career-Ready** (building) committing ~12 hrs/week. Your fastest lever to unlock the next milestone is closing the gap in **SQL & Relational Databases**.\n\nHow can I help you today? You can ask me to explain why this path fits you, suggest high-impact resume projects, or generate practice scenarios.",
-        "timestamp": "2026-09-12T05:43:40.276Z",
-        "suggestedActions": [
-          "What should I learn today?",
-          "Why is this career recommended for me?",
-          "Recommend a standout project"
-        ],
-        "contextSnapshot": {
-          "careerTitle": "Data Analyst & BI Specialist",
-          "topGapSkill": "SQL & Relational Databases",
-          "readiness": 62
-        }
-      },
-      {
-        "id": "msg-user-1789191854327",
-        "sender": "user",
-        "content": "what do I need to do to became a fullstack developer?",
-        "timestamp": "2026-09-12T05:44:14.327Z"
-      },
-      {
-        "id": "msg-1789191854327",
-        "sender": "assistant",
-        "content": "Hello Maya Chen! As your CareerBridge Mentor, I'm tracking your roadmap for **Data Analyst & BI Specialist** tailored to your **B.Tech in Computer Science & Engineering** background.\n\nYou are currently **62% Career-Ready** (building) committing ~12 hrs/week. Your fastest lever to unlock the next milestone is closing the gap in **SQL & Relational Databases**.\n\nHow can I help you today? You can ask me to explain why this path fits you, suggest high-impact resume projects, or generate practice scenarios.",
-        "timestamp": "2026-09-12T05:44:14.327Z",
-        "suggestedActions": [
-          "What should I learn today?",
-          "Why is this career recommended for me?",
-          "Recommend a standout project"
-        ],
-        "contextSnapshot": {
-          "careerTitle": "Data Analyst & BI Specialist",
-          "topGapSkill": "SQL & Relational Databases",
-          "readiness": 62
-        }
-      },
-      {
-        "id": "msg-user-1789191865445",
-        "sender": "user",
-        "content": "Recommend a standout project",
-        "timestamp": "2026-09-12T05:44:25.445Z"
-      },
-      {
-        "id": "msg-1789191865445",
-        "sender": "assistant",
-        "content": "To stand out to recruiters for **Data Analyst & BI Specialist** from your **B.Tech in Computer Science & Engineering** background, I recommend building: **\"E-commerce Cohort Retention Analysis\"**.\n\nKey execution checklist:\n1. Solve a real domain problem bridging your domain with industry standards.\n2. Apply **SQL & Relational Databases** to demonstrate capability where candidates typically struggle.\n3. Publish code with a clean README, architectural diagram, and deployment link.",
-        "timestamp": "2026-09-12T05:44:25.445Z",
-        "suggestedActions": [
-          "View Project Brief in Roadmap",
-          "Explore GitHub Starters",
-          "Take Project Checkpoint Quiz"
-        ],
-        "contextSnapshot": {
-          "careerTitle": "Data Analyst & BI Specialist",
-          "topGapSkill": "SQL & Relational Databases",
-          "readiness": 62
-        }
+        "id": "chat-kalai-1",
+        "role": "assistant",
+        "content": "Hello Kalai! As your AI Career Mentor, I'm tracking your roadmap for **Data Analyst & BI Specialist** tailored to your **B.Tech in Computer Science & Engineering** background.\n\nYou are currently **72% Career-Ready** committing ~12 hrs/week. Your fastest lever to unlock the next milestone is closing the gap in **SQL & Relational Databases** (specifically window functions).\n\nHow can I help you today?",
+        "timestamp": "2026-09-12T07:51:41.201Z"
       }
     ]
   }
