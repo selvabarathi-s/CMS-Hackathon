@@ -27,7 +27,7 @@ import {
 } from 'lucide-react';
 
 interface TestCredential {
-  portal: 'student' | 'mentor' | 'admin';
+  portal: 'student' | 'mentor' | 'admin' | 'placement_cell';
   name: string;
   email: string;
   role: UserRole;
@@ -83,6 +83,15 @@ const TEST_CREDENTIALS: TestCredential[] = [
     studentId: 'FAC-ENG-904'
   },
   {
+    portal: 'placement_cell',
+    name: 'Mr. K. Senthil Kumar',
+    email: 'placement@college.edu',
+    role: 'placement_cell',
+    stream: 'Corporate Relations & Placement Directorate',
+    goal: 'Campus Recruitment Drives & Placements',
+    studentId: 'PLC-DIR-001'
+  },
+  {
     portal: 'admin',
     name: 'Ms. Anjali Govindh',
     email: 'admin@careerbridge.io',
@@ -97,8 +106,8 @@ export const LoginPage: React.FC = () => {
   const { login } = useAuth();
   const navigate = useNavigate();
 
-  // Active portal tab: 'student' | 'mentor' | 'admin'
-  const [activePortal, setActivePortal] = useState<'student' | 'mentor' | 'admin'>('student');
+  // Active portal tab: 'student' | 'mentor' | 'admin' | 'placement_cell'
+  const [activePortal, setActivePortal] = useState<'student' | 'mentor' | 'admin' | 'placement_cell'>('student');
   const [email, setEmail] = useState('selva@college.edu');
   const [password, setPassword] = useState('password123');
   const [showPassword, setShowPassword] = useState(false);
@@ -108,7 +117,7 @@ export const LoginPage: React.FC = () => {
   const [showCredentialsGuide, setShowCredentialsGuide] = useState(false);
   const [copiedAccount, setCopiedAccount] = useState<string | null>(null);
 
-  const handlePortalSwitch = (portal: 'student' | 'mentor' | 'admin') => {
+  const handlePortalSwitch = (portal: 'student' | 'mentor' | 'admin' | 'placement_cell') => {
     setActivePortal(portal);
     setErrorMsg(null);
     if (portal === 'student') {
@@ -116,6 +125,9 @@ export const LoginPage: React.FC = () => {
       setPassword('password123');
     } else if (portal === 'mentor') {
       setEmail('balu.prasath@university.edu');
+      setPassword('password123');
+    } else if (portal === 'placement_cell') {
+      setEmail('placement@college.edu');
       setPassword('password123');
     } else {
       setEmail('admin@careerbridge.io');
@@ -141,6 +153,8 @@ export const LoginPage: React.FC = () => {
           navigate('/admin');
         } else if (activePortal === 'mentor') {
           navigate('/mentor');
+        } else if (activePortal === 'placement_cell') {
+          navigate('/placement-cell');
         } else {
           navigate('/dashboard');
         }
@@ -179,6 +193,14 @@ export const LoginPage: React.FC = () => {
       color: 'amber',
       badgeBg: 'bg-amber-50 dark:bg-amber-950/60 text-amber-700 dark:text-amber-300 border-amber-200 dark:border-amber-900',
       idPlaceholder: 'faculty.advisor@university.edu or FAC-ENG-904'
+    },
+    placement_cell: {
+      title: 'Placement Cell Directorate',
+      subtitle: 'Manage recruitment drives, corporate partnerships, student shortlisting & offer tracking',
+      icon: Building2,
+      color: 'emerald',
+      badgeBg: 'bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 border-emerald-200 dark:border-emerald-900',
+      idPlaceholder: 'placement@college.edu or PLC-DIR-001'
     },
     admin: {
       title: 'Institutional Administration',
@@ -233,6 +255,18 @@ export const LoginPage: React.FC = () => {
           >
             <GraduationCap className="h-4 w-4" />
             <span>Faculty / Mentor</span>
+          </button>
+
+          <button
+            onClick={() => handlePortalSwitch('placement_cell')}
+            className={`flex items-center gap-2 rounded-xl px-4 py-2.5 text-xs font-bold transition-all shrink-0 ${
+              activePortal === 'placement_cell'
+                ? 'bg-white dark:bg-slate-800 text-emerald-600 dark:text-emerald-400 shadow-md border border-slate-200/80 dark:border-slate-700'
+                : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
+            }`}
+          >
+            <Building2 className="h-4 w-4" />
+            <span>Placement Cell</span>
           </button>
 
           <button

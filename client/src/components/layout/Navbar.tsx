@@ -18,7 +18,8 @@ import {
   CheckCircle2,
   ExternalLink,
   User,
-  UserPlus
+  UserPlus,
+  Building2
 } from 'lucide-react';
 
 interface NavbarProps {
@@ -62,6 +63,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenMobileCompanion, onOpenQRS
           label: 'Institution Admin',
           icon: Shield,
           color: 'bg-rose-50 text-rose-700 dark:bg-rose-950/80 dark:text-rose-300 border-rose-200 dark:border-rose-900/60'
+        };
+      case 'placement_cell':
+        return {
+          label: 'Placement Directorate',
+          icon: Building2,
+          color: 'bg-emerald-50 text-emerald-700 dark:bg-emerald-950/80 dark:text-emerald-300 border-emerald-200 dark:border-emerald-900/60'
         };
       case 'mentor':
         return {

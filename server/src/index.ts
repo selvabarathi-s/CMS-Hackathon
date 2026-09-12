@@ -14,6 +14,8 @@ import { aiMentorRouter } from './routes/aiMentorRoutes.js';
 import { mentorRouter } from './routes/mentorRoutes.js';
 import { adminRouter } from './routes/adminRoutes.js';
 import { mobileRouter } from './routes/mobileRoutes.js';
+import { guidanceRouter } from './routes/guidanceRoutes.js';
+import { placementRouter } from './routes/placementRoutes.js';
 
 dotenv.config();
 
@@ -42,6 +44,8 @@ app.use('/api/ai-mentor', aiMentorRouter);
 app.use('/api/mentor', mentorRouter);
 app.use('/api/admin', adminRouter);
 app.use('/api/mobile', mobileRouter);
+app.use('/api/guidance', guidanceRouter);
+app.use('/api/placements', placementRouter);
 
 app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString(), platform: 'CareerBridge API v1.0' });

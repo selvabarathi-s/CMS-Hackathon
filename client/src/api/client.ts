@@ -12,7 +12,12 @@ import {
   CurriculumGapInsight,
   AIMessage,
   NotificationItem,
-  AdaptationContext
+  AdaptationContext,
+  DoubtQuery,
+  DoubtReply,
+  PlacementCompanyDrive,
+  PlacementApplication,
+  PlacementAnalyticsSummary
 } from '../../../shared/types.js';
 
 const API_BASE = (typeof import.meta !== 'undefined' && (import.meta as any).env && (import.meta as any).env.VITE_API_BASE) || '/api';
@@ -311,5 +316,118 @@ export const api = {
       pairingCode: string;
       pwaReady: boolean;
     }>;
+  },
+
+  // Guidance & Doubts
+  async getDoubts(params?: { domain?: string; category?: string; status?: string; search?: string; studentId?: string }) {
+    const qs = new URLSearchParams();
+    if (params) {
+      Object.entries(params).forEach(([k, v]) => {
+        if (v) qs.append(k, v);
+      });
+    }
+    const res = await fetch(`${API_BASE}/guidance/doubts?${qs.toString()}`);
+    return res.json() as Promise<{ doubts: DoubtQuery[] }>;
+  },
+
+  async getDoubtById(id: string) {
+    const res = await fetch(`${API_BASE}/guidance/doubts/${id}`);
+    return res.json() as Promise<{ doubt: DoubtQuery }>;
+  },
+
+  async createDoubt(data: Partial<DoubtQuery>) {
+    const res = await fetch(`${API_BASE}/guidance/doubts`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+    return res.json() as Promise<{ success: boolean; doubt: DoubtQuery }>;
+  },
+
+  async replyToDoubt(doubtId: string, data: Partial<DoubtReply>) {
+    const res = await fetch(`${API_BASE}/guidance/doubts/${doubtId}/replies`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+    return res.json() as Promise<{ success: boolean; reply: DoubtReply; doubt: DoubtQuery }>;
+  },
+
+  async upvoteDoubt(id: string) {
+    const res = await fetch(`${API_BASE}/guidance/doubts/${id}/upvote`, { method: 'POST' });
+    return res.json() as Promise<{ success: boolean; upvotes: number }>;
+  },
+
+  async resolveDoubt(id: string) {
+    const res = await fetch(`${API_BASE}/guidance/doubts/${id}/resolve`, { method: 'POST' });
+    return res.json() as Promise<{ success: boolean; status: string }>;
+  },
+
+  // Placements & Drives
+  async getPlacementDrives(params?: { department?: string; status?: string; search?: string }) {
+    const qs = new URLSearchParams();
+    if (params) {
+      Object.entries(params).forEach(([k, v]) => {
+        if (v) qs.append(k, v);
+      });
+    }
+    const res = await fetch(`${API_BASE}/placements/drives?${qs.toString()}`);
+    return res.json() as Promise<{ drives: PlacementCompanyDrive[] }>;
+  },
+
+  async getPlacementDriveById(id: string) {
+    const res = await fetch(`${API_BASE}/placements/drives/${id}`);
+    return res.json() as Promise<{ drive: PlacementCompanyDrive }>;
+  },
+
+  async createPlacementDrive(data: Partial<PlacementCompanyDrive>) {
+    const res = await fetch(`${API_BASE}/placements/drives`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+    return res.json() as Promise<{ success: boolean; drive: PlacementCompanyDrive }>;
+  },
+
+  async updatePlacementDrive(id: string, data: Partial<PlacementCompanyDrive>) {
+    const res = await fetch(`${API_BASE}/placements/drives/${id}`, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+    return res.json() as Promise<{ success: boolean; drive: PlacementCompanyDrive }>;
+  },
+
+  async applyToPlacementDrive(driveId: string, studentId: string) {
+    const res = await fetch(`${API_BASE}/placements/drives/${driveId}/apply`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ studentId })
+    });
+    return res.json() as Promise<{ success: boolean; application?: PlacementApplication; drive?: PlacementCompanyDrive; error?: string }>;
+  },
+
+  async getStudentApplications(studentId: string) {
+    const res = await fetch(`${API_BASE}/placements/applications/student/${studentId}`);
+    return res.json() as Promise<{ applications: PlacementApplication[] }>;
+  },
+
+  async getDriveApplications(driveId: string) {
+    const res = await fetch(`${API_BASE}/placements/applications/drive/${driveId}`);
+    return res.json() as Promise<{ applications: PlacementApplication[] }>;
+  },
+
+  async updateApplicationStatus(applicationId: string, status: string, feedback?: string) {
+    const res = await fetch(`${API_BASE}/placements/applications/${applicationId}/status`, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ status, feedback })
+    });
+    return res.json() as Promise<{ success: boolean; application: PlacementApplication }>;
+  },
+
+  async getPlacementAnalytics() {
+    const res = await fetch(`${API_BASE}/placements/analytics`);
+    return res.json() as Promise<{ summary: PlacementAnalyticsSummary }>;
   }
 };

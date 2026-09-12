@@ -8,7 +8,7 @@ export type DisciplineType =
   | 'law_governance'
   | 'hospitality';
 
-export type UserRole = 'student' | 'mentor' | 'admin';
+export type UserRole = 'student' | 'mentor' | 'admin' | 'placement_cell';
 
 export type SkillMasteryStatus =
   | 'mastered'
@@ -330,4 +330,93 @@ export interface AIMessage {
     topGapSkill?: string;
     readiness?: number;
   };
+}
+
+// --- Real-Time Guidance & Doubt Clearance Models ---
+export interface DoubtReply {
+  id: string;
+  doubtId: string;
+  authorId: string;
+  authorName: string;
+  authorRole: 'mentor' | 'industrial_expert' | 'student' | 'placement_cell';
+  authorTitle: string;
+  authorOrg: string;
+  content: string;
+  codeSnippet?: string;
+  verified: boolean;
+  upvotes: number;
+  createdAt: string;
+}
+
+export interface DoubtQuery {
+  id: string;
+  studentId: string;
+  studentName: string;
+  studentEmail: string;
+  title: string;
+  queryText: string;
+  codeSnippet?: string;
+  domain: string;
+  category: 'technical' | 'career_guidance' | 'interview_prep' | 'academic_concept' | 'project_help';
+  tags: string[];
+  urgency: 'normal' | 'urgent';
+  status: 'open' | 'answered' | 'resolved';
+  createdAt: string;
+  upvotes: number;
+  replies: DoubtReply[];
+}
+
+// --- Live Placement Companies & Placement Cell Models ---
+export interface PlacementCompanyDrive {
+  id: string;
+  companyName: string;
+  logoUrl?: string;
+  industry: string;
+  roleTitle: string;
+  ctcPackage: string;
+  jobType: 'full_time' | 'internship_to_fte';
+  workLocation: string;
+  driveDate: string;
+  applicationDeadline: string;
+  status: 'active' | 'upcoming' | 'completed' | 'in_progress';
+  eligibleDepartments: string[];
+  minCgpa: number;
+  minReadinessScore: number;
+  requiredSkills: string[];
+  selectionProcess: string[];
+  description: string;
+  hiringCount: number;
+  registeredStudentIds: string[];
+  shortlistedStudentIds: string[];
+  placedStudentIds: string[];
+}
+
+export interface PlacementApplication {
+  id: string;
+  driveId: string;
+  studentId: string;
+  studentName: string;
+  department: string;
+  cgpa: number;
+  readinessPercentage: number;
+  status: 'applied' | 'shortlisted' | 'assessment_cleared' | 'interview_scheduled' | 'offer_extended' | 'rejected';
+  appliedAt: string;
+  feedback?: string;
+}
+
+export interface PlacementAnalyticsSummary {
+  totalDrives: number;
+  activeDrives: number;
+  totalEligibleStudents: number;
+  totalApplications: number;
+  totalOffersExtended: number;
+  averageCtc: string;
+  highestCtc: string;
+  placementRatePercentage: number;
+  departmentPlacementStats: {
+    department: string;
+    totalStudents: number;
+    placedStudents: number;
+    placementPercentage: number;
+  }[];
 }

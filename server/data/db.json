@@ -181,6 +181,19 @@
       "studentId": "ADM-EXEC-001",
       "avatarUrl": "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=150&auto=format&fit=crop&q=80",
       "createdAt": "2023-08-01T08:00:00.000Z"
+    },
+    {
+      "id": "user-placement-cell",
+      "profileId": "profile-placement-officer",
+      "name": "Mr. K. Senthil Kumar",
+      "email": "placement@college.edu",
+      "password": "password123",
+      "role": "placement_cell",
+      "discipline": "engineering",
+      "stream": "Central Placement & Corporate Relations Directorate",
+      "studentId": "OFF-PLC-001",
+      "avatarUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80",
+      "createdAt": "2023-06-01T08:00:00.000Z"
     }
   ],
   "careers": [
@@ -8187,5 +8200,719 @@
         "timestamp": "2026-09-12T07:51:41.201Z"
       }
     ]
-  }
+  },
+  "doubts": [
+    {
+      "id": "doubt-1",
+      "studentId": "student-selva",
+      "studentName": "Selva",
+      "studentEmail": "selva@college.edu",
+      "title": "How to handle CUDA Out-of-Memory (OOM) during LoRA fine-tuning on 16GB VRAM?",
+      "queryText": "I am fine-tuning a 7B parameter LLM using Hugging Face PEFT + LoRA on an RTX 4080 (16GB), but experiencing CUDA Out-Of-Memory during the backward pass at step 42. What gradient accumulation and quantization flags should I set to stabilize training without losing perplexity?",
+      "codeSnippet": "from transformers import TrainingArguments\n\ntraining_args = TrainingArguments(\n    output_dir='./results',\n    per_device_train_batch_size=4,\n    gradient_accumulation_steps=1,\n    learning_rate=2e-4,\n    fp16=True,\n    logging_steps=10\n)",
+      "domain": "AI & Machine Learning",
+      "category": "technical",
+      "tags": [
+        "PyTorch",
+        "LoRA",
+        "LLMs",
+        "CUDA",
+        "PEFT"
+      ],
+      "urgency": "normal",
+      "status": "answered",
+      "createdAt": "2026-09-10T10:15:00.000Z",
+      "upvotes": 12,
+      "replies": [
+        {
+          "id": "reply-1-1",
+          "doubtId": "doubt-1",
+          "authorId": "exp-google-vikram",
+          "authorName": "Dr. Vikram Nair",
+          "authorRole": "industrial_expert",
+          "authorTitle": "Principal Research Scientist",
+          "authorOrg": "Google DeepMind",
+          "content": "Switch to QLoRA with 4-bit NormalFloat (NF4) quantization and enable gradient checkpointing. By dropping per_device_train_batch_size to 1 and setting gradient_accumulation_steps to 8 (effective batch size 8), your VRAM usage will plummet from ~14.8GB to ~6.4GB with zero observable loss in downstream benchmark accuracy.",
+          "codeSnippet": "from transformers import BitsAndBytesConfig\n\nbnb_config = BitsAndBytesConfig(\n    load_in_4bit=True,\n    bnb_4bit_quant_type='nf4',\n    bnb_4bit_compute_dtype=torch.bfloat16,\n    bnb_4bit_use_double_quant=True\n)\n\n# Also enable in training_args:\ntraining_args.gradient_checkpointing = True\ntraining_args.optim = 'paged_adamw_8bit'",
+          "verified": true,
+          "upvotes": 18,
+          "createdAt": "2026-09-10T11:40:00.000Z"
+        },
+        {
+          "id": "reply-1-2",
+          "doubtId": "doubt-1",
+          "authorId": "user-balu",
+          "authorName": "Dr. Balu Prasath",
+          "authorRole": "mentor",
+          "authorTitle": "Department Faculty Advisor & Mentor",
+          "authorOrg": "College Department of CSE / AI",
+          "content": "Great question Selva. Dr. Vikram's advice on paged 8-bit AdamW is exact. Also ensure you target only the projection query and value matrices (q_proj, v_proj) initially to keep trainable parameters under 0.2% of the base model.",
+          "verified": true,
+          "upvotes": 9,
+          "createdAt": "2026-09-10T13:10:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "doubt-2",
+      "studentId": "student-sabari",
+      "studentName": "Sabari",
+      "studentEmail": "sabari@college.edu",
+      "title": "Preventing WebSocket connection drops during Kubernetes Canary rollouts in Argo",
+      "queryText": "When triggering an automated Canary step-weight promotion from 20% to 50% in Argo Rollouts, our ingress controller drops ~0.5% of persistent WebSocket sessions. How can we ensure graceful termination of long-lived connections during pod eviction?",
+      "codeSnippet": "apiVersion: argoproj.io/v1alpha1\nkind: Rollout\nmetadata:\n  name: realtime-gateway\nspec:\n  strategy:\n    canary:\n      steps:\n      - setWeight: 20\n      - pause: {duration: 5m}\n      - setWeight: 50",
+      "domain": "Cloud DevOps & SRE",
+      "category": "technical",
+      "tags": [
+        "Kubernetes",
+        "ArgoCD",
+        "WebSockets",
+        "SRE",
+        "DevOps"
+      ],
+      "urgency": "urgent",
+      "status": "answered",
+      "createdAt": "2026-09-11T09:00:00.000Z",
+      "upvotes": 15,
+      "replies": [
+        {
+          "id": "reply-2-1",
+          "doubtId": "doubt-2",
+          "authorId": "exp-aws-sundar",
+          "authorName": "Sundar Ramanathan",
+          "authorRole": "industrial_expert",
+          "authorTitle": "Staff SRE & Cloud Architect",
+          "authorOrg": "Amazon Web Services",
+          "content": "In Kubernetes, when a pod is marked Terminating, endpoint removal and SIGTERM delivery happen asynchronously. To fix WebSocket connection drops:\n1. Add a container preStop hook with a 15-20s sleep to let AWS ALB / NGINX remove the pod from routing.\n2. Increase `terminationGracePeriodSeconds: 75`.\n3. In your app process, catch SIGTERM and stop accepting new sockets while draining existing connections.",
+          "codeSnippet": "lifecycle:\n  preStop:\n    exec:\n      command: ['/bin/sh', '-c', 'sleep 15']\nterminationGracePeriodSeconds: 75",
+          "verified": true,
+          "upvotes": 22,
+          "createdAt": "2026-09-11T10:15:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "doubt-3",
+      "studentId": "student-gokul",
+      "studentName": "Gokul",
+      "studentEmail": "gokul@college.edu",
+      "title": "50Hz powerline hum interference in biomedical lead-II ECG instrumentation amplifiers",
+      "queryText": "Our custom AD8232 lead-II ECG sensor telemetry board is picking up massive 50Hz mains powerline hum noise even when battery-powered. Should we add an analog Twin-T notch filter before the ADC or handle it purely in digital FIR filtering on the ESP32?",
+      "codeSnippet": "// ADC sampling at 500 Hz on ESP32\nint rawSample = analogRead(ECG_PIN);\n// Heavy 50Hz periodic sinusoidal ripple obscuring P-wave",
+      "domain": "Biomedical & Hardware",
+      "category": "academic_concept",
+      "tags": [
+        "ECG",
+        "Biosensors",
+        "Noise Filtering",
+        "DSP",
+        "Biomedical"
+      ],
+      "urgency": "normal",
+      "status": "answered",
+      "createdAt": "2026-09-11T14:30:00.000Z",
+      "upvotes": 8,
+      "replies": [
+        {
+          "id": "reply-3-1",
+          "doubtId": "doubt-3",
+          "authorId": "exp-bosch-karthik",
+          "authorName": "Karthikeyan M.",
+          "authorRole": "industrial_expert",
+          "authorTitle": "Senior Embedded Hardware Specialist",
+          "authorOrg": "Bosch Engineering",
+          "content": "Always prioritize hardware common-mode rejection first. Implement a Right-Leg Drive (RLD) active feedback loop to invert patient common-mode body voltage back into the body. This boosts CMRR >100dB. Then, in MCU firmware, apply a 2nd-order IIR Notch filter centered at 50Hz (Q=30) sampled at 500Hz. Digital-only filtering without RLD will saturate your ADC frontend.",
+          "verified": true,
+          "upvotes": 14,
+          "createdAt": "2026-09-11T16:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "doubt-4",
+      "studentId": "student-kalai",
+      "studentName": "Kalai",
+      "studentEmail": "kalai@college.edu",
+      "title": "Eliminating expensive Disk Sorts in PostgreSQL Window Aggregations on 10M rows",
+      "queryText": "Running `DENSE_RANK() OVER (PARTITION BY customer_segment ORDER BY total_spend DESC)` takes 14.8 seconds and spills 480MB into temporary disk files. How do we structure composite indexes so the planner avoids the external merge sort?",
+      "codeSnippet": "SELECT customer_id, customer_segment, total_spend,\n       DENSE_RANK() OVER (PARTITION BY customer_segment ORDER BY total_spend DESC) as rank\nFROM enterprise_transactions\nWHERE transaction_year = 2025;",
+      "domain": "Data Analytics & SQL",
+      "category": "technical",
+      "tags": [
+        "PostgreSQL",
+        "WindowFunctions",
+        "Indexing",
+        "Performance",
+        "ETL"
+      ],
+      "urgency": "normal",
+      "status": "answered",
+      "createdAt": "2026-09-11T17:20:00.000Z",
+      "upvotes": 11,
+      "replies": [
+        {
+          "id": "reply-4-1",
+          "doubtId": "doubt-4",
+          "authorId": "exp-msft-anand",
+          "authorName": "Anand Kumar",
+          "authorRole": "industrial_expert",
+          "authorTitle": "Lead Analytics Architect",
+          "authorOrg": "Microsoft Azure Data",
+          "content": "Create a composite B-tree index matching the exact partitioning and ordering keys:\n`CREATE INDEX idx_trans_window ON enterprise_transactions(transaction_year, customer_segment, total_spend DESC);`\nThis allows PostgreSQL to stream pre-sorted records directly into the window accumulator node, dropping execution time from 14.8s to 82ms!",
+          "verified": true,
+          "upvotes": 19,
+          "createdAt": "2026-09-11T18:45:00.000Z"
+        },
+        {
+          "id": "reply-4-2",
+          "doubtId": "doubt-4",
+          "authorId": "user-balu",
+          "authorName": "Dr. Balu Prasath",
+          "authorRole": "mentor",
+          "authorTitle": "Department Faculty Advisor & Mentor",
+          "authorOrg": "College Department of CSE / AI",
+          "content": "Kalai, also consider running `SET work_mem = '64MB';` for that session to give the in-memory window buffer adequate room if running multi-tenant queries.",
+          "verified": true,
+          "upvotes": 7,
+          "createdAt": "2026-09-11T19:10:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "doubt-5",
+      "studentId": "student-ram",
+      "studentName": "Ram",
+      "studentEmail": "ram@college.edu",
+      "title": "How should 2026 engineering graduates prepare for Tier-1 coding & system design rounds?",
+      "queryText": "For upcoming on-campus drives like Amazon AWS, Qualcomm, and Zoho, what is the right split between dynamic programming and system design? How critical are CS fundamentals (OS, DBMS, Computer Networks)?",
+      "domain": "Placement Preparation",
+      "category": "interview_prep",
+      "tags": [
+        "Placements",
+        "InterviewPrep",
+        "DSA",
+        "SystemDesign",
+        "CoreCS"
+      ],
+      "urgency": "urgent",
+      "status": "answered",
+      "createdAt": "2026-09-12T07:15:00.000Z",
+      "upvotes": 24,
+      "replies": [
+        {
+          "id": "reply-5-1",
+          "doubtId": "doubt-5",
+          "authorId": "user-placement-cell",
+          "authorName": "Mr. K. Senthil Kumar",
+          "authorRole": "placement_cell",
+          "authorTitle": "Head of Corporate Relations & Placement Directorate",
+          "authorOrg": "College Central Placement Cell",
+          "content": "Here is the official hiring rubric from our visiting recruiters this semester:\n1. Round 1 Online Test: 100% DSA (Trees, Graphs, Sliding Window, DP, Binary Search).\n2. Technical Interview 1: DSA live whiteboard coding + time/space complexity proof.\n3. Technical Interview 2: Core CS (OS process scheduling, virtual memory, ACID transactions, TCP 3-way handshake) + applied projects.\n4. We have 8 recruitment drives live now on the portal. Make sure your readiness score is above 70% to unlock direct shortlisting!",
+          "verified": true,
+          "upvotes": 31,
+          "createdAt": "2026-09-12T08:00:00.000Z"
+        },
+        {
+          "id": "reply-5-2",
+          "doubtId": "doubt-5",
+          "authorId": "exp-msft-pooja",
+          "authorName": "Pooja Sharma",
+          "authorRole": "industrial_expert",
+          "authorTitle": "Senior Security Software Engineer",
+          "authorOrg": "Microsoft",
+          "content": "Master the Blind 75 questions first. When given a problem in interview, do NOT jump straight to code: talk through brute-force in 2 mins, identify trade-offs, state target O(N) complexity, and write modular clean code with descriptive variable names.",
+          "verified": true,
+          "upvotes": 25,
+          "createdAt": "2026-09-12T08:45:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "doubt-6",
+      "studentId": "student-saranya",
+      "studentName": "Saranya",
+      "studentEmail": "saranya@college.edu",
+      "title": "Preserving 3D rebar spatial geometry during IFC export from Revit to Navisworks for 4D simulation",
+      "queryText": "When linking Revit structural column reinforcements to MS Project schedule items in Navisworks Timeliner, certain 3D rebar meshes vanish. What IFC export profile ensures clash detection doesn't produce false negatives?",
+      "domain": "Civil & Infrastructure",
+      "category": "project_help",
+      "tags": [
+        "BIM",
+        "Revit",
+        "Navisworks",
+        "DigitalTwins",
+        "Civil"
+      ],
+      "urgency": "normal",
+      "status": "answered",
+      "createdAt": "2026-09-12T09:30:00.000Z",
+      "upvotes": 9,
+      "replies": [
+        {
+          "id": "reply-6-1",
+          "doubtId": "doubt-6",
+          "authorId": "exp-lt-rajesh",
+          "authorName": "Rajesh V.",
+          "authorRole": "industrial_expert",
+          "authorTitle": "BIM Lead & Digital Twin Engineer",
+          "authorOrg": "L&T Construction",
+          "content": "Use `IFC4 Design Transfer View` rather than IFC2x3 Coordination View. In Revit IFC Export options:\n1. Enable 'Export Rebar Elements as BRep Solid Geometry'.\n2. Turn on 'Include Internal Revit Property Sets'.\nThis eliminates mesh clipping in Navisworks 2024 and links seamlessly to Primavera P6 / MS Project time nodes.",
+          "verified": true,
+          "upvotes": 16,
+          "createdAt": "2026-09-12T10:15:00.000Z"
+        }
+      ]
+    }
+  ],
+  "placementDrives": [
+    {
+      "id": "drive-amazon-aws",
+      "companyName": "Amazon Web Services (AWS)",
+      "logoUrl": "https://images.unsplash.com/photo-1523474253243-231a4f58c7e0?w=100&auto=format&fit=crop&q=80",
+      "industry": "Cloud Computing & Enterprise Software",
+      "roleTitle": "Cloud Software Development Engineer (SDE-1)",
+      "ctcPackage": "₹24 - 32 LPA (₹18L Base + ₹8L Stock + Joining Bonus)",
+      "jobType": "full_time",
+      "workLocation": "Bengaluru / Hyderabad (Hybrid)",
+      "driveDate": "2026-10-15",
+      "applicationDeadline": "2026-10-05",
+      "status": "active",
+      "eligibleDepartments": [
+        "AI & DS",
+        "AI & ML",
+        "CSE",
+        "IT",
+        "CSBS",
+        "ECE"
+      ],
+      "minCgpa": 7.5,
+      "minReadinessScore": 72,
+      "requiredSkills": [
+        "Data Structures & Algorithms",
+        "Python / Java",
+        "Cloud Infrastructure",
+        "System Design",
+        "SQL"
+      ],
+      "selectionProcess": [
+        "Online Assessment: 2 LeetCode Medium/Hard Algorithmic Problems (90 mins)",
+        "Technical Round 1: Data Structures, Complexity Analysis & Live Whiteboard Coding",
+        "Technical Round 2: Low-Level System Design, Object-Oriented Modeling & Clean Code",
+        "Bar Raiser & Leadership Principles Interview"
+      ],
+      "description": "Join the core AWS infrastructure engineering team developing hyperscale distributed cloud services, high-throughput caching layers, and fault-tolerant storage engines powering millions of global customers.",
+      "hiringCount": 25,
+      "registeredStudentIds": [
+        "student-selva",
+        "student-sabari",
+        "student-kalai"
+      ],
+      "shortlistedStudentIds": [
+        "student-sabari"
+      ],
+      "placedStudentIds": []
+    },
+    {
+      "id": "drive-tata-elxsi",
+      "companyName": "Tata Elxsi",
+      "logoUrl": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=100&auto=format&fit=crop&q=80",
+      "industry": "Automotive Electronics & Autonomous Systems",
+      "roleTitle": "Embedded Systems & Autonomous Drive Engineer",
+      "ctcPackage": "₹12.5 - 16 LPA",
+      "jobType": "full_time",
+      "workLocation": "Bengaluru / Chennai",
+      "driveDate": "2026-10-22",
+      "applicationDeadline": "2026-10-12",
+      "status": "active",
+      "eligibleDepartments": [
+        "ECE",
+        "EEE",
+        "Mechatronics",
+        "Robotics & Automation",
+        "Automobile",
+        "Mechanical"
+      ],
+      "minCgpa": 7,
+      "minReadinessScore": 65,
+      "requiredSkills": [
+        "Embedded C/C++",
+        "RTOS",
+        "CAN / LIN Protocol",
+        "MATLAB Simulink",
+        "Microcontrollers"
+      ],
+      "selectionProcess": [
+        "Online Technical Test: C/C++ Bitwise Algorithms & Automotive Microcontrollers",
+        "Firmware Simulation Round: FreeRTOS Task Synchronization Drill",
+        "Technical Interview: AUTOSAR architecture & Hardware-in-the-loop (HIL) testing",
+        "HR & Culture Fitment"
+      ],
+      "description": "Engineer next-generation ADAS (Advanced Driver Assistance Systems), EV electronic control units (ECUs), and connected vehicle telematics firmware for premier global automotive OEMs.",
+      "hiringCount": 40,
+      "registeredStudentIds": [
+        "student-gokul",
+        "student-sanjay",
+        "student-kishore"
+      ],
+      "shortlistedStudentIds": [
+        "student-sanjay"
+      ],
+      "placedStudentIds": []
+    },
+    {
+      "id": "drive-bosch-mobility",
+      "companyName": "Bosch Global Software Technologies",
+      "logoUrl": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=100&auto=format&fit=crop&q=80",
+      "industry": "Electric Mobility & Smart IoT Systems",
+      "roleTitle": "EV Powertrain & Smart Mobility Firmware Engineer",
+      "ctcPackage": "₹14 - 18.5 LPA",
+      "jobType": "full_time",
+      "workLocation": "Bengaluru / Coimbatore",
+      "driveDate": "2026-11-05",
+      "applicationDeadline": "2026-10-28",
+      "status": "upcoming",
+      "eligibleDepartments": [
+        "EEE",
+        "ECE",
+        "Automobile",
+        "Mechanical",
+        "EIE"
+      ],
+      "minCgpa": 7.2,
+      "minReadinessScore": 68,
+      "requiredSkills": [
+        "Power Electronics",
+        "Battery Management Systems (BMS)",
+        "Embedded C",
+        "Simulink",
+        "Sensors"
+      ],
+      "selectionProcess": [
+        "Online Hardware & Firmware MCQ Test",
+        "Simulink / MATLAB Thermal & Battery Circuit Simulation Case Study",
+        "Technical Panel Interview: Inverter circuits & Field-Oriented Motor Control",
+        "Managerial Round"
+      ],
+      "description": "Architect mission-critical battery management software, regenerative braking controllers, and high-voltage inverter firmware for high-efficiency electric two-wheelers and passenger vehicles.",
+      "hiringCount": 30,
+      "registeredStudentIds": [
+        "student-gokul"
+      ],
+      "shortlistedStudentIds": [],
+      "placedStudentIds": []
+    },
+    {
+      "id": "drive-microsoft-ai",
+      "companyName": "Microsoft Corporation",
+      "logoUrl": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=100&auto=format&fit=crop&q=80",
+      "industry": "Artificial Intelligence & Enterprise Cloud",
+      "roleTitle": "Software Engineer - AI Platform & Intelligent Cloud",
+      "ctcPackage": "₹28 - 44 LPA (₹21L Base + Stocks + Relocation Allowance)",
+      "jobType": "full_time",
+      "workLocation": "Hyderabad / Bengaluru / Noida",
+      "driveDate": "2026-11-12",
+      "applicationDeadline": "2026-11-02",
+      "status": "upcoming",
+      "eligibleDepartments": [
+        "AI & DS",
+        "AI & ML",
+        "CSE",
+        "IT",
+        "Computer Engineering"
+      ],
+      "minCgpa": 8,
+      "minReadinessScore": 78,
+      "requiredSkills": [
+        "Data Structures",
+        "Python / C#",
+        "Deep Learning",
+        "Distributed Systems",
+        "SQL"
+      ],
+      "selectionProcess": [
+        "Online Assessment: 3 Algorithmic Coding Challenges (110 mins)",
+        "Technical Virtual Onsite 1: Advanced Graph Algorithms & Memory Optimization",
+        "Technical Virtual Onsite 2: System Architecture for Multi-Region Data Pipelines",
+        "Executive 'As-Appropriate' (AA) Leadership Interview"
+      ],
+      "description": "Build high-throughput inference backends, Azure OpenAI enterprise integrations, and scalable vector search pipelines serving billions of global requests daily.",
+      "hiringCount": 15,
+      "registeredStudentIds": [
+        "student-selva",
+        "student-deepa"
+      ],
+      "shortlistedStudentIds": [
+        "student-deepa"
+      ],
+      "placedStudentIds": []
+    },
+    {
+      "id": "drive-qualcomm-vlsi",
+      "companyName": "Qualcomm India",
+      "logoUrl": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=100&auto=format&fit=crop&q=80",
+      "industry": "Semiconductors & 5G Wireless Systems",
+      "roleTitle": "VLSI Physical Design & RTL Verification Engineer",
+      "ctcPackage": "₹18 - 25 LPA",
+      "jobType": "full_time",
+      "workLocation": "Bengaluru / Hyderabad / Chennai",
+      "driveDate": "2026-11-18",
+      "applicationDeadline": "2026-11-08",
+      "status": "upcoming",
+      "eligibleDepartments": [
+        "ECE",
+        "VLSI",
+        "Embedded Systems",
+        "Telecommunication"
+      ],
+      "minCgpa": 7.5,
+      "minReadinessScore": 70,
+      "requiredSkills": [
+        "Verilog / SystemVerilog",
+        "Digital Electronics",
+        "Static Timing Analysis (STA)",
+        "FPGA",
+        "UVM"
+      ],
+      "selectionProcess": [
+        "Digital Electronics, Setup/Hold Time & Verilog Coding Test",
+        "Technical Interview 1: Logic Synthesis, Clock Domain Crossing (CDC) & FSM Design",
+        "Technical Interview 2: SystemVerilog Testbenches & UVM Protocol Verification",
+        "HR Round"
+      ],
+      "description": "Design and verify cutting-edge Snapdragon 5G system-on-chip (SoC) architectures, AI hardware accelerators, and low-power mobile modem sub-systems on 3nm/4nm silicon processes.",
+      "hiringCount": 20,
+      "registeredStudentIds": [
+        "student-kishore"
+      ],
+      "shortlistedStudentIds": [],
+      "placedStudentIds": []
+    },
+    {
+      "id": "drive-zoho-corp",
+      "companyName": "Zoho Corporation",
+      "logoUrl": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=100&auto=format&fit=crop&q=80",
+      "industry": "SaaS & Enterprise Business Cloud",
+      "roleTitle": "Member Technical Staff (MTS) - Full Stack & Systems",
+      "ctcPackage": "₹8.5 - 14 LPA",
+      "jobType": "full_time",
+      "workLocation": "Chennai / Tenkasi / Coimbatore",
+      "driveDate": "2026-10-18",
+      "applicationDeadline": "2026-10-10",
+      "status": "active",
+      "eligibleDepartments": [
+        "All Engineering Branches"
+      ],
+      "minCgpa": 6.5,
+      "minReadinessScore": 60,
+      "requiredSkills": [
+        "Programming (Java/C++/Python)",
+        "Data Structures",
+        "Web Technologies",
+        "Logical Problem Solving"
+      ],
+      "selectionProcess": [
+        "Round 1: General Aptitude & Mental Arithmetic (45 mins)",
+        "Round 2: Basic Programming & Syntax Debugging (5 Questions)",
+        "Round 3: Advanced DSA & Problem Solving (3 Questions)",
+        "Round 4: On-Spot Application Prototyping in 3 Hours",
+        "Round 5: Technical Fitment & Leadership Interview"
+      ],
+      "description": "Build high-speed database engines, enterprise CRM workflows, and real-time collaboration suites for 100+ million global users across 150+ countries.",
+      "hiringCount": 80,
+      "registeredStudentIds": [
+        "student-karthick",
+        "student-sathya",
+        "student-kalai"
+      ],
+      "shortlistedStudentIds": [
+        "student-karthick",
+        "student-sathya"
+      ],
+      "placedStudentIds": [
+        "student-sabari"
+      ]
+    },
+    {
+      "id": "drive-lt-smartcities",
+      "companyName": "Larsen & Toubro (L&T)",
+      "logoUrl": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=100&auto=format&fit=crop&q=80",
+      "industry": "Smart Infrastructure, BIM & Digital Construction",
+      "roleTitle": "Graduate Engineer Trainee - Smart Cities & Digital Twins",
+      "ctcPackage": "₹9.5 - 13.5 LPA",
+      "jobType": "full_time",
+      "workLocation": "Chennai / Mumbai / Delhi NCR",
+      "driveDate": "2026-11-25",
+      "applicationDeadline": "2026-11-15",
+      "status": "upcoming",
+      "eligibleDepartments": [
+        "Civil",
+        "Construction",
+        "Environmental",
+        "Mechanical",
+        "EEE"
+      ],
+      "minCgpa": 6.8,
+      "minReadinessScore": 62,
+      "requiredSkills": [
+        "BIM (Revit / Navisworks)",
+        "Structural Analysis (STAAD.Pro)",
+        "AutoCAD",
+        "GIS Telemetry"
+      ],
+      "selectionProcess": [
+        "Online Engineering Aptitude & Core Structural Domain Test",
+        "Group Discussion on Sustainable Mega-Projects & Smart Cities",
+        "Technical Panel Interview: 4D BIM Clash Resolution & Concrete Technology",
+        "HR Interview & Medical Evaluation"
+      ],
+      "description": "Participate in India's landmark mega-infrastructure developments: high-speed rail corridors, underground metro networks, smart airport terminals, and green hydrogen synthesis facilities.",
+      "hiringCount": 50,
+      "registeredStudentIds": [
+        "student-saranya"
+      ],
+      "shortlistedStudentIds": [],
+      "placedStudentIds": []
+    },
+    {
+      "id": "drive-infosys-sp",
+      "companyName": "Infosys Limited",
+      "logoUrl": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=100&auto=format&fit=crop&q=80",
+      "industry": "Enterprise Digital Transformation & AI",
+      "roleTitle": "Specialist Programmer (SP) & Digital Specialist Engineer",
+      "ctcPackage": "₹9.5 - 12 LPA (SP: ₹9.5L, DSE: ₹6.5L)",
+      "jobType": "full_time",
+      "workLocation": "Pan India / Mysore Training Campus",
+      "driveDate": "2026-10-29",
+      "applicationDeadline": "2026-10-19",
+      "status": "active",
+      "eligibleDepartments": [
+        "All Engineering Branches"
+      ],
+      "minCgpa": 6.5,
+      "minReadinessScore": 55,
+      "requiredSkills": [
+        "Algorithms & Data Structures",
+        "Python / Java",
+        "Database Systems",
+        "Problem Solving"
+      ],
+      "selectionProcess": [
+        "National Coding Challenge: 3 Hard Algorithmic Problems (180 mins)",
+        "Technical Interview: Dynamic Programming & Complexity Optimization",
+        "HR Fitment & Offer Rollout"
+      ],
+      "description": "Elite development cohort working on generative AI solutions, cloud-native enterprise microservices, and automated blockchain settlement networks.",
+      "hiringCount": 120,
+      "registeredStudentIds": [
+        "student-ram",
+        "student-seetha",
+        "student-karthick"
+      ],
+      "shortlistedStudentIds": [
+        "student-ram",
+        "student-seetha"
+      ],
+      "placedStudentIds": [
+        "student-kalai"
+      ]
+    }
+  ],
+  "placementApplications": [
+    {
+      "id": "app-1",
+      "driveId": "drive-amazon-aws",
+      "studentId": "student-sabari",
+      "studentName": "Sabari",
+      "department": "Computer Science & Engineering",
+      "cgpa": 8.92,
+      "readinessPercentage": 82,
+      "status": "shortlisted",
+      "appliedAt": "2026-09-08T14:30:00.000Z",
+      "feedback": "Cleared Online Coding Assessment (100% test cases passed). Technical Interview 1 scheduled for Oct 15."
+    },
+    {
+      "id": "app-2",
+      "driveId": "drive-amazon-aws",
+      "studentId": "student-selva",
+      "studentName": "Selva",
+      "department": "Artificial Intelligence & Data Science",
+      "cgpa": 8.85,
+      "readinessPercentage": 78,
+      "status": "applied",
+      "appliedAt": "2026-09-10T11:00:00.000Z",
+      "feedback": "Application registered. Online Assessment link dispatched to selva@college.edu."
+    },
+    {
+      "id": "app-3",
+      "driveId": "drive-zoho-corp",
+      "studentId": "student-sabari",
+      "studentName": "Sabari",
+      "department": "Computer Science & Engineering",
+      "cgpa": 8.92,
+      "readinessPercentage": 82,
+      "status": "offer_extended",
+      "appliedAt": "2026-08-28T09:00:00.000Z",
+      "feedback": "Outstanding performance in On-Spot Prototyping. Official offer letter issued for Member Technical Staff (₹12 LPA)."
+    },
+    {
+      "id": "app-4",
+      "driveId": "drive-zoho-corp",
+      "studentId": "student-karthick",
+      "studentName": "Karthick",
+      "department": "Computer Science & Business Systems",
+      "cgpa": 8.1,
+      "readinessPercentage": 74,
+      "status": "shortlisted",
+      "appliedAt": "2026-09-02T16:00:00.000Z",
+      "feedback": "Advanced DSA round cleared. Application Development round scheduled for Oct 18."
+    },
+    {
+      "id": "app-5",
+      "driveId": "drive-microsoft-ai",
+      "studentId": "student-deepa",
+      "studentName": "Deepa",
+      "department": "AI & Machine Learning",
+      "cgpa": 9.15,
+      "readinessPercentage": 86,
+      "status": "interview_scheduled",
+      "appliedAt": "2026-09-05T10:00:00.000Z",
+      "feedback": "OA score 300/300. Virtual Onsite Technical Interview scheduled for Nov 12."
+    },
+    {
+      "id": "app-6",
+      "driveId": "drive-tata-elxsi",
+      "studentId": "student-sanjay",
+      "studentName": "Sanjay",
+      "department": "Mechanical & Robotics Engineering",
+      "cgpa": 8.2,
+      "readinessPercentage": 68,
+      "status": "shortlisted",
+      "appliedAt": "2026-09-06T15:30:00.000Z",
+      "feedback": "Cleared C/C++ bitwise drill. Firmware simulation round scheduled for Oct 22."
+    },
+    {
+      "id": "app-7",
+      "driveId": "drive-infosys-sp",
+      "studentId": "student-kalai",
+      "studentName": "Kalai",
+      "department": "Computer Science & Engineering",
+      "cgpa": 8.45,
+      "readinessPercentage": 72,
+      "status": "offer_extended",
+      "appliedAt": "2026-08-25T11:00:00.000Z",
+      "feedback": "Specialist Programmer offer confirmed (₹9.5 LPA). Welcome to Infosys SP cohort!"
+    },
+    {
+      "id": "app-8",
+      "driveId": "drive-lt-smartcities",
+      "studentId": "student-saranya",
+      "studentName": "Saranya",
+      "department": "Civil & Smart Infrastructure",
+      "cgpa": 7.9,
+      "readinessPercentage": 64,
+      "status": "applied",
+      "appliedAt": "2026-09-11T12:00:00.000Z",
+      "feedback": "Application submitted. Document verification under review by Central Placement Cell."
+    }
+  ]
 }

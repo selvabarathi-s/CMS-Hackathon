@@ -11,7 +11,11 @@ import {
   CurriculumGapInsight,
   AIMessage,
   UserAccount,
-  NotificationItem
+  NotificationItem,
+  DoubtQuery,
+  DoubtReply,
+  PlacementCompanyDrive,
+  PlacementApplication
 } from '../types/shared.js';
 import {
   SEED_CAREERS,
@@ -22,7 +26,10 @@ import {
   SEED_INTERVENTIONS,
   SEED_CURRICULUM_GAPS,
   SEED_USERS,
-  SEED_NOTIFICATIONS
+  SEED_NOTIFICATIONS,
+  SEED_DOUBTS,
+  SEED_PLACEMENT_DRIVES,
+  SEED_PLACEMENT_APPLICATIONS
 } from './seedData.js';
 
 interface DatabaseSchema {
@@ -35,6 +42,9 @@ interface DatabaseSchema {
   interventions: MentorIntervention[];
   curriculumGaps: CurriculumGapInsight[];
   notifications: NotificationItem[];
+  doubts: DoubtQuery[];
+  placementDrives: PlacementCompanyDrive[];
+  placementApplications: PlacementApplication[];
   chatHistory: Record<string, AIMessage[]>; // studentId -> AIMessage[]
 }
 
@@ -77,6 +87,15 @@ class DatabaseService {
           if (!parsed.notifications || parsed.notifications.length === 0) {
             parsed.notifications = SEED_NOTIFICATIONS;
           }
+          if (!parsed.doubts || parsed.doubts.length === 0) {
+            parsed.doubts = SEED_DOUBTS;
+          }
+          if (!parsed.placementDrives || parsed.placementDrives.length === 0) {
+            parsed.placementDrives = SEED_PLACEMENT_DRIVES;
+          }
+          if (!parsed.placementApplications || parsed.placementApplications.length === 0) {
+            parsed.placementApplications = SEED_PLACEMENT_APPLICATIONS;
+          }
           this.saveData(parsed);
           return parsed;
         }
@@ -95,6 +114,9 @@ class DatabaseService {
       interventions: SEED_INTERVENTIONS,
       curriculumGaps: SEED_CURRICULUM_GAPS,
       notifications: SEED_NOTIFICATIONS,
+      doubts: SEED_DOUBTS,
+      placementDrives: SEED_PLACEMENT_DRIVES,
+      placementApplications: SEED_PLACEMENT_APPLICATIONS,
       chatHistory: {}
     };
 
@@ -291,6 +313,69 @@ class DatabaseService {
     this.saveData();
   }
 
+  // --- Real-Time Guidance & Doubts ---
+  public getDoubts(): DoubtQuery[] {
+    return this.data.doubts || [];
+  }
+
+  public getDoubtById(id: string): DoubtQuery | undefined {
+    return (this.data.doubts || []).find(d => d.id === id);
+  }
+
+  public saveDoubt(doubt: DoubtQuery): DoubtQuery {
+    if (!this.data.doubts) this.data.doubts = [];
+    const idx = this.data.doubts.findIndex(d => d.id === doubt.id);
+    if (idx >= 0) {
+      this.data.doubts[idx] = doubt;
+    } else {
+      this.data.doubts.unshift(doubt);
+    }
+    this.saveData();
+    return doubt;
+  }
+
+  // --- Live Placement Drives ---
+  public getPlacementDrives(): PlacementCompanyDrive[] {
+    return this.data.placementDrives || [];
+  }
+
+  public getPlacementDriveById(id: string): PlacementCompanyDrive | undefined {
+    return (this.data.placementDrives || []).find(d => d.id === id);
+  }
+
+  public savePlacementDrive(drive: PlacementCompanyDrive): PlacementCompanyDrive {
+    if (!this.data.placementDrives) this.data.placementDrives = [];
+    const idx = this.data.placementDrives.findIndex(d => d.id === drive.id);
+    if (idx >= 0) {
+      this.data.placementDrives[idx] = drive;
+    } else {
+      this.data.placementDrives.unshift(drive);
+    }
+    this.saveData();
+    return drive;
+  }
+
+  // --- Student Placement Applications ---
+  public getPlacementApplications(): PlacementApplication[] {
+    return this.data.placementApplications || [];
+  }
+
+  public getPlacementApplicationsByStudent(studentId: string): PlacementApplication[] {
+    return (this.data.placementApplications || []).filter(a => a.studentId === studentId);
+  }
+
+  public savePlacementApplication(app: PlacementApplication): PlacementApplication {
+    if (!this.data.placementApplications) this.data.placementApplications = [];
+    const idx = this.data.placementApplications.findIndex(a => a.id === app.id);
+    if (idx >= 0) {
+      this.data.placementApplications[idx] = app;
+    } else {
+      this.data.placementApplications.unshift(app);
+    }
+    this.saveData();
+    return app;
+  }
+
   public resetToSeed(): void {
     this.data = {
       users: SEED_USERS,
@@ -302,6 +387,9 @@ class DatabaseService {
       interventions: SEED_INTERVENTIONS,
       curriculumGaps: SEED_CURRICULUM_GAPS,
       notifications: SEED_NOTIFICATIONS,
+      doubts: SEED_DOUBTS,
+      placementDrives: SEED_PLACEMENT_DRIVES,
+      placementApplications: SEED_PLACEMENT_APPLICATIONS,
       chatHistory: {}
     };
     this.saveData();

@@ -14,7 +14,9 @@ import {
   Users,
   BarChart3,
   Flame,
-  ArrowRight
+  ArrowRight,
+  MessageSquare,
+  Building2
 } from 'lucide-react';
 
 interface SidebarProps {
@@ -26,13 +28,16 @@ export const Sidebar: React.FC<SidebarProps> = ({ onOpenMobileCompanion }) => {
 
   const navItems = [
     { to: '/dashboard', label: 'Dashboard', icon: Compass, roles: ['student'] },
-    { to: '/explore', label: 'Career Explorer', icon: Briefcase, roles: ['student', 'mentor', 'admin'] },
+    { to: '/explore', label: 'Career Explorer', icon: Briefcase, roles: ['student', 'mentor', 'admin', 'placement_cell'] },
     { to: '/roadmap', label: 'Adaptive Roadmap', icon: MapPin, roles: ['student'] },
-    { to: '/resources', label: 'Resource Hub', icon: BookOpen, roles: ['student', 'mentor', 'admin'] },
+    { to: '/resources', label: 'Resource Hub', icon: BookOpen, roles: ['student', 'mentor', 'admin', 'placement_cell'] },
     { to: '/assessments', label: 'Assessment Arena', icon: Award, roles: ['student'] },
     { to: '/skills', label: 'Skill Gap Studio', icon: Layers, roles: ['student'] },
     { to: '/simulator', label: 'Career Simulator & Pivot', icon: GitCompare, roles: ['student', 'mentor', 'admin'] },
     { to: '/ai-mentor', label: 'AI Career Mentor', icon: Sparkles, roles: ['student', 'mentor', 'admin'], highlight: true },
+    { to: '/guidance', label: 'Real-Time Guidance', icon: MessageSquare, roles: ['student', 'mentor', 'admin', 'placement_cell'] },
+    { to: '/placements', label: 'Live Placement Drives', icon: Building2, roles: ['student', 'mentor', 'admin', 'placement_cell'] },
+    { to: '/placement-cell', label: 'Placement Cell Directorate', icon: Building2, roles: ['placement_cell', 'admin'] },
     { to: '/mentor', label: 'Faculty Mentor Hub', icon: Users, roles: ['mentor', 'admin'] },
     { to: '/admin', label: 'Institutional Analytics', icon: BarChart3, roles: ['admin'] },
     { to: '/profile', label: 'Student Profile', icon: User, roles: ['student'] }

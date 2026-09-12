@@ -57,6 +57,16 @@ export const DEFAULT_CREDENTIALS = [
     studentId: 'FAC-ENG-904'
   },
   {
+    portal: 'Placement Cell Portal',
+    name: 'Mr. K. Senthil Kumar',
+    role: 'placement_cell' as const,
+    stream: 'Central Placement & Corporate Relations Directorate',
+    goal: 'Campus Recruitment Drives & Student Placements',
+    email: 'placement@college.edu',
+    password: 'password123',
+    studentId: 'OFF-PLC-001'
+  },
+  {
     portal: 'Institution / Admin Portal',
     name: 'Ms. Anjali Govindh',
     role: 'admin' as const,

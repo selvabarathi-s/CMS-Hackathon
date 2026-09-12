@@ -21,6 +21,9 @@ import { AIMentorPage } from './pages/AIMentorPage';
 import { MentorPortalPage } from './pages/MentorPortalPage';
 import { AdminHubPage } from './pages/AdminHubPage';
 import { StudentProfilePage } from './pages/StudentProfilePage';
+import { RealTimeGuidancePage } from './pages/RealTimeGuidancePage';
+import { LivePlacementDrivesPage } from './pages/LivePlacementDrivesPage';
+import { PlacementCellPortalPage } from './pages/PlacementCellPortalPage';
 
 import {
   Compass,
@@ -83,6 +86,9 @@ const AppLayout: React.FC = () => {
             <Route path="/mentor" element={<MentorPortalPage />} />
             <Route path="/admin" element={<AdminHubPage />} />
             <Route path="/profile" element={<StudentProfilePage />} />
+            <Route path="/guidance" element={<RealTimeGuidancePage />} />
+            <Route path="/placements" element={<LivePlacementDrivesPage />} />
+            <Route path="/placement-cell" element={<PlacementCellPortalPage />} />
 
             {/* Fallback */}
             <Route path="*" element={<Navigate to="/" replace />} />
@@ -105,7 +111,7 @@ const AppLayout: React.FC = () => {
         </NavLink>
 
         <NavLink
-          to={user ? (user.role === 'admin' ? '/admin' : user.role === 'mentor' ? '/mentor' : '/dashboard') : '/login'}
+          to={user ? (user.role === 'admin' ? '/admin' : user.role === 'mentor' ? '/mentor' : user.role === 'placement_cell' ? '/placement-cell' : '/dashboard') : '/login'}
           className={({ isActive }) =>
             `flex flex-col items-center gap-1 text-[10px] font-medium transition-colors ${
               isActive ? 'text-blue-600 dark:text-blue-400 font-bold' : 'text-slate-500 dark:text-slate-400'
