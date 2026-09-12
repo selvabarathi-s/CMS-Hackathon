@@ -15,8 +15,10 @@ import {
   ArrowRight,
   ExternalLink,
   Sparkles,
-  Zap
+  Zap,
+  Briefcase
 } from 'lucide-react';
+import confetti from 'canvas-confetti';
 
 export const AdaptiveRoadmapPage: React.FC = () => {
   const { profile, targetCareer, refreshProfileData } = useAuth();
@@ -44,6 +46,15 @@ export const AdaptiveRoadmapPage: React.FC = () => {
       const res = await api.updateMilestoneStatus(profile.id, milestoneId, newStatus);
       if (res.success) {
         setMilestones(res.milestones);
+        if (newStatus === 'completed') {
+          try {
+            confetti({
+              particleCount: 60,
+              spread: 70,
+              origin: { y: 0.7 }
+            });
+          } catch (e) {}
+        }
         await refreshProfileData();
       }
     } catch (err) {

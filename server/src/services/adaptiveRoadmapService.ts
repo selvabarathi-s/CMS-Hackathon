@@ -36,11 +36,11 @@ export class AdaptiveRoadmapService {
         }
       ];
 
+      const completedIds = profile.completedMilestoneIds || [];
+
       // Stage 1: LEARN (Theory & Foundational Patterns)
       let learnStatus: MilestoneStatus = 'not_started';
-      if (gap.status === 'mastered') {
-        learnStatus = 'completed';
-      } else if (gap.status === 'strong') {
+      if (completedIds.includes(`ms-${gap.skillId}-learn`) || gap.status === 'mastered' || gap.status === 'strong') {
         learnStatus = 'completed';
       } else if (gap.priority === 'critical' && milestones.length === 0) {
         learnStatus = 'in_progress';
@@ -62,8 +62,10 @@ export class AdaptiveRoadmapService {
 
       // Stage 2: PRACTICE (Interactive Exercises & Drills)
       let practiceStatus: MilestoneStatus = 'locked';
-      if (learnStatus === 'completed') {
-        practiceStatus = gap.status === 'mastered' ? 'completed' : 'in_progress';
+      if (completedIds.includes(`ms-${gap.skillId}-practice`) || gap.status === 'mastered') {
+        practiceStatus = 'completed';
+      } else if (learnStatus === 'completed') {
+        practiceStatus = 'in_progress';
       }
 
       milestones.push({
@@ -88,8 +90,10 @@ export class AdaptiveRoadmapService {
 
       // Stage 3: BUILD (Real-World Portfolio Project)
       let buildStatus: MilestoneStatus = 'locked';
-      if (practiceStatus === 'completed') {
-        buildStatus = 'not_started';
+      if (completedIds.includes(`ms-${gap.skillId}-build`)) {
+        buildStatus = 'completed';
+      } else if (practiceStatus === 'completed') {
+        buildStatus = 'in_progress';
       }
 
       milestones.push({
@@ -116,8 +120,10 @@ export class AdaptiveRoadmapService {
       // Stage 4: EVALUATE (Skill Mastery Assessment)
       const matchingAssessment = db.getAssessments(gap.skillId)[0];
       let evalStatus: MilestoneStatus = 'locked';
-      if (gap.status === 'mastered') {
+      if (completedIds.includes(`ms-${gap.skillId}-evaluate`) || gap.status === 'mastered') {
         evalStatus = 'completed';
+      } else if (buildStatus === 'completed') {
+        evalStatus = 'not_started';
       }
 
       milestones.push({

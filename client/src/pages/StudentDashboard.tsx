@@ -107,15 +107,22 @@ export const StudentDashboard: React.FC = () => {
           {/* Quick Actions */}
           <div className="flex flex-wrap lg:flex-col gap-2 shrink-0">
             <button
+              onClick={() => navigate('/explore')}
+              className="flex items-center justify-center gap-2 rounded-xl border border-emerald-500/40 bg-emerald-950/60 hover:bg-emerald-900/60 px-4 py-2 text-xs font-bold text-emerald-300 transition-colors"
+            >
+              <Briefcase className="h-4 w-4 text-emerald-400" />
+              <span>Change Career Goal</span>
+            </button>
+            <button
               onClick={() => navigate('/assessments')}
-              className="flex items-center justify-center gap-2 rounded-xl bg-blue-600 hover:bg-blue-500 px-4 py-2.5 text-xs font-bold text-white shadow-lg shadow-blue-600/30 transition-all"
+              className="flex items-center justify-center gap-2 rounded-xl bg-blue-600 hover:bg-blue-500 px-4 py-2 text-xs font-bold text-white shadow-lg shadow-blue-600/30 transition-all"
             >
               <Award className="h-4 w-4" />
               <span>Take Assessment</span>
             </button>
             <button
               onClick={() => navigate('/simulator')}
-              className="flex items-center justify-center gap-2 rounded-xl border border-slate-700 bg-slate-800/80 hover:bg-slate-700 px-4 py-2.5 text-xs font-bold text-slate-200 transition-colors"
+              className="flex items-center justify-center gap-2 rounded-xl border border-slate-700 bg-slate-800/80 hover:bg-slate-700 px-4 py-2 text-xs font-bold text-slate-200 transition-colors"
             >
               <GitCompare className="h-4 w-4 text-cyan-400" />
               <span>Simulate Career Pivot</span>

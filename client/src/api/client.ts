@@ -187,6 +187,31 @@ export const api = {
       success: boolean;
       milestones: RoadmapMilestone[];
       nextAction: NextBestAction;
+      readiness?: any;
+      profile?: StudentProfile;
+    }>;
+  },
+
+  async getResources(studentId: string) {
+    const res = await fetch(`${API_BASE}/roadmaps/${studentId}/resources`);
+    return res.json() as Promise<{
+      resources: Resource[];
+      completedResourceIds: string[];
+      careerTitle: string;
+      discipline: string;
+    }>;
+  },
+
+  async completeResource(studentId: string, resourceId: string) {
+    const res = await fetch(`${API_BASE}/roadmaps/${studentId}/resources/${resourceId}/complete`, {
+      method: 'POST'
+    });
+    return res.json() as Promise<{
+      success: boolean;
+      isCompleted: boolean;
+      completedResourceIds: string[];
+      readiness?: any;
+      profile?: StudentProfile;
     }>;
   },
 

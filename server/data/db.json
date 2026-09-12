@@ -2920,9 +2920,9 @@
         {
           "skillId": "skill-sql",
           "skillName": "SQL & Relational Databases",
-          "level": 45,
+          "level": 65,
           "verified": true,
-          "lastAssessedAt": "2026-09-10"
+          "lastAssessedAt": "2026-09-12"
         },
         {
           "skillId": "skill-stats",
@@ -2962,15 +2962,21 @@
       },
       "uncertaintyScore": 18,
       "readinessScore": {
-        "overallPercentage": 62,
-        "technicalScore": 60,
-        "projectScore": 65,
-        "problemSolvingScore": 70,
+        "overallPercentage": 61,
+        "technicalScore": 65,
+        "projectScore": 50,
+        "problemSolvingScore": 73,
         "softSkillScore": 75,
         "status": "building"
       },
       "learningPace": "accelerated",
-      "weeklyHoursCommitted": 12
+      "weeklyHoursCommitted": 12,
+      "completedResourceIds": [
+        "res-sql-interactive"
+      ],
+      "completedMilestoneIds": [
+        "ms-skill-sql-learn"
+      ]
     },
     {
       "id": "student-rajesh",

@@ -226,6 +226,8 @@ export interface StudentProfile {
   learningStyle?: 'hands_on' | 'visual' | 'reading' | 'interactive';
   targetTimeline?: 'immediate' | 'skill_building' | 'higher_studies';
   priorExperience?: string;
+  completedMilestoneIds?: string[];
+  completedResourceIds?: string[];
 }
 
 export interface SkillGapItem {

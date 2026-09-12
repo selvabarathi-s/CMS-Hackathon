@@ -349,7 +349,7 @@ export const RegisterPage: React.FC = () => {
   const [cgpa, setCgpa] = useState('8.4');
 
   // Step 4: Career Aspiration & Skills
-  const [targetCareerId, setTargetCareerId] = useState('career-data-analyst');
+  const [targetCareerId, setTargetCareerId] = useState('');
   const [availableCareers, setAvailableCareers] = useState<Career[]>([]);
   const [selectedSkills, setSelectedSkills] = useState<string[]>([]);
   const [skillProficiency, setSkillProficiency] = useState<'beginner' | 'intermediate' | 'advanced'>('intermediate');
@@ -365,6 +365,10 @@ export const RegisterPage: React.FC = () => {
       try {
         const { careers } = await api.getCareers();
         setAvailableCareers(careers);
+        const match = careers.find(c => c.discipline === discipline);
+        if (match) {
+          setTargetCareerId(match.id);
+        }
       } catch (err) {
         console.error('Failed to load careers:', err);
       }
@@ -414,6 +418,14 @@ export const RegisterPage: React.FC = () => {
         return;
       }
     }
+
+    if (step === 4) {
+      if (!targetCareerId) {
+        setErrorMsg('Please select your target career goal from the choices below.');
+        return;
+      }
+    }
+
     setStep(prev => prev + 1);
   };
 
