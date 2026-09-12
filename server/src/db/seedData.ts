@@ -6740,7 +6740,7 @@ export const SEED_USERS: UserAccount[] = [
     discipline: 'engineering',
     stream: 'Artificial Intelligence & Data Science',
     studentId: 'STU-ENG-2024-001',
-    avatarUrl: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: '',
     createdAt: '2024-01-10T08:00:00.000Z'
   },
   {
@@ -6753,7 +6753,7 @@ export const SEED_USERS: UserAccount[] = [
     discipline: 'engineering',
     stream: 'Computer Science & Engineering / IT',
     studentId: 'STU-ENG-2024-002',
-    avatarUrl: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: '',
     createdAt: '2024-01-12T08:00:00.000Z'
   },
   {
@@ -6766,7 +6766,7 @@ export const SEED_USERS: UserAccount[] = [
     discipline: 'engineering',
     stream: 'Computer Science & Engineering / IT',
     studentId: 'STU-ENG-2024-003',
-    avatarUrl: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: '',
     createdAt: '2024-01-15T08:00:00.000Z'
   },
   {
@@ -6779,7 +6779,7 @@ export const SEED_USERS: UserAccount[] = [
     discipline: 'engineering',
     stream: 'Electrical & Electronics Engineering (EEE)',
     studentId: 'STU-ENG-2024-004',
-    avatarUrl: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: '',
     createdAt: '2024-01-18T08:00:00.000Z'
   },
   {
@@ -6792,7 +6792,7 @@ export const SEED_USERS: UserAccount[] = [
     discipline: 'engineering',
     stream: 'Mechanical & Robotics Engineering',
     studentId: 'STU-ENG-2024-005',
-    avatarUrl: 'https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: '',
     createdAt: '2024-01-20T08:00:00.000Z'
   },
   {
@@ -6805,7 +6805,7 @@ export const SEED_USERS: UserAccount[] = [
     discipline: 'engineering',
     stream: 'Electronics & Communication (ECE)',
     studentId: 'STU-ENG-2024-006',
-    avatarUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: '',
     createdAt: '2024-01-22T08:00:00.000Z'
   },
   {
@@ -6818,7 +6818,7 @@ export const SEED_USERS: UserAccount[] = [
     discipline: 'engineering',
     stream: 'Computer Science & Engineering / IT',
     studentId: 'STU-ENG-2024-007',
-    avatarUrl: 'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: '',
     createdAt: '2024-01-25T08:00:00.000Z'
   },
 
@@ -6833,7 +6833,7 @@ export const SEED_USERS: UserAccount[] = [
     discipline: 'engineering',
     stream: 'Computer Science & Engineering / IT',
     studentId: 'STU-ENG-2024-008',
-    avatarUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: '',
     createdAt: '2024-01-28T08:00:00.000Z'
   },
   {
@@ -6846,7 +6846,7 @@ export const SEED_USERS: UserAccount[] = [
     discipline: 'engineering',
     stream: 'Artificial Intelligence & Data Science',
     studentId: 'STU-ENG-2024-009',
-    avatarUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: '',
     createdAt: '2024-02-01T08:00:00.000Z'
   },
   {
@@ -6859,7 +6859,7 @@ export const SEED_USERS: UserAccount[] = [
     discipline: 'engineering',
     stream: 'Electronics & Communication (ECE)',
     studentId: 'STU-ENG-2024-010',
-    avatarUrl: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: '',
     createdAt: '2024-02-03T08:00:00.000Z'
   },
   {
@@ -6872,7 +6872,7 @@ export const SEED_USERS: UserAccount[] = [
     discipline: 'engineering',
     stream: 'Computer Science & Engineering / IT',
     studentId: 'STU-ENG-2024-011',
-    avatarUrl: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: '',
     createdAt: '2024-02-05T08:00:00.000Z'
   },
   {
@@ -6885,7 +6885,7 @@ export const SEED_USERS: UserAccount[] = [
     discipline: 'engineering',
     stream: 'Civil & Environmental Engineering',
     studentId: 'STU-ENG-2024-012',
-    avatarUrl: 'https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: '',
     createdAt: '2024-02-08T08:00:00.000Z'
   },
 
@@ -6900,7 +6900,7 @@ export const SEED_USERS: UserAccount[] = [
     discipline: 'engineering',
     stream: 'Department of Computing & Engineering Sciences',
     studentId: 'FAC-ENG-904',
-    avatarUrl: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: '',
     createdAt: '2023-09-01T08:00:00.000Z'
   },
   {
@@ -6913,7 +6913,7 @@ export const SEED_USERS: UserAccount[] = [
     discipline: 'engineering',
     stream: 'Dean of Academic Intelligence & Curriculum Alignment',
     studentId: 'ADM-EXEC-001',
-    avatarUrl: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: '',
     createdAt: '2023-08-01T08:00:00.000Z'
   }
 ];
@@ -6925,7 +6925,7 @@ export const SEED_PROFILES: StudentProfile[] = [
     userId: 'user-selva',
     fullName: 'Selva',
     email: 'selva@college.edu',
-    avatarUrl: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: '',
     discipline: 'engineering',
     stream: 'Artificial Intelligence & Data Science',
     degree: 'B.Tech in Artificial Intelligence & Data Science',
@@ -6977,7 +6977,7 @@ export const SEED_PROFILES: StudentProfile[] = [
     userId: 'user-sabari',
     fullName: 'Sabari',
     email: 'sabari@college.edu',
-    avatarUrl: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: '',
     discipline: 'engineering',
     stream: 'Computer Science & Engineering / IT',
     degree: 'B.Tech in Computer Science & Engineering',
@@ -7029,7 +7029,7 @@ export const SEED_PROFILES: StudentProfile[] = [
     userId: 'user-ram',
     fullName: 'Ram',
     email: 'ram@college.edu',
-    avatarUrl: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: '',
     discipline: 'engineering',
     stream: 'Computer Science & Engineering / IT',
     degree: 'B.Tech in Cybersecurity & Network Systems',
@@ -7077,7 +7077,7 @@ export const SEED_PROFILES: StudentProfile[] = [
     userId: 'user-gokul',
     fullName: 'Gokul',
     email: 'gokul@college.edu',
-    avatarUrl: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: '',
     discipline: 'engineering',
     stream: 'Electrical & Electronics Engineering (EEE)',
     degree: 'B.Tech in Electrical & Electronics Engineering',
@@ -7116,7 +7116,7 @@ export const SEED_PROFILES: StudentProfile[] = [
     userId: 'user-sanjay',
     fullName: 'Sanjay',
     email: 'sanjay@college.edu',
-    avatarUrl: 'https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: '',
     discipline: 'engineering',
     stream: 'Mechanical & Robotics Engineering',
     degree: 'B.Tech in Mechanical & Robotics Engineering',
@@ -7163,7 +7163,7 @@ export const SEED_PROFILES: StudentProfile[] = [
     userId: 'user-kishore',
     fullName: 'Kishore',
     email: 'kishore@college.edu',
-    avatarUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: '',
     discipline: 'engineering',
     stream: 'Electronics & Communication (ECE)',
     degree: 'B.Tech in Electronics & Communication Engineering',
@@ -7210,7 +7210,7 @@ export const SEED_PROFILES: StudentProfile[] = [
     userId: 'user-karthick',
     fullName: 'Karthick',
     email: 'karthick@college.edu',
-    avatarUrl: 'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: '',
     discipline: 'engineering',
     stream: 'Computer Science & Engineering / IT',
     degree: 'B.Tech in Computer Science & Business Systems',
@@ -7258,7 +7258,7 @@ export const SEED_PROFILES: StudentProfile[] = [
     userId: 'user-kalai',
     fullName: 'Kalai',
     email: 'kalai@college.edu',
-    avatarUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: '',
     discipline: 'engineering',
     stream: 'Computer Science & Engineering / IT',
     degree: 'B.Tech in Computer Science & Engineering',
@@ -7310,7 +7310,7 @@ export const SEED_PROFILES: StudentProfile[] = [
     userId: 'user-deepa',
     fullName: 'Deepa',
     email: 'deepa@college.edu',
-    avatarUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: '',
     discipline: 'engineering',
     stream: 'Artificial Intelligence & Data Science',
     degree: 'B.Tech in Artificial Intelligence & Machine Learning',
@@ -7358,7 +7358,7 @@ export const SEED_PROFILES: StudentProfile[] = [
     userId: 'user-seetha',
     fullName: 'Seetha',
     email: 'seetha@college.edu',
-    avatarUrl: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: '',
     discipline: 'engineering',
     stream: 'Electronics & Communication (ECE)',
     degree: 'B.Tech in Biomedical Engineering',
@@ -7405,7 +7405,7 @@ export const SEED_PROFILES: StudentProfile[] = [
     userId: 'user-sathya',
     fullName: 'Sathya',
     email: 'sathya@college.edu',
-    avatarUrl: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: '',
     discipline: 'engineering',
     stream: 'Computer Science & Engineering / IT',
     degree: 'B.Tech in Information Technology',
@@ -7452,7 +7452,7 @@ export const SEED_PROFILES: StudentProfile[] = [
     userId: 'user-saranya',
     fullName: 'Saranya',
     email: 'saranya@college.edu',
-    avatarUrl: 'https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?w=150&auto=format&fit=crop&q=80',
+    avatarUrl: '',
     discipline: 'engineering',
     stream: 'Civil & Environmental Engineering',
     degree: 'B.Tech in Civil & Smart Infrastructure Technology',
@@ -7877,7 +7877,7 @@ export const SEED_PLACEMENT_DRIVES: PlacementCompanyDrive[] = [
   {
     "id": "drive-amazon-aws",
     "companyName": "Amazon Web Services (AWS)",
-    "logoUrl": "https://images.unsplash.com/photo-1523474253243-231a4f58c7e0?w=100&auto=format&fit=crop&q=80",
+    "logoUrl": "",
     "industry": "Cloud Computing & Enterprise Software",
     "roleTitle": "Cloud Software Development Engineer (SDE-1)",
     "ctcPackage": "\u20b924 - 32 LPA (\u20b918L Base + \u20b98L Stock + Joining Bonus)",
@@ -7924,7 +7924,7 @@ export const SEED_PLACEMENT_DRIVES: PlacementCompanyDrive[] = [
   {
     "id": "drive-tata-elxsi",
     "companyName": "Tata Elxsi",
-    "logoUrl": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=100&auto=format&fit=crop&q=80",
+    "logoUrl": "",
     "industry": "Automotive Electronics & Autonomous Systems",
     "roleTitle": "Embedded Systems & Autonomous Drive Engineer",
     "ctcPackage": "\u20b912.5 - 16 LPA",
@@ -7971,7 +7971,7 @@ export const SEED_PLACEMENT_DRIVES: PlacementCompanyDrive[] = [
   {
     "id": "drive-bosch-mobility",
     "companyName": "Bosch Global Software Technologies",
-    "logoUrl": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=100&auto=format&fit=crop&q=80",
+    "logoUrl": "",
     "industry": "Electric Mobility & Smart IoT Systems",
     "roleTitle": "EV Powertrain & Smart Mobility Firmware Engineer",
     "ctcPackage": "\u20b914 - 18.5 LPA",
@@ -8013,7 +8013,7 @@ export const SEED_PLACEMENT_DRIVES: PlacementCompanyDrive[] = [
   {
     "id": "drive-microsoft-ai",
     "companyName": "Microsoft Corporation",
-    "logoUrl": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=100&auto=format&fit=crop&q=80",
+    "logoUrl": "",
     "industry": "Artificial Intelligence & Enterprise Cloud",
     "roleTitle": "Software Engineer - AI Platform & Intelligent Cloud",
     "ctcPackage": "\u20b928 - 44 LPA (\u20b921L Base + Stocks + Relocation Allowance)",
@@ -8058,7 +8058,7 @@ export const SEED_PLACEMENT_DRIVES: PlacementCompanyDrive[] = [
   {
     "id": "drive-qualcomm-vlsi",
     "companyName": "Qualcomm India",
-    "logoUrl": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=100&auto=format&fit=crop&q=80",
+    "logoUrl": "",
     "industry": "Semiconductors & 5G Wireless Systems",
     "roleTitle": "VLSI Physical Design & RTL Verification Engineer",
     "ctcPackage": "\u20b918 - 25 LPA",
@@ -8099,7 +8099,7 @@ export const SEED_PLACEMENT_DRIVES: PlacementCompanyDrive[] = [
   {
     "id": "drive-zoho-corp",
     "companyName": "Zoho Corporation",
-    "logoUrl": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=100&auto=format&fit=crop&q=80",
+    "logoUrl": "",
     "industry": "SaaS & Enterprise Business Cloud",
     "roleTitle": "Member Technical Staff (MTS) - Full Stack & Systems",
     "ctcPackage": "\u20b98.5 - 14 LPA",
@@ -8144,7 +8144,7 @@ export const SEED_PLACEMENT_DRIVES: PlacementCompanyDrive[] = [
   {
     "id": "drive-lt-smartcities",
     "companyName": "Larsen & Toubro (L&T)",
-    "logoUrl": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=100&auto=format&fit=crop&q=80",
+    "logoUrl": "",
     "industry": "Smart Infrastructure, BIM & Digital Construction",
     "roleTitle": "Graduate Engineer Trainee - Smart Cities & Digital Twins",
     "ctcPackage": "\u20b99.5 - 13.5 LPA",
@@ -8185,7 +8185,7 @@ export const SEED_PLACEMENT_DRIVES: PlacementCompanyDrive[] = [
   {
     "id": "drive-infosys-sp",
     "companyName": "Infosys Limited",
-    "logoUrl": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=100&auto=format&fit=crop&q=80",
+    "logoUrl": "",
     "industry": "Enterprise Digital Transformation & AI",
     "roleTitle": "Specialist Programmer (SP) & Digital Specialist Engineer",
     "ctcPackage": "\u20b99.5 - 12 LPA (SP: \u20b99.5L, DSE: \u20b96.5L)",

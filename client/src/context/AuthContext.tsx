@@ -108,6 +108,17 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         if (savedUserJson) {
           try {
             const parsedUser: UserSession = JSON.parse(savedUserJson);
+            if (parsedUser.name === 'Dr. Alan Vance' || parsedUser.email === 'alan.vance@university.edu') {
+              parsedUser.name = 'Dr. Balu Prasath';
+              parsedUser.email = 'balu.prasath@university.edu';
+            }
+            if (parsedUser.name === 'Sarah Jenkins' || parsedUser.email === 'admin@institution.edu') {
+              parsedUser.name = 'Ms. Anjali Govindh';
+              parsedUser.email = 'admin@careerbridge.io';
+            }
+            delete parsedUser.avatarUrl;
+            localStorage.setItem('careerbridge_user', JSON.stringify(parsedUser));
+
             setUser(parsedUser);
             setRole(parsedUser.role || savedRole);
 

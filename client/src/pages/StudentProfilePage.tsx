@@ -19,6 +19,7 @@ import {
   Flame,
   ShieldCheck
 } from 'lucide-react';
+import { UserAvatar } from '../components/common/UserAvatar';
 
 export const StudentProfilePage: React.FC = () => {
   const { profile, updateStudentProfile } = useAuth();
@@ -139,11 +140,7 @@ export const StudentProfilePage: React.FC = () => {
       {/* Top Overview Banner */}
       <div className="rounded-3xl border border-blue-200 dark:border-blue-900/60 bg-gradient-to-r from-blue-50 via-indigo-50/40 to-slate-50 dark:from-[#0c162d] dark:to-slate-900 p-6 shadow-md flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div className="flex items-center gap-4">
-          <img
-            src={profile.avatarUrl || `https://api.dicebear.com/7.x/initials/svg?seed=${encodeURIComponent(profile.fullName)}`}
-            alt={profile.fullName}
-            className="h-16 w-16 rounded-2xl object-cover border-2 border-white dark:border-slate-800 shadow-md"
-          />
+          <UserAvatar name={profile.fullName} size="xl" className="shadow-md" />
           <div>
             <div className="flex items-center gap-2">
               <h2 className="text-lg font-bold text-slate-900 dark:text-white">{profile.fullName}</h2>

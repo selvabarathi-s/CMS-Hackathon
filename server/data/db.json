@@ -10,7 +10,7 @@
       "discipline": "engineering",
       "stream": "Artificial Intelligence & Data Science",
       "studentId": "STU-ENG-2024-001",
-      "avatarUrl": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=150&auto=format&fit=crop&q=80",
+      "avatarUrl": "",
       "createdAt": "2024-01-10T08:00:00.000Z"
     },
     {
@@ -23,7 +23,7 @@
       "discipline": "engineering",
       "stream": "Computer Science & Engineering / IT",
       "studentId": "STU-ENG-2024-002",
-      "avatarUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&auto=format&fit=crop&q=80",
+      "avatarUrl": "",
       "createdAt": "2024-01-12T08:00:00.000Z"
     },
     {
@@ -36,7 +36,7 @@
       "discipline": "engineering",
       "stream": "Computer Science & Engineering / IT",
       "studentId": "STU-ENG-2024-003",
-      "avatarUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80",
+      "avatarUrl": "",
       "createdAt": "2024-01-15T08:00:00.000Z"
     },
     {
@@ -49,7 +49,7 @@
       "discipline": "engineering",
       "stream": "Electrical & Electronics Engineering (EEE)",
       "studentId": "STU-ENG-2024-004",
-      "avatarUrl": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150&auto=format&fit=crop&q=80",
+      "avatarUrl": "",
       "createdAt": "2024-01-18T08:00:00.000Z"
     },
     {
@@ -62,7 +62,7 @@
       "discipline": "engineering",
       "stream": "Mechanical & Robotics Engineering",
       "studentId": "STU-ENG-2024-005",
-      "avatarUrl": "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=150&auto=format&fit=crop&q=80",
+      "avatarUrl": "",
       "createdAt": "2024-01-20T08:00:00.000Z"
     },
     {
@@ -75,7 +75,7 @@
       "discipline": "engineering",
       "stream": "Electronics & Communication (ECE)",
       "studentId": "STU-ENG-2024-006",
-      "avatarUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80",
+      "avatarUrl": "",
       "createdAt": "2024-01-22T08:00:00.000Z"
     },
     {
@@ -88,7 +88,7 @@
       "discipline": "engineering",
       "stream": "Computer Science & Engineering / IT",
       "studentId": "STU-ENG-2024-007",
-      "avatarUrl": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=150&auto=format&fit=crop&q=80",
+      "avatarUrl": "",
       "createdAt": "2024-01-25T08:00:00.000Z"
     },
     {
@@ -101,7 +101,7 @@
       "discipline": "engineering",
       "stream": "Computer Science & Engineering / IT",
       "studentId": "STU-ENG-2024-008",
-      "avatarUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80",
+      "avatarUrl": "",
       "createdAt": "2024-01-28T08:00:00.000Z"
     },
     {
@@ -114,7 +114,7 @@
       "discipline": "engineering",
       "stream": "Artificial Intelligence & Data Science",
       "studentId": "STU-ENG-2024-009",
-      "avatarUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&auto=format&fit=crop&q=80",
+      "avatarUrl": "",
       "createdAt": "2024-02-01T08:00:00.000Z"
     },
     {
@@ -127,7 +127,7 @@
       "discipline": "engineering",
       "stream": "Electronics & Communication (ECE)",
       "studentId": "STU-ENG-2024-010",
-      "avatarUrl": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&auto=format&fit=crop&q=80",
+      "avatarUrl": "",
       "createdAt": "2024-02-03T08:00:00.000Z"
     },
     {
@@ -140,7 +140,7 @@
       "discipline": "engineering",
       "stream": "Computer Science & Engineering / IT",
       "studentId": "STU-ENG-2024-011",
-      "avatarUrl": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&auto=format&fit=crop&q=80",
+      "avatarUrl": "",
       "createdAt": "2024-02-05T08:00:00.000Z"
     },
     {
@@ -153,7 +153,7 @@
       "discipline": "engineering",
       "stream": "Civil & Environmental Engineering",
       "studentId": "STU-ENG-2024-012",
-      "avatarUrl": "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?w=150&auto=format&fit=crop&q=80",
+      "avatarUrl": "",
       "createdAt": "2024-02-08T08:00:00.000Z"
     },
     {
@@ -166,7 +166,7 @@
       "discipline": "engineering",
       "stream": "Department of Computing & Engineering Sciences",
       "studentId": "FAC-ENG-904",
-      "avatarUrl": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&auto=format&fit=crop&q=80",
+      "avatarUrl": "",
       "createdAt": "2023-09-01T08:00:00.000Z"
     },
     {
@@ -179,7 +179,7 @@
       "discipline": "engineering",
       "stream": "Dean of Academic Intelligence & Curriculum Alignment",
       "studentId": "ADM-EXEC-001",
-      "avatarUrl": "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=150&auto=format&fit=crop&q=80",
+      "avatarUrl": "",
       "createdAt": "2023-08-01T08:00:00.000Z"
     },
     {
@@ -192,7 +192,7 @@
       "discipline": "engineering",
       "stream": "Central Placement & Corporate Relations Directorate",
       "studentId": "OFF-PLC-001",
-      "avatarUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80",
+      "avatarUrl": "",
       "createdAt": "2023-06-01T08:00:00.000Z"
     }
   ],
@@ -7158,13 +7158,13 @@
       "userId": "user-selva",
       "fullName": "Selva",
       "email": "selva@college.edu",
-      "avatarUrl": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=150&auto=format&fit=crop&q=80",
+      "avatarUrl": "",
       "discipline": "engineering",
       "stream": "Artificial Intelligence & Data Science",
       "degree": "B.Tech in Artificial Intelligence & Data Science",
       "yearOfStudy": 3,
       "cgpa": 8.85,
-      "targetCareerId": "career-ai-engineer",
+      "targetCareerId": "career-data-analyst",
       "interests": [
         "Deep Learning",
         "Generative AI",
@@ -7175,9 +7175,9 @@
         {
           "skillId": "skill-python",
           "skillName": "Python Programming",
-          "level": 85,
+          "level": 100,
           "verified": true,
-          "lastAssessedAt": "2024-03-01"
+          "lastAssessedAt": "2026-09-12"
         },
         {
           "skillId": "skill-stats",
@@ -7195,8 +7195,30 @@
         {
           "skillId": "skill-sql",
           "skillName": "SQL & Relational Databases",
+          "level": 80,
+          "verified": false,
+          "lastAssessedAt": "2026-09-12"
+        },
+        {
+          "skillId": "skill-statistics",
+          "skillName": "skill-statistics",
+          "level": 85,
+          "verified": false,
+          "lastAssessedAt": "2026-09-12"
+        },
+        {
+          "skillId": "skill-pandas",
+          "skillName": "skill-pandas",
           "level": 65,
-          "verified": false
+          "verified": false,
+          "lastAssessedAt": "2026-09-12"
+        },
+        {
+          "skillId": "skill-scikit-learn",
+          "skillName": "skill-scikit-learn",
+          "level": 65,
+          "verified": false,
+          "lastAssessedAt": "2026-09-12"
         }
       ],
       "projects": [
@@ -7212,6 +7234,17 @@
           ],
           "verified": true,
           "link": "https://github.com/selva/code-llm"
+        },
+        {
+          "id": "proj-skill-python",
+          "title": "Python Programming Production Showcase",
+          "description": "Applied industry implementation verifying practical capability in Python Programming for Data Analyst & BI Specialist.",
+          "technologies": [
+            "Python Programming",
+            "Git",
+            "Production Deployment"
+          ],
+          "verified": true
         }
       ],
       "certifications": [
@@ -7224,12 +7257,12 @@
       },
       "uncertaintyScore": 10,
       "readinessScore": {
-        "overallPercentage": 78,
-        "technicalScore": 82,
+        "overallPercentage": 86,
+        "technicalScore": 78,
         "projectScore": 75,
-        "problemSolvingScore": 80,
+        "problemSolvingScore": 84,
         "softSkillScore": 75,
-        "status": "competent"
+        "status": "career_ready"
       },
       "learningPace": "accelerated",
       "weeklyHoursCommitted": 14,
@@ -7237,11 +7270,22 @@
       "targetTimeline": "intensive",
       "completedMilestoneIds": [
         "ms-ai-1",
-        "ms-ai-2"
+        "ms-ai-2",
+        "ms-skill-statistics-learn",
+        "ms-skill-pandas-learn",
+        "ms-skill-scikit-learn-learn",
+        "ms-skill-sql-learn",
+        "ms-skill-statistics-practice",
+        "ms-skill-python-build"
       ],
       "completedResourceIds": [
         "res-py-1",
-        "res-math-1"
+        "res-math-1",
+        "res-ext-autodesk-learning",
+        "res-ext-epa-resources",
+        "res-ext-hugging-face-learn",
+        "res-ext-asq-learning",
+        "res-ext-aws-skill-builder"
       ]
     },
     {
@@ -7249,7 +7293,7 @@
       "userId": "user-sabari",
       "fullName": "Sabari",
       "email": "sabari@college.edu",
-      "avatarUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&auto=format&fit=crop&q=80",
+      "avatarUrl": "",
       "discipline": "engineering",
       "stream": "Computer Science & Engineering / IT",
       "degree": "B.Tech in Computer Science & Engineering",
@@ -7337,7 +7381,7 @@
       "userId": "user-ram",
       "fullName": "Ram",
       "email": "ram@college.edu",
-      "avatarUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80",
+      "avatarUrl": "",
       "discipline": "engineering",
       "stream": "Computer Science & Engineering / IT",
       "degree": "B.Tech in Cybersecurity & Network Systems",
@@ -7416,7 +7460,7 @@
       "userId": "user-gokul",
       "fullName": "Gokul",
       "email": "gokul@college.edu",
-      "avatarUrl": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150&auto=format&fit=crop&q=80",
+      "avatarUrl": "",
       "discipline": "engineering",
       "stream": "Electrical & Electronics Engineering (EEE)",
       "degree": "B.Tech in Electrical & Electronics Engineering",
@@ -7473,7 +7517,7 @@
       "userId": "user-sanjay",
       "fullName": "Sanjay",
       "email": "sanjay@college.edu",
-      "avatarUrl": "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=150&auto=format&fit=crop&q=80",
+      "avatarUrl": "",
       "discipline": "engineering",
       "stream": "Mechanical & Robotics Engineering",
       "degree": "B.Tech in Mechanical & Robotics Engineering",
@@ -7545,7 +7589,7 @@
       "userId": "user-kishore",
       "fullName": "Kishore",
       "email": "kishore@college.edu",
-      "avatarUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80",
+      "avatarUrl": "",
       "discipline": "engineering",
       "stream": "Electronics & Communication (ECE)",
       "degree": "B.Tech in Electronics & Communication Engineering",
@@ -7617,7 +7661,7 @@
       "userId": "user-karthick",
       "fullName": "Karthick",
       "email": "karthick@college.edu",
-      "avatarUrl": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=150&auto=format&fit=crop&q=80",
+      "avatarUrl": "",
       "discipline": "engineering",
       "stream": "Computer Science & Engineering / IT",
       "degree": "B.Tech in Computer Science & Business Systems",
@@ -7696,7 +7740,7 @@
       "userId": "user-kalai",
       "fullName": "Kalai",
       "email": "kalai@college.edu",
-      "avatarUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80",
+      "avatarUrl": "",
       "discipline": "engineering",
       "stream": "Computer Science & Engineering / IT",
       "degree": "B.Tech in Computer Science & Engineering",
@@ -7784,7 +7828,7 @@
       "userId": "user-deepa",
       "fullName": "Deepa",
       "email": "deepa@college.edu",
-      "avatarUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&auto=format&fit=crop&q=80",
+      "avatarUrl": "",
       "discipline": "engineering",
       "stream": "Artificial Intelligence & Data Science",
       "degree": "B.Tech in Artificial Intelligence & Machine Learning",
@@ -7864,7 +7908,7 @@
       "userId": "user-seetha",
       "fullName": "Seetha",
       "email": "seetha@college.edu",
-      "avatarUrl": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&auto=format&fit=crop&q=80",
+      "avatarUrl": "",
       "discipline": "engineering",
       "stream": "Electronics & Communication (ECE)",
       "degree": "B.Tech in Biomedical Engineering",
@@ -7936,7 +7980,7 @@
       "userId": "user-sathya",
       "fullName": "Sathya",
       "email": "sathya@college.edu",
-      "avatarUrl": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&auto=format&fit=crop&q=80",
+      "avatarUrl": "",
       "discipline": "engineering",
       "stream": "Computer Science & Engineering / IT",
       "degree": "B.Tech in Information Technology",
@@ -8009,7 +8053,7 @@
       "userId": "user-saranya",
       "fullName": "Saranya",
       "email": "saranya@college.edu",
-      "avatarUrl": "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?w=150&auto=format&fit=crop&q=80",
+      "avatarUrl": "",
       "discipline": "engineering",
       "stream": "Civil & Environmental Engineering",
       "degree": "B.Tech in Civil & Smart Infrastructure Technology",
@@ -8153,6 +8197,26 @@
   ],
   "notifications": [
     {
+      "id": "notif-1789202934832",
+      "userId": "user-selva",
+      "title": "Expert Reply from Dr. Balu Prasath",
+      "message": "Dr. Balu Prasath (Faculty Mentor & Academic Advisor) replied to your doubt: \"what AWS?...\"",
+      "type": "mentor",
+      "read": false,
+      "createdAt": "2026-09-12T08:48:54.832Z",
+      "link": "/guidance?id=doubt-1789202843038"
+    },
+    {
+      "id": "notif-1789202843047",
+      "userId": "user-balu",
+      "title": "New Student Query: Selva",
+      "message": "Selva posted a question on \"what AWS?\".",
+      "type": "mentor",
+      "read": false,
+      "createdAt": "2026-09-12T08:47:23.047Z",
+      "link": "/guidance?id=doubt-1789202843038"
+    },
+    {
       "id": "notif-1",
       "userId": "user-selva",
       "title": "New Advanced Milestone Ready",
@@ -8202,6 +8266,38 @@
     ]
   },
   "doubts": [
+    {
+      "id": "doubt-1789202843038",
+      "studentId": "student-selva",
+      "studentName": "Selva",
+      "studentEmail": "selva@college.edu",
+      "title": "what AWS?",
+      "queryText": "what AWS?",
+      "domain": "Cloud DevOps & SRE",
+      "category": "technical",
+      "tags": [
+        "AWS"
+      ],
+      "urgency": "urgent",
+      "status": "resolved",
+      "createdAt": "2026-09-12T08:47:23.038Z",
+      "upvotes": 1,
+      "replies": [
+        {
+          "id": "reply-1789202934822",
+          "doubtId": "doubt-1789202843038",
+          "authorId": "user-mentor-1",
+          "authorName": "Dr. Balu Prasath",
+          "authorRole": "mentor",
+          "authorTitle": "Faculty Mentor & Academic Advisor",
+          "authorOrg": "College Academic Faculty",
+          "content": "It a cloud deployment platform",
+          "verified": true,
+          "upvotes": 0,
+          "createdAt": "2026-09-12T08:48:54.822Z"
+        }
+      ]
+    },
     {
       "id": "doubt-1",
       "studentId": "student-selva",
@@ -8468,7 +8564,7 @@
     {
       "id": "drive-amazon-aws",
       "companyName": "Amazon Web Services (AWS)",
-      "logoUrl": "https://images.unsplash.com/photo-1523474253243-231a4f58c7e0?w=100&auto=format&fit=crop&q=80",
+      "logoUrl": "",
       "industry": "Cloud Computing & Enterprise Software",
       "roleTitle": "Cloud Software Development Engineer (SDE-1)",
       "ctcPackage": "₹24 - 32 LPA (₹18L Base + ₹8L Stock + Joining Bonus)",
@@ -8515,7 +8611,7 @@
     {
       "id": "drive-tata-elxsi",
       "companyName": "Tata Elxsi",
-      "logoUrl": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=100&auto=format&fit=crop&q=80",
+      "logoUrl": "",
       "industry": "Automotive Electronics & Autonomous Systems",
       "roleTitle": "Embedded Systems & Autonomous Drive Engineer",
       "ctcPackage": "₹12.5 - 16 LPA",
@@ -8562,7 +8658,7 @@
     {
       "id": "drive-bosch-mobility",
       "companyName": "Bosch Global Software Technologies",
-      "logoUrl": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=100&auto=format&fit=crop&q=80",
+      "logoUrl": "",
       "industry": "Electric Mobility & Smart IoT Systems",
       "roleTitle": "EV Powertrain & Smart Mobility Firmware Engineer",
       "ctcPackage": "₹14 - 18.5 LPA",
@@ -8604,7 +8700,7 @@
     {
       "id": "drive-microsoft-ai",
       "companyName": "Microsoft Corporation",
-      "logoUrl": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=100&auto=format&fit=crop&q=80",
+      "logoUrl": "",
       "industry": "Artificial Intelligence & Enterprise Cloud",
       "roleTitle": "Software Engineer - AI Platform & Intelligent Cloud",
       "ctcPackage": "₹28 - 44 LPA (₹21L Base + Stocks + Relocation Allowance)",
@@ -8649,7 +8745,7 @@
     {
       "id": "drive-qualcomm-vlsi",
       "companyName": "Qualcomm India",
-      "logoUrl": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=100&auto=format&fit=crop&q=80",
+      "logoUrl": "",
       "industry": "Semiconductors & 5G Wireless Systems",
       "roleTitle": "VLSI Physical Design & RTL Verification Engineer",
       "ctcPackage": "₹18 - 25 LPA",
@@ -8690,7 +8786,7 @@
     {
       "id": "drive-zoho-corp",
       "companyName": "Zoho Corporation",
-      "logoUrl": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=100&auto=format&fit=crop&q=80",
+      "logoUrl": "",
       "industry": "SaaS & Enterprise Business Cloud",
       "roleTitle": "Member Technical Staff (MTS) - Full Stack & Systems",
       "ctcPackage": "₹8.5 - 14 LPA",
@@ -8735,7 +8831,7 @@
     {
       "id": "drive-lt-smartcities",
       "companyName": "Larsen & Toubro (L&T)",
-      "logoUrl": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=100&auto=format&fit=crop&q=80",
+      "logoUrl": "",
       "industry": "Smart Infrastructure, BIM & Digital Construction",
       "roleTitle": "Graduate Engineer Trainee - Smart Cities & Digital Twins",
       "ctcPackage": "₹9.5 - 13.5 LPA",
@@ -8776,7 +8872,7 @@
     {
       "id": "drive-infosys-sp",
       "companyName": "Infosys Limited",
-      "logoUrl": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=100&auto=format&fit=crop&q=80",
+      "logoUrl": "",
       "industry": "Enterprise Digital Transformation & AI",
       "roleTitle": "Specialist Programmer (SP) & Digital Specialist Engineer",
       "ctcPackage": "₹9.5 - 12 LPA (SP: ₹9.5L, DSE: ₹6.5L)",

@@ -21,6 +21,7 @@ import {
   UserPlus,
   Building2
 } from 'lucide-react';
+import { UserAvatar } from '../common/UserAvatar';
 
 interface NavbarProps {
   onOpenMobileCompanion: () => void;
@@ -233,11 +234,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenMobileCompanion, onOpenQRS
                   onClick={() => setProfileDropdownOpen(!profileDropdownOpen)}
                   className="flex items-center gap-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 px-3 py-1.5 text-xs font-medium text-slate-800 dark:text-slate-200 hover:border-slate-300 dark:hover:border-slate-700 transition-all shadow-sm"
                 >
-                  <img
-                    src={user.avatarUrl || `https://api.dicebear.com/7.x/initials/svg?seed=${encodeURIComponent(user.name)}`}
-                    alt={user.name}
-                    className="h-7 w-7 rounded-full object-cover border border-slate-200 dark:border-slate-700"
-                  />
+                  <UserAvatar name={user.name} size="xs" role={user.role} />
                   <div className="text-left hidden sm:block">
                     <div className="text-xs font-bold text-slate-900 dark:text-white leading-tight">
                       {user.name}
@@ -253,11 +250,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenMobileCompanion, onOpenQRS
                   <div className="absolute right-0 mt-2 w-72 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 shadow-2xl z-50 p-3 space-y-3 divide-y divide-slate-100 dark:divide-slate-800">
                     {/* User Header */}
                     <div className="flex items-center gap-3 pt-1">
-                      <img
-                        src={user.avatarUrl || `https://api.dicebear.com/7.x/initials/svg?seed=${encodeURIComponent(user.name)}`}
-                        alt={user.name}
-                        className="h-11 w-11 rounded-full object-cover border border-slate-200 dark:border-slate-700 shadow-sm"
-                      />
+                      <UserAvatar name={user.name} size="md" role={user.role} />
                       <div className="min-w-0 flex-1">
                         <div className="font-bold text-slate-900 dark:text-white text-sm truncate">
                           {user.name}
