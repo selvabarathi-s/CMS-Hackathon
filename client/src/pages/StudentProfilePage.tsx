@@ -196,8 +196,16 @@ export const StudentProfilePage: React.FC = () => {
               <label className="text-slate-700 dark:text-slate-300 font-semibold">Broad Discipline:</label>
               <select
                 value={formData.discipline}
-                onChange={(e) => setFormData({ ...formData, discipline: e.target.value as DisciplineType })}
-                className="w-full rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 p-2.5 text-slate-900 dark:text-slate-100 focus:border-blue-500 focus:outline-none capitalize"
+                onChange={(e) => {
+                  const newDisc = e.target.value as DisciplineType;
+                  const relevantCareers = allCareers.filter(c => c.discipline === newDisc);
+                  setFormData({
+                    ...formData,
+                    discipline: newDisc,
+                    targetCareerId: relevantCareers.length > 0 ? relevantCareers[0].id : formData.targetCareerId
+                  });
+                }}
+                className="w-full rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 p-2.5 text-slate-900 dark:text-slate-100 focus:border-blue-500 focus:outline-none capitalize font-semibold"
               >
                 <option value="engineering">Engineering & Technology</option>
                 <option value="agriculture">Agriculture & Allied Sciences</option>
@@ -270,17 +278,24 @@ export const StudentProfilePage: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
             <div className="space-y-1.5">
-              <label className="text-slate-700 dark:text-slate-300 font-semibold">Primary Target Career Goal:</label>
+              <label className="text-slate-700 dark:text-slate-300 font-semibold flex items-center justify-between">
+                <span>Personal Target Career Goal:</span>
+                <span className="text-[10px] text-blue-600 dark:text-blue-400 uppercase font-bold">
+                  {formData.discipline} only
+                </span>
+              </label>
               <select
                 value={formData.targetCareerId}
                 onChange={(e: React.ChangeEvent<HTMLSelectElement>) => setFormData({ ...formData, targetCareerId: e.target.value })}
                 className="w-full rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 p-2.5 text-slate-900 dark:text-slate-100 focus:border-blue-500 focus:outline-none font-semibold"
               >
-                {allCareers.map((c: Career) => (
-                  <option key={c.id} value={c.id}>
-                    {c.title} ({c.discipline})
-                  </option>
-                ))}
+                {allCareers
+                  .filter((c: Career) => c.discipline === formData.discipline)
+                  .map((c: Career) => (
+                    <option key={c.id} value={c.id}>
+                      {c.title} ({c.category || c.discipline})
+                    </option>
+                  ))}
               </select>
             </div>
 

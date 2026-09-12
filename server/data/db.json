@@ -141,6 +141,32 @@
       "studentId": "STU-BIO-2024-901",
       "avatarUrl": "https://api.dicebear.com/7.x/initials/svg?seed=Samira%20Al-Hassan",
       "createdAt": "2026-09-12T04:38:08.656Z"
+    },
+    {
+      "id": "user-1789192096320",
+      "profileId": "student-1789192096320",
+      "name": "test student 2",
+      "email": "test@student2.com",
+      "password": "teststudent",
+      "role": "student",
+      "discipline": "engineering",
+      "stream": "Electrical & Electronics Engineering (EEE)",
+      "studentId": "STU-2024-101",
+      "avatarUrl": "https://api.dicebear.com/7.x/initials/svg?seed=test%20student%202",
+      "createdAt": "2026-09-12T05:48:16.321Z"
+    },
+    {
+      "id": "user-1789195679888",
+      "profileId": "student-1789195679888",
+      "name": "wert",
+      "email": "selva@mcet.in",
+      "password": "selva123",
+      "role": "student",
+      "discipline": "engineering",
+      "stream": "Computer Science & Engineering / IT",
+      "studentId": "qqq",
+      "avatarUrl": "https://api.dicebear.com/7.x/initials/svg?seed=wert",
+      "createdAt": "2026-09-12T06:47:59.889Z"
     }
   ],
   "careers": [
@@ -3418,6 +3444,148 @@
       "learningStyle": "hands_on",
       "targetTimeline": "skill_building",
       "priorExperience": "2 skills tagged during onboarding"
+    },
+    {
+      "id": "student-1789192096320",
+      "userId": "user-1789192096320",
+      "fullName": "test student 2",
+      "email": "test@student2.com",
+      "avatarUrl": "https://api.dicebear.com/7.x/initials/svg?seed=test%20student%202",
+      "discipline": "engineering",
+      "stream": "Electrical & Electronics Engineering (EEE)",
+      "specialization": "Electrical & Electronics Engineering (EEE)",
+      "degree": "B.Tech Electrical & Electronics Engineering",
+      "yearOfStudy": 2,
+      "cgpa": 7,
+      "targetCareerId": "career-data-analyst",
+      "interests": [
+        "Electrical & Electronics Engineering (EEE)",
+        "Smart Agriculture",
+        "Adaptive Learning"
+      ],
+      "skills": [
+        {
+          "skillId": "skill-soil-sensors",
+          "skillName": "Soil Sensor & Telemetry Integration",
+          "level": 50,
+          "verified": true,
+          "lastAssessedAt": "2026-09-12"
+        },
+        {
+          "skillId": "skill-smart-irrigation",
+          "skillName": "Automated Irrigation & Climate Control",
+          "level": 45,
+          "verified": false,
+          "lastAssessedAt": "2026-09-12T05:48:16.321Z"
+        },
+        {
+          "skillId": "skill-python",
+          "skillName": "Python Programming",
+          "level": 45,
+          "verified": false,
+          "lastAssessedAt": "2026-09-12T05:48:16.321Z"
+        },
+        {
+          "skillId": "skill-algo-trading",
+          "skillName": "Quantitative Risk & Algorithmic Trading",
+          "level": 45,
+          "verified": false,
+          "lastAssessedAt": "2026-09-12T05:48:16.321Z"
+        },
+        {
+          "skillId": "skill-sql",
+          "skillName": "SQL & Relational Databases",
+          "level": 33,
+          "verified": true,
+          "lastAssessedAt": "2026-09-12"
+        }
+      ],
+      "projects": [],
+      "certifications": [],
+      "assessmentScores": {
+        "assess-agtech-telemetry": 50,
+        "assess-sql-diagnostic": 33
+      },
+      "uncertaintyScore": 10,
+      "readinessScore": {
+        "overallPercentage": 43,
+        "technicalScore": 44,
+        "projectScore": 20,
+        "problemSolvingScore": 49,
+        "softSkillScore": 75,
+        "status": "starting"
+      },
+      "learningPace": "accelerated",
+      "weeklyHoursCommitted": 10,
+      "learningStyle": "visual",
+      "targetTimeline": "skill_building",
+      "priorExperience": "4 skills tagged during onboarding"
+    },
+    {
+      "id": "student-1789195679888",
+      "userId": "user-1789195679888",
+      "fullName": "wert",
+      "email": "selva@mcet.in",
+      "avatarUrl": "https://api.dicebear.com/7.x/initials/svg?seed=wert",
+      "discipline": "engineering",
+      "stream": "Computer Science & Engineering / IT",
+      "specialization": "Computer Science & Engineering / IT",
+      "degree": "B.Tech / B.E. Computer Science & Engineering",
+      "yearOfStudy": 3,
+      "cgpa": 8.4,
+      "targetCareerId": "career-data-analyst",
+      "interests": [
+        "Computer Science & Engineering / IT",
+        "Data & Analytics",
+        "Adaptive Learning"
+      ],
+      "skills": [
+        {
+          "skillId": "skill-python",
+          "skillName": "Python Programming",
+          "level": 45,
+          "verified": false,
+          "lastAssessedAt": "2026-09-12T06:47:59.888Z"
+        },
+        {
+          "skillId": "skill-sql",
+          "skillName": "SQL & Relational Databases",
+          "level": 45,
+          "verified": false,
+          "lastAssessedAt": "2026-09-12T06:47:59.888Z"
+        },
+        {
+          "skillId": "skill-cloud",
+          "skillName": "Cloud Architecture & DevOps",
+          "level": 45,
+          "verified": false,
+          "lastAssessedAt": "2026-09-12T06:47:59.888Z"
+        },
+        {
+          "skillId": "skill-data-viz",
+          "skillName": "Data Visualization & BI",
+          "level": 45,
+          "verified": false,
+          "lastAssessedAt": "2026-09-12T06:47:59.888Z"
+        }
+      ],
+      "projects": [],
+      "certifications": [],
+      "assessmentScores": {},
+      "uncertaintyScore": 10,
+      "readinessScore": {
+        "overallPercentage": 61,
+        "technicalScore": 72,
+        "projectScore": 50,
+        "problemSolvingScore": 55,
+        "softSkillScore": 70,
+        "status": "building"
+      },
+      "learningPace": "accelerated",
+      "weeklyHoursCommitted": 10,
+      "learningStyle": "hands_on",
+      "targetTimeline": "skill_building",
+      "priorExperience": "4 skills tagged during onboarding"
     }
   ],
   "interventions": [
@@ -3498,6 +3666,26 @@
     }
   ],
   "notifications": [
+    {
+      "id": "notif-welcome-1789195679892",
+      "userId": "user-1789195679888",
+      "title": "Welcome wert! Your Computer Science & Engineering / IT Roadmap is Ready",
+      "message": "We've personalized your roadmap and skill gap matrix for Data Analyst & BI Specialist. Explore your milestones and launch your diagnostic arena!",
+      "type": "system",
+      "read": false,
+      "createdAt": "Just now",
+      "link": "/dashboard"
+    },
+    {
+      "id": "notif-welcome-1789192096328",
+      "userId": "user-1789192096320",
+      "title": "Welcome test student 2! Your Electrical & Electronics Engineering (EEE) Roadmap is Ready",
+      "message": "We've personalized your roadmap and skill gap matrix for Precision AgTech & IoT Specialist. Explore your milestones and launch your diagnostic arena!",
+      "type": "system",
+      "read": true,
+      "createdAt": "Just now",
+      "link": "/dashboard"
+    },
     {
       "id": "notif-welcome-1789187888659",
       "userId": "user-1789187888656",
@@ -3659,6 +3847,118 @@
           "careerTitle": "Computational Biologist & Genomics Scientist",
           "topGapSkill": "Computational Genomics & Bioinformatics",
           "readiness": 45
+        }
+      }
+    ],
+    "student-maya": [
+      {
+        "id": "msg-user-1789191817642",
+        "sender": "user",
+        "content": "How can I pivot to an adjacent role?",
+        "timestamp": "2026-09-12T05:43:37.642Z"
+      },
+      {
+        "id": "msg-1789191817642",
+        "sender": "assistant",
+        "content": "You can definitely pivot from **engineering**! Your foundation transfers directly into adjacent tracks like AI & Machine Learning Engineer or FinTech Quantitative Analyst or Precision AgTech & IoT Specialist. I recommend running a scenario in our **Career Simulator** to inspect exact month-by-month bridge roadmaps.",
+        "timestamp": "2026-09-12T05:43:37.642Z",
+        "suggestedActions": [
+          "Launch Career Simulator",
+          "Compare with AI Engineer",
+          "Compare with AgTech Specialist"
+        ],
+        "contextSnapshot": {
+          "careerTitle": "Data Analyst & BI Specialist",
+          "topGapSkill": "SQL & Relational Databases",
+          "readiness": 62
+        }
+      },
+      {
+        "id": "msg-user-1789191817918",
+        "sender": "user",
+        "content": "How can I pivot to an adjacent role?",
+        "timestamp": "2026-09-12T05:43:37.918Z"
+      },
+      {
+        "id": "msg-1789191817918",
+        "sender": "assistant",
+        "content": "You can definitely pivot from **engineering**! Your foundation transfers directly into adjacent tracks like AI & Machine Learning Engineer or FinTech Quantitative Analyst or Precision AgTech & IoT Specialist. I recommend running a scenario in our **Career Simulator** to inspect exact month-by-month bridge roadmaps.",
+        "timestamp": "2026-09-12T05:43:37.918Z",
+        "suggestedActions": [
+          "Launch Career Simulator",
+          "Compare with AI Engineer",
+          "Compare with AgTech Specialist"
+        ],
+        "contextSnapshot": {
+          "careerTitle": "Data Analyst & BI Specialist",
+          "topGapSkill": "SQL & Relational Databases",
+          "readiness": 62
+        }
+      },
+      {
+        "id": "msg-user-1789191820276",
+        "sender": "user",
+        "content": "What should I learn today?",
+        "timestamp": "2026-09-12T05:43:40.276Z"
+      },
+      {
+        "id": "msg-1789191820275",
+        "sender": "assistant",
+        "content": "Hello Maya Chen! As your CareerBridge Mentor, I'm tracking your roadmap for **Data Analyst & BI Specialist** tailored to your **B.Tech in Computer Science & Engineering** background.\n\nYou are currently **62% Career-Ready** (building) committing ~12 hrs/week. Your fastest lever to unlock the next milestone is closing the gap in **SQL & Relational Databases**.\n\nHow can I help you today? You can ask me to explain why this path fits you, suggest high-impact resume projects, or generate practice scenarios.",
+        "timestamp": "2026-09-12T05:43:40.276Z",
+        "suggestedActions": [
+          "What should I learn today?",
+          "Why is this career recommended for me?",
+          "Recommend a standout project"
+        ],
+        "contextSnapshot": {
+          "careerTitle": "Data Analyst & BI Specialist",
+          "topGapSkill": "SQL & Relational Databases",
+          "readiness": 62
+        }
+      },
+      {
+        "id": "msg-user-1789191854327",
+        "sender": "user",
+        "content": "what do I need to do to became a fullstack developer?",
+        "timestamp": "2026-09-12T05:44:14.327Z"
+      },
+      {
+        "id": "msg-1789191854327",
+        "sender": "assistant",
+        "content": "Hello Maya Chen! As your CareerBridge Mentor, I'm tracking your roadmap for **Data Analyst & BI Specialist** tailored to your **B.Tech in Computer Science & Engineering** background.\n\nYou are currently **62% Career-Ready** (building) committing ~12 hrs/week. Your fastest lever to unlock the next milestone is closing the gap in **SQL & Relational Databases**.\n\nHow can I help you today? You can ask me to explain why this path fits you, suggest high-impact resume projects, or generate practice scenarios.",
+        "timestamp": "2026-09-12T05:44:14.327Z",
+        "suggestedActions": [
+          "What should I learn today?",
+          "Why is this career recommended for me?",
+          "Recommend a standout project"
+        ],
+        "contextSnapshot": {
+          "careerTitle": "Data Analyst & BI Specialist",
+          "topGapSkill": "SQL & Relational Databases",
+          "readiness": 62
+        }
+      },
+      {
+        "id": "msg-user-1789191865445",
+        "sender": "user",
+        "content": "Recommend a standout project",
+        "timestamp": "2026-09-12T05:44:25.445Z"
+      },
+      {
+        "id": "msg-1789191865445",
+        "sender": "assistant",
+        "content": "To stand out to recruiters for **Data Analyst & BI Specialist** from your **B.Tech in Computer Science & Engineering** background, I recommend building: **\"E-commerce Cohort Retention Analysis\"**.\n\nKey execution checklist:\n1. Solve a real domain problem bridging your domain with industry standards.\n2. Apply **SQL & Relational Databases** to demonstrate capability where candidates typically struggle.\n3. Publish code with a clean README, architectural diagram, and deployment link.",
+        "timestamp": "2026-09-12T05:44:25.445Z",
+        "suggestedActions": [
+          "View Project Brief in Roadmap",
+          "Explore GitHub Starters",
+          "Take Project Checkpoint Quiz"
+        ],
+        "contextSnapshot": {
+          "careerTitle": "Data Analyst & BI Specialist",
+          "topGapSkill": "SQL & Relational Databases",
+          "readiness": 62
         }
       }
     ]

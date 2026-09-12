@@ -83,22 +83,22 @@ const DISCIPLINE_DATA: Record<string, {
         id: 'eee',
         name: 'Electrical & Electronics Engineering (EEE)',
         degreeName: 'B.Tech Electrical & Electronics Engineering',
-        defaultCareerId: 'career-agtech-analyst',
-        suggestedSkills: ['skill-soil-sensors', 'skill-smart-irrigation', 'skill-python']
+        defaultCareerId: 'career-ai-engineer',
+        suggestedSkills: ['skill-python', 'skill-sql', 'skill-cloud', 'skill-stats']
       },
       {
         id: 'mech',
         name: 'Mechanical & Robotics Engineering',
         degreeName: 'B.Tech Mechanical Engineering',
         defaultCareerId: 'career-data-analyst',
-        suggestedSkills: ['skill-python', 'skill-stats', 'skill-soil-sensors']
+        suggestedSkills: ['skill-python', 'skill-stats', 'skill-data-viz']
       },
       {
         id: 'civil',
         name: 'Civil & Environmental Engineering',
         degreeName: 'B.Tech Civil Engineering',
-        defaultCareerId: 'career-agtech-analyst',
-        suggestedSkills: ['skill-crop-analytics', 'skill-data-viz', 'skill-stats']
+        defaultCareerId: 'career-cloud-devops',
+        suggestedSkills: ['skill-sql', 'skill-data-viz', 'skill-stats']
       }
     ]
   },
@@ -140,8 +140,8 @@ const DISCIPLINE_DATA: Record<string, {
         id: 'agri_business',
         name: 'Agri-Business Management & Supply Chain',
         degreeName: 'B.Sc Agri-Business Management',
-        defaultCareerId: 'career-data-analyst',
-        suggestedSkills: ['skill-sql', 'skill-data-viz', 'skill-stats']
+        defaultCareerId: 'career-sustainable-agronomy',
+        suggestedSkills: ['skill-crop-analytics', 'skill-data-viz', 'skill-stats']
       }
     ]
   },
@@ -212,8 +212,8 @@ const DISCIPLINE_DATA: Record<string, {
         id: 'business_analytics',
         name: 'Business Analytics & Decision Science',
         degreeName: 'BBA Business Analytics & Intelligence',
-        defaultCareerId: 'career-data-analyst',
-        suggestedSkills: ['skill-sql', 'skill-data-viz', 'skill-stats', 'skill-python']
+        defaultCareerId: 'career-digital-growth-strat',
+        suggestedSkills: ['skill-growth-analytics', 'skill-data-viz', 'skill-stats', 'skill-fin-modeling']
       },
       {
         id: 'regtech_compliance',
@@ -234,15 +234,15 @@ const DISCIPLINE_DATA: Record<string, {
         id: 'ui_ux',
         name: 'UI/UX & Digital Product Design',
         degreeName: 'B.Des Interaction & UX Design',
-        defaultCareerId: 'career-data-analyst',
+        defaultCareerId: 'career-uiux-systems-designer',
         suggestedSkills: ['skill-ux-research', 'skill-design-systems', 'skill-data-viz']
       },
       {
         id: 'interactive_media',
         name: 'Interactive Media & Visual Systems',
         degreeName: 'B.Sc Visual Communication & Media',
-        defaultCareerId: 'career-data-analyst',
-        suggestedSkills: ['skill-ux-research', 'skill-design-systems', 'skill-data-viz']
+        defaultCareerId: 'career-game-vfx-developer',
+        suggestedSkills: ['skill-game-engines', 'skill-design-systems', 'skill-ux-research']
       }
     ]
   },
@@ -256,7 +256,7 @@ const DISCIPLINE_DATA: Record<string, {
         id: 'math_stats',
         name: 'Applied Mathematics & Statistics',
         degreeName: 'B.Sc (Hons) Mathematics & Statistics',
-        defaultCareerId: 'career-data-analyst',
+        defaultCareerId: 'career-applied-math-quant',
         suggestedSkills: ['skill-stats', 'skill-python', 'skill-sql', 'skill-ml']
       },
       {
@@ -456,37 +456,44 @@ export const RegisterPage: React.FC = () => {
   const currentDisciplineInfo = DISCIPLINE_DATA[discipline] || DISCIPLINE_DATA.engineering;
   const targetCareerObj = availableCareers.find(c => c.id === targetCareerId) || availableCareers[0];
 
-  const allAvailableSkills = [
-    { id: 'skill-python', name: 'Python Programming', category: 'Coding' },
-    { id: 'skill-sql', name: 'SQL & Database Queries', category: 'Data' },
-    { id: 'skill-stats', name: 'Applied Statistics', category: 'Math' },
-    { id: 'skill-data-viz', name: 'Data Viz & Dashboards', category: 'Analytics' },
-    { id: 'skill-ml', name: 'Machine Learning', category: 'AI' },
-    { id: 'skill-cloud', name: 'Cloud & DevOps (AWS/Docker)', category: 'Cloud' },
-    { id: 'skill-cybersec', name: 'Network & Cloud Security', category: 'Security' },
-    { id: 'skill-soil-sensors', name: 'IoT Sensors & Telemetry', category: 'AgTech / Hardware' },
-    { id: 'skill-crop-analytics', name: 'GIS & Spatial Analytics', category: 'GIS / AgTech' },
-    { id: 'skill-smart-irrigation', name: 'Smart Farm Automation', category: 'Automation' },
-    { id: 'skill-hydroponics', name: 'Hydroponics & CEA Farming', category: 'Agriculture' },
-    { id: 'skill-food-qa', name: 'Food Safety & HACCP QA', category: 'FoodTech' },
-    { id: 'skill-ehr-systems', name: 'EHR & Health Protocols (HL7/FHIR)', category: 'HealthTech' },
-    { id: 'skill-clinical-stats', name: 'Clinical Biostatistics', category: 'Healthcare' },
-    { id: 'skill-biomed-diagnostics', name: 'Biomedical Diagnostic Systems', category: 'Diagnostics' },
-    { id: 'skill-telemed-protocols', name: 'Telemedicine & Remote Monitoring', category: 'Digital Health' },
-    { id: 'skill-physio-biomech', name: 'Biomechanics & Rehabilitation', category: 'Physiotherapy' },
-    { id: 'skill-fin-modeling', name: 'Financial Valuation & DCF', category: 'Finance' },
-    { id: 'skill-algo-trading', name: 'Algorithmic Trading & Risk', category: 'FinTech' },
-    { id: 'skill-fin-compliance', name: 'RegTech & AML Compliance', category: 'Compliance' },
-    { id: 'skill-supply-chain-erp', name: 'Supply Chain Analytics & SAP', category: 'Logistics' },
-    { id: 'skill-growth-analytics', name: 'Digital Growth & Retention', category: 'Marketing' },
-    { id: 'skill-ux-research', name: 'User Research & Wireframing', category: 'Design' },
-    { id: 'skill-design-systems', name: 'Figma & Design Systems', category: 'UI/UX' },
-    { id: 'skill-game-engines', name: 'Unity & Unreal Engines', category: 'Gaming' },
-    { id: 'skill-comp-bio', name: 'Computational Genomics & NGS', category: 'Bioinformatics' },
-    { id: 'skill-cyber-law', name: 'Cyber Law & GDPR Governance', category: 'Law' },
-    { id: 'skill-ai-ethics', name: 'AI Ethics & Model Auditing', category: 'Policy' },
-    { id: 'skill-hospitality-pms', name: 'Hospitality PMS & RevPAR Yield', category: 'Hospitality' }
+  const allAvailableSkills: { id: string; name: string; category: string; discipline: string }[] = [
+    { id: 'skill-python', name: 'Python Programming', category: 'Coding', discipline: 'engineering' },
+    { id: 'skill-sql', name: 'SQL & Database Queries', category: 'Data', discipline: 'engineering' },
+    { id: 'skill-stats', name: 'Applied Statistics', category: 'Math', discipline: 'engineering' },
+    { id: 'skill-data-viz', name: 'Data Viz & Dashboards', category: 'Analytics', discipline: 'engineering' },
+    { id: 'skill-ml', name: 'Machine Learning', category: 'AI', discipline: 'engineering' },
+    { id: 'skill-cloud', name: 'Cloud & DevOps (AWS/Docker)', category: 'Cloud', discipline: 'engineering' },
+    { id: 'skill-cybersec', name: 'Network & Cloud Security', category: 'Security', discipline: 'engineering' },
+    { id: 'skill-soil-sensors', name: 'IoT Sensors & Telemetry', category: 'AgTech / Hardware', discipline: 'agriculture' },
+    { id: 'skill-crop-analytics', name: 'GIS & Spatial Analytics', category: 'GIS / AgTech', discipline: 'agriculture' },
+    { id: 'skill-smart-irrigation', name: 'Smart Farm Automation', category: 'Automation', discipline: 'agriculture' },
+    { id: 'skill-hydroponics', name: 'Hydroponics & CEA Farming', category: 'Agriculture', discipline: 'agriculture' },
+    { id: 'skill-food-qa', name: 'Food Safety & HACCP QA', category: 'FoodTech', discipline: 'agriculture' },
+    { id: 'skill-ehr-systems', name: 'EHR & Health Protocols (HL7/FHIR)', category: 'HealthTech', discipline: 'paramedical' },
+    { id: 'skill-clinical-stats', name: 'Clinical Biostatistics', category: 'Healthcare', discipline: 'paramedical' },
+    { id: 'skill-biomed-diagnostics', name: 'Biomedical Diagnostic Systems', category: 'Diagnostics', discipline: 'paramedical' },
+    { id: 'skill-telemed-protocols', name: 'Telemedicine & Remote Monitoring', category: 'Digital Health', discipline: 'paramedical' },
+    { id: 'skill-physio-biomech', name: 'Biomechanics & Rehabilitation', category: 'Physiotherapy', discipline: 'paramedical' },
+    { id: 'skill-fin-modeling', name: 'Financial Valuation & DCF', category: 'Finance', discipline: 'commerce' },
+    { id: 'skill-algo-trading', name: 'Algorithmic Trading & Risk', category: 'FinTech', discipline: 'commerce' },
+    { id: 'skill-fin-compliance', name: 'RegTech & AML Compliance', category: 'Compliance', discipline: 'commerce' },
+    { id: 'skill-supply-chain-erp', name: 'Supply Chain Analytics & SAP', category: 'Logistics', discipline: 'commerce' },
+    { id: 'skill-growth-analytics', name: 'Digital Growth & Retention', category: 'Marketing', discipline: 'commerce' },
+    { id: 'skill-ux-research', name: 'User Research & Wireframing', category: 'Design', discipline: 'design_media' },
+    { id: 'skill-design-systems', name: 'Figma & Design Systems', category: 'UI/UX', discipline: 'design_media' },
+    { id: 'skill-game-engines', name: 'Unity & Unreal Engines', category: 'Gaming', discipline: 'design_media' },
+    { id: 'skill-comp-bio', name: 'Computational Genomics & NGS', category: 'Bioinformatics', discipline: 'arts_science' },
+    { id: 'skill-cyber-law', name: 'Cyber Law & GDPR Governance', category: 'Law', discipline: 'law_governance' },
+    { id: 'skill-ai-ethics', name: 'AI Ethics & Model Auditing', category: 'Policy', discipline: 'law_governance' },
+    { id: 'skill-hospitality-pms', name: 'Hospitality PMS & RevPAR Yield', category: 'Hospitality', discipline: 'hospitality' }
   ];
+
+  const relevantSkills = allAvailableSkills.filter(sk =>
+    sk.discipline === discipline ||
+    currentDisciplineInfo.streams.some(s => s.suggestedSkills.includes(sk.id))
+  );
+
+  const relevantCareers = availableCareers.filter(c => c.discipline === discipline);
 
   return (
     <div className="max-w-4xl mx-auto space-y-8 pb-20">
@@ -875,12 +882,17 @@ export const RegisterPage: React.FC = () => {
 
             {/* Question 5: Target Career Role */}
             <div className="space-y-3">
-              <label className="text-xs font-bold text-slate-800 dark:text-slate-200">
-                5. What is your dream target career role?
-              </label>
+              <div className="flex items-center justify-between">
+                <label className="text-xs font-bold text-slate-800 dark:text-slate-200">
+                  5. What is your dream target career role in {currentDisciplineInfo.label}?
+                </label>
+                <span className="text-[10px] font-bold text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-950/60 px-2 py-0.5 rounded-md uppercase">
+                  {discipline} Pathways
+                </span>
+              </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {availableCareers.map((c) => {
+                {relevantCareers.map((c) => {
                   const isSelected = targetCareerId === c.id;
                   return (
                     <div
@@ -926,7 +938,7 @@ export const RegisterPage: React.FC = () => {
               </div>
 
               <div className="flex flex-wrap gap-2">
-                {allAvailableSkills.map((sk) => {
+                {relevantSkills.map((sk) => {
                   const isChecked = selectedSkills.includes(sk.id);
                   return (
                     <button

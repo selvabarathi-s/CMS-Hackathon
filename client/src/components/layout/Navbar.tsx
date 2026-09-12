@@ -99,7 +99,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenMobileCompanion, onOpenQRS
               </span>
             </div>
             <p className="hidden sm:block text-[11px] text-slate-500 dark:text-slate-400 font-medium">
-              Adaptive Multi-Disciplinary Career Navigation
+              Personal-Disciplinary Career Intelligence & Navigation
             </p>
           </div>
         </Link>

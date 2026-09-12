@@ -10,29 +10,45 @@ import {
   TrendingUp,
   Award,
   GitCompare,
-  ExternalLink
+  ExternalLink,
+  GraduationCap,
+  Filter,
+  Layers
 } from 'lucide-react';
 
 export const CareerExplorer: React.FC = () => {
-  const { profile, targetCareer, setTargetCareer } = useAuth();
+  const { profile, user, role, targetCareer, setTargetCareer } = useAuth();
   const navigate = useNavigate();
 
+  const isStudent = role === 'student';
+  const studentDiscipline = profile?.discipline || (user as any)?.discipline || 'engineering';
+
   const [careers, setCareers] = useState<Career[]>([]);
-  const [selectedDiscipline, setSelectedDiscipline] = useState<string>('all');
+  const [selectedDiscipline, setSelectedDiscipline] = useState<string>(isStudent ? studentDiscipline : 'all');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [showAllDisciplines, setShowAllDisciplines] = useState<boolean>(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCareer, setSelectedCareer] = useState<Career | null>(null);
   const [loading, setLoading] = useState(true);
 
+  // Keep student discipline locked to their academic discipline unless they explicitly opt into cross-disciplinary viewing
+  useEffect(() => {
+    if (isStudent && !showAllDisciplines && profile?.discipline) {
+      setSelectedDiscipline(profile.discipline);
+    }
+  }, [isStudent, showAllDisciplines, profile?.discipline]);
+
   useEffect(() => {
     setLoading(true);
-    api.getCareers(selectedDiscipline, searchQuery).then(data => {
+    const queryDisc = (isStudent && !showAllDisciplines) ? studentDiscipline : selectedDiscipline;
+    api.getCareers(queryDisc, searchQuery).then(data => {
       setCareers(data.careers || []);
       setLoading(false);
     }).catch(err => {
       console.error('Failed to load careers:', err);
       setLoading(false);
     });
-  }, [selectedDiscipline, searchQuery]);
+  }, [isStudent, showAllDisciplines, studentDiscipline, selectedDiscipline, searchQuery]);
 
   const disciplines: { id: string; label: string }[] = [
     { id: 'all', label: 'All Disciplines' },
@@ -45,6 +61,18 @@ export const CareerExplorer: React.FC = () => {
     { id: 'law_governance', label: 'Law & Governance' },
     { id: 'hospitality', label: 'Hospitality & Tourism' }
   ];
+
+  const getDisciplineLabel = (id: string) => {
+    return disciplines.find(d => d.id === id)?.label || id;
+  };
+
+  // Extract distinct categories within current careers for granular specialization filtering
+  const availableCategories = ['all', ...Array.from(new Set(careers.map(c => c.category).filter(Boolean)))];
+
+  const filteredCareers = careers.filter(c => {
+    if (selectedCategory === 'all') return true;
+    return c.category === selectedCategory;
+  });
 
   const handleSelectTarget = async (career: Career) => {
     await setTargetCareer(career.id);
@@ -59,39 +87,100 @@ export const CareerExplorer: React.FC = () => {
         <div className="flex items-center gap-2">
           <Briefcase className="h-5 w-5 text-blue-600 dark:text-blue-400" />
           <h1 className="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-            Multi-Disciplinary Career Explorer
+            {isStudent && !showAllDisciplines ? 'Personal-Disciplinary Career Explorer' : 'Career Explorer & Benchmark Matrix'}
           </h1>
         </div>
         <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400">
-          Discover high-demand career pathways, benchmark requirements, and skill hierarchies across diverse academic streams.
+          {isStudent && !showAllDisciplines
+            ? `Specialized high-demand pathways and industry benchmarks calibrated for your discipline (${getDisciplineLabel(studentDiscipline)}).`
+            : 'Discover high-demand career pathways, benchmark requirements, and skill hierarchies across diverse academic streams.'}
         </p>
       </div>
 
-      {/* Search & Discipline Filter Bar */}
-      <div className="flex flex-col md:flex-row gap-3 items-stretch md:items-center justify-between">
-        {/* Discipline Tabs */}
-        <div className="flex overflow-x-auto pb-1 md:pb-0 gap-1.5 scrollbar-none">
-          {disciplines.map(d => (
-            <button
-              key={d.id}
-              onClick={() => setSelectedDiscipline(d.id)}
-              className={`whitespace-nowrap rounded-lg px-3 py-1.5 text-xs font-semibold transition-all ${
-                selectedDiscipline === d.id
-                  ? 'bg-blue-600 text-white shadow-sm'
-                  : 'bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 border border-slate-200 dark:border-slate-800 shadow-sm'
-              }`}
-            >
-              {d.label}
-            </button>
-          ))}
+      {/* Student Personal Discipline Banner */}
+      {isStudent && (
+        <div className="flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-blue-200 dark:border-blue-900/60 bg-blue-50/70 dark:bg-blue-950/30 px-4 py-3">
+          <div className="flex items-center gap-3">
+            <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-blue-600 text-white shadow-sm">
+              <GraduationCap className="h-5 w-5" />
+            </div>
+            <div>
+              <div className="text-xs font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                <span>Enrolled Discipline:</span>
+                <span className="capitalize text-blue-700 dark:text-blue-300 font-extrabold">
+                  {getDisciplineLabel(studentDiscipline)}
+                </span>
+                <span className="rounded-md bg-blue-100 dark:bg-blue-900/60 px-2 py-0.5 text-[10px] font-bold text-blue-800 dark:text-blue-200 uppercase">
+                  Personal Stream Aligned
+                </span>
+              </div>
+              <p className="text-[11px] text-slate-600 dark:text-slate-400">
+                {profile?.stream || profile?.degree || 'Targeted Academic Stream'} • Non-relevant fields (Agri, Arts, Paramedic, etc.) hidden.
+              </p>
+            </div>
+          </div>
+          <button
+            onClick={() => {
+              const next = !showAllDisciplines;
+              setShowAllDisciplines(next);
+              if (!next) {
+                setSelectedDiscipline(studentDiscipline);
+                setSelectedCategory('all');
+              }
+            }}
+            className="text-[11px] font-semibold text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 hover:underline transition-colors"
+          >
+            {showAllDisciplines ? '← Lock back to My Discipline' : 'Explore Cross-Disciplinary Options (Optional)'}
+          </button>
         </div>
+      )}
+
+      {/* Search & Discipline / Category Filter Bar */}
+      <div className="flex flex-col md:flex-row gap-3 items-stretch md:items-center justify-between">
+        {/* If student and locked: show Category specializations within discipline; otherwise show discipline tabs */}
+        {isStudent && !showAllDisciplines ? (
+          <div className="flex overflow-x-auto pb-1 md:pb-0 gap-1.5 scrollbar-none items-center">
+            <span className="text-[11px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider mr-1 flex items-center gap-1">
+              <Layers className="h-3 w-3" /> Specializations:
+            </span>
+            {availableCategories.map(cat => (
+              <button
+                key={cat}
+                onClick={() => setSelectedCategory(cat)}
+                className={`whitespace-nowrap rounded-lg px-3 py-1.5 text-xs font-semibold transition-all ${
+                  selectedCategory === cat
+                    ? 'bg-blue-600 text-white shadow-sm'
+                    : 'bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 border border-slate-200 dark:border-slate-800 shadow-sm'
+                }`}
+              >
+                {cat === 'all' ? `All ${getDisciplineLabel(studentDiscipline)} Pathways` : cat}
+              </button>
+            ))}
+          </div>
+        ) : (
+          <div className="flex overflow-x-auto pb-1 md:pb-0 gap-1.5 scrollbar-none">
+            {disciplines.map(d => (
+              <button
+                key={d.id}
+                onClick={() => setSelectedDiscipline(d.id)}
+                className={`whitespace-nowrap rounded-lg px-3 py-1.5 text-xs font-semibold transition-all ${
+                  selectedDiscipline === d.id
+                    ? 'bg-blue-600 text-white shadow-sm'
+                    : 'bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 border border-slate-200 dark:border-slate-800 shadow-sm'
+                }`}
+              >
+                {d.label}
+              </button>
+            ))}
+          </div>
+        )}
 
         {/* Search Box */}
         <div className="relative w-full md:w-64">
           <Search className="absolute left-3 top-2.5 h-3.5 w-3.5 text-slate-400" />
           <input
             type="text"
-            placeholder="Search roles, skills..."
+            placeholder={isStudent && !showAllDisciplines ? `Search ${getDisciplineLabel(studentDiscipline)} roles, skills...` : "Search roles, skills..."}
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             className="w-full rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 pl-9 pr-3 py-1.5 text-xs text-slate-900 dark:text-slate-200 placeholder-slate-400 focus:border-blue-500 focus:outline-none"
@@ -108,7 +197,7 @@ export const CareerExplorer: React.FC = () => {
         </div>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {careers.map(career => {
+          {filteredCareers.map(career => {
             const isTarget = targetCareer?.id === career.id;
 
             return (

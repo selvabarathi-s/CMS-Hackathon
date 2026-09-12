@@ -83,11 +83,26 @@ export const CareerSimulatorPage: React.FC = () => {
               onChange={(e) => setSourceId(e.target.value)}
               className="w-full rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 p-3 text-xs font-semibold text-slate-900 dark:text-slate-200 focus:border-blue-500 focus:outline-none"
             >
-              {allCareers.map(c => (
-                <option key={c.id} value={c.id}>
-                  {c.title} ({c.discipline})
-                </option>
-              ))}
+              <optgroup label="Your Discipline Careers">
+                {allCareers
+                  .filter(c => !profile?.discipline || c.discipline === profile.discipline)
+                  .map(c => (
+                    <option key={c.id} value={c.id}>
+                      {c.title} ({c.category || c.discipline})
+                    </option>
+                  ))}
+              </optgroup>
+              {allCareers.some(c => profile?.discipline && c.discipline !== profile.discipline) && (
+                <optgroup label="Other Disciplines">
+                  {allCareers
+                    .filter(c => profile?.discipline && c.discipline !== profile.discipline)
+                    .map(c => (
+                      <option key={c.id} value={c.id}>
+                        {c.title} ({c.discipline})
+                      </option>
+                    ))}
+                </optgroup>
+              )}
             </select>
           </div>
 
@@ -108,11 +123,26 @@ export const CareerSimulatorPage: React.FC = () => {
               onChange={(e) => setPivotId(e.target.value)}
               className="w-full rounded-xl border border-cyan-300 dark:border-cyan-900/80 bg-cyan-50/50 dark:bg-slate-950 p-3 text-xs font-semibold text-cyan-900 dark:text-cyan-300 focus:border-cyan-500 focus:outline-none"
             >
-              {allCareers.filter(c => c.id !== sourceId).map(c => (
-                <option key={c.id} value={c.id}>
-                  {c.title} ({c.discipline})
-                </option>
-              ))}
+              <optgroup label="In-Discipline Specializations & Tracks">
+                {allCareers
+                  .filter(c => c.id !== sourceId && (!profile?.discipline || c.discipline === profile.discipline))
+                  .map(c => (
+                    <option key={c.id} value={c.id}>
+                      {c.title} ({c.category || c.discipline})
+                    </option>
+                  ))}
+              </optgroup>
+              {allCareers.some(c => profile?.discipline && c.discipline !== profile.discipline) && (
+                <optgroup label="Cross-Disciplinary Alternatives">
+                  {allCareers
+                    .filter(c => c.id !== sourceId && profile?.discipline && c.discipline !== profile.discipline)
+                    .map(c => (
+                      <option key={c.id} value={c.id}>
+                        {c.title} ({c.discipline})
+                      </option>
+                    ))}
+                </optgroup>
+              )}
             </select>
           </div>
         </div>
