@@ -369,819 +369,5441 @@ export const SEED_SKILLS: Skill[] = [
 ];
 
 export const SEED_CAREERS: Career[] = [
-  // 1. Data Analyst & BI Specialist (Engineering / Data)
   {
-    id: 'career-data-analyst',
-    title: 'Data Analyst & BI Specialist',
-    discipline: 'engineering',
-    category: 'Data & Analytics',
-    description: 'Extract, clean, analyze, and translate complex datasets into strategic business decisions and executive dashboards.',
-    growthRate: '+28% (Very High)',
-    medianSalary: '$85,000 / ₹10-18 LPA',
-    scope: 'High demand across Tech, Finance, Retail, Healthcare, and Governance.',
-    subCareers: ['Business Intelligence Analyst', 'Product Analytics Specialist', 'Operations Data Analyst'],
-    roles: [
+    "id": "career-ai-engineer",
+    "title": "AI & Machine Learning Engineer",
+    "discipline": "engineering",
+    "department": "Artificial Intelligence & Machine Learning",
+    "roleCategory": "Technology/Electronics",
+    "category": "Artificial Intelligence & Emerging Tech",
+    "description": "Design, train, fine-tune, and deploy deep neural networks, generative AI models, computer vision systems, and autonomous intelligence pipelines into production.",
+    "growthRate": "+38% (High Demand)",
+    "medianSalary": "$145,000 / \u20b916-32 LPA",
+    "scope": "Spans LLM fine-tuning, computer vision, NLP, edge AI inference, and autonomous systems.",
+    "subCareers": [
+      "Data Scientist",
+      "Data Analyst",
+      "ML Engineer",
+      "Data Engineer",
+      "AI/ML Engineer",
+      "NLP Engineer",
+      "Computer Vision Engineer",
+      "Generative AI Engineer"
+    ],
+    "roles": [
       {
-        id: 'role-da-junior',
-        title: 'Junior Data Analyst',
-        responsibilities: ['Write SQL queries for reporting', 'Build PowerBI/Tableau dashboards', 'Clean dirty raw data'],
-        requiredSkillIds: ['skill-sql', 'skill-data-viz'],
-        readinessCriteria: 'Proficiency in SQL joins & basic dashboarding.',
-        entrySalary: '$65,000'
+        "id": "role-data-scientist",
+        "title": "Data Scientist",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Data Scientist.",
+          "Apply core principles of Python, Statistics, Linear Algebra in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in Python, SQL, statistics and completion of 2-3 portfolio projects.",
+        "entrySalary": "$145,000 / \u20b916-32 LPA"
       },
       {
-        id: 'role-da-senior',
-        title: 'Senior BI Engineer',
-        responsibilities: ['Architect semantic layers', 'Perform statistical root cause analysis', 'Lead data storytelling'],
-        requiredSkillIds: ['skill-sql', 'skill-stats', 'skill-data-viz', 'skill-python'],
-        readinessCriteria: 'Complex window queries, statistical modeling, production BI governance.',
-        entrySalary: '$110,000'
-      }
-    ],
-    requiredSkillIds: ['skill-sql', 'skill-stats', 'skill-data-viz', 'skill-python'],
-    prerequisites: ['Basic mathematics & analytical aptitude'],
-    relatedCareerIds: ['career-ai-engineer', 'career-fintech-quant', 'career-agtech-analyst'],
-    benchmark: {
-      requiredSkills: [
-        { skillId: 'skill-sql', skillName: 'SQL & Relational Databases', importance: 'mandatory', targetProficiency: 85 },
-        { skillId: 'skill-stats', skillName: 'Applied Statistics & Probability', importance: 'mandatory', targetProficiency: 75 },
-        { skillId: 'skill-data-viz', skillName: 'Data Visualization & BI', importance: 'mandatory', targetProficiency: 80 },
-        { skillId: 'skill-python', skillName: 'Python Programming', importance: 'recommended', targetProficiency: 65 }
-      ],
-      prerequisiteCourses: ['Intro to Database Systems', 'Business Statistics'],
-      recommendedProjects: ['E-commerce Cohort Retention Analysis', 'Real-time Sales BI Executive Dashboard'],
-      emergingSkills: ['dbt Analytics Engineering', 'DuckDB in-browser query engines'],
-      readinessThreshold: 75
-    },
-    iconName: 'Database'
-  },
-
-  // 2. AI & Machine Learning Engineer (Engineering)
-  {
-    id: 'career-ai-engineer',
-    title: 'AI & Machine Learning Engineer',
-    discipline: 'engineering',
-    category: 'Artificial Intelligence',
-    description: 'Design, develop, and operationalize predictive machine learning pipelines and modern GenAI solutions.',
-    growthRate: '+36% (Extremely High)',
-    medianSalary: '$125,000 / ₹16-32 LPA',
-    scope: 'Transforming every vertical with automated intelligence, agentic workflows, and deep predictive models.',
-    subCareers: ['MLOps Specialist', 'Computer Vision Engineer', 'NLP & LLM Applications Engineer'],
-    roles: [
-      {
-        id: 'role-mle',
-        title: 'Machine Learning Engineer',
-        responsibilities: ['Train and evaluate ML models', 'Build feature stores and training pipelines', 'Deploy REST inference APIs'],
-        requiredSkillIds: ['skill-python', 'skill-stats', 'skill-ml', 'skill-cloud'],
-        readinessCriteria: 'Solid theoretical math foundation + scikit-learn/PyTorch deployment.',
-        entrySalary: '$95,000'
-      }
-    ],
-    requiredSkillIds: ['skill-python', 'skill-stats', 'skill-ml', 'skill-sql', 'skill-cloud'],
-    prerequisites: ['Linear Algebra & Multivariable Calculus', 'Core programming'],
-    relatedCareerIds: ['career-data-analyst', 'career-fintech-quant'],
-    benchmark: {
-      requiredSkills: [
-        { skillId: 'skill-python', skillName: 'Python Programming', importance: 'mandatory', targetProficiency: 90 },
-        { skillId: 'skill-stats', skillName: 'Applied Statistics & Probability', importance: 'mandatory', targetProficiency: 85 },
-        { skillId: 'skill-ml', skillName: 'Machine Learning Algorithms', importance: 'mandatory', targetProficiency: 85 },
-        { skillId: 'skill-cloud', skillName: 'Cloud Architecture & DevOps', importance: 'recommended', targetProficiency: 70 }
-      ],
-      prerequisiteCourses: ['Data Structures & Algorithms', 'Statistical Machine Learning'],
-      recommendedProjects: ['End-to-End Customer Churn Predictor with Docker & FastApi', 'Agentic RAG Search Engine'],
-      emergingSkills: ['Small Language Model Fine-Tuning', 'Vector Databases & Embeddings'],
-      readinessThreshold: 80
-    },
-    iconName: 'Cpu'
-  },
-
-  // 3. Cloud DevOps & Site Reliability Engineer (Engineering)
-  {
-    id: 'career-cloud-devops',
-    title: 'Cloud DevOps & Site Reliability Engineer',
-    discipline: 'engineering',
-    category: 'Cloud Infrastructure',
-    description: 'Architect resilient multi-region cloud infrastructures, Kubernetes clusters, and automated CI/CD deployment pipelines.',
-    growthRate: '+30% (High)',
-    medianSalary: '$118,000 / ₹14-26 LPA',
-    scope: 'Critical infrastructure backbone across enterprise software, SaaS, banking, and government portals.',
-    subCareers: ['Site Reliability Engineer (SRE)', 'Platform Engineer', 'Cloud Infrastructure Architect'],
-    roles: [
-      {
-        id: 'role-devops-eng',
-        title: 'Cloud DevOps Engineer',
-        responsibilities: ['Maintain Kubernetes workloads', 'Automate Terraform infra', 'Monitor SLA/SLO latency telemetry'],
-        requiredSkillIds: ['skill-cloud', 'skill-python', 'skill-cybersec'],
-        readinessCriteria: 'Hands-on Dockerization, CI/CD pipeline writing, and cloud IAM security.',
-        entrySalary: '$88,000'
-      }
-    ],
-    requiredSkillIds: ['skill-cloud', 'skill-python', 'skill-cybersec', 'skill-sql'],
-    prerequisites: ['Operating Systems & Networking fundamentals'],
-    relatedCareerIds: ['career-cybersec-architect', 'career-ai-engineer'],
-    benchmark: {
-      requiredSkills: [
-        { skillId: 'skill-cloud', skillName: 'Cloud Architecture & DevOps', importance: 'mandatory', targetProficiency: 88 },
-        { skillId: 'skill-python', skillName: 'Python Programming', importance: 'mandatory', targetProficiency: 75 },
-        { skillId: 'skill-cybersec', skillName: 'Network & Cloud Security', importance: 'recommended', targetProficiency: 70 }
-      ],
-      prerequisiteCourses: ['Computer Networks', 'Distributed Systems'],
-      recommendedProjects: ['Automated Blue-Green Multi-Cluster Kubernetes Deployment', 'Zero-Downtime Terraform Infra'],
-      emergingSkills: ['eBPF Observability', 'GitOps with ArgoCD'],
-      readinessThreshold: 78
-    },
-    iconName: 'Cloud'
-  },
-
-  // 4. Cybersecurity Architect & SOC Analyst (Engineering)
-  {
-    id: 'career-cybersec-architect',
-    title: 'Cybersecurity Architect & SOC Analyst',
-    discipline: 'engineering',
-    category: 'Information Security',
-    description: 'Defend organizational perimeters, orchestrate threat intelligence, and design zero-trust cyber defense systems.',
-    growthRate: '+33% (Critical Need)',
-    medianSalary: '$120,000 / ₹15-30 LPA',
-    scope: 'Essential security governance for financial networks, defense agencies, and enterprise IT.',
-    subCareers: ['Threat Intelligence Analyst', 'Penetration Tester', 'Cloud Security Engineer'],
-    roles: [
-      {
-        id: 'role-soc-analyst',
-        title: 'SOC Security Analyst',
-        responsibilities: ['Triage SIEM incident alerts', 'Analyze malware packets', 'Execute incident containment'],
-        requiredSkillIds: ['skill-cybersec', 'skill-python'],
-        readinessCriteria: 'Threat log analysis and network anomaly mitigation.',
-        entrySalary: '$82,000'
-      }
-    ],
-    requiredSkillIds: ['skill-cybersec', 'skill-cloud', 'skill-python', 'skill-sql'],
-    prerequisites: ['TCP/IP protocols', 'Linux system administration'],
-    relatedCareerIds: ['career-cloud-devops', 'career-cyber-law-analyst'],
-    benchmark: {
-      requiredSkills: [
-        { skillId: 'skill-cybersec', skillName: 'Network & Cloud Security', importance: 'mandatory', targetProficiency: 90 },
-        { skillId: 'skill-cloud', skillName: 'Cloud Architecture & DevOps', importance: 'recommended', targetProficiency: 75 },
-        { skillId: 'skill-python', skillName: 'Python Programming', importance: 'recommended', targetProficiency: 70 }
-      ],
-      prerequisiteCourses: ['Network Security & Cryptography', 'Ethical Hacking'],
-      recommendedProjects: ['Automated SIEM Threat Hunter in Python', 'Zero-Trust Bastion Architecture'],
-      emergingSkills: ['Quantum-Safe Cryptography', 'AI Adversarial Defense'],
-      readinessThreshold: 80
-    },
-    iconName: 'Shield'
-  },
-
-  // 5. Biomedical Devices & Robotics Engineer (Engineering / Medical)
-  {
-    id: 'career-biomedical-engineer',
-    title: 'Biomedical Devices & Robotics Engineer',
-    discipline: 'engineering',
-    category: 'Medical Technology',
-    description: 'Engineer smart prosthetics, robotic surgical actuators, and vital-sign wearable hardware calibrated to clinical standards.',
-    growthRate: '+26% (High)',
-    medianSalary: '$98,000 / ₹12-24 LPA',
-    scope: 'Medical device manufacturers, surgical robotics labs, and diagnostic instrumentation companies.',
-    subCareers: ['Prosthetics Automation Engineer', 'Medical Hardware Validation Specialist'],
-    roles: [
-      {
-        id: 'role-biomed-dev',
-        title: 'Medical Devices Instrumentation Engineer',
-        responsibilities: ['Design sensor circuits for patient monitoring', 'Execute IEC 60601 electrical safety validation'],
-        requiredSkillIds: ['skill-biomed-devices', 'skill-embedded-iot'],
-        readinessCriteria: 'Sensor circuit design and analog biosignal filtration.',
-        entrySalary: '$78,000'
-      }
-    ],
-    requiredSkillIds: ['skill-biomed-devices', 'skill-embedded-iot', 'skill-robotics-control', 'skill-stats'],
-    prerequisites: ['Electronic circuits', 'Human anatomy basics'],
-    relatedCareerIds: ['career-health-informatics', 'career-diagnostic-lab-spec'],
-    benchmark: {
-      requiredSkills: [
-        { skillId: 'skill-biomed-devices', skillName: 'Biomedical Instrumentation & Sensors', importance: 'mandatory', targetProficiency: 85 },
-        { skillId: 'skill-embedded-iot', skillName: 'Embedded Systems & Microcontrollers', importance: 'mandatory', targetProficiency: 80 },
-        { skillId: 'skill-robotics-control', skillName: 'Robotics Kinematics & Control Systems', importance: 'recommended', targetProficiency: 70 }
-      ],
-      prerequisiteCourses: ['Biosignals & Systems', 'Microcontroller Interfacing'],
-      recommendedProjects: ['Wearable LoRa ECG Biosignal Monitor', 'Myoelectric Bionic Hand Controller'],
-      emergingSkills: ['Brain-Computer Interfaces (BCI)', 'Implantable Telemetry Sensors'],
-      readinessThreshold: 78
-    },
-    iconName: 'HeartPulse'
-  },
-
-  // 6. Precision AgTech & IoT Specialist (Agriculture)
-  {
-    id: 'career-agtech-analyst',
-    title: 'Precision AgTech & IoT Specialist',
-    discipline: 'agriculture',
-    category: 'Smart Agriculture',
-    description: 'Bridge agronomy with IoT sensors, drone multispectral GIS imagery, and automated irrigation systems for climate-resilient farming.',
-    growthRate: '+24% (Rapid Growth)',
-    medianSalary: '$82,000 / ₹8-16 LPA',
-    scope: 'Modern agricultural enterprises, food-tech corporations, drone survey firms, and sustainable farming initiatives.',
-    subCareers: ['Drone Agronomy Surveyor', 'Smart Farm Automation Engineer', 'Agronomic Data Strategist'],
-    roles: [
-      {
-        id: 'role-agtech-field',
-        title: 'Smart Farm Telemetry Engineer',
-        responsibilities: ['Install and calibrate soil moisture IoT nodes', 'Maintain LoRa mesh networks', 'Monitor irrigation telemetry'],
-        requiredSkillIds: ['skill-soil-sensors', 'skill-smart-irrigation'],
-        readinessCriteria: 'Hands-on sensor calibration and automated control system testing.',
-        entrySalary: '$60,000'
+        "id": "role-data-analyst",
+        "title": "Data Analyst",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Data Analyst.",
+          "Apply core principles of Python, Statistics, Linear Algebra in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in Python, SQL, statistics and completion of 2-3 portfolio projects.",
+        "entrySalary": "$145,000 / \u20b916-32 LPA"
       },
       {
-        id: 'role-agtech-gis',
-        title: 'GIS Crop Analytics Specialist',
-        responsibilities: ['Process satellite NDVI indices', 'Build yield estimation heatmaps', 'Advise on fertilizer optimization'],
-        requiredSkillIds: ['skill-crop-analytics', 'skill-data-viz', 'skill-stats'],
-        readinessCriteria: 'GIS spatial analysis + predictive yield modeling.',
-        entrySalary: '$90,000'
-      }
-    ],
-    requiredSkillIds: ['skill-soil-sensors', 'skill-crop-analytics', 'skill-smart-irrigation', 'skill-stats', 'skill-data-viz'],
-    prerequisites: ['Agricultural science fundamentals', 'Basic electronics/computing'],
-    relatedCareerIds: ['career-data-analyst', 'career-sustainable-agronomy'],
-    benchmark: {
-      requiredSkills: [
-        { skillId: 'skill-soil-sensors', skillName: 'Soil Sensor & Telemetry Integration', importance: 'mandatory', targetProficiency: 80 },
-        { skillId: 'skill-smart-irrigation', skillName: 'Automated Irrigation & Climate Control', importance: 'mandatory', targetProficiency: 75 },
-        { skillId: 'skill-crop-analytics', skillName: 'GIS & Crop Yield Predictive Modeling', importance: 'mandatory', targetProficiency: 70 },
-        { skillId: 'skill-stats', skillName: 'Applied Statistics & Probability', importance: 'recommended', targetProficiency: 60 }
-      ],
-      prerequisiteCourses: ['Soil Physics & Crop Physiology', 'Introduction to Geoinformatics'],
-      recommendedProjects: ['Automated LoRa Soil Moisture Telemetry Station', 'NDVI Crop Health Index Dashboard'],
-      emergingSkills: ['Hyperspectral Drone Imaging', 'Autonomous Tractor Telematics'],
-      readinessThreshold: 72
-    },
-    iconName: 'Sprout'
-  },
-
-  // 7. Sustainable Agronomy & Climate Resilience Specialist (Agriculture)
-  {
-    id: 'career-sustainable-agronomy',
-    title: 'Sustainable Agronomy & Climate Specialist',
-    discipline: 'agriculture',
-    category: 'Environmental Agronomy',
-    description: 'Design regenerative cropping systems, carbon sequestration audits, and hydroponic controlled environment farming.',
-    growthRate: '+22% (Steady)',
-    medianSalary: '$78,000 / ₹8-15 LPA',
-    scope: 'Agri-consultancies, greenhouse operators, organic certification agencies, and carbon credit brokers.',
-    subCareers: ['Hydroponics Facility Manager', 'Soil Carbon Verification Auditor'],
-    roles: [
+        "id": "role-ml-engineer",
+        "title": "ML Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in ML Engineer.",
+          "Apply core principles of Python, Statistics, Linear Algebra in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in Python, SQL, statistics and completion of 2-3 portfolio projects.",
+        "entrySalary": "$145,000 / \u20b916-32 LPA"
+      },
       {
-        id: 'role-hydro-mgr',
-        title: 'Controlled Environment Farm Manager',
-        responsibilities: ['Formulate closed-loop nutrient solutions', 'Calibrate LED spectrums for leafy greens', 'Manage biosecurity'],
-        requiredSkillIds: ['skill-hydroponics', 'skill-smart-irrigation'],
-        readinessCriteria: 'Nutrient formulation calculation and automated climate loop maintenance.',
-        entrySalary: '$58,000'
-      }
-    ],
-    requiredSkillIds: ['skill-hydroponics', 'skill-soil-sensors', 'skill-smart-irrigation', 'skill-crop-analytics'],
-    prerequisites: ['Plant biochemistry', 'Soil fertility'],
-    relatedCareerIds: ['career-agtech-analyst', 'career-food-tech-qa'],
-    benchmark: {
-      requiredSkills: [
-        { skillId: 'skill-hydroponics', skillName: 'Hydroponics & Controlled Environment Agriculture', importance: 'mandatory', targetProficiency: 85 },
-        { skillId: 'skill-smart-irrigation', skillName: 'Automated Irrigation & Climate Control', importance: 'mandatory', targetProficiency: 75 },
-        { skillId: 'skill-soil-sensors', skillName: 'Soil Sensor & Telemetry Integration', importance: 'recommended', targetProficiency: 65 }
-      ],
-      prerequisiteCourses: ['Plant Nutrition & Metabolism', 'Greenhouse Systems Engineering'],
-      recommendedProjects: ['Automated Recirculating Deep Water Culture Hydroponic System'],
-      emergingSkills: ['Aeroponic Fogging Systems', 'Biochar Soil Amendment Verification'],
-      readinessThreshold: 72
-    },
-    iconName: 'Sprout'
-  },
-
-  // 8. Food Technology & Quality Assurance Engineer (Agriculture / Biotech)
-  {
-    id: 'career-food-tech-qa',
-    title: 'Food Processing & Quality Assurance Engineer',
-    discipline: 'agriculture',
-    category: 'Food Technology',
-    description: 'Ensure food safety standards, microbial quality controls, aseptic packaging lines, and novel nutritional formulation.',
-    growthRate: '+20% (Consistent)',
-    medianSalary: '$75,000 / ₹7-14 LPA',
-    scope: 'FMCG food processing giants, dairy networks, beverage breweries, and food safety regulatory bodies.',
-    subCareers: ['HACCP Food Safety Auditor', 'Sensory & Formulation Scientist'],
-    roles: [
+        "id": "role-data-engineer",
+        "title": "Data Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Data Engineer.",
+          "Apply core principles of Python, Statistics, Linear Algebra in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in Python, SQL, statistics and completion of 2-3 portfolio projects.",
+        "entrySalary": "$145,000 / \u20b916-32 LPA"
+      },
       {
-        id: 'role-food-qa-officer',
-        title: 'Quality Assurance Technologist',
-        responsibilities: ['Conduct microbial pathogen swabs', 'Verify shelf-life acceleration curves', 'Audit supplier compliance'],
-        requiredSkillIds: ['skill-food-qa', 'skill-stats'],
-        readinessCriteria: 'ISO 22000 standard adherence and microbial lab assay execution.',
-        entrySalary: '$55,000'
-      }
-    ],
-    requiredSkillIds: ['skill-food-qa', 'skill-stats', 'skill-data-viz'],
-    prerequisites: ['Food microbiology', 'Organic chemistry'],
-    relatedCareerIds: ['career-diagnostic-lab-spec', 'career-sustainable-agronomy'],
-    benchmark: {
-      requiredSkills: [
-        { skillId: 'skill-food-qa', skillName: 'Food Safety & Quality Assurance (HACCP)', importance: 'mandatory', targetProficiency: 90 },
-        { skillId: 'skill-stats', skillName: 'Applied Statistics & Probability', importance: 'mandatory', targetProficiency: 65 }
-      ],
-      prerequisiteCourses: ['Food Microbiology', 'Thermal Processing & Preservation'],
-      recommendedProjects: ['Plant-wide HACCP Risk Map & Critical Control Point Dashboard'],
-      emergingSkills: ['High-Pressure Processing (HPP)', 'Blockchain Food Traceability'],
-      readinessThreshold: 75
-    },
-    iconName: 'Award'
-  },
-
-  // 9. Clinical Health Informatics Specialist (Paramedical)
-  {
-    id: 'career-health-informatics',
-    title: 'Clinical Health Informatics Specialist',
-    discipline: 'paramedical',
-    category: 'Healthcare Technology',
-    description: 'Unify clinical hospital operations with digital health standards (HL7/FHIR), electronic health records, and clinical outcome analytics.',
-    growthRate: '+31% (High Demand)',
-    medianSalary: '$92,000 / ₹11-22 LPA',
-    scope: 'Hospitals, medical diagnostic networks, health-tech startups, and pharma clinical research organizations.',
-    subCareers: ['Medical EHR Systems Specialist', 'Clinical Trial Data Manager', 'Telemedicine Systems Engineer'],
-    roles: [
+        "id": "role-ai-ml-engineer",
+        "title": "AI/ML Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in AI/ML Engineer.",
+          "Apply core principles of Python, Statistics, Linear Algebra in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in Python, SQL, statistics and completion of 2-3 portfolio projects.",
+        "entrySalary": "$145,000 / \u20b916-32 LPA"
+      },
       {
-        id: 'role-health-ehrs',
-        title: 'Hospital Systems Informatics Officer',
-        responsibilities: ['Maintain EHR data flow and compliance', 'Ensure FHIR protocol integrations', 'Audit patient data security'],
-        requiredSkillIds: ['skill-ehr-systems', 'skill-sql'],
-        readinessCriteria: 'HL7/FHIR standard compliance and hospital database query handling.',
-        entrySalary: '$72,000'
-      }
-    ],
-    requiredSkillIds: ['skill-ehr-systems', 'skill-clinical-stats', 'skill-sql', 'skill-biomed-diagnostics', 'skill-stats'],
-    prerequisites: ['Paramedical / Anatomy fundamentals', 'Information systems basics'],
-    relatedCareerIds: ['career-data-analyst', 'career-telemedicine-coord'],
-    benchmark: {
-      requiredSkills: [
-        { skillId: 'skill-ehr-systems', skillName: 'EHR & Health Protocols (HL7/FHIR)', importance: 'mandatory', targetProficiency: 85 },
-        { skillId: 'skill-sql', skillName: 'SQL & Relational Databases', importance: 'mandatory', targetProficiency: 80 },
-        { skillId: 'skill-clinical-stats', skillName: 'Biostatistics & Clinical Trial Analytics', importance: 'mandatory', targetProficiency: 70 },
-        { skillId: 'skill-biomed-diagnostics', skillName: 'Biomedical Diagnostic Systems & Quality', importance: 'recommended', targetProficiency: 65 }
-      ],
-      prerequisiteCourses: ['Medical Terminology & Ethics', 'Healthcare Data Standards'],
-      recommendedProjects: ['FHIR REST API Medical Record Interoperability Bridge', 'Clinical Trial Patient Retention Dashboard'],
-      emergingSkills: ['AI-assisted Radiology Triage', 'Genomic Data Pipelines'],
-      readinessThreshold: 75
-    },
-    iconName: 'HeartPulse'
-  },
-
-  // 10. Biomedical Diagnostic Lab Specialist (Paramedical)
-  {
-    id: 'career-diagnostic-lab-spec',
-    title: 'Biomedical Diagnostic Lab Specialist',
-    discipline: 'paramedical',
-    category: 'Diagnostic Medicine',
-    description: 'Manage automated clinical pathology laboratories, molecular diagnostic assays, quality control indices, and biomarker interpretation.',
-    growthRate: '+25% (High)',
-    medianSalary: '$72,000 / ₹7-15 LPA',
-    scope: 'Diagnostic lab chains, tertiary hospital pathology departments, blood banks, and clinical CROs.',
-    subCareers: ['Molecular Diagnostics Technologist', 'Clinical Biochemistry Lead'],
-    roles: [
+        "id": "role-nlp-engineer",
+        "title": "NLP Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in NLP Engineer.",
+          "Apply core principles of Python, Statistics, Linear Algebra in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in Python, SQL, statistics and completion of 2-3 portfolio projects.",
+        "entrySalary": "$145,000 / \u20b916-32 LPA"
+      },
       {
-        id: 'role-mlt-lead',
-        title: 'Senior Medical Laboratory Technologist',
-        responsibilities: ['Run ELISA & PCR panels', 'Calibrate automated hematology analyzers', 'Sign off on IQC deviations'],
-        requiredSkillIds: ['skill-biomed-diagnostics', 'skill-clinical-stats'],
-        readinessCriteria: 'Precision pipetting, auto-analyzer troubleshooting, and Westgard rule application.',
-        entrySalary: '$52,000'
-      }
-    ],
-    requiredSkillIds: ['skill-biomed-diagnostics', 'skill-clinical-stats', 'skill-ehr-systems'],
-    prerequisites: ['Pathology fundamentals', 'Medical biochemistry'],
-    relatedCareerIds: ['career-health-informatics', 'career-food-tech-qa'],
-    benchmark: {
-      requiredSkills: [
-        { skillId: 'skill-biomed-diagnostics', skillName: 'Biomedical Diagnostic Systems & Quality', importance: 'mandatory', targetProficiency: 90 },
-        { skillId: 'skill-clinical-stats', skillName: 'Biostatistics & Clinical Trial Analytics', importance: 'mandatory', targetProficiency: 70 },
-        { skillId: 'skill-ehr-systems', skillName: 'EHR & Health Protocols (HL7/FHIR)', importance: 'recommended', targetProficiency: 60 }
-      ],
-      prerequisiteCourses: ['Clinical Hematology & Immuno-hematology', 'Molecular Pathology'],
-      recommendedProjects: ['Laboratory Westgard QC Deviation & Calibration Tracker'],
-      emergingSkills: ['Next-Gen Molecular Diagnostics (ddPCR)', 'Digital Pathology Image Analysis'],
-      readinessThreshold: 76
-    },
-    iconName: 'HeartPulse'
-  },
-
-  // 11. Telemedicine & Remote Care Coordinator (Paramedical / Nursing)
-  {
-    id: 'career-telemedicine-coord',
-    title: 'Telemedicine & Remote Care Coordinator',
-    discipline: 'paramedical',
-    category: 'Digital Health',
-    description: 'Orchestrate virtual clinical triage, remote patient physiological telemetry, and chronic disease digital monitoring protocols.',
-    growthRate: '+34% (Explosive)',
-    medianSalary: '$75,000 / ₹8-16 LPA',
-    scope: 'Telehealth providers, health insurance digital programs, home-health agencies, and chronic care networks.',
-    subCareers: ['Virtual Health Triage Nurse', 'RPM Device Implementation Specialist'],
-    roles: [
+        "id": "role-computer-vision-engineer",
+        "title": "Computer Vision Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Computer Vision Engineer.",
+          "Apply core principles of Python, Statistics, Linear Algebra in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in Python, SQL, statistics and completion of 2-3 portfolio projects.",
+        "entrySalary": "$145,000 / \u20b916-32 LPA"
+      },
       {
-        id: 'role-telemed-officer',
-        title: 'Remote Patient Monitoring Coordinator',
-        responsibilities: ['Monitor daily cardiac & diabetic telemetry feeds', 'Trigger urgent clinician interventions', 'Educate patients on RPM wearables'],
-        requiredSkillIds: ['skill-telemed-protocols', 'skill-ehr-systems'],
-        readinessCriteria: 'Virtual triage protocols, telemetry alert escalations, and empathetic patient engagement.',
-        entrySalary: '$58,000'
+        "id": "role-generative-ai-engineer",
+        "title": "Generative AI Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Generative AI Engineer.",
+          "Apply core principles of Python, Statistics, Linear Algebra in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in Python, SQL, statistics and completion of 2-3 portfolio projects.",
+        "entrySalary": "$145,000 / \u20b916-32 LPA"
       }
     ],
-    requiredSkillIds: ['skill-telemed-protocols', 'skill-ehr-systems', 'skill-clinical-stats'],
-    prerequisites: ['Clinical nursing / paramedical care', 'Communication'],
-    relatedCareerIds: ['career-health-informatics', 'career-physiotherapy-rehab'],
-    benchmark: {
-      requiredSkills: [
-        { skillId: 'skill-telemed-protocols', skillName: 'Telemedicine & Remote Patient Monitoring (RPM)', importance: 'mandatory', targetProficiency: 85 },
-        { skillId: 'skill-ehr-systems', skillName: 'EHR & Health Protocols (HL7/FHIR)', importance: 'mandatory', targetProficiency: 75 }
+    "requiredSkillIds": [
+      "skill-python",
+      "skill-sql",
+      "skill-statistics",
+      "skill-pandas",
+      "skill-scikit-learn"
+    ],
+    "prerequisites": [
+      "Python",
+      "Statistics",
+      "Linear Algebra",
+      "ML"
+    ],
+    "relatedCareerIds": [],
+    "benchmark": {
+      "requiredSkills": [
+        {
+          "skillId": "skill-python",
+          "skillName": "Python",
+          "importance": "mandatory",
+          "targetProficiency": 80
+        },
+        {
+          "skillId": "skill-sql",
+          "skillName": "SQL",
+          "importance": "mandatory",
+          "targetProficiency": 80
+        },
+        {
+          "skillId": "skill-statistics",
+          "skillName": "statistics",
+          "importance": "mandatory",
+          "targetProficiency": 80
+        },
+        {
+          "skillId": "skill-pandas",
+          "skillName": "pandas",
+          "importance": "mandatory",
+          "targetProficiency": 80
+        },
+        {
+          "skillId": "skill-scikit-learn",
+          "skillName": "scikit-learn",
+          "importance": "mandatory",
+          "targetProficiency": 80
+        }
       ],
-      prerequisiteCourses: ['Virtual Clinical Care Standards', 'Patient Health Engagement'],
-      recommendedProjects: ['Chronic Heart Failure Remote Telemetry Escalation Workflow'],
-      emergingSkills: ['AI-driven Symptom Checkers', 'Continuous Glucose Monitor (CGM) Streaming'],
-      readinessThreshold: 72
+      "prerequisiteCourses": [
+        "Python",
+        "Statistics",
+        "Linear Algebra",
+        "ML"
+      ],
+      "recommendedProjects": [
+        "End-to-End AI & Machine Learning Engineer Capstone System",
+        "Production Optimization using Python"
+      ],
+      "emergingSkills": [
+        "GenAI",
+        "LLMs",
+        "MLOps",
+        "data governance"
+      ],
+      "readinessThreshold": 75
     },
-    iconName: 'HeartPulse'
-  },
-
-  // 12. Physiotherapy & Movement Rehabilitation Specialist (Paramedical)
-  {
-    id: 'career-physiotherapy-rehab',
-    title: 'Physiotherapy & Movement Rehabilitation Specialist',
-    discipline: 'paramedical',
-    category: 'Rehabilitation Medicine',
-    description: 'Evaluate musculoskeletal kinematics, craft evidence-based physical rehabilitation protocols, and utilize EMG motion feedback.',
-    growthRate: '+24% (Strong)',
-    medianSalary: '$80,000 / ₹8-18 LPA',
-    scope: 'Sports injury clinics, orthopedic hospitals, neuro-rehabilitation centers, and professional sports franchises.',
-    subCareers: ['Sports Kinematics Specialist', 'Neuro-Rehabilitation Clinician'],
-    roles: [
+    "coreCourses": [
+      "Python",
+      "Statistics",
+      "Linear Algebra",
+      "ML",
+      "DBMS",
+      "Data Visualization",
+      "Deep Learning",
+      "NLP",
+      "Computer Vision"
+    ],
+    "placementSkills": [
+      "Python",
+      "SQL",
+      "statistics",
+      "pandas",
+      "scikit-learn",
+      "visualization",
+      "ML",
+      "model evaluation",
+      "PyTorch/TensorFlow",
+      "deployment"
+    ],
+    "futureSkills": [
+      "GenAI",
+      "LLMs",
+      "MLOps",
+      "data governance",
+      "AI agents",
+      "RAG",
+      "multimodal AI"
+    ],
+    "futureRelevance": "Very High",
+    "placementPreparation": "Aptitude; logical reasoning; quantitative ability; communication; resume; interview; role-specific technical test; 2-3 projects",
+    "learningResources": [
       {
-        id: 'role-physio-lead',
-        title: 'Clinical Movement Specialist',
-        responsibilities: ['Conduct dynamic gait analysis', 'Design progressive resistance exercise regimens', 'Apply therapeutic modalities'],
-        requiredSkillIds: ['skill-physio-biomech', 'skill-clinical-stats'],
-        readinessCriteria: 'Biomechanical gait assessment and individualized rehabilitation protocol design.',
-        entrySalary: '$60,000'
-      }
-    ],
-    requiredSkillIds: ['skill-physio-biomech', 'skill-clinical-stats', 'skill-telemed-protocols'],
-    prerequisites: ['Anatomy & Physiology', 'Exercise Physiology'],
-    relatedCareerIds: ['career-telemedicine-coord', 'career-biomedical-engineer'],
-    benchmark: {
-      requiredSkills: [
-        { skillId: 'skill-physio-biomech', skillName: 'Biomechanics & Movement Analysis', importance: 'mandatory', targetProficiency: 88 },
-        { skillId: 'skill-clinical-stats', skillName: 'Biostatistics & Clinical Trial Analytics', importance: 'recommended', targetProficiency: 65 }
-      ],
-      prerequisiteCourses: ['Kinesiology & Biomechanics', 'Orthopedic Physical Therapy'],
-      recommendedProjects: ['Post-ACL Reconstruction Return-to-Sport Motion Assessment Protocol'],
-      emergingSkills: ['Wearable IMU Gait Sensors', 'Virtual Reality Motor Rehabilitation'],
-      readinessThreshold: 75
-    },
-    iconName: 'HeartPulse'
-  },
-
-  // 13. FinTech Quantitative Analyst (Commerce)
-  {
-    id: 'career-fintech-quant',
-    title: 'FinTech Quantitative Analyst',
-    discipline: 'commerce',
-    category: 'Finance & Technology',
-    description: 'Apply computational modeling, financial valuation, and regulatory automation to capital markets and digital payment systems.',
-    growthRate: '+25% (High)',
-    medianSalary: '$115,000 / ₹14-28 LPA',
-    scope: 'Investment banking, hedge funds, neobanks, payment gateways, and risk rating institutions.',
-    subCareers: ['Credit Risk Modeler', 'Financial Valuation Analyst', 'RegTech & AML Officer'],
-    roles: [
+        "title": "Kaggle Learn",
+        "url": "https://www.kaggle.com/learn"
+      },
       {
-        id: 'role-fin-quant',
-        title: 'Quantitative Risk Analyst',
-        responsibilities: ['Build credit scoring algorithms', 'Perform Monte Carlo simulations', 'Automate regulatory risk reports'],
-        requiredSkillIds: ['skill-fin-modeling', 'skill-stats', 'skill-python', 'skill-algo-trading'],
-        readinessCriteria: 'Strong DCF + stochastic modeling + algorithmic backtesting.',
-        entrySalary: '$90,000'
-      }
-    ],
-    requiredSkillIds: ['skill-fin-modeling', 'skill-algo-trading', 'skill-fin-compliance', 'skill-stats', 'skill-python', 'skill-sql'],
-    prerequisites: ['Corporate finance principles', 'Probability and statistics'],
-    relatedCareerIds: ['career-data-analyst', 'career-supply-chain-analyst'],
-    benchmark: {
-      requiredSkills: [
-        { skillId: 'skill-fin-modeling', skillName: 'Financial Modeling & Valuation', importance: 'mandatory', targetProficiency: 85 },
-        { skillId: 'skill-algo-trading', skillName: 'Quantitative Risk & Algorithmic Trading', importance: 'mandatory', targetProficiency: 75 },
-        { skillId: 'skill-fin-compliance', skillName: 'Anti-Money Laundering & RegTech Compliance', importance: 'recommended', targetProficiency: 70 },
-        { skillId: 'skill-python', skillName: 'Python Programming', importance: 'mandatory', targetProficiency: 70 }
-      ],
-      prerequisiteCourses: ['Financial Accounting & Statements', 'Derivatives & Risk Analytics'],
-      recommendedProjects: ['Dynamic DCF Valuation Engine with Sensitivity Tables', 'Algorithmic Pairs Trading Backtester'],
-      emergingSkills: ['High-Frequency Order Routing', 'DeFi Liquidity Pool Modeling'],
-      readinessThreshold: 78
-    },
-    iconName: 'TrendingUp'
-  },
-
-  // 14. Global Supply Chain & Operations Analyst (Commerce)
-  {
-    id: 'career-supply-chain-analyst',
-    title: 'Global Supply Chain & Operations Analyst',
-    discipline: 'commerce',
-    category: 'Operations & Logistics',
-    description: 'Optimize global procurement, warehouse throughput, freight cost models, and enterprise SAP inventory allocations.',
-    growthRate: '+23% (High)',
-    medianSalary: '$84,000 / ₹9-18 LPA',
-    scope: 'E-commerce giants, international shipping lines, manufacturing plants, and retail supply chains.',
-    subCareers: ['Demand Planning Specialist', 'Logistics Freight Optimization Lead'],
-    roles: [
+        "title": "Google Data Analytics",
+        "url": "https://www.coursera.org/professional-certificates/google-data-analytics"
+      },
       {
-        id: 'role-supply-analyst',
-        title: 'Supply Chain Optimization Engineer',
-        responsibilities: ['Build safety-stock replenishment models', 'Map supplier lead-time variances', 'Configure SAP inventory modules'],
-        requiredSkillIds: ['skill-supply-chain-erp', 'skill-sql', 'skill-data-viz'],
-        readinessCriteria: 'Economic Order Quantity (EOQ) modeling, safety stock calculation, and ERP query fluency.',
-        entrySalary: '$64,000'
-      }
-    ],
-    requiredSkillIds: ['skill-supply-chain-erp', 'skill-sql', 'skill-data-viz', 'skill-stats'],
-    prerequisites: ['Operations management', 'Spreadsheet modeling'],
-    relatedCareerIds: ['career-data-analyst', 'career-fintech-quant'],
-    benchmark: {
-      requiredSkills: [
-        { skillId: 'skill-supply-chain-erp', skillName: 'Supply Chain Analytics & SAP/ERP', importance: 'mandatory', targetProficiency: 85 },
-        { skillId: 'skill-sql', skillName: 'SQL & Relational Databases', importance: 'mandatory', targetProficiency: 80 },
-        { skillId: 'skill-data-viz', skillName: 'Data Visualization & BI', importance: 'mandatory', targetProficiency: 75 }
-      ],
-      prerequisiteCourses: ['Operations Research', 'Global Logistics Management'],
-      recommendedProjects: ['Multi-Echelon Inventory Optimization Model in Python & SQL'],
-      emergingSkills: ['Digital Twin Supply Chains', 'Real-time GPS Freight Telematics'],
-      readinessThreshold: 75
-    },
-    iconName: 'TrendingUp'
-  },
-
-  // 15. Digital Growth & Marketing Strategist (Commerce / Media)
-  {
-    id: 'career-digital-growth-strat',
-    title: 'Digital Growth & Customer Analytics Strategist',
-    discipline: 'commerce',
-    category: 'Digital Strategy',
-    description: 'Drive customer acquisition and lifecycle retention through multi-channel attribution modeling, A/B experiments, and user cohort science.',
-    growthRate: '+26% (Rapid)',
-    medianSalary: '$88,000 / ₹10-20 LPA',
-    scope: 'Direct-to-consumer (D2C) brands, SaaS tech startups, digital agencies, and media powerhouses.',
-    subCareers: ['Performance Marketing Lead', 'Retention & Lifecycle Manager'],
-    roles: [
+        "title": "SQLBolt",
+        "url": "https://sqlbolt.com/"
+      },
       {
-        id: 'role-growth-lead',
-        title: 'Growth Marketing Analyst',
-        responsibilities: ['Run statistical A/B test experiments', 'Model customer lifetime value (LTV)', 'Optimize conversion funnels'],
-        requiredSkillIds: ['skill-growth-analytics', 'skill-data-viz', 'skill-stats'],
-        readinessCriteria: 'Hypothesis testing, multi-touch attribution, and retention cohort analysis.',
-        entrySalary: '$66,000'
-      }
-    ],
-    requiredSkillIds: ['skill-growth-analytics', 'skill-data-viz', 'skill-stats', 'skill-sql'],
-    prerequisites: ['Principles of marketing', 'Basic data visualization'],
-    relatedCareerIds: ['career-data-analyst', 'career-uiux-systems-designer'],
-    benchmark: {
-      requiredSkills: [
-        { skillId: 'skill-growth-analytics', skillName: 'Digital Growth & Customer Analytics', importance: 'mandatory', targetProficiency: 88 },
-        { skillId: 'skill-data-viz', skillName: 'Data Visualization & BI', importance: 'mandatory', targetProficiency: 80 },
-        { skillId: 'skill-stats', skillName: 'Applied Statistics & Probability', importance: 'recommended', targetProficiency: 70 }
-      ],
-      prerequisiteCourses: ['Digital Marketing & SEO', 'Applied Marketing Analytics'],
-      recommendedProjects: ['SaaS Acquisition Funnel & Churn Predictor Dashboard'],
-      emergingSkills: ['AI-driven Copy Personalization', 'First-Party Data Clean Rooms'],
-      readinessThreshold: 76
-    },
-    iconName: 'TrendingUp'
-  },
-
-  // 16. Product & UI/UX Systems Designer (Design & Media)
-  {
-    id: 'career-uiux-systems-designer',
-    title: 'Product & UI/UX Systems Designer',
-    discipline: 'design_media',
-    category: 'Product Design',
-    description: 'Architect scalable multi-platform design systems, conduct empirical user research, and craft high-fidelity interactive digital experiences.',
-    growthRate: '+22% (High)',
-    medianSalary: '$95,000 / ₹11-22 LPA',
-    scope: 'Tech companies, digital product studios, consumer software apps, and fin-tech platforms.',
-    subCareers: ['Design Systems Engineer', 'UX Researcher', 'Interaction Designer'],
-    roles: [
+        "title": "Microsoft Learn",
+        "url": "https://learn.microsoft.com/training/"
+      },
       {
-        id: 'role-uiux-senior',
-        title: 'Senior Product Designer',
-        responsibilities: ['Create multi-brand design tokens in Figma', 'Execute usability test interviews', 'Ensure WCAG AAA accessibility'],
-        requiredSkillIds: ['skill-design-systems', 'skill-ux-research'],
-        readinessCriteria: 'Figma component variables, interactive prototyping, and empirical user testing.',
-        entrySalary: '$75,000'
-      }
-    ],
-    requiredSkillIds: ['skill-design-systems', 'skill-ux-research', 'skill-data-viz'],
-    prerequisites: ['Visual design principles', 'Human-computer interaction basics'],
-    relatedCareerIds: ['career-digital-growth-strat', 'career-game-vfx-developer'],
-    benchmark: {
-      requiredSkills: [
-        { skillId: 'skill-design-systems', skillName: 'Figma & Design Systems Engineering', importance: 'mandatory', targetProficiency: 90 },
-        { skillId: 'skill-ux-research', skillName: 'User Research & Journey Mapping', importance: 'mandatory', targetProficiency: 85 },
-        { skillId: 'skill-data-viz', skillName: 'Data Visualization & BI', importance: 'recommended', targetProficiency: 60 }
-      ],
-      prerequisiteCourses: ['Human-Centered Design', 'Information Architecture'],
-      recommendedProjects: ['End-to-End Enterprise SaaS Design System & Interactive Prototype in Figma'],
-      emergingSkills: ['Spatial UI for Apple Vision Pro', 'Design-to-Code Token Automation'],
-      readinessThreshold: 78
-    },
-    iconName: 'Layout'
-  },
-
-  // 17. Game Systems & Interactive VFX Developer (Design & Media)
-  {
-    id: 'career-game-vfx-developer',
-    title: 'Game Systems & Interactive VFX Developer',
-    discipline: 'design_media',
-    category: 'Interactive Media',
-    description: 'Develop physics-driven game mechanics, real-time procedural shaders, and 3D spatial environments in Unity and Unreal Engine.',
-    growthRate: '+27% (Surging)',
-    medianSalary: '$96,000 / ₹12-25 LPA',
-    scope: 'AAA gaming studios, indie game publishers, virtual production film sets, and architectural VR visualization.',
-    subCareers: ['Technical Artist', 'Gameplay Systems Programmer', '3D Environment Artist'],
-    roles: [
+        "title": "Coursera",
+        "url": "https://www.coursera.org/"
+      },
       {
-        id: 'role-gameplay-prog',
-        title: 'Gameplay Programmer',
-        responsibilities: ['Code character movement physics in Unity C#', 'Author Niagara particle systems in Unreal', 'Optimize draw calls'],
-        requiredSkillIds: ['skill-game-engines', 'skill-3d-modeling'],
-        readinessCriteria: 'Real-time 60fps frame budgeting, C# gameplay architecture, and PBR shader compilation.',
-        entrySalary: '$72,000'
-      }
-    ],
-    requiredSkillIds: ['skill-game-engines', 'skill-3d-modeling', 'skill-python'],
-    prerequisites: ['Object-oriented programming', '3D math (vectors & quaternions)'],
-    relatedCareerIds: ['career-uiux-systems-designer', 'career-ai-engineer'],
-    benchmark: {
-      requiredSkills: [
-        { skillId: 'skill-game-engines', skillName: 'Unity & Unreal Interactive Systems', importance: 'mandatory', targetProficiency: 88 },
-        { skillId: 'skill-3d-modeling', skillName: '3D Spatial Modeling & Shader VFX', importance: 'mandatory', targetProficiency: 80 }
-      ],
-      prerequisiteCourses: ['Computer Graphics & Shaders', 'Game Mechanics Design'],
-      recommendedProjects: ['Action-Adventure Game Vertical Slice with Custom HLSL Shaders'],
-      emergingSkills: ['Procedural World Generation with Houdini', 'Real-time Raytracing Optimization'],
-      readinessThreshold: 78
-    },
-    iconName: 'Layout'
-  },
-
-  // 18. Computational Biologist & Genomics Scientist (Arts & Science)
-  {
-    id: 'career-computational-biologist',
-    title: 'Computational Biologist & Genomics Scientist',
-    discipline: 'arts_science',
-    category: 'Bioinformatics',
-    description: 'Analyze high-throughput DNA sequencing, model macromolecular protein structures, and accelerate drug target discovery using code.',
-    growthRate: '+29% (High Growth)',
-    medianSalary: '$105,000 / ₹14-26 LPA',
-    scope: 'Biotech pharma firms, genome research institutes, precision oncology centers, and agricultural genetics labs.',
-    subCareers: ['NGS Pipeline Developer', 'Structural Bioinformatician'],
-    roles: [
+        "title": "Google Career Certificates",
+        "url": "https://grow.google/certificates/"
+      },
       {
-        id: 'role-comp-bio',
-        title: 'Bioinformatics Pipeline Scientist',
-        responsibilities: ['Run RNA-seq differential expression', 'Variant call whole-exome sequencing files', 'Model protein-ligand docks'],
-        requiredSkillIds: ['skill-comp-bio', 'skill-python', 'skill-stats'],
-        readinessCriteria: 'NGS pipeline orchestration, Biopython scripting, and statistical significance testing.',
-        entrySalary: '$82,000'
-      }
-    ],
-    requiredSkillIds: ['skill-comp-bio', 'skill-python', 'skill-stats', 'skill-sql'],
-    prerequisites: ['Genetics & Molecular Biology', 'Python programming'],
-    relatedCareerIds: ['career-ai-engineer', 'career-health-informatics'],
-    benchmark: {
-      requiredSkills: [
-        { skillId: 'skill-comp-bio', skillName: 'Computational Genomics & Bioinformatics', importance: 'mandatory', targetProficiency: 90 },
-        { skillId: 'skill-python', skillName: 'Python Programming', importance: 'mandatory', targetProficiency: 85 },
-        { skillId: 'skill-stats', skillName: 'Applied Statistics & Probability', importance: 'mandatory', targetProficiency: 80 }
-      ],
-      prerequisiteCourses: ['Molecular Genetics', 'Algorithmic Bioinformatics'],
-      recommendedProjects: ['Automated Cancer RNA-Seq Differential Expression & Pathway Enrichment Pipeline'],
-      emergingSkills: ['Single-Cell Spatial Transcriptomics', 'AlphaFold Protein Folding Pipelines'],
-      readinessThreshold: 80
-    },
-    iconName: 'Atom'
-  },
-
-  // 19. Applied Quantitative Economist & Policy Analyst (Arts & Science)
-  {
-    id: 'career-applied-math-quant',
-    title: 'Applied Quantitative Economist & Policy Analyst',
-    discipline: 'arts_science',
-    category: 'Quantitative Science',
-    description: 'Model macro-economic trends, evaluate public policy impact through econometrics, and forecast monetary market liquidity.',
-    growthRate: '+21% (Steady)',
-    medianSalary: '$94,000 / ₹11-22 LPA',
-    scope: 'Central banks, international development agencies (World Bank/IMF), economic think tanks, and policy consulting.',
-    subCareers: ['Macroeconomic Forecaster', 'Public Policy Impact Evaluator'],
-    roles: [
+        "title": "DeepLearning.AI",
+        "url": "https://www.deeplearning.ai/"
+      },
       {
-        id: 'role-quant-econ',
-        title: 'Quantitative Policy Researcher',
-        responsibilities: ['Estimate econometric panel regressions', 'Conduct difference-in-differences impact assessments', 'Publish policy briefs'],
-        requiredSkillIds: ['skill-econometrics', 'skill-stats', 'skill-python'],
-        readinessCriteria: 'Stochastic economic modeling, instrumental variables, and econometric causal inference.',
-        entrySalary: '$72,000'
+        "title": "Hugging Face Learn",
+        "url": "https://huggingface.co/learn"
       }
-    ],
-    requiredSkillIds: ['skill-econometrics', 'skill-stats', 'skill-python', 'skill-data-viz'],
-    prerequisites: ['Micro & Macro economics', 'Calculus and linear algebra'],
-    relatedCareerIds: ['career-fintech-quant', 'career-data-analyst'],
-    benchmark: {
-      requiredSkills: [
-        { skillId: 'skill-econometrics', skillName: 'Econometric Modeling & Quantitative Policy', importance: 'mandatory', targetProficiency: 88 },
-        { skillId: 'skill-stats', skillName: 'Applied Statistics & Probability', importance: 'mandatory', targetProficiency: 85 },
-        { skillId: 'skill-python', skillName: 'Python Programming', importance: 'recommended', targetProficiency: 70 }
-      ],
-      prerequisiteCourses: ['Intermediate Econometrics', 'Mathematical Economics'],
-      recommendedProjects: ['Empirical Policy Impact Analysis of Renewable Energy Subsidies on Industrial Output'],
-      emergingSkills: ['Machine Learning in Causal Inference', 'High-Frequency Inflation Nowcasting'],
-      readinessThreshold: 78
-    },
-    iconName: 'Atom'
+    ]
   },
-
-  // 20. Cyber Law & AI Governance Analyst (Law & Governance)
   {
-    id: 'career-cyber-law-analyst',
-    title: 'Cyber Law & AI Governance Analyst',
-    discipline: 'law_governance',
-    category: 'Technology Law',
-    description: 'Ensure corporate compliance with international data privacy statutes (GDPR/DPDP), audit AI models for algorithmic bias, and draft tech IP agreements.',
-    growthRate: '+32% (Surging Need)',
-    medianSalary: '$110,000 / ₹14-28 LPA',
-    scope: 'Tech corporations, international law firms, privacy consulting practices, and regulatory oversight authorities.',
-    subCareers: ['Data Protection Officer (DPO)', 'AI Ethics & Model Compliance Auditor'],
-    roles: [
+    "id": "career-data-analyst",
+    "title": "Data Analyst & BI Specialist",
+    "discipline": "engineering",
+    "department": "Computer Science & Data Analytics",
+    "roleCategory": "Technology/Electronics",
+    "category": "Data Science & Enterprise Intelligence",
+    "description": "Transform massive structured and unstructured datasets into strategic business intelligence, predictive dashboards, automated ETL workflows, and quantitative insights.",
+    "growthRate": "+32% (Very High Demand)",
+    "medianSalary": "$95,000 / \u20b910-22 LPA",
+    "scope": "Cross-functional data modeling, SQL optimization, statistical inference, and enterprise dashboard engineering.",
+    "subCareers": [
+      "Data Scientist",
+      "Data Analyst",
+      "ML Engineer",
+      "Data Engineer",
+      "Software Engineer",
+      "Backend Developer",
+      "AI/ML Engineer",
+      "Business Analyst",
+      "Product Analyst"
+    ],
+    "roles": [
       {
-        id: 'role-privacy-counsel',
-        title: 'Data Privacy Compliance Specialist',
-        responsibilities: ['Draft Data Protection Impact Assessments (DPIAs)', 'Audit AI model training datasets for copyright and bias', 'Manage cross-border data transfer compliance'],
-        requiredSkillIds: ['skill-cyber-law', 'skill-ai-ethics'],
-        readinessCriteria: 'GDPR/DPDP statutory fluency and algorithmic audit framework application.',
-        entrySalary: '$85,000'
+        "id": "role-data-scientist",
+        "title": "Data Scientist",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Data Scientist.",
+          "Apply core principles of Python, Statistics, Linear Algebra in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in Python, SQL, statistics and completion of 2-3 portfolio projects.",
+        "entrySalary": "$95,000 / \u20b910-22 LPA"
+      },
+      {
+        "id": "role-data-analyst",
+        "title": "Data Analyst",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Data Analyst.",
+          "Apply core principles of Python, Statistics, Linear Algebra in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in Python, SQL, statistics and completion of 2-3 portfolio projects.",
+        "entrySalary": "$95,000 / \u20b910-22 LPA"
+      },
+      {
+        "id": "role-ml-engineer",
+        "title": "ML Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in ML Engineer.",
+          "Apply core principles of Python, Statistics, Linear Algebra in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in Python, SQL, statistics and completion of 2-3 portfolio projects.",
+        "entrySalary": "$95,000 / \u20b910-22 LPA"
+      },
+      {
+        "id": "role-data-engineer",
+        "title": "Data Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Data Engineer.",
+          "Apply core principles of Python, Statistics, Linear Algebra in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in Python, SQL, statistics and completion of 2-3 portfolio projects.",
+        "entrySalary": "$95,000 / \u20b910-22 LPA"
+      },
+      {
+        "id": "role-software-engineer",
+        "title": "Software Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Software Engineer.",
+          "Apply core principles of Python, Statistics, Linear Algebra in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in Python, SQL, statistics and completion of 2-3 portfolio projects.",
+        "entrySalary": "$95,000 / \u20b910-22 LPA"
+      },
+      {
+        "id": "role-backend-developer",
+        "title": "Backend Developer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Backend Developer.",
+          "Apply core principles of Python, Statistics, Linear Algebra in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in Python, SQL, statistics and completion of 2-3 portfolio projects.",
+        "entrySalary": "$95,000 / \u20b910-22 LPA"
+      },
+      {
+        "id": "role-ai-ml-engineer",
+        "title": "AI/ML Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in AI/ML Engineer.",
+          "Apply core principles of Python, Statistics, Linear Algebra in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in Python, SQL, statistics and completion of 2-3 portfolio projects.",
+        "entrySalary": "$95,000 / \u20b910-22 LPA"
+      },
+      {
+        "id": "role-business-analyst",
+        "title": "Business Analyst",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Business Analyst.",
+          "Apply core principles of Python, Statistics, Linear Algebra in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in Python, SQL, statistics and completion of 2-3 portfolio projects.",
+        "entrySalary": "$95,000 / \u20b910-22 LPA"
+      },
+      {
+        "id": "role-product-analyst",
+        "title": "Product Analyst",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Product Analyst.",
+          "Apply core principles of Python, Statistics, Linear Algebra in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in Python, SQL, statistics and completion of 2-3 portfolio projects.",
+        "entrySalary": "$95,000 / \u20b910-22 LPA"
       }
     ],
-    requiredSkillIds: ['skill-cyber-law', 'skill-ai-ethics', 'skill-cybersec'],
-    prerequisites: ['Jurisprudence / legal fundamentals', 'Basic understanding of computer systems'],
-    relatedCareerIds: ['career-cybersec-architect', 'career-fintech-quant'],
-    benchmark: {
-      requiredSkills: [
-        { skillId: 'skill-cyber-law', skillName: 'Cyber Law, GDPR & Data Privacy Governance', importance: 'mandatory', targetProficiency: 90 },
-        { skillId: 'skill-ai-ethics', skillName: 'AI Ethics, Governance & Model Auditing', importance: 'mandatory', targetProficiency: 85 },
-        { skillId: 'skill-cybersec', skillName: 'Network & Cloud Security', importance: 'recommended', targetProficiency: 65 }
+    "requiredSkillIds": [
+      "skill-python",
+      "skill-sql",
+      "skill-statistics",
+      "skill-pandas",
+      "skill-scikit-learn"
+    ],
+    "prerequisites": [
+      "Python",
+      "Statistics",
+      "Linear Algebra",
+      "ML"
+    ],
+    "relatedCareerIds": [],
+    "benchmark": {
+      "requiredSkills": [
+        {
+          "skillId": "skill-python",
+          "skillName": "Python",
+          "importance": "mandatory",
+          "targetProficiency": 80
+        },
+        {
+          "skillId": "skill-sql",
+          "skillName": "SQL",
+          "importance": "mandatory",
+          "targetProficiency": 80
+        },
+        {
+          "skillId": "skill-statistics",
+          "skillName": "statistics",
+          "importance": "mandatory",
+          "targetProficiency": 80
+        },
+        {
+          "skillId": "skill-pandas",
+          "skillName": "pandas",
+          "importance": "mandatory",
+          "targetProficiency": 80
+        },
+        {
+          "skillId": "skill-scikit-learn",
+          "skillName": "scikit-learn",
+          "importance": "mandatory",
+          "targetProficiency": 80
+        }
       ],
-      prerequisiteCourses: ['Cyber Law & Internet Governance', 'Intellectual Property in Digital Age'],
-      recommendedProjects: ['Comprehensive GDPR & AI Act Compliance Framework for Generative AI SaaS'],
-      emergingSkills: ['Synthetic Data Privacy Licensing', 'Autonomous Agent Liability Audits'],
-      readinessThreshold: 78
+      "prerequisiteCourses": [
+        "Python",
+        "Statistics",
+        "Linear Algebra",
+        "ML"
+      ],
+      "recommendedProjects": [
+        "End-to-End Data Analyst & BI Specialist Capstone System",
+        "Production Optimization using Python"
+      ],
+      "emergingSkills": [
+        "GenAI",
+        "LLMs",
+        "MLOps",
+        "data governance"
+      ],
+      "readinessThreshold": 75
     },
-    iconName: 'Shield'
+    "coreCourses": [
+      "Python",
+      "Statistics",
+      "Linear Algebra",
+      "ML",
+      "DBMS",
+      "Data Visualization",
+      "DSA",
+      "OOP",
+      "OS",
+      "Computer Networks",
+      "Software Engineering",
+      "Programming",
+      "Business Analytics"
+    ],
+    "placementSkills": [
+      "Python",
+      "SQL",
+      "statistics",
+      "pandas",
+      "scikit-learn",
+      "visualization",
+      "DSA",
+      "Java/Python/C++",
+      "Git",
+      "REST APIs",
+      "aptitude",
+      "Excel/BI",
+      "communication",
+      "case studies"
+    ],
+    "futureSkills": [
+      "GenAI",
+      "LLMs",
+      "MLOps",
+      "data governance",
+      "AI agents",
+      "cloud",
+      "cybersecurity",
+      "AI-assisted analytics",
+      "product analytics"
+    ],
+    "futureRelevance": "Very High",
+    "placementPreparation": "Aptitude; logical reasoning; quantitative ability; communication; resume; interview; role-specific technical test; 2-3 projects",
+    "learningResources": [
+      {
+        "title": "Kaggle Learn",
+        "url": "https://www.kaggle.com/learn"
+      },
+      {
+        "title": "Google Data Analytics",
+        "url": "https://www.coursera.org/professional-certificates/google-data-analytics"
+      },
+      {
+        "title": "SQLBolt",
+        "url": "https://sqlbolt.com/"
+      },
+      {
+        "title": "Microsoft Learn",
+        "url": "https://learn.microsoft.com/training/"
+      },
+      {
+        "title": "Coursera",
+        "url": "https://www.coursera.org/"
+      },
+      {
+        "title": "Google Career Certificates",
+        "url": "https://grow.google/certificates/"
+      },
+      {
+        "title": "freeCodeCamp",
+        "url": "https://www.freecodecamp.org/"
+      },
+      {
+        "title": "GeeksforGeeks",
+        "url": "https://www.geeksforgeeks.org/"
+      },
+      {
+        "title": "LeetCode",
+        "url": "https://leetcode.com/"
+      },
+      {
+        "title": "DeepLearning.AI",
+        "url": "https://www.deeplearning.ai/"
+      },
+      {
+        "title": "Hugging Face Learn",
+        "url": "https://huggingface.co/learn"
+      }
+    ]
   },
-
-  // 21. Smart Hospitality & Revenue Manager (Hospitality)
   {
-    id: 'career-smart-hospitality-mgr',
-    title: 'Smart Hospitality & Revenue Strategy Manager',
-    discipline: 'hospitality',
-    category: 'Hospitality Management',
-    description: 'Leverage property management systems (PMS), dynamic room pricing algorithms, and luxury guest experience analytics to maximize hotel RevPAR.',
-    growthRate: '+23% (Strong Rebound)',
-    medianSalary: '$82,000 / ₹9-18 LPA',
-    scope: 'Luxury hotel chains, integrated mega-resorts, airline hospitality networks, and boutique travel conglomerates.',
-    subCareers: ['Hotel Revenue Director', 'Luxury Guest Experience Architect'],
-    roles: [
+    "id": "career-cloud-devops",
+    "title": "Cloud DevOps & Site Reliability Engineer",
+    "discipline": "engineering",
+    "department": "Computer Science & Cloud Infrastructure",
+    "roleCategory": "Technology/Electronics",
+    "category": "Cloud Infrastructure & SRE",
+    "description": "Architect zero-downtime distributed infrastructure, automate multi-region Kubernetes deployments, establish DevSecOps pipelines, and ensure 99.999% system availability.",
+    "growthRate": "+35% (High Demand)",
+    "medianSalary": "$138,000 / \u20b914-28 LPA",
+    "scope": "Kubernetes clusters, Infrastructure-as-Code (Terraform), CI/CD automation, and cloud monitoring.",
+    "subCareers": [
+      "Software Engineer",
+      "Full Stack Developer",
+      "Cloud Engineer",
+      "QA Automation Engineer",
+      "Backend Developer",
+      "AI/ML Engineer",
+      "Data Engineer",
+      "Systems Engineer",
+      "Embedded Software Engineer",
+      "Network Engineer"
+    ],
+    "roles": [
       {
-        id: 'role-rev-mgr',
-        title: 'Hospitality Revenue Strategist',
-        responsibilities: ['Set dynamic room pricing matrices', 'Audit OTA channel commission costs', 'Monitor guest satisfaction Net Promoter Scores'],
-        requiredSkillIds: ['skill-hospitality-pms', 'skill-data-viz'],
-        readinessCriteria: 'RevPAR optimization, Opera PMS reporting, and yield management forecasting.',
-        entrySalary: '$62,000'
+        "id": "role-software-engineer",
+        "title": "Software Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Software Engineer.",
+          "Apply core principles of DBMS, Web Technologies, OS in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in DSA, SQL, Java/Python/JS and completion of 2-3 portfolio projects.",
+        "entrySalary": "$138,000 / \u20b914-28 LPA"
+      },
+      {
+        "id": "role-full-stack-developer",
+        "title": "Full Stack Developer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Full Stack Developer.",
+          "Apply core principles of DBMS, Web Technologies, OS in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in DSA, SQL, Java/Python/JS and completion of 2-3 portfolio projects.",
+        "entrySalary": "$138,000 / \u20b914-28 LPA"
+      },
+      {
+        "id": "role-cloud-engineer",
+        "title": "Cloud Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Cloud Engineer.",
+          "Apply core principles of DBMS, Web Technologies, OS in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in DSA, SQL, Java/Python/JS and completion of 2-3 portfolio projects.",
+        "entrySalary": "$138,000 / \u20b914-28 LPA"
+      },
+      {
+        "id": "role-qa-automation-engineer",
+        "title": "QA Automation Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in QA Automation Engineer.",
+          "Apply core principles of DBMS, Web Technologies, OS in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in DSA, SQL, Java/Python/JS and completion of 2-3 portfolio projects.",
+        "entrySalary": "$138,000 / \u20b914-28 LPA"
+      },
+      {
+        "id": "role-backend-developer",
+        "title": "Backend Developer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Backend Developer.",
+          "Apply core principles of DBMS, Web Technologies, OS in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in DSA, SQL, Java/Python/JS and completion of 2-3 portfolio projects.",
+        "entrySalary": "$138,000 / \u20b914-28 LPA"
+      },
+      {
+        "id": "role-ai-ml-engineer",
+        "title": "AI/ML Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in AI/ML Engineer.",
+          "Apply core principles of DBMS, Web Technologies, OS in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in DSA, SQL, Java/Python/JS and completion of 2-3 portfolio projects.",
+        "entrySalary": "$138,000 / \u20b914-28 LPA"
+      },
+      {
+        "id": "role-data-engineer",
+        "title": "Data Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Data Engineer.",
+          "Apply core principles of DBMS, Web Technologies, OS in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in DSA, SQL, Java/Python/JS and completion of 2-3 portfolio projects.",
+        "entrySalary": "$138,000 / \u20b914-28 LPA"
+      },
+      {
+        "id": "role-systems-engineer",
+        "title": "Systems Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Systems Engineer.",
+          "Apply core principles of DBMS, Web Technologies, OS in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in DSA, SQL, Java/Python/JS and completion of 2-3 portfolio projects.",
+        "entrySalary": "$138,000 / \u20b914-28 LPA"
+      },
+      {
+        "id": "role-embedded-software-engineer",
+        "title": "Embedded Software Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Embedded Software Engineer.",
+          "Apply core principles of DBMS, Web Technologies, OS in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in DSA, SQL, Java/Python/JS and completion of 2-3 portfolio projects.",
+        "entrySalary": "$138,000 / \u20b914-28 LPA"
+      },
+      {
+        "id": "role-network-engineer",
+        "title": "Network Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Network Engineer.",
+          "Apply core principles of DBMS, Web Technologies, OS in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in DSA, SQL, Java/Python/JS and completion of 2-3 portfolio projects.",
+        "entrySalary": "$138,000 / \u20b914-28 LPA"
       }
     ],
-    requiredSkillIds: ['skill-hospitality-pms', 'skill-event-logistics', 'skill-data-viz', 'skill-stats'],
-    prerequisites: ['Hospitality operations fundamentals', 'Commercial arithmetic'],
-    relatedCareerIds: ['career-digital-growth-strat', 'career-supply-chain-analyst'],
-    benchmark: {
-      requiredSkills: [
-        { skillId: 'skill-hospitality-pms', skillName: 'Hospitality PMS & Revenue Yield Management', importance: 'mandatory', targetProficiency: 88 },
-        { skillId: 'skill-event-logistics', skillName: 'Event Operations & Luxury Guest Experience', importance: 'mandatory', targetProficiency: 80 },
-        { skillId: 'skill-data-viz', skillName: 'Data Visualization & BI', importance: 'recommended', targetProficiency: 70 }
+    "requiredSkillIds": [
+      "skill-dsa",
+      "skill-sql",
+      "skill-java-python-js",
+      "skill-testing",
+      "skill-git"
+    ],
+    "prerequisites": [
+      "DBMS",
+      "Web Technologies",
+      "OS",
+      "Networks"
+    ],
+    "relatedCareerIds": [],
+    "benchmark": {
+      "requiredSkills": [
+        {
+          "skillId": "skill-dsa",
+          "skillName": "DSA",
+          "importance": "mandatory",
+          "targetProficiency": 80
+        },
+        {
+          "skillId": "skill-sql",
+          "skillName": "SQL",
+          "importance": "mandatory",
+          "targetProficiency": 80
+        },
+        {
+          "skillId": "skill-java-python-js",
+          "skillName": "Java/Python/JS",
+          "importance": "mandatory",
+          "targetProficiency": 80
+        },
+        {
+          "skillId": "skill-testing",
+          "skillName": "testing",
+          "importance": "mandatory",
+          "targetProficiency": 80
+        },
+        {
+          "skillId": "skill-git",
+          "skillName": "Git",
+          "importance": "mandatory",
+          "targetProficiency": 80
+        }
       ],
-      prerequisiteCourses: ['Hotel Revenue Management', 'Luxury Brand Customer Experience'],
-      recommendedProjects: ['Dynamic Hotel RevPAR Yield Pricing Model with Channel Distribution Matrix'],
-      emergingSkills: ['Keyless IoT Mobile Guest Journeys', 'AI Concierge Conversational Agents'],
-      readinessThreshold: 75
+      "prerequisiteCourses": [
+        "DBMS",
+        "Web Technologies",
+        "OS",
+        "Networks"
+      ],
+      "recommendedProjects": [
+        "End-to-End Cloud DevOps & Site Reliability Engineer Capstone System",
+        "Production Optimization using DSA"
+      ],
+      "emergingSkills": [
+        "Cloud",
+        "DevSecOps",
+        "AI-assisted development",
+        "data engineering"
+      ],
+      "readinessThreshold": 75
     },
-    iconName: 'Award'
+    "coreCourses": [
+      "DBMS",
+      "Web Technologies",
+      "OS",
+      "Networks",
+      "Software Engineering",
+      "DSA",
+      "OOP",
+      "Computer Networks",
+      "Microprocessors",
+      "Embedded Systems"
+    ],
+    "placementSkills": [
+      "DSA",
+      "SQL",
+      "Java/Python/JS",
+      "testing",
+      "Git",
+      "aptitude",
+      "Java/Python/C++",
+      "REST APIs",
+      "C/C++",
+      "Linux",
+      "networking",
+      "debugging"
+    ],
+    "futureSkills": [
+      "Cloud",
+      "DevSecOps",
+      "AI-assisted development",
+      "data engineering",
+      "GenAI",
+      "LLMs",
+      "MLOps",
+      "cloud",
+      "cybersecurity",
+      "Edge AI",
+      "embedded AI"
+    ],
+    "futureRelevance": "Very High",
+    "placementPreparation": "Aptitude; logical reasoning; quantitative ability; communication; resume; interview; role-specific technical test; 2-3 projects",
+    "learningResources": [
+      {
+        "title": "freeCodeCamp",
+        "url": "https://www.freecodecamp.org/"
+      },
+      {
+        "title": "GeeksforGeeks",
+        "url": "https://www.geeksforgeeks.org/"
+      },
+      {
+        "title": "LeetCode",
+        "url": "https://leetcode.com/"
+      },
+      {
+        "title": "AWS Skill Builder",
+        "url": "https://skillbuilder.aws/"
+      },
+      {
+        "title": "Microsoft Learn",
+        "url": "https://learn.microsoft.com/training/"
+      },
+      {
+        "title": "Google Cloud Skills Boost",
+        "url": "https://www.cloudskillsboost.google/"
+      },
+      {
+        "title": "Siemens SCE",
+        "url": "https://www.siemens.com/sce"
+      },
+      {
+        "title": "Rockwell Automation Learning+",
+        "url": "https://www.rockwellautomation.com/en-us/support/learning.html"
+      },
+      {
+        "title": "NPTEL",
+        "url": "https://nptel.ac.in/"
+      },
+      {
+        "title": "Kaggle Learn",
+        "url": "https://www.kaggle.com/learn"
+      },
+      {
+        "title": "DeepLearning.AI",
+        "url": "https://www.deeplearning.ai/"
+      },
+      {
+        "title": "Hugging Face Learn",
+        "url": "https://huggingface.co/learn"
+      },
+      {
+        "title": "Google Data Analytics",
+        "url": "https://www.coursera.org/professional-certificates/google-data-analytics"
+      },
+      {
+        "title": "SQLBolt",
+        "url": "https://sqlbolt.com/"
+      },
+      {
+        "title": "Arduino Docs",
+        "url": "https://docs.arduino.cc/"
+      },
+      {
+        "title": "ARM Learning Paths",
+        "url": "https://learn.arm.com/"
+      },
+      {
+        "title": "FreeRTOS Docs",
+        "url": "https://www.freertos.org/Documentation/"
+      },
+      {
+        "title": "Keysight University",
+        "url": "https://learn.keysight.com/"
+      },
+      {
+        "title": "Cisco Networking Academy",
+        "url": "https://www.netacad.com/"
+      }
+    ]
+  },
+  {
+    "id": "career-cybersec-architect",
+    "title": "Cybersecurity Architect & SOC Analyst",
+    "discipline": "engineering",
+    "department": "Cybersecurity & Network Systems",
+    "roleCategory": "Technology/Electronics",
+    "category": "Cyber Defense & Security Architecture",
+    "description": "Defend enterprise digital assets through continuous threat hunting, zero-trust network segmentation, automated SIEM incident triage, and application penetration testing.",
+    "growthRate": "+36% (Critical Demand)",
+    "medianSalary": "$135,000 / \u20b914-30 LPA",
+    "scope": "SOC telemetry, threat intelligence, cloud IAM fortification, and regulatory compliance.",
+    "subCareers": [
+      "Cybersecurity Analyst",
+      "SOC Analyst",
+      "Application Security Engineer",
+      "Penetration Tester",
+      "Software Engineer",
+      "Full Stack Developer",
+      "Cloud Engineer",
+      "QA Automation Engineer"
+    ],
+    "roles": [
+      {
+        "id": "role-cybersecurity-analyst",
+        "title": "Cybersecurity Analyst",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Cybersecurity Analyst.",
+          "Apply core principles of Networks, OS, Cryptography in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in Linux, networking, Python and completion of 2-3 portfolio projects.",
+        "entrySalary": "$135,000 / \u20b914-30 LPA"
+      },
+      {
+        "id": "role-soc-analyst",
+        "title": "SOC Analyst",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in SOC Analyst.",
+          "Apply core principles of Networks, OS, Cryptography in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in Linux, networking, Python and completion of 2-3 portfolio projects.",
+        "entrySalary": "$135,000 / \u20b914-30 LPA"
+      },
+      {
+        "id": "role-application-security-engineer",
+        "title": "Application Security Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Application Security Engineer.",
+          "Apply core principles of Networks, OS, Cryptography in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in Linux, networking, Python and completion of 2-3 portfolio projects.",
+        "entrySalary": "$135,000 / \u20b914-30 LPA"
+      },
+      {
+        "id": "role-penetration-tester",
+        "title": "Penetration Tester",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Penetration Tester.",
+          "Apply core principles of Networks, OS, Cryptography in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in Linux, networking, Python and completion of 2-3 portfolio projects.",
+        "entrySalary": "$135,000 / \u20b914-30 LPA"
+      },
+      {
+        "id": "role-software-engineer",
+        "title": "Software Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Software Engineer.",
+          "Apply core principles of Networks, OS, Cryptography in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in Linux, networking, Python and completion of 2-3 portfolio projects.",
+        "entrySalary": "$135,000 / \u20b914-30 LPA"
+      },
+      {
+        "id": "role-full-stack-developer",
+        "title": "Full Stack Developer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Full Stack Developer.",
+          "Apply core principles of Networks, OS, Cryptography in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in Linux, networking, Python and completion of 2-3 portfolio projects.",
+        "entrySalary": "$135,000 / \u20b914-30 LPA"
+      },
+      {
+        "id": "role-cloud-engineer",
+        "title": "Cloud Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Cloud Engineer.",
+          "Apply core principles of Networks, OS, Cryptography in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in Linux, networking, Python and completion of 2-3 portfolio projects.",
+        "entrySalary": "$135,000 / \u20b914-30 LPA"
+      },
+      {
+        "id": "role-qa-automation-engineer",
+        "title": "QA Automation Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in QA Automation Engineer.",
+          "Apply core principles of Networks, OS, Cryptography in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in Linux, networking, Python and completion of 2-3 portfolio projects.",
+        "entrySalary": "$135,000 / \u20b914-30 LPA"
+      }
+    ],
+    "requiredSkillIds": [
+      "skill-linux",
+      "skill-networking",
+      "skill-python",
+      "skill-owasp",
+      "skill-siem"
+    ],
+    "prerequisites": [
+      "Networks",
+      "OS",
+      "Cryptography",
+      "Cybersecurity"
+    ],
+    "relatedCareerIds": [],
+    "benchmark": {
+      "requiredSkills": [
+        {
+          "skillId": "skill-linux",
+          "skillName": "Linux",
+          "importance": "mandatory",
+          "targetProficiency": 80
+        },
+        {
+          "skillId": "skill-networking",
+          "skillName": "networking",
+          "importance": "mandatory",
+          "targetProficiency": 80
+        },
+        {
+          "skillId": "skill-python",
+          "skillName": "Python",
+          "importance": "mandatory",
+          "targetProficiency": 80
+        },
+        {
+          "skillId": "skill-owasp",
+          "skillName": "OWASP",
+          "importance": "mandatory",
+          "targetProficiency": 80
+        },
+        {
+          "skillId": "skill-siem",
+          "skillName": "SIEM",
+          "importance": "mandatory",
+          "targetProficiency": 80
+        }
+      ],
+      "prerequisiteCourses": [
+        "Networks",
+        "OS",
+        "Cryptography",
+        "Cybersecurity"
+      ],
+      "recommendedProjects": [
+        "End-to-End Cybersecurity Architect & SOC Analyst Capstone System",
+        "Production Optimization using Linux"
+      ],
+      "emergingSkills": [
+        "Cloud security",
+        "zero trust",
+        "AI security",
+        "threat intelligence"
+      ],
+      "readinessThreshold": 75
+    },
+    "coreCourses": [
+      "Networks",
+      "OS",
+      "Cryptography",
+      "Cybersecurity",
+      "Web Security",
+      "DBMS",
+      "Web Technologies",
+      "Software Engineering"
+    ],
+    "placementSkills": [
+      "Linux",
+      "networking",
+      "Python",
+      "OWASP",
+      "SIEM",
+      "incident response",
+      "DSA",
+      "SQL",
+      "Java/Python/JS",
+      "testing",
+      "Git",
+      "aptitude"
+    ],
+    "futureSkills": [
+      "Cloud security",
+      "zero trust",
+      "AI security",
+      "threat intelligence",
+      "Cloud",
+      "DevSecOps",
+      "AI-assisted development",
+      "data engineering"
+    ],
+    "futureRelevance": "Very High",
+    "placementPreparation": "Aptitude; logical reasoning; quantitative ability; communication; resume; interview; role-specific technical test; 2-3 projects",
+    "learningResources": [
+      {
+        "title": "Cisco Networking Academy",
+        "url": "https://www.netacad.com/"
+      },
+      {
+        "title": "PortSwigger Web Security Academy",
+        "url": "https://portswigger.net/web-security"
+      },
+      {
+        "title": "TryHackMe",
+        "url": "https://tryhackme.com/"
+      },
+      {
+        "title": "freeCodeCamp",
+        "url": "https://www.freecodecamp.org/"
+      },
+      {
+        "title": "GeeksforGeeks",
+        "url": "https://www.geeksforgeeks.org/"
+      },
+      {
+        "title": "LeetCode",
+        "url": "https://leetcode.com/"
+      },
+      {
+        "title": "AWS Skill Builder",
+        "url": "https://skillbuilder.aws/"
+      },
+      {
+        "title": "Microsoft Learn",
+        "url": "https://learn.microsoft.com/training/"
+      },
+      {
+        "title": "Google Cloud Skills Boost",
+        "url": "https://www.cloudskillsboost.google/"
+      },
+      {
+        "title": "Siemens SCE",
+        "url": "https://www.siemens.com/sce"
+      },
+      {
+        "title": "Rockwell Automation Learning+",
+        "url": "https://www.rockwellautomation.com/en-us/support/learning.html"
+      },
+      {
+        "title": "NPTEL",
+        "url": "https://nptel.ac.in/"
+      }
+    ]
+  },
+  {
+    "id": "career-biomedical-engineer",
+    "title": "Biomedical Devices & Robotics Engineer",
+    "discipline": "engineering",
+    "department": "Biomedical Engineering & Medical Devices",
+    "roleCategory": "Life/Chemical/Process",
+    "category": "Healthcare Technology & Medical Devices",
+    "description": "Pioneer life-saving medical instrumentation, wearable biometric sensors, robotic surgical systems, and FDA/CE-compliant diagnostic software.",
+    "growthRate": "+28% (Steady Growth)",
+    "medianSalary": "$112,000 / \u20b910-24 LPA",
+    "scope": "Biosignal processing, wearable telehealth firmware, ISO 13485 standards, and clinical instrumentation.",
+    "subCareers": [
+      "Biomedical Engineer",
+      "Medical Device Engineer",
+      "Clinical Engineering Associate",
+      "Biomedical Signal Processing Engineer",
+      "Bioprocess Engineer",
+      "Bioinformatics Analyst",
+      "Biomanufacturing Associate",
+      "Quality/Validation Associate"
+    ],
+    "roles": [
+      {
+        "id": "role-biomedical-engineer",
+        "title": "Biomedical Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Biomedical Engineer.",
+          "Apply core principles of Biomedical Instrumentation, Anatomy, Physiology in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in MATLAB/Python, signal processing, medical devices and completion of 2-3 portfolio projects.",
+        "entrySalary": "$112,000 / \u20b910-24 LPA"
+      },
+      {
+        "id": "role-medical-device-engineer",
+        "title": "Medical Device Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Medical Device Engineer.",
+          "Apply core principles of Biomedical Instrumentation, Anatomy, Physiology in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in MATLAB/Python, signal processing, medical devices and completion of 2-3 portfolio projects.",
+        "entrySalary": "$112,000 / \u20b910-24 LPA"
+      },
+      {
+        "id": "role-clinical-engineering-associate",
+        "title": "Clinical Engineering Associate",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Clinical Engineering Associate.",
+          "Apply core principles of Biomedical Instrumentation, Anatomy, Physiology in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in MATLAB/Python, signal processing, medical devices and completion of 2-3 portfolio projects.",
+        "entrySalary": "$112,000 / \u20b910-24 LPA"
+      },
+      {
+        "id": "role-biomedical-signal-processing-engineer",
+        "title": "Biomedical Signal Processing Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Biomedical Signal Processing Engineer.",
+          "Apply core principles of Biomedical Instrumentation, Anatomy, Physiology in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in MATLAB/Python, signal processing, medical devices and completion of 2-3 portfolio projects.",
+        "entrySalary": "$112,000 / \u20b910-24 LPA"
+      },
+      {
+        "id": "role-bioprocess-engineer",
+        "title": "Bioprocess Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Bioprocess Engineer.",
+          "Apply core principles of Biomedical Instrumentation, Anatomy, Physiology in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in MATLAB/Python, signal processing, medical devices and completion of 2-3 portfolio projects.",
+        "entrySalary": "$112,000 / \u20b910-24 LPA"
+      },
+      {
+        "id": "role-bioinformatics-analyst",
+        "title": "Bioinformatics Analyst",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Bioinformatics Analyst.",
+          "Apply core principles of Biomedical Instrumentation, Anatomy, Physiology in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in MATLAB/Python, signal processing, medical devices and completion of 2-3 portfolio projects.",
+        "entrySalary": "$112,000 / \u20b910-24 LPA"
+      },
+      {
+        "id": "role-biomanufacturing-associate",
+        "title": "Biomanufacturing Associate",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Biomanufacturing Associate.",
+          "Apply core principles of Biomedical Instrumentation, Anatomy, Physiology in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in MATLAB/Python, signal processing, medical devices and completion of 2-3 portfolio projects.",
+        "entrySalary": "$112,000 / \u20b910-24 LPA"
+      },
+      {
+        "id": "role-quality-validation-associate",
+        "title": "Quality/Validation Associate",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Quality/Validation Associate.",
+          "Apply core principles of Biomedical Instrumentation, Anatomy, Physiology in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in MATLAB/Python, signal processing, medical devices and completion of 2-3 portfolio projects.",
+        "entrySalary": "$112,000 / \u20b910-24 LPA"
+      }
+    ],
+    "requiredSkillIds": [
+      "skill-matlab-python",
+      "skill-signal-processing",
+      "skill-medical-devices",
+      "skill-validation",
+      "skill-lab-techniques"
+    ],
+    "prerequisites": [
+      "Biomedical Instrumentation",
+      "Anatomy",
+      "Physiology",
+      "Signals"
+    ],
+    "relatedCareerIds": [],
+    "benchmark": {
+      "requiredSkills": [
+        {
+          "skillId": "skill-matlab-python",
+          "skillName": "MATLAB/Python",
+          "importance": "mandatory",
+          "targetProficiency": 80
+        },
+        {
+          "skillId": "skill-signal-processing",
+          "skillName": "signal processing",
+          "importance": "mandatory",
+          "targetProficiency": 80
+        },
+        {
+          "skillId": "skill-medical-devices",
+          "skillName": "medical devices",
+          "importance": "mandatory",
+          "targetProficiency": 80
+        },
+        {
+          "skillId": "skill-validation",
+          "skillName": "validation",
+          "importance": "mandatory",
+          "targetProficiency": 80
+        },
+        {
+          "skillId": "skill-lab-techniques",
+          "skillName": "Lab techniques",
+          "importance": "mandatory",
+          "targetProficiency": 80
+        }
+      ],
+      "prerequisiteCourses": [
+        "Biomedical Instrumentation",
+        "Anatomy",
+        "Physiology",
+        "Signals"
+      ],
+      "recommendedProjects": [
+        "End-to-End Biomedical Devices & Robotics Engineer Capstone System",
+        "Production Optimization using MATLAB/Python"
+      ],
+      "emergingSkills": [
+        "AI medical imaging",
+        "wearables",
+        "digital health",
+        "med-device cybersecurity"
+      ],
+      "readinessThreshold": 75
+    },
+    "coreCourses": [
+      "Biomedical Instrumentation",
+      "Anatomy",
+      "Physiology",
+      "Signals",
+      "Imaging",
+      "Biomaterials",
+      "Molecular Biology",
+      "Biochemistry",
+      "Microbiology",
+      "Genetic Engineering",
+      "Bioprocess"
+    ],
+    "placementSkills": [
+      "MATLAB/Python",
+      "signal processing",
+      "medical devices",
+      "validation",
+      "Lab techniques",
+      "statistics",
+      "Python/R",
+      "GMP/GLP",
+      "documentation"
+    ],
+    "futureSkills": [
+      "AI medical imaging",
+      "wearables",
+      "digital health",
+      "med-device cybersecurity",
+      "Bioinformatics",
+      "computational biology",
+      "precision medicine",
+      "automation"
+    ],
+    "futureRelevance": "Very High",
+    "placementPreparation": "Aptitude; logical reasoning; quantitative ability; communication; resume; interview; role-specific technical test; 2-3 projects",
+    "learningResources": [
+      {
+        "title": "NPTEL",
+        "url": "https://nptel.ac.in/"
+      },
+      {
+        "title": "LearnChemE",
+        "url": "https://learncheme.com/"
+      },
+      {
+        "title": "AspenTech Learning",
+        "url": "https://www.aspentech.com/en/learning"
+      }
+    ]
+  },
+  {
+    "id": "career-ece-embedded-vlsi",
+    "title": "Embedded Systems & VLSI Design Engineer",
+    "discipline": "engineering",
+    "department": "Electronics & Communication (ECE / VLSI)",
+    "roleCategory": "Technology/Electronics",
+    "category": "Semiconductors & Embedded Electronics",
+    "description": "Architect high-performance silicon chips, FPGA hardware accelerators, real-time operating systems (RTOS), and edge telemetry microcontrollers.",
+    "growthRate": "+30% (High Growth)",
+    "medianSalary": "$128,000 / \u20b912-26 LPA",
+    "scope": "RTL Verilog design, physical synthesis, FreeRTOS firmware, and wireless 5G/IoT transceivers.",
+    "subCareers": [
+      "Embedded Systems Engineer",
+      "VLSI Design Engineer",
+      "Verification Engineer",
+      "IoT Engineer",
+      "RTL Design Engineer",
+      "Design Verification Engineer",
+      "Physical Design Engineer",
+      "FPGA Engineer",
+      "Embedded Software Engineer",
+      "Firmware Engineer",
+      "RTOS Engineer",
+      "IoT Edge Engineer",
+      "Telecom Engineer",
+      "RF Engineer",
+      "Network Engineer"
+    ],
+    "roles": [
+      {
+        "id": "role-embedded-systems-engineer",
+        "title": "Embedded Systems Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Embedded Systems Engineer.",
+          "Apply core principles of Digital, Analog, Microprocessors in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in C/C++, Verilog/SystemVerilog, MATLAB and completion of 2-3 portfolio projects.",
+        "entrySalary": "$128,000 / \u20b912-26 LPA"
+      },
+      {
+        "id": "role-vlsi-design-engineer",
+        "title": "VLSI Design Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in VLSI Design Engineer.",
+          "Apply core principles of Digital, Analog, Microprocessors in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in C/C++, Verilog/SystemVerilog, MATLAB and completion of 2-3 portfolio projects.",
+        "entrySalary": "$128,000 / \u20b912-26 LPA"
+      },
+      {
+        "id": "role-verification-engineer",
+        "title": "Verification Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Verification Engineer.",
+          "Apply core principles of Digital, Analog, Microprocessors in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in C/C++, Verilog/SystemVerilog, MATLAB and completion of 2-3 portfolio projects.",
+        "entrySalary": "$128,000 / \u20b912-26 LPA"
+      },
+      {
+        "id": "role-iot-engineer",
+        "title": "IoT Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in IoT Engineer.",
+          "Apply core principles of Digital, Analog, Microprocessors in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in C/C++, Verilog/SystemVerilog, MATLAB and completion of 2-3 portfolio projects.",
+        "entrySalary": "$128,000 / \u20b912-26 LPA"
+      },
+      {
+        "id": "role-rtl-design-engineer",
+        "title": "RTL Design Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in RTL Design Engineer.",
+          "Apply core principles of Digital, Analog, Microprocessors in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in C/C++, Verilog/SystemVerilog, MATLAB and completion of 2-3 portfolio projects.",
+        "entrySalary": "$128,000 / \u20b912-26 LPA"
+      },
+      {
+        "id": "role-design-verification-engineer",
+        "title": "Design Verification Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Design Verification Engineer.",
+          "Apply core principles of Digital, Analog, Microprocessors in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in C/C++, Verilog/SystemVerilog, MATLAB and completion of 2-3 portfolio projects.",
+        "entrySalary": "$128,000 / \u20b912-26 LPA"
+      },
+      {
+        "id": "role-physical-design-engineer",
+        "title": "Physical Design Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Physical Design Engineer.",
+          "Apply core principles of Digital, Analog, Microprocessors in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in C/C++, Verilog/SystemVerilog, MATLAB and completion of 2-3 portfolio projects.",
+        "entrySalary": "$128,000 / \u20b912-26 LPA"
+      },
+      {
+        "id": "role-fpga-engineer",
+        "title": "FPGA Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in FPGA Engineer.",
+          "Apply core principles of Digital, Analog, Microprocessors in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in C/C++, Verilog/SystemVerilog, MATLAB and completion of 2-3 portfolio projects.",
+        "entrySalary": "$128,000 / \u20b912-26 LPA"
+      },
+      {
+        "id": "role-embedded-software-engineer",
+        "title": "Embedded Software Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Embedded Software Engineer.",
+          "Apply core principles of Digital, Analog, Microprocessors in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in C/C++, Verilog/SystemVerilog, MATLAB and completion of 2-3 portfolio projects.",
+        "entrySalary": "$128,000 / \u20b912-26 LPA"
+      },
+      {
+        "id": "role-firmware-engineer",
+        "title": "Firmware Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Firmware Engineer.",
+          "Apply core principles of Digital, Analog, Microprocessors in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in C/C++, Verilog/SystemVerilog, MATLAB and completion of 2-3 portfolio projects.",
+        "entrySalary": "$128,000 / \u20b912-26 LPA"
+      },
+      {
+        "id": "role-rtos-engineer",
+        "title": "RTOS Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in RTOS Engineer.",
+          "Apply core principles of Digital, Analog, Microprocessors in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in C/C++, Verilog/SystemVerilog, MATLAB and completion of 2-3 portfolio projects.",
+        "entrySalary": "$128,000 / \u20b912-26 LPA"
+      },
+      {
+        "id": "role-iot-edge-engineer",
+        "title": "IoT Edge Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in IoT Edge Engineer.",
+          "Apply core principles of Digital, Analog, Microprocessors in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in C/C++, Verilog/SystemVerilog, MATLAB and completion of 2-3 portfolio projects.",
+        "entrySalary": "$128,000 / \u20b912-26 LPA"
+      },
+      {
+        "id": "role-telecom-engineer",
+        "title": "Telecom Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Telecom Engineer.",
+          "Apply core principles of Digital, Analog, Microprocessors in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in C/C++, Verilog/SystemVerilog, MATLAB and completion of 2-3 portfolio projects.",
+        "entrySalary": "$128,000 / \u20b912-26 LPA"
+      },
+      {
+        "id": "role-rf-engineer",
+        "title": "RF Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in RF Engineer.",
+          "Apply core principles of Digital, Analog, Microprocessors in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in C/C++, Verilog/SystemVerilog, MATLAB and completion of 2-3 portfolio projects.",
+        "entrySalary": "$128,000 / \u20b912-26 LPA"
+      },
+      {
+        "id": "role-network-engineer",
+        "title": "Network Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Network Engineer.",
+          "Apply core principles of Digital, Analog, Microprocessors in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in C/C++, Verilog/SystemVerilog, MATLAB and completion of 2-3 portfolio projects.",
+        "entrySalary": "$128,000 / \u20b912-26 LPA"
+      }
+    ],
+    "requiredSkillIds": [
+      "skill-c-c",
+      "skill-verilog-systemverilog",
+      "skill-matlab",
+      "skill-embedded-debugging",
+      "skill-uvm"
+    ],
+    "prerequisites": [
+      "Digital",
+      "Analog",
+      "Microprocessors",
+      "Communication"
+    ],
+    "relatedCareerIds": [],
+    "benchmark": {
+      "requiredSkills": [
+        {
+          "skillId": "skill-c-c",
+          "skillName": "C/C++",
+          "importance": "mandatory",
+          "targetProficiency": 80
+        },
+        {
+          "skillId": "skill-verilog-systemverilog",
+          "skillName": "Verilog/SystemVerilog",
+          "importance": "mandatory",
+          "targetProficiency": 80
+        },
+        {
+          "skillId": "skill-matlab",
+          "skillName": "MATLAB",
+          "importance": "mandatory",
+          "targetProficiency": 80
+        },
+        {
+          "skillId": "skill-embedded-debugging",
+          "skillName": "embedded debugging",
+          "importance": "mandatory",
+          "targetProficiency": 80
+        },
+        {
+          "skillId": "skill-uvm",
+          "skillName": "UVM",
+          "importance": "mandatory",
+          "targetProficiency": 80
+        }
+      ],
+      "prerequisiteCourses": [
+        "Digital",
+        "Analog",
+        "Microprocessors",
+        "Communication"
+      ],
+      "recommendedProjects": [
+        "End-to-End Embedded Systems & VLSI Design Engineer Capstone System",
+        "Production Optimization using C/C++"
+      ],
+      "emergingSkills": [
+        "Edge AI",
+        "advanced SoC",
+        "FPGA",
+        "5G/6G"
+      ],
+      "readinessThreshold": 75
+    },
+    "coreCourses": [
+      "Digital",
+      "Analog",
+      "Microprocessors",
+      "Communication",
+      "DSP",
+      "Control Systems",
+      "Digital VLSI",
+      "CMOS",
+      "Computer Architecture",
+      "Verilog",
+      "SystemVerilog",
+      "Microcontrollers",
+      "Embedded C",
+      "RTOS",
+      "Device Drivers",
+      "Communication Systems",
+      "RF",
+      "Antennas",
+      "Networks"
+    ],
+    "placementSkills": [
+      "C/C++",
+      "Verilog/SystemVerilog",
+      "MATLAB",
+      "embedded debugging",
+      "UVM",
+      "STA",
+      "Linux",
+      "digital design",
+      "UART/I2C/SPI/CAN",
+      "RTOS",
+      "embedded Linux",
+      "debugging",
+      "Networking",
+      "RF basics",
+      "embedded C",
+      "troubleshooting"
+    ],
+    "futureSkills": [
+      "Edge AI",
+      "advanced SoC",
+      "FPGA",
+      "5G/6G",
+      "IoT security",
+      "AI accelerators",
+      "chiplets",
+      "RISC-V",
+      "low-power VLSI",
+      "automotive software",
+      "secure embedded systems",
+      "Open RAN",
+      "edge computing",
+      "network automation"
+    ],
+    "futureRelevance": "Very High",
+    "placementPreparation": "Aptitude; logical reasoning; quantitative ability; communication; resume; interview; role-specific technical test; 2-3 projects",
+    "learningResources": [
+      {
+        "title": "Arduino Docs",
+        "url": "https://docs.arduino.cc/"
+      },
+      {
+        "title": "ARM Learning Paths",
+        "url": "https://learn.arm.com/"
+      },
+      {
+        "title": "FreeRTOS Docs",
+        "url": "https://www.freertos.org/Documentation/"
+      },
+      {
+        "title": "NPTEL",
+        "url": "https://nptel.ac.in/"
+      },
+      {
+        "title": "HDLBits",
+        "url": "https://hdlbits.01xz.net/wiki/Main_Page"
+      },
+      {
+        "title": "VerilogPro",
+        "url": "https://www.verilogpro.com/"
+      },
+      {
+        "title": "Microsoft Learn",
+        "url": "https://learn.microsoft.com/training/"
+      },
+      {
+        "title": "Coursera",
+        "url": "https://www.coursera.org/"
+      },
+      {
+        "title": "Google Career Certificates",
+        "url": "https://grow.google/certificates/"
+      },
+      {
+        "title": "Keysight University",
+        "url": "https://learn.keysight.com/"
+      },
+      {
+        "title": "Cisco Networking Academy",
+        "url": "https://www.netacad.com/"
+      }
+    ]
+  },
+  {
+    "id": "career-eee-power-ev",
+    "title": "Power Systems & EV Powertrain Engineer",
+    "discipline": "engineering",
+    "department": "Electrical & Electronics Engineering (EEE / EV)",
+    "roleCategory": "Core/Manufacturing",
+    "category": "Electric Vehicles & Clean Energy",
+    "description": "Engineer electric vehicle battery management systems (BMS), high-voltage motor inverters, renewable microgrids, and smart grid automation protocols.",
+    "growthRate": "+34% (Rapid Expansion)",
+    "medianSalary": "$118,000 / \u20b911-25 LPA",
+    "scope": "EV motor controllers, MATLAB/Simulink simulation, grid-tied battery storage, and power electronics.",
+    "subCareers": [
+      "Electrical Design Engineer",
+      "Power Systems Engineer",
+      "EV Systems Engineer",
+      "Renewable Energy Engineer",
+      "Automotive Design Engineer",
+      "Automotive Test Engineer",
+      "Automotive Software/ECU Engineer",
+      "Instrumentation Engineer",
+      "Control Systems Engineer",
+      "Automation Engineer",
+      "PLC/SCADA Engineer"
+    ],
+    "roles": [
+      {
+        "id": "role-electrical-design-engineer",
+        "title": "Electrical Design Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Electrical Design Engineer.",
+          "Apply core principles of Circuits, Machines, Power Systems in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in Electrical machines, MATLAB, protection and completion of 2-3 portfolio projects.",
+        "entrySalary": "$118,000 / \u20b911-25 LPA"
+      },
+      {
+        "id": "role-power-systems-engineer",
+        "title": "Power Systems Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Power Systems Engineer.",
+          "Apply core principles of Circuits, Machines, Power Systems in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in Electrical machines, MATLAB, protection and completion of 2-3 portfolio projects.",
+        "entrySalary": "$118,000 / \u20b911-25 LPA"
+      },
+      {
+        "id": "role-ev-systems-engineer",
+        "title": "EV Systems Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in EV Systems Engineer.",
+          "Apply core principles of Circuits, Machines, Power Systems in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in Electrical machines, MATLAB, protection and completion of 2-3 portfolio projects.",
+        "entrySalary": "$118,000 / \u20b911-25 LPA"
+      },
+      {
+        "id": "role-renewable-energy-engineer",
+        "title": "Renewable Energy Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Renewable Energy Engineer.",
+          "Apply core principles of Circuits, Machines, Power Systems in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in Electrical machines, MATLAB, protection and completion of 2-3 portfolio projects.",
+        "entrySalary": "$118,000 / \u20b911-25 LPA"
+      },
+      {
+        "id": "role-automotive-design-engineer",
+        "title": "Automotive Design Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Automotive Design Engineer.",
+          "Apply core principles of Circuits, Machines, Power Systems in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in Electrical machines, MATLAB, protection and completion of 2-3 portfolio projects.",
+        "entrySalary": "$118,000 / \u20b911-25 LPA"
+      },
+      {
+        "id": "role-automotive-test-engineer",
+        "title": "Automotive Test Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Automotive Test Engineer.",
+          "Apply core principles of Circuits, Machines, Power Systems in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in Electrical machines, MATLAB, protection and completion of 2-3 portfolio projects.",
+        "entrySalary": "$118,000 / \u20b911-25 LPA"
+      },
+      {
+        "id": "role-automotive-software-ecu-engineer",
+        "title": "Automotive Software/ECU Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Automotive Software/ECU Engineer.",
+          "Apply core principles of Circuits, Machines, Power Systems in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in Electrical machines, MATLAB, protection and completion of 2-3 portfolio projects.",
+        "entrySalary": "$118,000 / \u20b911-25 LPA"
+      },
+      {
+        "id": "role-instrumentation-engineer",
+        "title": "Instrumentation Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Instrumentation Engineer.",
+          "Apply core principles of Circuits, Machines, Power Systems in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in Electrical machines, MATLAB, protection and completion of 2-3 portfolio projects.",
+        "entrySalary": "$118,000 / \u20b911-25 LPA"
+      },
+      {
+        "id": "role-control-systems-engineer",
+        "title": "Control Systems Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Control Systems Engineer.",
+          "Apply core principles of Circuits, Machines, Power Systems in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in Electrical machines, MATLAB, protection and completion of 2-3 portfolio projects.",
+        "entrySalary": "$118,000 / \u20b911-25 LPA"
+      },
+      {
+        "id": "role-automation-engineer",
+        "title": "Automation Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Automation Engineer.",
+          "Apply core principles of Circuits, Machines, Power Systems in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in Electrical machines, MATLAB, protection and completion of 2-3 portfolio projects.",
+        "entrySalary": "$118,000 / \u20b911-25 LPA"
+      },
+      {
+        "id": "role-plc-scada-engineer",
+        "title": "PLC/SCADA Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in PLC/SCADA Engineer.",
+          "Apply core principles of Circuits, Machines, Power Systems in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in Electrical machines, MATLAB, protection and completion of 2-3 portfolio projects.",
+        "entrySalary": "$118,000 / \u20b911-25 LPA"
+      }
+    ],
+    "requiredSkillIds": [
+      "skill-electrical-machines",
+      "skill-matlab",
+      "skill-protection",
+      "skill-power-electronics",
+      "skill-catia-solidworks"
+    ],
+    "prerequisites": [
+      "Circuits",
+      "Machines",
+      "Power Systems",
+      "Power Electronics"
+    ],
+    "relatedCareerIds": [],
+    "benchmark": {
+      "requiredSkills": [
+        {
+          "skillId": "skill-electrical-machines",
+          "skillName": "Electrical machines",
+          "importance": "mandatory",
+          "targetProficiency": 80
+        },
+        {
+          "skillId": "skill-matlab",
+          "skillName": "MATLAB",
+          "importance": "mandatory",
+          "targetProficiency": 80
+        },
+        {
+          "skillId": "skill-protection",
+          "skillName": "protection",
+          "importance": "mandatory",
+          "targetProficiency": 80
+        },
+        {
+          "skillId": "skill-power-electronics",
+          "skillName": "power electronics",
+          "importance": "mandatory",
+          "targetProficiency": 80
+        },
+        {
+          "skillId": "skill-catia-solidworks",
+          "skillName": "CATIA/SolidWorks",
+          "importance": "mandatory",
+          "targetProficiency": 80
+        }
+      ],
+      "prerequisiteCourses": [
+        "Circuits",
+        "Machines",
+        "Power Systems",
+        "Power Electronics"
+      ],
+      "recommendedProjects": [
+        "End-to-End Power Systems & EV Powertrain Engineer Capstone System",
+        "Production Optimization using Electrical machines"
+      ],
+      "emergingSkills": [
+        "EV powertrains",
+        "battery systems",
+        "smart grids",
+        "renewable integration"
+      ],
+      "readinessThreshold": 75
+    },
+    "coreCourses": [
+      "Circuits",
+      "Machines",
+      "Power Systems",
+      "Power Electronics",
+      "Measurements",
+      "Automotive",
+      "Vehicle Dynamics",
+      "CAD",
+      "Electronics",
+      "Control",
+      "Sensors",
+      "Control Systems",
+      "Instrumentation",
+      "PLC/SCADA"
+    ],
+    "placementSkills": [
+      "Electrical machines",
+      "MATLAB",
+      "protection",
+      "power electronics",
+      "CATIA/SolidWorks",
+      "CAN",
+      "MATLAB/Simulink",
+      "testing",
+      "PLC",
+      "SCADA",
+      "PID",
+      "sensors",
+      "industrial communication"
+    ],
+    "futureSkills": [
+      "EV powertrains",
+      "battery systems",
+      "smart grids",
+      "renewable integration",
+      "EV",
+      "ADAS",
+      "autonomous driving",
+      "automotive cybersecurity",
+      "Industrial IoT",
+      "digital twins",
+      "predictive maintenance",
+      "OT security"
+    ],
+    "futureRelevance": "Very High",
+    "placementPreparation": "Aptitude; logical reasoning; quantitative ability; communication; resume; interview; role-specific technical test; 2-3 projects",
+    "learningResources": [
+      {
+        "title": "NPTEL",
+        "url": "https://nptel.ac.in/"
+      },
+      {
+        "title": "MATLAB/Simulink",
+        "url": "https://www.mathworks.com/learn/"
+      },
+      {
+        "title": "Electrical Engineering Portal",
+        "url": "https://electrical-engineering-portal.com/"
+      },
+      {
+        "title": "Arduino Docs",
+        "url": "https://docs.arduino.cc/"
+      },
+      {
+        "title": "ARM Learning Paths",
+        "url": "https://learn.arm.com/"
+      },
+      {
+        "title": "FreeRTOS Docs",
+        "url": "https://www.freertos.org/Documentation/"
+      },
+      {
+        "title": "MathWorks Automotive",
+        "url": "https://www.mathworks.com/solutions/automotive.html"
+      },
+      {
+        "title": "Vector Academy",
+        "url": "https://www.vector.com/int/en/know-how/academy/"
+      },
+      {
+        "title": "Siemens SCE",
+        "url": "https://www.siemens.com/sce"
+      },
+      {
+        "title": "Rockwell Automation Learning+",
+        "url": "https://www.rockwellautomation.com/en-us/support/learning.html"
+      }
+    ]
+  },
+  {
+    "id": "career-mech-design-cae",
+    "title": "Mechanical Design & CAE Simulation Engineer",
+    "discipline": "engineering",
+    "department": "Mechanical & Aerospace Engineering",
+    "roleCategory": "Core/Manufacturing",
+    "category": "Mechanical Design & Digital Simulation",
+    "description": "Model complex structural assemblies using CAD/SolidWorks, perform finite element analysis (FEA) and computational fluid dynamics (CFD), and automate manufacturing.",
+    "growthRate": "+24% (Steady Demand)",
+    "medianSalary": "$105,000 / \u20b99-20 LPA",
+    "scope": "GD&T, generative structural design, additive manufacturing, and thermal/stress simulations.",
+    "subCareers": [
+      "Design Engineer",
+      "Manufacturing Engineer",
+      "Production Engineer",
+      "CAE Engineer",
+      "Automotive Design Engineer",
+      "Automotive Test Engineer",
+      "EV Systems Engineer",
+      "Automotive Software/ECU Engineer",
+      "Aerospace Design Engineer",
+      "Systems Engineer",
+      "Propulsion Engineer",
+      "Avionics Engineer",
+      "Aerodynamics Engineer",
+      "Flight Test Engineer",
+      "UAV Engineer"
+    ],
+    "roles": [
+      {
+        "id": "role-design-engineer",
+        "title": "Design Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Design Engineer.",
+          "Apply core principles of Engineering Mechanics, Thermodynamics, Machine Design in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in AutoCAD/SolidWorks, GD&T, manufacturing and completion of 2-3 portfolio projects.",
+        "entrySalary": "$105,000 / \u20b99-20 LPA"
+      },
+      {
+        "id": "role-manufacturing-engineer",
+        "title": "Manufacturing Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Manufacturing Engineer.",
+          "Apply core principles of Engineering Mechanics, Thermodynamics, Machine Design in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in AutoCAD/SolidWorks, GD&T, manufacturing and completion of 2-3 portfolio projects.",
+        "entrySalary": "$105,000 / \u20b99-20 LPA"
+      },
+      {
+        "id": "role-production-engineer",
+        "title": "Production Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Production Engineer.",
+          "Apply core principles of Engineering Mechanics, Thermodynamics, Machine Design in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in AutoCAD/SolidWorks, GD&T, manufacturing and completion of 2-3 portfolio projects.",
+        "entrySalary": "$105,000 / \u20b99-20 LPA"
+      },
+      {
+        "id": "role-cae-engineer",
+        "title": "CAE Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in CAE Engineer.",
+          "Apply core principles of Engineering Mechanics, Thermodynamics, Machine Design in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in AutoCAD/SolidWorks, GD&T, manufacturing and completion of 2-3 portfolio projects.",
+        "entrySalary": "$105,000 / \u20b99-20 LPA"
+      },
+      {
+        "id": "role-automotive-design-engineer",
+        "title": "Automotive Design Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Automotive Design Engineer.",
+          "Apply core principles of Engineering Mechanics, Thermodynamics, Machine Design in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in AutoCAD/SolidWorks, GD&T, manufacturing and completion of 2-3 portfolio projects.",
+        "entrySalary": "$105,000 / \u20b99-20 LPA"
+      },
+      {
+        "id": "role-automotive-test-engineer",
+        "title": "Automotive Test Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Automotive Test Engineer.",
+          "Apply core principles of Engineering Mechanics, Thermodynamics, Machine Design in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in AutoCAD/SolidWorks, GD&T, manufacturing and completion of 2-3 portfolio projects.",
+        "entrySalary": "$105,000 / \u20b99-20 LPA"
+      },
+      {
+        "id": "role-ev-systems-engineer",
+        "title": "EV Systems Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in EV Systems Engineer.",
+          "Apply core principles of Engineering Mechanics, Thermodynamics, Machine Design in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in AutoCAD/SolidWorks, GD&T, manufacturing and completion of 2-3 portfolio projects.",
+        "entrySalary": "$105,000 / \u20b99-20 LPA"
+      },
+      {
+        "id": "role-automotive-software-ecu-engineer",
+        "title": "Automotive Software/ECU Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Automotive Software/ECU Engineer.",
+          "Apply core principles of Engineering Mechanics, Thermodynamics, Machine Design in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in AutoCAD/SolidWorks, GD&T, manufacturing and completion of 2-3 portfolio projects.",
+        "entrySalary": "$105,000 / \u20b99-20 LPA"
+      },
+      {
+        "id": "role-aerospace-design-engineer",
+        "title": "Aerospace Design Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Aerospace Design Engineer.",
+          "Apply core principles of Engineering Mechanics, Thermodynamics, Machine Design in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in AutoCAD/SolidWorks, GD&T, manufacturing and completion of 2-3 portfolio projects.",
+        "entrySalary": "$105,000 / \u20b99-20 LPA"
+      },
+      {
+        "id": "role-systems-engineer",
+        "title": "Systems Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Systems Engineer.",
+          "Apply core principles of Engineering Mechanics, Thermodynamics, Machine Design in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in AutoCAD/SolidWorks, GD&T, manufacturing and completion of 2-3 portfolio projects.",
+        "entrySalary": "$105,000 / \u20b99-20 LPA"
+      },
+      {
+        "id": "role-propulsion-engineer",
+        "title": "Propulsion Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Propulsion Engineer.",
+          "Apply core principles of Engineering Mechanics, Thermodynamics, Machine Design in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in AutoCAD/SolidWorks, GD&T, manufacturing and completion of 2-3 portfolio projects.",
+        "entrySalary": "$105,000 / \u20b99-20 LPA"
+      },
+      {
+        "id": "role-avionics-engineer",
+        "title": "Avionics Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Avionics Engineer.",
+          "Apply core principles of Engineering Mechanics, Thermodynamics, Machine Design in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in AutoCAD/SolidWorks, GD&T, manufacturing and completion of 2-3 portfolio projects.",
+        "entrySalary": "$105,000 / \u20b99-20 LPA"
+      },
+      {
+        "id": "role-aerodynamics-engineer",
+        "title": "Aerodynamics Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Aerodynamics Engineer.",
+          "Apply core principles of Engineering Mechanics, Thermodynamics, Machine Design in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in AutoCAD/SolidWorks, GD&T, manufacturing and completion of 2-3 portfolio projects.",
+        "entrySalary": "$105,000 / \u20b99-20 LPA"
+      },
+      {
+        "id": "role-flight-test-engineer",
+        "title": "Flight Test Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Flight Test Engineer.",
+          "Apply core principles of Engineering Mechanics, Thermodynamics, Machine Design in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in AutoCAD/SolidWorks, GD&T, manufacturing and completion of 2-3 portfolio projects.",
+        "entrySalary": "$105,000 / \u20b99-20 LPA"
+      },
+      {
+        "id": "role-uav-engineer",
+        "title": "UAV Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in UAV Engineer.",
+          "Apply core principles of Engineering Mechanics, Thermodynamics, Machine Design in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in AutoCAD/SolidWorks, GD&T, manufacturing and completion of 2-3 portfolio projects.",
+        "entrySalary": "$105,000 / \u20b99-20 LPA"
+      }
+    ],
+    "requiredSkillIds": [
+      "skill-autocad-solidworks",
+      "skill-gd-t",
+      "skill-manufacturing",
+      "skill-quality",
+      "skill-aptitude"
+    ],
+    "prerequisites": [
+      "Engineering Mechanics",
+      "Thermodynamics",
+      "Machine Design",
+      "Manufacturing"
+    ],
+    "relatedCareerIds": [],
+    "benchmark": {
+      "requiredSkills": [
+        {
+          "skillId": "skill-autocad-solidworks",
+          "skillName": "AutoCAD/SolidWorks",
+          "importance": "mandatory",
+          "targetProficiency": 80
+        },
+        {
+          "skillId": "skill-gd-t",
+          "skillName": "GD&T",
+          "importance": "mandatory",
+          "targetProficiency": 80
+        },
+        {
+          "skillId": "skill-manufacturing",
+          "skillName": "manufacturing",
+          "importance": "mandatory",
+          "targetProficiency": 80
+        },
+        {
+          "skillId": "skill-quality",
+          "skillName": "quality",
+          "importance": "mandatory",
+          "targetProficiency": 80
+        },
+        {
+          "skillId": "skill-aptitude",
+          "skillName": "aptitude",
+          "importance": "mandatory",
+          "targetProficiency": 80
+        }
+      ],
+      "prerequisiteCourses": [
+        "Engineering Mechanics",
+        "Thermodynamics",
+        "Machine Design",
+        "Manufacturing"
+      ],
+      "recommendedProjects": [
+        "End-to-End Mechanical Design & CAE Simulation Engineer Capstone System",
+        "Production Optimization using AutoCAD/SolidWorks"
+      ],
+      "emergingSkills": [
+        "Additive manufacturing",
+        "digital twins",
+        "robotics",
+        "CAE automation"
+      ],
+      "readinessThreshold": 75
+    },
+    "coreCourses": [
+      "Engineering Mechanics",
+      "Thermodynamics",
+      "Machine Design",
+      "Manufacturing",
+      "CAD/CAM",
+      "Automotive",
+      "Vehicle Dynamics",
+      "CAD",
+      "Electronics",
+      "Control",
+      "Aerodynamics",
+      "Propulsion",
+      "Structures",
+      "Flight Mechanics",
+      "Avionics",
+      "Aircraft Structures"
+    ],
+    "placementSkills": [
+      "AutoCAD/SolidWorks",
+      "GD&T",
+      "manufacturing",
+      "quality",
+      "aptitude",
+      "CATIA/SolidWorks",
+      "CAN",
+      "MATLAB/Simulink",
+      "testing",
+      "CAD/CAE",
+      "CFD/FEA",
+      "systems engineering",
+      "CATIA/NX",
+      "MATLAB",
+      "documentation"
+    ],
+    "futureSkills": [
+      "Additive manufacturing",
+      "digital twins",
+      "robotics",
+      "CAE automation",
+      "EV",
+      "ADAS",
+      "autonomous driving",
+      "automotive cybersecurity",
+      "Autonomous systems",
+      "space systems",
+      "digital engineering",
+      "UAV autonomy",
+      "advanced composites"
+    ],
+    "futureRelevance": "Very High",
+    "placementPreparation": "Aptitude; logical reasoning; quantitative ability; communication; resume; interview; role-specific technical test; 2-3 projects",
+    "learningResources": [
+      {
+        "title": "NPTEL",
+        "url": "https://nptel.ac.in/"
+      },
+      {
+        "title": "Autodesk Learning",
+        "url": "https://www.autodesk.com/learning"
+      },
+      {
+        "title": "ASQ Learning",
+        "url": "https://asq.org/training"
+      },
+      {
+        "title": "MathWorks Automotive",
+        "url": "https://www.mathworks.com/solutions/automotive.html"
+      },
+      {
+        "title": "Vector Academy",
+        "url": "https://www.vector.com/int/en/know-how/academy/"
+      },
+      {
+        "title": "Arduino Docs",
+        "url": "https://docs.arduino.cc/"
+      },
+      {
+        "title": "ARM Learning Paths",
+        "url": "https://learn.arm.com/"
+      },
+      {
+        "title": "FreeRTOS Docs",
+        "url": "https://www.freertos.org/Documentation/"
+      },
+      {
+        "title": "NASA STEM",
+        "url": "https://www.nasa.gov/stem/"
+      },
+      {
+        "title": "MIT OpenCourseWare",
+        "url": "https://ocw.mit.edu/"
+      }
+    ]
+  },
+  {
+    "id": "career-robotics-automation",
+    "title": "Robotics & Autonomous Systems Engineer",
+    "discipline": "engineering",
+    "department": "Robotics, Mechatronics & Automation",
+    "roleCategory": "Core/Manufacturing",
+    "category": "Robotics & Industrial Automation",
+    "description": "Build autonomous mobile robots (AMRs), robotic manipulator control loops in ROS 2, collaborative assembly robots, and industrial PLC/SCADA systems.",
+    "growthRate": "+37% (High Demand)",
+    "medianSalary": "$132,000 / \u20b913-28 LPA",
+    "scope": "ROS 2 nodes, SLAM navigation, Gazebo digital twins, and industrial robot arms.",
+    "subCareers": [
+      "Robotics Engineer",
+      "ROS Developer",
+      "Robotics Software Engineer",
+      "Computer Vision Engineer",
+      "Mechatronics Engineer",
+      "Automation Engineer",
+      "Controls Engineer",
+      "Instrumentation Engineer",
+      "Control Systems Engineer",
+      "PLC/SCADA Engineer"
+    ],
+    "roles": [
+      {
+        "id": "role-robotics-engineer",
+        "title": "Robotics Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Robotics Engineer.",
+          "Apply core principles of Robotics, Control, ROS in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in Python/C++, ROS2, Linux and completion of 2-3 portfolio projects.",
+        "entrySalary": "$132,000 / \u20b913-28 LPA"
+      },
+      {
+        "id": "role-ros-developer",
+        "title": "ROS Developer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in ROS Developer.",
+          "Apply core principles of Robotics, Control, ROS in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in Python/C++, ROS2, Linux and completion of 2-3 portfolio projects.",
+        "entrySalary": "$132,000 / \u20b913-28 LPA"
+      },
+      {
+        "id": "role-robotics-software-engineer",
+        "title": "Robotics Software Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Robotics Software Engineer.",
+          "Apply core principles of Robotics, Control, ROS in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in Python/C++, ROS2, Linux and completion of 2-3 portfolio projects.",
+        "entrySalary": "$132,000 / \u20b913-28 LPA"
+      },
+      {
+        "id": "role-computer-vision-engineer",
+        "title": "Computer Vision Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Computer Vision Engineer.",
+          "Apply core principles of Robotics, Control, ROS in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in Python/C++, ROS2, Linux and completion of 2-3 portfolio projects.",
+        "entrySalary": "$132,000 / \u20b913-28 LPA"
+      },
+      {
+        "id": "role-mechatronics-engineer",
+        "title": "Mechatronics Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Mechatronics Engineer.",
+          "Apply core principles of Robotics, Control, ROS in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in Python/C++, ROS2, Linux and completion of 2-3 portfolio projects.",
+        "entrySalary": "$132,000 / \u20b913-28 LPA"
+      },
+      {
+        "id": "role-automation-engineer",
+        "title": "Automation Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Automation Engineer.",
+          "Apply core principles of Robotics, Control, ROS in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in Python/C++, ROS2, Linux and completion of 2-3 portfolio projects.",
+        "entrySalary": "$132,000 / \u20b913-28 LPA"
+      },
+      {
+        "id": "role-controls-engineer",
+        "title": "Controls Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Controls Engineer.",
+          "Apply core principles of Robotics, Control, ROS in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in Python/C++, ROS2, Linux and completion of 2-3 portfolio projects.",
+        "entrySalary": "$132,000 / \u20b913-28 LPA"
+      },
+      {
+        "id": "role-instrumentation-engineer",
+        "title": "Instrumentation Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Instrumentation Engineer.",
+          "Apply core principles of Robotics, Control, ROS in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in Python/C++, ROS2, Linux and completion of 2-3 portfolio projects.",
+        "entrySalary": "$132,000 / \u20b913-28 LPA"
+      },
+      {
+        "id": "role-control-systems-engineer",
+        "title": "Control Systems Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Control Systems Engineer.",
+          "Apply core principles of Robotics, Control, ROS in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in Python/C++, ROS2, Linux and completion of 2-3 portfolio projects.",
+        "entrySalary": "$132,000 / \u20b913-28 LPA"
+      },
+      {
+        "id": "role-plc-scada-engineer",
+        "title": "PLC/SCADA Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in PLC/SCADA Engineer.",
+          "Apply core principles of Robotics, Control, ROS in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in Python/C++, ROS2, Linux and completion of 2-3 portfolio projects.",
+        "entrySalary": "$132,000 / \u20b913-28 LPA"
+      }
+    ],
+    "requiredSkillIds": [
+      "skill-python-c",
+      "skill-ros2",
+      "skill-linux",
+      "skill-kinematics",
+      "skill-simulation"
+    ],
+    "prerequisites": [
+      "Robotics",
+      "Control",
+      "ROS",
+      "Sensors"
+    ],
+    "relatedCareerIds": [],
+    "benchmark": {
+      "requiredSkills": [
+        {
+          "skillId": "skill-python-c",
+          "skillName": "Python/C++",
+          "importance": "mandatory",
+          "targetProficiency": 80
+        },
+        {
+          "skillId": "skill-ros2",
+          "skillName": "ROS2",
+          "importance": "mandatory",
+          "targetProficiency": 80
+        },
+        {
+          "skillId": "skill-linux",
+          "skillName": "Linux",
+          "importance": "mandatory",
+          "targetProficiency": 80
+        },
+        {
+          "skillId": "skill-kinematics",
+          "skillName": "kinematics",
+          "importance": "mandatory",
+          "targetProficiency": 80
+        },
+        {
+          "skillId": "skill-simulation",
+          "skillName": "simulation",
+          "importance": "mandatory",
+          "targetProficiency": 80
+        }
+      ],
+      "prerequisiteCourses": [
+        "Robotics",
+        "Control",
+        "ROS",
+        "Sensors"
+      ],
+      "recommendedProjects": [
+        "End-to-End Robotics & Autonomous Systems Engineer Capstone System",
+        "Production Optimization using Python/C++"
+      ],
+      "emergingSkills": [
+        "Autonomous systems",
+        "AI robotics",
+        "reinforcement learning",
+        "Collaborative robots"
+      ],
+      "readinessThreshold": 75
+    },
+    "coreCourses": [
+      "Robotics",
+      "Control",
+      "ROS",
+      "Sensors",
+      "Embedded",
+      "Computer Vision",
+      "Mechanisms",
+      "PLC",
+      "Embedded Systems",
+      "Measurements",
+      "Control Systems",
+      "Instrumentation",
+      "PLC/SCADA"
+    ],
+    "placementSkills": [
+      "Python/C++",
+      "ROS2",
+      "Linux",
+      "kinematics",
+      "simulation",
+      "PLC",
+      "robotics",
+      "C/C++",
+      "MATLAB/Simulink",
+      "sensors",
+      "SCADA",
+      "PID",
+      "industrial communication"
+    ],
+    "futureSkills": [
+      "Autonomous systems",
+      "AI robotics",
+      "reinforcement learning",
+      "Collaborative robots",
+      "computer vision",
+      "digital twins",
+      "edge AI",
+      "Industrial IoT",
+      "predictive maintenance",
+      "OT security"
+    ],
+    "futureRelevance": "Very High",
+    "placementPreparation": "Aptitude; logical reasoning; quantitative ability; communication; resume; interview; role-specific technical test; 2-3 projects",
+    "learningResources": [
+      {
+        "title": "Siemens SCE",
+        "url": "https://www.siemens.com/sce"
+      },
+      {
+        "title": "Rockwell Automation Learning+",
+        "url": "https://www.rockwellautomation.com/en-us/support/learning.html"
+      },
+      {
+        "title": "NPTEL",
+        "url": "https://nptel.ac.in/"
+      },
+      {
+        "title": "Kaggle Learn",
+        "url": "https://www.kaggle.com/learn"
+      },
+      {
+        "title": "DeepLearning.AI",
+        "url": "https://www.deeplearning.ai/"
+      },
+      {
+        "title": "Hugging Face Learn",
+        "url": "https://huggingface.co/learn"
+      },
+      {
+        "title": "Autodesk Learning",
+        "url": "https://www.autodesk.com/learning"
+      },
+      {
+        "title": "ASQ Learning",
+        "url": "https://asq.org/training"
+      },
+      {
+        "title": "ROS 2 Documentation",
+        "url": "https://docs.ros.org/"
+      },
+      {
+        "title": "The Construct",
+        "url": "https://www.theconstruct.ai/"
+      },
+      {
+        "title": "Arduino Docs",
+        "url": "https://docs.arduino.cc/"
+      },
+      {
+        "title": "ARM Learning Paths",
+        "url": "https://learn.arm.com/"
+      },
+      {
+        "title": "FreeRTOS Docs",
+        "url": "https://www.freertos.org/Documentation/"
+      }
+    ]
+  },
+  {
+    "id": "career-civil-bim-smart",
+    "title": "Civil Infrastructure & BIM Digital Twin Specialist",
+    "discipline": "engineering",
+    "department": "Civil, Construction & Geomatics",
+    "roleCategory": "Infrastructure/Environment",
+    "category": "Smart Infrastructure & Built Environment",
+    "description": "Design resilient mega-structures, generate 4D/5D Building Information Models (BIM) with Revit, and monitor smart urban infrastructure using GIS spatial telemetry.",
+    "growthRate": "+22% (Core Industry)",
+    "medianSalary": "$98,000 / \u20b98-18 LPA",
+    "scope": "Structural STAAD.Pro analysis, Revit digital twin coordination, and remote sensing GIS.",
+    "subCareers": [
+      "Structural Engineer",
+      "Site Engineer",
+      "Planning Engineer",
+      "Quantity Surveyor",
+      "Construction Engineer",
+      "BIM Engineer",
+      "Quantity/Contracts Engineer",
+      "GIS Analyst",
+      "Survey Engineer",
+      "Remote Sensing Analyst",
+      "Geospatial Data Analyst"
+    ],
+    "roles": [
+      {
+        "id": "role-structural-engineer",
+        "title": "Structural Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Structural Engineer.",
+          "Apply core principles of Structural Analysis, RCC, Steel in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in AutoCAD, STAAD.Pro/ETABS, estimation and completion of 2-3 portfolio projects.",
+        "entrySalary": "$98,000 / \u20b98-18 LPA"
+      },
+      {
+        "id": "role-site-engineer",
+        "title": "Site Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Site Engineer.",
+          "Apply core principles of Structural Analysis, RCC, Steel in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in AutoCAD, STAAD.Pro/ETABS, estimation and completion of 2-3 portfolio projects.",
+        "entrySalary": "$98,000 / \u20b98-18 LPA"
+      },
+      {
+        "id": "role-planning-engineer",
+        "title": "Planning Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Planning Engineer.",
+          "Apply core principles of Structural Analysis, RCC, Steel in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in AutoCAD, STAAD.Pro/ETABS, estimation and completion of 2-3 portfolio projects.",
+        "entrySalary": "$98,000 / \u20b98-18 LPA"
+      },
+      {
+        "id": "role-quantity-surveyor",
+        "title": "Quantity Surveyor",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Quantity Surveyor.",
+          "Apply core principles of Structural Analysis, RCC, Steel in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in AutoCAD, STAAD.Pro/ETABS, estimation and completion of 2-3 portfolio projects.",
+        "entrySalary": "$98,000 / \u20b98-18 LPA"
+      },
+      {
+        "id": "role-construction-engineer",
+        "title": "Construction Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Construction Engineer.",
+          "Apply core principles of Structural Analysis, RCC, Steel in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in AutoCAD, STAAD.Pro/ETABS, estimation and completion of 2-3 portfolio projects.",
+        "entrySalary": "$98,000 / \u20b98-18 LPA"
+      },
+      {
+        "id": "role-bim-engineer",
+        "title": "BIM Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in BIM Engineer.",
+          "Apply core principles of Structural Analysis, RCC, Steel in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in AutoCAD, STAAD.Pro/ETABS, estimation and completion of 2-3 portfolio projects.",
+        "entrySalary": "$98,000 / \u20b98-18 LPA"
+      },
+      {
+        "id": "role-quantity-contracts-engineer",
+        "title": "Quantity/Contracts Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Quantity/Contracts Engineer.",
+          "Apply core principles of Structural Analysis, RCC, Steel in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in AutoCAD, STAAD.Pro/ETABS, estimation and completion of 2-3 portfolio projects.",
+        "entrySalary": "$98,000 / \u20b98-18 LPA"
+      },
+      {
+        "id": "role-gis-analyst",
+        "title": "GIS Analyst",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in GIS Analyst.",
+          "Apply core principles of Structural Analysis, RCC, Steel in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in AutoCAD, STAAD.Pro/ETABS, estimation and completion of 2-3 portfolio projects.",
+        "entrySalary": "$98,000 / \u20b98-18 LPA"
+      },
+      {
+        "id": "role-survey-engineer",
+        "title": "Survey Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Survey Engineer.",
+          "Apply core principles of Structural Analysis, RCC, Steel in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in AutoCAD, STAAD.Pro/ETABS, estimation and completion of 2-3 portfolio projects.",
+        "entrySalary": "$98,000 / \u20b98-18 LPA"
+      },
+      {
+        "id": "role-remote-sensing-analyst",
+        "title": "Remote Sensing Analyst",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Remote Sensing Analyst.",
+          "Apply core principles of Structural Analysis, RCC, Steel in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in AutoCAD, STAAD.Pro/ETABS, estimation and completion of 2-3 portfolio projects.",
+        "entrySalary": "$98,000 / \u20b98-18 LPA"
+      },
+      {
+        "id": "role-geospatial-data-analyst",
+        "title": "Geospatial Data Analyst",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Geospatial Data Analyst.",
+          "Apply core principles of Structural Analysis, RCC, Steel in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in AutoCAD, STAAD.Pro/ETABS, estimation and completion of 2-3 portfolio projects.",
+        "entrySalary": "$98,000 / \u20b98-18 LPA"
+      }
+    ],
+    "requiredSkillIds": [
+      "skill-autocad",
+      "skill-staad-pro-etabs",
+      "skill-estimation",
+      "skill-surveying",
+      "skill-primavera-ms-project"
+    ],
+    "prerequisites": [
+      "Structural Analysis",
+      "RCC",
+      "Steel",
+      "Geotechnical"
+    ],
+    "relatedCareerIds": [],
+    "benchmark": {
+      "requiredSkills": [
+        {
+          "skillId": "skill-autocad",
+          "skillName": "AutoCAD",
+          "importance": "mandatory",
+          "targetProficiency": 80
+        },
+        {
+          "skillId": "skill-staad-pro-etabs",
+          "skillName": "STAAD.Pro/ETABS",
+          "importance": "mandatory",
+          "targetProficiency": 80
+        },
+        {
+          "skillId": "skill-estimation",
+          "skillName": "estimation",
+          "importance": "mandatory",
+          "targetProficiency": 80
+        },
+        {
+          "skillId": "skill-surveying",
+          "skillName": "surveying",
+          "importance": "mandatory",
+          "targetProficiency": 80
+        },
+        {
+          "skillId": "skill-primavera-ms-project",
+          "skillName": "Primavera/MS Project",
+          "importance": "mandatory",
+          "targetProficiency": 80
+        }
+      ],
+      "prerequisiteCourses": [
+        "Structural Analysis",
+        "RCC",
+        "Steel",
+        "Geotechnical"
+      ],
+      "recommendedProjects": [
+        "End-to-End Civil Infrastructure & BIM Digital Twin Specialist Capstone System",
+        "Production Optimization using AutoCAD"
+      ],
+      "emergingSkills": [
+        "BIM",
+        "digital twins",
+        "smart infrastructure",
+        "climate-resilient construction"
+      ],
+      "readinessThreshold": 75
+    },
+    "coreCourses": [
+      "Structural Analysis",
+      "RCC",
+      "Steel",
+      "Geotechnical",
+      "Transportation",
+      "Surveying",
+      "Construction Technology",
+      "Estimation",
+      "Planning",
+      "Contracts",
+      "GIS",
+      "Remote Sensing",
+      "Photogrammetry",
+      "GNSS"
+    ],
+    "placementSkills": [
+      "AutoCAD",
+      "STAAD.Pro/ETABS",
+      "estimation",
+      "surveying",
+      "Primavera/MS Project",
+      "BIM/Revit",
+      "BOQ",
+      "project controls",
+      "QGIS/ArcGIS",
+      "AutoCAD/Civil 3D",
+      "GIS",
+      "GNSS",
+      "Python basics"
+    ],
+    "futureSkills": [
+      "BIM",
+      "digital twins",
+      "smart infrastructure",
+      "climate-resilient construction",
+      "BIM automation",
+      "construction analytics",
+      "Geospatial AI",
+      "UAV mapping",
+      "satellite analytics"
+    ],
+    "futureRelevance": "Very High",
+    "placementPreparation": "Aptitude; logical reasoning; quantitative ability; communication; resume; interview; role-specific technical test; 2-3 projects",
+    "learningResources": [
+      {
+        "title": "NPTEL",
+        "url": "https://nptel.ac.in/"
+      },
+      {
+        "title": "Autodesk Learning",
+        "url": "https://www.autodesk.com/learning"
+      },
+      {
+        "title": "Bentley Learn",
+        "url": "https://learn.bentley.com/"
+      },
+      {
+        "title": "Autodesk Construction Cloud Learning",
+        "url": "https://www.autodesk.com/learn/ondemand"
+      },
+      {
+        "title": "Primavera training via Oracle",
+        "url": "https://www.oracle.com/industries/construction-engineering/"
+      },
+      {
+        "title": "QGIS Training Manual",
+        "url": "https://docs.qgis.org/latest/en/docs/training_manual/"
+      },
+      {
+        "title": "Esri Academy",
+        "url": "https://www.esri.com/training/"
+      },
+      {
+        "title": "NASA ARSET",
+        "url": "https://appliedsciences.nasa.gov/what-we-do/capacity-building/arset"
+      },
+      {
+        "title": "Kaggle Learn",
+        "url": "https://www.kaggle.com/learn"
+      },
+      {
+        "title": "Google Data Analytics",
+        "url": "https://www.coursera.org/professional-certificates/google-data-analytics"
+      },
+      {
+        "title": "SQLBolt",
+        "url": "https://sqlbolt.com/"
+      }
+    ]
+  },
+  {
+    "id": "career-chemical-process",
+    "title": "Chemical Process & Sustainable Energy Engineer",
+    "discipline": "engineering",
+    "department": "Chemical, Environmental & Materials",
+    "roleCategory": "Life/Chemical/Process",
+    "category": "Process Engineering & Green Energy",
+    "description": "Model continuous industrial chemical reactors in Aspen Plus, design carbon capture systems, scale green hydrogen synthesis, and optimize refinery thermodynamics.",
+    "growthRate": "+26% (Emerging Sector)",
+    "medianSalary": "$110,000 / \u20b910-22 LPA",
+    "scope": "Thermodynamic mass/heat balances, Aspen HYSYS simulations, green hydrogen, and process safety.",
+    "subCareers": [
+      "Process Engineer",
+      "Production Engineer",
+      "Process Safety Engineer",
+      "Process Design Engineer",
+      "Reservoir Engineer",
+      "Drilling Engineer",
+      "Petrophysicist",
+      "Environmental Engineer",
+      "Water/Wastewater Engineer",
+      "EHS Engineer",
+      "Sustainability Analyst",
+      "Materials Engineer",
+      "Metallurgy Engineer",
+      "Failure Analysis Engineer",
+      "Quality Engineer"
+    ],
+    "roles": [
+      {
+        "id": "role-process-engineer",
+        "title": "Process Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Process Engineer.",
+          "Apply core principles of Material/Energy Balances, Thermodynamics, Heat/Mass Transfer in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in Aspen basics, process calculations, safety and completion of 2-3 portfolio projects.",
+        "entrySalary": "$110,000 / \u20b910-22 LPA"
+      },
+      {
+        "id": "role-production-engineer",
+        "title": "Production Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Production Engineer.",
+          "Apply core principles of Material/Energy Balances, Thermodynamics, Heat/Mass Transfer in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in Aspen basics, process calculations, safety and completion of 2-3 portfolio projects.",
+        "entrySalary": "$110,000 / \u20b910-22 LPA"
+      },
+      {
+        "id": "role-process-safety-engineer",
+        "title": "Process Safety Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Process Safety Engineer.",
+          "Apply core principles of Material/Energy Balances, Thermodynamics, Heat/Mass Transfer in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in Aspen basics, process calculations, safety and completion of 2-3 portfolio projects.",
+        "entrySalary": "$110,000 / \u20b910-22 LPA"
+      },
+      {
+        "id": "role-process-design-engineer",
+        "title": "Process Design Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Process Design Engineer.",
+          "Apply core principles of Material/Energy Balances, Thermodynamics, Heat/Mass Transfer in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in Aspen basics, process calculations, safety and completion of 2-3 portfolio projects.",
+        "entrySalary": "$110,000 / \u20b910-22 LPA"
+      },
+      {
+        "id": "role-reservoir-engineer",
+        "title": "Reservoir Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Reservoir Engineer.",
+          "Apply core principles of Material/Energy Balances, Thermodynamics, Heat/Mass Transfer in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in Aspen basics, process calculations, safety and completion of 2-3 portfolio projects.",
+        "entrySalary": "$110,000 / \u20b910-22 LPA"
+      },
+      {
+        "id": "role-drilling-engineer",
+        "title": "Drilling Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Drilling Engineer.",
+          "Apply core principles of Material/Energy Balances, Thermodynamics, Heat/Mass Transfer in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in Aspen basics, process calculations, safety and completion of 2-3 portfolio projects.",
+        "entrySalary": "$110,000 / \u20b910-22 LPA"
+      },
+      {
+        "id": "role-petrophysicist",
+        "title": "Petrophysicist",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Petrophysicist.",
+          "Apply core principles of Material/Energy Balances, Thermodynamics, Heat/Mass Transfer in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in Aspen basics, process calculations, safety and completion of 2-3 portfolio projects.",
+        "entrySalary": "$110,000 / \u20b910-22 LPA"
+      },
+      {
+        "id": "role-environmental-engineer",
+        "title": "Environmental Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Environmental Engineer.",
+          "Apply core principles of Material/Energy Balances, Thermodynamics, Heat/Mass Transfer in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in Aspen basics, process calculations, safety and completion of 2-3 portfolio projects.",
+        "entrySalary": "$110,000 / \u20b910-22 LPA"
+      },
+      {
+        "id": "role-water-wastewater-engineer",
+        "title": "Water/Wastewater Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Water/Wastewater Engineer.",
+          "Apply core principles of Material/Energy Balances, Thermodynamics, Heat/Mass Transfer in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in Aspen basics, process calculations, safety and completion of 2-3 portfolio projects.",
+        "entrySalary": "$110,000 / \u20b910-22 LPA"
+      },
+      {
+        "id": "role-ehs-engineer",
+        "title": "EHS Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in EHS Engineer.",
+          "Apply core principles of Material/Energy Balances, Thermodynamics, Heat/Mass Transfer in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in Aspen basics, process calculations, safety and completion of 2-3 portfolio projects.",
+        "entrySalary": "$110,000 / \u20b910-22 LPA"
+      },
+      {
+        "id": "role-sustainability-analyst",
+        "title": "Sustainability Analyst",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Sustainability Analyst.",
+          "Apply core principles of Material/Energy Balances, Thermodynamics, Heat/Mass Transfer in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in Aspen basics, process calculations, safety and completion of 2-3 portfolio projects.",
+        "entrySalary": "$110,000 / \u20b910-22 LPA"
+      },
+      {
+        "id": "role-materials-engineer",
+        "title": "Materials Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Materials Engineer.",
+          "Apply core principles of Material/Energy Balances, Thermodynamics, Heat/Mass Transfer in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in Aspen basics, process calculations, safety and completion of 2-3 portfolio projects.",
+        "entrySalary": "$110,000 / \u20b910-22 LPA"
+      },
+      {
+        "id": "role-metallurgy-engineer",
+        "title": "Metallurgy Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Metallurgy Engineer.",
+          "Apply core principles of Material/Energy Balances, Thermodynamics, Heat/Mass Transfer in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in Aspen basics, process calculations, safety and completion of 2-3 portfolio projects.",
+        "entrySalary": "$110,000 / \u20b910-22 LPA"
+      },
+      {
+        "id": "role-failure-analysis-engineer",
+        "title": "Failure Analysis Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Failure Analysis Engineer.",
+          "Apply core principles of Material/Energy Balances, Thermodynamics, Heat/Mass Transfer in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in Aspen basics, process calculations, safety and completion of 2-3 portfolio projects.",
+        "entrySalary": "$110,000 / \u20b910-22 LPA"
+      },
+      {
+        "id": "role-quality-engineer",
+        "title": "Quality Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Quality Engineer.",
+          "Apply core principles of Material/Energy Balances, Thermodynamics, Heat/Mass Transfer in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in Aspen basics, process calculations, safety and completion of 2-3 portfolio projects.",
+        "entrySalary": "$110,000 / \u20b910-22 LPA"
+      }
+    ],
+    "requiredSkillIds": [
+      "skill-aspen-basics",
+      "skill-process-calculations",
+      "skill-safety",
+      "skill-excel",
+      "skill-troubleshooting"
+    ],
+    "prerequisites": [
+      "Material/Energy Balances",
+      "Thermodynamics",
+      "Heat/Mass Transfer",
+      "Reaction Engineering"
+    ],
+    "relatedCareerIds": [],
+    "benchmark": {
+      "requiredSkills": [
+        {
+          "skillId": "skill-aspen-basics",
+          "skillName": "Aspen basics",
+          "importance": "mandatory",
+          "targetProficiency": 80
+        },
+        {
+          "skillId": "skill-process-calculations",
+          "skillName": "process calculations",
+          "importance": "mandatory",
+          "targetProficiency": 80
+        },
+        {
+          "skillId": "skill-safety",
+          "skillName": "safety",
+          "importance": "mandatory",
+          "targetProficiency": 80
+        },
+        {
+          "skillId": "skill-excel",
+          "skillName": "Excel",
+          "importance": "mandatory",
+          "targetProficiency": 80
+        },
+        {
+          "skillId": "skill-troubleshooting",
+          "skillName": "troubleshooting",
+          "importance": "mandatory",
+          "targetProficiency": 80
+        }
+      ],
+      "prerequisiteCourses": [
+        "Material/Energy Balances",
+        "Thermodynamics",
+        "Heat/Mass Transfer",
+        "Reaction Engineering"
+      ],
+      "recommendedProjects": [
+        "End-to-End Chemical Process & Sustainable Energy Engineer Capstone System",
+        "Production Optimization using Aspen basics"
+      ],
+      "emergingSkills": [
+        "Green hydrogen",
+        "carbon capture",
+        "sustainable chemicals",
+        "AI process optimization"
+      ],
+      "readinessThreshold": 75
+    },
+    "coreCourses": [
+      "Material/Energy Balances",
+      "Thermodynamics",
+      "Heat/Mass Transfer",
+      "Reaction Engineering",
+      "Control",
+      "Reservoir Engineering",
+      "Drilling",
+      "Production",
+      "Petrophysics",
+      "Well Testing",
+      "Environmental Chemistry",
+      "Water Treatment",
+      "Air Pollution",
+      "Waste Management",
+      "EIA",
+      "Materials Science",
+      "Physical Metallurgy",
+      "Heat Treatment",
+      "Corrosion",
+      "Characterization"
+    ],
+    "placementSkills": [
+      "Aspen basics",
+      "process calculations",
+      "safety",
+      "Excel",
+      "troubleshooting",
+      "Petrel/industry tools",
+      "numerical methods",
+      "data analysis",
+      "Environmental standards",
+      "GIS",
+      "sampling",
+      "reporting",
+      "Materials testing",
+      "microscopy",
+      "failure analysis",
+      "quality systems"
+    ],
+    "futureSkills": [
+      "Green hydrogen",
+      "carbon capture",
+      "sustainable chemicals",
+      "AI process optimization",
+      "Digital oilfield",
+      "carbon management",
+      "geothermal",
+      "energy analytics",
+      "Climate analytics",
+      "circular economy",
+      "carbon accounting",
+      "environmental AI",
+      "Advanced materials",
+      "composites",
+      "additive manufacturing",
+      "battery materials"
+    ],
+    "futureRelevance": "Very High",
+    "placementPreparation": "Aptitude; logical reasoning; quantitative ability; communication; resume; interview; role-specific technical test; 2-3 projects",
+    "learningResources": [
+      {
+        "title": "NPTEL",
+        "url": "https://nptel.ac.in/"
+      },
+      {
+        "title": "LearnChemE",
+        "url": "https://learncheme.com/"
+      },
+      {
+        "title": "AspenTech Learning",
+        "url": "https://www.aspentech.com/en/learning"
+      },
+      {
+        "title": "Autodesk Learning",
+        "url": "https://www.autodesk.com/learning"
+      },
+      {
+        "title": "ASQ Learning",
+        "url": "https://asq.org/training"
+      },
+      {
+        "title": "EPA Resources",
+        "url": "https://www.epa.gov/education"
+      },
+      {
+        "title": "QGIS Training Manual",
+        "url": "https://docs.qgis.org/latest/en/docs/training_manual/"
+      }
+    ]
+  },
+  {
+    "id": "career-csbs-business-product",
+    "title": "Business Systems & Product Engineering Analyst",
+    "discipline": "engineering",
+    "department": "Computer Science & Business Systems",
+    "roleCategory": "Cross-Domain",
+    "category": "Cross-Domain Product & Analytics",
+    "description": "Bridge technical software architecture and executive business strategy through product requirement roadmaps, quantitative revenue analysis, and systems workflow modeling.",
+    "growthRate": "+31% (High Demand)",
+    "medianSalary": "$115,000 / \u20b912-24 LPA",
+    "scope": "Agile product roadmaps, cohort retention metrics, enterprise software evaluation, and technical leadership.",
+    "subCareers": [
+      "Software Engineer",
+      "Business Analyst",
+      "Data Analyst",
+      "Product Analyst",
+      "Industrial Engineer",
+      "Operations Analyst",
+      "Supply Chain Analyst",
+      "Process Improvement Engineer",
+      "Technical Support Engineer",
+      "Project Coordinator",
+      "Technical Sales Engineer"
+    ],
+    "roles": [
+      {
+        "id": "role-software-engineer",
+        "title": "Software Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Software Engineer.",
+          "Apply core principles of Programming, DBMS, Software Engineering in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in DSA, SQL, Excel/BI and completion of 2-3 portfolio projects.",
+        "entrySalary": "$115,000 / \u20b912-24 LPA"
+      },
+      {
+        "id": "role-business-analyst",
+        "title": "Business Analyst",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Business Analyst.",
+          "Apply core principles of Programming, DBMS, Software Engineering in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in DSA, SQL, Excel/BI and completion of 2-3 portfolio projects.",
+        "entrySalary": "$115,000 / \u20b912-24 LPA"
+      },
+      {
+        "id": "role-data-analyst",
+        "title": "Data Analyst",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Data Analyst.",
+          "Apply core principles of Programming, DBMS, Software Engineering in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in DSA, SQL, Excel/BI and completion of 2-3 portfolio projects.",
+        "entrySalary": "$115,000 / \u20b912-24 LPA"
+      },
+      {
+        "id": "role-product-analyst",
+        "title": "Product Analyst",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Product Analyst.",
+          "Apply core principles of Programming, DBMS, Software Engineering in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in DSA, SQL, Excel/BI and completion of 2-3 portfolio projects.",
+        "entrySalary": "$115,000 / \u20b912-24 LPA"
+      },
+      {
+        "id": "role-industrial-engineer",
+        "title": "Industrial Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Industrial Engineer.",
+          "Apply core principles of Programming, DBMS, Software Engineering in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in DSA, SQL, Excel/BI and completion of 2-3 portfolio projects.",
+        "entrySalary": "$115,000 / \u20b912-24 LPA"
+      },
+      {
+        "id": "role-operations-analyst",
+        "title": "Operations Analyst",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Operations Analyst.",
+          "Apply core principles of Programming, DBMS, Software Engineering in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in DSA, SQL, Excel/BI and completion of 2-3 portfolio projects.",
+        "entrySalary": "$115,000 / \u20b912-24 LPA"
+      },
+      {
+        "id": "role-supply-chain-analyst",
+        "title": "Supply Chain Analyst",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Supply Chain Analyst.",
+          "Apply core principles of Programming, DBMS, Software Engineering in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in DSA, SQL, Excel/BI and completion of 2-3 portfolio projects.",
+        "entrySalary": "$115,000 / \u20b912-24 LPA"
+      },
+      {
+        "id": "role-process-improvement-engineer",
+        "title": "Process Improvement Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Process Improvement Engineer.",
+          "Apply core principles of Programming, DBMS, Software Engineering in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in DSA, SQL, Excel/BI and completion of 2-3 portfolio projects.",
+        "entrySalary": "$115,000 / \u20b912-24 LPA"
+      },
+      {
+        "id": "role-technical-support-engineer",
+        "title": "Technical Support Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Technical Support Engineer.",
+          "Apply core principles of Programming, DBMS, Software Engineering in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in DSA, SQL, Excel/BI and completion of 2-3 portfolio projects.",
+        "entrySalary": "$115,000 / \u20b912-24 LPA"
+      },
+      {
+        "id": "role-project-coordinator",
+        "title": "Project Coordinator",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Project Coordinator.",
+          "Apply core principles of Programming, DBMS, Software Engineering in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in DSA, SQL, Excel/BI and completion of 2-3 portfolio projects.",
+        "entrySalary": "$115,000 / \u20b912-24 LPA"
+      },
+      {
+        "id": "role-technical-sales-engineer",
+        "title": "Technical Sales Engineer",
+        "responsibilities": [
+          "Develop and deploy verified engineering solutions in Technical Sales Engineer.",
+          "Apply core principles of Programming, DBMS, Software Engineering in industry workflows.",
+          "Collaborate in cross-functional technical teams and maintain documentation standards."
+        ],
+        "requiredSkillIds": [
+          "skill-python",
+          "skill-sql"
+        ],
+        "readinessCriteria": "Proficiency in DSA, SQL, Excel/BI and completion of 2-3 portfolio projects.",
+        "entrySalary": "$115,000 / \u20b912-24 LPA"
+      }
+    ],
+    "requiredSkillIds": [
+      "skill-dsa",
+      "skill-sql",
+      "skill-excel-bi",
+      "skill-communication",
+      "skill-case-studies"
+    ],
+    "prerequisites": [
+      "Programming",
+      "DBMS",
+      "Software Engineering",
+      "Statistics"
+    ],
+    "relatedCareerIds": [],
+    "benchmark": {
+      "requiredSkills": [
+        {
+          "skillId": "skill-dsa",
+          "skillName": "DSA",
+          "importance": "mandatory",
+          "targetProficiency": 80
+        },
+        {
+          "skillId": "skill-sql",
+          "skillName": "SQL",
+          "importance": "mandatory",
+          "targetProficiency": 80
+        },
+        {
+          "skillId": "skill-excel-bi",
+          "skillName": "Excel/BI",
+          "importance": "mandatory",
+          "targetProficiency": 80
+        },
+        {
+          "skillId": "skill-communication",
+          "skillName": "communication",
+          "importance": "mandatory",
+          "targetProficiency": 80
+        },
+        {
+          "skillId": "skill-case-studies",
+          "skillName": "case studies",
+          "importance": "mandatory",
+          "targetProficiency": 80
+        }
+      ],
+      "prerequisiteCourses": [
+        "Programming",
+        "DBMS",
+        "Software Engineering",
+        "Statistics"
+      ],
+      "recommendedProjects": [
+        "End-to-End Business Systems & Product Engineering Analyst Capstone System",
+        "Production Optimization using DSA"
+      ],
+      "emergingSkills": [
+        "AI-assisted analytics",
+        "product analytics",
+        "cloud",
+        "AI operations"
+      ],
+      "readinessThreshold": 75
+    },
+    "coreCourses": [
+      "Programming",
+      "DBMS",
+      "Software Engineering",
+      "Statistics",
+      "Business Analytics",
+      "Operations Research",
+      "Supply Chain",
+      "Quality",
+      "Optimization",
+      "Aptitude",
+      "Communication",
+      "Excel",
+      "Business Fundamentals",
+      "Project Management"
+    ],
+    "placementSkills": [
+      "DSA",
+      "SQL",
+      "Excel/BI",
+      "communication",
+      "case studies",
+      "aptitude",
+      "Excel",
+      "Power BI",
+      "Lean Six Sigma",
+      "optimization",
+      "Quantitative aptitude",
+      "logical reasoning",
+      "PowerPoint",
+      "problem solving"
+    ],
+    "futureSkills": [
+      "AI-assisted analytics",
+      "product analytics",
+      "cloud",
+      "AI operations",
+      "supply-chain analytics",
+      "digital twins",
+      "automation",
+      "digital transformation"
+    ],
+    "futureRelevance": "Very High",
+    "placementPreparation": "Aptitude; logical reasoning; quantitative ability; communication; resume; interview; role-specific technical test; 2-3 projects; Aptitude; verbal ability; case studies; group discussion; resume; HR interview",
+    "learningResources": [
+      {
+        "title": "freeCodeCamp",
+        "url": "https://www.freecodecamp.org/"
+      },
+      {
+        "title": "GeeksforGeeks",
+        "url": "https://www.geeksforgeeks.org/"
+      },
+      {
+        "title": "LeetCode",
+        "url": "https://leetcode.com/"
+      },
+      {
+        "title": "Microsoft Learn",
+        "url": "https://learn.microsoft.com/training/"
+      },
+      {
+        "title": "Coursera",
+        "url": "https://www.coursera.org/"
+      },
+      {
+        "title": "Google Career Certificates",
+        "url": "https://grow.google/certificates/"
+      },
+      {
+        "title": "Kaggle Learn",
+        "url": "https://www.kaggle.com/learn"
+      },
+      {
+        "title": "Google Data Analytics",
+        "url": "https://www.coursera.org/professional-certificates/google-data-analytics"
+      },
+      {
+        "title": "SQLBolt",
+        "url": "https://sqlbolt.com/"
+      },
+      {
+        "title": "NPTEL",
+        "url": "https://nptel.ac.in/"
+      },
+      {
+        "title": "ASQ Learning",
+        "url": "https://asq.org/training"
+      }
+    ]
+  },
+  {
+    "id": "career-agtech-analyst",
+    "title": "Precision AgTech & IoT Specialist",
+    "discipline": "agriculture",
+    "category": "Smart Agriculture",
+    "description": "Bridge agronomy with IoT sensors, drone multispectral GIS imagery, and automated irrigation systems for climate-resilient farming.",
+    "growthRate": "+24% (Rapid Growth)",
+    "medianSalary": "$82,000 / \u20b98-16 LPA",
+    "scope": "Modern agricultural enterprises, food-tech corporations, drone survey firms, and sustainable farming initiatives.",
+    "subCareers": [
+      "Drone Agronomy Surveyor",
+      "Smart Farm Automation Engineer",
+      "Agronomic Data Strategist"
+    ],
+    "roles": [
+      {
+        "id": "role-agtech-field",
+        "title": "Smart Farm Telemetry Engineer",
+        "responsibilities": [
+          "Install and calibrate soil moisture IoT nodes",
+          "Maintain LoRa mesh networks",
+          "Monitor irrigation telemetry"
+        ],
+        "requiredSkillIds": [
+          "skill-soil-sensors",
+          "skill-smart-irrigation"
+        ],
+        "readinessCriteria": "Hands-on sensor calibration and automated control system testing.",
+        "entrySalary": "$60,000"
+      },
+      {
+        "id": "role-agtech-gis",
+        "title": "GIS Crop Analytics Specialist",
+        "responsibilities": [
+          "Process satellite NDVI indices",
+          "Build yield estimation heatmaps",
+          "Advise on fertilizer optimization"
+        ],
+        "requiredSkillIds": [
+          "skill-crop-analytics",
+          "skill-data-viz",
+          "skill-stats"
+        ],
+        "readinessCriteria": "GIS spatial analysis + predictive yield modeling.",
+        "entrySalary": "$90,000"
+      }
+    ],
+    "requiredSkillIds": [
+      "skill-soil-sensors",
+      "skill-crop-analytics",
+      "skill-smart-irrigation",
+      "skill-stats",
+      "skill-data-viz"
+    ],
+    "prerequisites": [
+      "Agricultural science fundamentals",
+      "Basic electronics/computing"
+    ],
+    "relatedCareerIds": [
+      "career-data-analyst",
+      "career-sustainable-agronomy"
+    ],
+    "benchmark": {
+      "requiredSkills": [
+        {
+          "skillId": "skill-soil-sensors",
+          "skillName": "Soil Sensor & Telemetry Integration",
+          "importance": "mandatory",
+          "targetProficiency": 80
+        },
+        {
+          "skillId": "skill-smart-irrigation",
+          "skillName": "Automated Irrigation & Climate Control",
+          "importance": "mandatory",
+          "targetProficiency": 75
+        },
+        {
+          "skillId": "skill-crop-analytics",
+          "skillName": "GIS & Crop Yield Predictive Modeling",
+          "importance": "mandatory",
+          "targetProficiency": 70
+        },
+        {
+          "skillId": "skill-stats",
+          "skillName": "Applied Statistics & Probability",
+          "importance": "recommended",
+          "targetProficiency": 60
+        }
+      ],
+      "prerequisiteCourses": [
+        "Soil Physics & Crop Physiology",
+        "Introduction to Geoinformatics"
+      ],
+      "recommendedProjects": [
+        "Automated LoRa Soil Moisture Telemetry Station",
+        "NDVI Crop Health Index Dashboard"
+      ],
+      "emergingSkills": [
+        "Hyperspectral Drone Imaging",
+        "Autonomous Tractor Telematics"
+      ],
+      "readinessThreshold": 72
+    },
+    "iconName": "Sprout"
+  },
+  {
+    "id": "career-sustainable-agronomy",
+    "title": "Sustainable Agronomy & Climate Specialist",
+    "discipline": "agriculture",
+    "category": "Environmental Agronomy",
+    "description": "Design regenerative cropping systems, carbon sequestration audits, and hydroponic controlled environment farming.",
+    "growthRate": "+22% (Steady)",
+    "medianSalary": "$78,000 / \u20b98-15 LPA",
+    "scope": "Agri-consultancies, greenhouse operators, organic certification agencies, and carbon credit brokers.",
+    "subCareers": [
+      "Hydroponics Facility Manager",
+      "Soil Carbon Verification Auditor"
+    ],
+    "roles": [
+      {
+        "id": "role-hydro-mgr",
+        "title": "Controlled Environment Farm Manager",
+        "responsibilities": [
+          "Formulate closed-loop nutrient solutions",
+          "Calibrate LED spectrums for leafy greens",
+          "Manage biosecurity"
+        ],
+        "requiredSkillIds": [
+          "skill-hydroponics",
+          "skill-smart-irrigation"
+        ],
+        "readinessCriteria": "Nutrient formulation calculation and automated climate loop maintenance.",
+        "entrySalary": "$58,000"
+      }
+    ],
+    "requiredSkillIds": [
+      "skill-hydroponics",
+      "skill-soil-sensors",
+      "skill-smart-irrigation",
+      "skill-crop-analytics"
+    ],
+    "prerequisites": [
+      "Plant biochemistry",
+      "Soil fertility"
+    ],
+    "relatedCareerIds": [
+      "career-agtech-analyst",
+      "career-food-tech-qa"
+    ],
+    "benchmark": {
+      "requiredSkills": [
+        {
+          "skillId": "skill-hydroponics",
+          "skillName": "Hydroponics & Controlled Environment Agriculture",
+          "importance": "mandatory",
+          "targetProficiency": 85
+        },
+        {
+          "skillId": "skill-smart-irrigation",
+          "skillName": "Automated Irrigation & Climate Control",
+          "importance": "mandatory",
+          "targetProficiency": 75
+        },
+        {
+          "skillId": "skill-soil-sensors",
+          "skillName": "Soil Sensor & Telemetry Integration",
+          "importance": "recommended",
+          "targetProficiency": 65
+        }
+      ],
+      "prerequisiteCourses": [
+        "Plant Nutrition & Metabolism",
+        "Greenhouse Systems Engineering"
+      ],
+      "recommendedProjects": [
+        "Automated Recirculating Deep Water Culture Hydroponic System"
+      ],
+      "emergingSkills": [
+        "Aeroponic Fogging Systems",
+        "Biochar Soil Amendment Verification"
+      ],
+      "readinessThreshold": 72
+    },
+    "iconName": "Sprout"
+  },
+  {
+    "id": "career-food-tech-qa",
+    "title": "Food Processing & Quality Assurance Engineer",
+    "discipline": "agriculture",
+    "category": "Food Technology",
+    "description": "Ensure food safety standards, microbial quality controls, aseptic packaging lines, and novel nutritional formulation.",
+    "growthRate": "+20% (Consistent)",
+    "medianSalary": "$75,000 / \u20b97-14 LPA",
+    "scope": "FMCG food processing giants, dairy networks, beverage breweries, and food safety regulatory bodies.",
+    "subCareers": [
+      "HACCP Food Safety Auditor",
+      "Sensory & Formulation Scientist"
+    ],
+    "roles": [
+      {
+        "id": "role-food-qa-officer",
+        "title": "Quality Assurance Technologist",
+        "responsibilities": [
+          "Conduct microbial pathogen swabs",
+          "Verify shelf-life acceleration curves",
+          "Audit supplier compliance"
+        ],
+        "requiredSkillIds": [
+          "skill-food-qa",
+          "skill-stats"
+        ],
+        "readinessCriteria": "ISO 22000 standard adherence and microbial lab assay execution.",
+        "entrySalary": "$55,000"
+      }
+    ],
+    "requiredSkillIds": [
+      "skill-food-qa",
+      "skill-stats",
+      "skill-data-viz"
+    ],
+    "prerequisites": [
+      "Food microbiology",
+      "Organic chemistry"
+    ],
+    "relatedCareerIds": [
+      "career-diagnostic-lab-spec",
+      "career-sustainable-agronomy"
+    ],
+    "benchmark": {
+      "requiredSkills": [
+        {
+          "skillId": "skill-food-qa",
+          "skillName": "Food Safety & Quality Assurance (HACCP)",
+          "importance": "mandatory",
+          "targetProficiency": 90
+        },
+        {
+          "skillId": "skill-stats",
+          "skillName": "Applied Statistics & Probability",
+          "importance": "mandatory",
+          "targetProficiency": 65
+        }
+      ],
+      "prerequisiteCourses": [
+        "Food Microbiology",
+        "Thermal Processing & Preservation"
+      ],
+      "recommendedProjects": [
+        "Plant-wide HACCP Risk Map & Critical Control Point Dashboard"
+      ],
+      "emergingSkills": [
+        "High-Pressure Processing (HPP)",
+        "Blockchain Food Traceability"
+      ],
+      "readinessThreshold": 75
+    },
+    "iconName": "Award"
+  },
+  {
+    "id": "career-health-informatics",
+    "title": "Clinical Health Informatics Specialist",
+    "discipline": "paramedical",
+    "category": "Healthcare Technology",
+    "description": "Unify clinical hospital operations with digital health standards (HL7/FHIR), electronic health records, and clinical outcome analytics.",
+    "growthRate": "+31% (High Demand)",
+    "medianSalary": "$92,000 / \u20b911-22 LPA",
+    "scope": "Hospitals, medical diagnostic networks, health-tech startups, and pharma clinical research organizations.",
+    "subCareers": [
+      "Medical EHR Systems Specialist",
+      "Clinical Trial Data Manager",
+      "Telemedicine Systems Engineer"
+    ],
+    "roles": [
+      {
+        "id": "role-health-ehrs",
+        "title": "Hospital Systems Informatics Officer",
+        "responsibilities": [
+          "Maintain EHR data flow and compliance",
+          "Ensure FHIR protocol integrations",
+          "Audit patient data security"
+        ],
+        "requiredSkillIds": [
+          "skill-ehr-systems",
+          "skill-sql"
+        ],
+        "readinessCriteria": "HL7/FHIR standard compliance and hospital database query handling.",
+        "entrySalary": "$72,000"
+      }
+    ],
+    "requiredSkillIds": [
+      "skill-ehr-systems",
+      "skill-clinical-stats",
+      "skill-sql",
+      "skill-biomed-diagnostics",
+      "skill-stats"
+    ],
+    "prerequisites": [
+      "Paramedical / Anatomy fundamentals",
+      "Information systems basics"
+    ],
+    "relatedCareerIds": [
+      "career-data-analyst",
+      "career-telemedicine-coord"
+    ],
+    "benchmark": {
+      "requiredSkills": [
+        {
+          "skillId": "skill-ehr-systems",
+          "skillName": "EHR & Health Protocols (HL7/FHIR)",
+          "importance": "mandatory",
+          "targetProficiency": 85
+        },
+        {
+          "skillId": "skill-sql",
+          "skillName": "SQL & Relational Databases",
+          "importance": "mandatory",
+          "targetProficiency": 80
+        },
+        {
+          "skillId": "skill-clinical-stats",
+          "skillName": "Biostatistics & Clinical Trial Analytics",
+          "importance": "mandatory",
+          "targetProficiency": 70
+        },
+        {
+          "skillId": "skill-biomed-diagnostics",
+          "skillName": "Biomedical Diagnostic Systems & Quality",
+          "importance": "recommended",
+          "targetProficiency": 65
+        }
+      ],
+      "prerequisiteCourses": [
+        "Medical Terminology & Ethics",
+        "Healthcare Data Standards"
+      ],
+      "recommendedProjects": [
+        "FHIR REST API Medical Record Interoperability Bridge",
+        "Clinical Trial Patient Retention Dashboard"
+      ],
+      "emergingSkills": [
+        "AI-assisted Radiology Triage",
+        "Genomic Data Pipelines"
+      ],
+      "readinessThreshold": 75
+    },
+    "iconName": "HeartPulse"
+  },
+  {
+    "id": "career-diagnostic-lab-spec",
+    "title": "Biomedical Diagnostic Lab Specialist",
+    "discipline": "paramedical",
+    "category": "Diagnostic Medicine",
+    "description": "Manage automated clinical pathology laboratories, molecular diagnostic assays, quality control indices, and biomarker interpretation.",
+    "growthRate": "+25% (High)",
+    "medianSalary": "$72,000 / \u20b97-15 LPA",
+    "scope": "Diagnostic lab chains, tertiary hospital pathology departments, blood banks, and clinical CROs.",
+    "subCareers": [
+      "Molecular Diagnostics Technologist",
+      "Clinical Biochemistry Lead"
+    ],
+    "roles": [
+      {
+        "id": "role-mlt-lead",
+        "title": "Senior Medical Laboratory Technologist",
+        "responsibilities": [
+          "Run ELISA & PCR panels",
+          "Calibrate automated hematology analyzers",
+          "Sign off on IQC deviations"
+        ],
+        "requiredSkillIds": [
+          "skill-biomed-diagnostics",
+          "skill-clinical-stats"
+        ],
+        "readinessCriteria": "Precision pipetting, auto-analyzer troubleshooting, and Westgard rule application.",
+        "entrySalary": "$52,000"
+      }
+    ],
+    "requiredSkillIds": [
+      "skill-biomed-diagnostics",
+      "skill-clinical-stats",
+      "skill-ehr-systems"
+    ],
+    "prerequisites": [
+      "Pathology fundamentals",
+      "Medical biochemistry"
+    ],
+    "relatedCareerIds": [
+      "career-health-informatics",
+      "career-food-tech-qa"
+    ],
+    "benchmark": {
+      "requiredSkills": [
+        {
+          "skillId": "skill-biomed-diagnostics",
+          "skillName": "Biomedical Diagnostic Systems & Quality",
+          "importance": "mandatory",
+          "targetProficiency": 90
+        },
+        {
+          "skillId": "skill-clinical-stats",
+          "skillName": "Biostatistics & Clinical Trial Analytics",
+          "importance": "mandatory",
+          "targetProficiency": 70
+        },
+        {
+          "skillId": "skill-ehr-systems",
+          "skillName": "EHR & Health Protocols (HL7/FHIR)",
+          "importance": "recommended",
+          "targetProficiency": 60
+        }
+      ],
+      "prerequisiteCourses": [
+        "Clinical Hematology & Immuno-hematology",
+        "Molecular Pathology"
+      ],
+      "recommendedProjects": [
+        "Laboratory Westgard QC Deviation & Calibration Tracker"
+      ],
+      "emergingSkills": [
+        "Next-Gen Molecular Diagnostics (ddPCR)",
+        "Digital Pathology Image Analysis"
+      ],
+      "readinessThreshold": 76
+    },
+    "iconName": "HeartPulse"
+  },
+  {
+    "id": "career-telemedicine-coord",
+    "title": "Telemedicine & Remote Care Coordinator",
+    "discipline": "paramedical",
+    "category": "Digital Health",
+    "description": "Orchestrate virtual clinical triage, remote patient physiological telemetry, and chronic disease digital monitoring protocols.",
+    "growthRate": "+34% (Explosive)",
+    "medianSalary": "$75,000 / \u20b98-16 LPA",
+    "scope": "Telehealth providers, health insurance digital programs, home-health agencies, and chronic care networks.",
+    "subCareers": [
+      "Virtual Health Triage Nurse",
+      "RPM Device Implementation Specialist"
+    ],
+    "roles": [
+      {
+        "id": "role-telemed-officer",
+        "title": "Remote Patient Monitoring Coordinator",
+        "responsibilities": [
+          "Monitor daily cardiac & diabetic telemetry feeds",
+          "Trigger urgent clinician interventions",
+          "Educate patients on RPM wearables"
+        ],
+        "requiredSkillIds": [
+          "skill-telemed-protocols",
+          "skill-ehr-systems"
+        ],
+        "readinessCriteria": "Virtual triage protocols, telemetry alert escalations, and empathetic patient engagement.",
+        "entrySalary": "$58,000"
+      }
+    ],
+    "requiredSkillIds": [
+      "skill-telemed-protocols",
+      "skill-ehr-systems",
+      "skill-clinical-stats"
+    ],
+    "prerequisites": [
+      "Clinical nursing / paramedical care",
+      "Communication"
+    ],
+    "relatedCareerIds": [
+      "career-health-informatics",
+      "career-physiotherapy-rehab"
+    ],
+    "benchmark": {
+      "requiredSkills": [
+        {
+          "skillId": "skill-telemed-protocols",
+          "skillName": "Telemedicine & Remote Patient Monitoring (RPM)",
+          "importance": "mandatory",
+          "targetProficiency": 85
+        },
+        {
+          "skillId": "skill-ehr-systems",
+          "skillName": "EHR & Health Protocols (HL7/FHIR)",
+          "importance": "mandatory",
+          "targetProficiency": 75
+        }
+      ],
+      "prerequisiteCourses": [
+        "Virtual Clinical Care Standards",
+        "Patient Health Engagement"
+      ],
+      "recommendedProjects": [
+        "Chronic Heart Failure Remote Telemetry Escalation Workflow"
+      ],
+      "emergingSkills": [
+        "AI-driven Symptom Checkers",
+        "Continuous Glucose Monitor (CGM) Streaming"
+      ],
+      "readinessThreshold": 72
+    },
+    "iconName": "HeartPulse"
+  },
+  {
+    "id": "career-physiotherapy-rehab",
+    "title": "Physiotherapy & Movement Rehabilitation Specialist",
+    "discipline": "paramedical",
+    "category": "Rehabilitation Medicine",
+    "description": "Evaluate musculoskeletal kinematics, craft evidence-based physical rehabilitation protocols, and utilize EMG motion feedback.",
+    "growthRate": "+24% (Strong)",
+    "medianSalary": "$80,000 / \u20b98-18 LPA",
+    "scope": "Sports injury clinics, orthopedic hospitals, neuro-rehabilitation centers, and professional sports franchises.",
+    "subCareers": [
+      "Sports Kinematics Specialist",
+      "Neuro-Rehabilitation Clinician"
+    ],
+    "roles": [
+      {
+        "id": "role-physio-lead",
+        "title": "Clinical Movement Specialist",
+        "responsibilities": [
+          "Conduct dynamic gait analysis",
+          "Design progressive resistance exercise regimens",
+          "Apply therapeutic modalities"
+        ],
+        "requiredSkillIds": [
+          "skill-physio-biomech",
+          "skill-clinical-stats"
+        ],
+        "readinessCriteria": "Biomechanical gait assessment and individualized rehabilitation protocol design.",
+        "entrySalary": "$60,000"
+      }
+    ],
+    "requiredSkillIds": [
+      "skill-physio-biomech",
+      "skill-clinical-stats",
+      "skill-telemed-protocols"
+    ],
+    "prerequisites": [
+      "Anatomy & Physiology",
+      "Exercise Physiology"
+    ],
+    "relatedCareerIds": [
+      "career-telemedicine-coord",
+      "career-biomedical-engineer"
+    ],
+    "benchmark": {
+      "requiredSkills": [
+        {
+          "skillId": "skill-physio-biomech",
+          "skillName": "Biomechanics & Movement Analysis",
+          "importance": "mandatory",
+          "targetProficiency": 88
+        },
+        {
+          "skillId": "skill-clinical-stats",
+          "skillName": "Biostatistics & Clinical Trial Analytics",
+          "importance": "recommended",
+          "targetProficiency": 65
+        }
+      ],
+      "prerequisiteCourses": [
+        "Kinesiology & Biomechanics",
+        "Orthopedic Physical Therapy"
+      ],
+      "recommendedProjects": [
+        "Post-ACL Reconstruction Return-to-Sport Motion Assessment Protocol"
+      ],
+      "emergingSkills": [
+        "Wearable IMU Gait Sensors",
+        "Virtual Reality Motor Rehabilitation"
+      ],
+      "readinessThreshold": 75
+    },
+    "iconName": "HeartPulse"
+  },
+  {
+    "id": "career-fintech-quant",
+    "title": "FinTech Quantitative Analyst",
+    "discipline": "commerce",
+    "category": "Finance & Technology",
+    "description": "Apply computational modeling, financial valuation, and regulatory automation to capital markets and digital payment systems.",
+    "growthRate": "+25% (High)",
+    "medianSalary": "$115,000 / \u20b914-28 LPA",
+    "scope": "Investment banking, hedge funds, neobanks, payment gateways, and risk rating institutions.",
+    "subCareers": [
+      "Credit Risk Modeler",
+      "Financial Valuation Analyst",
+      "RegTech & AML Officer"
+    ],
+    "roles": [
+      {
+        "id": "role-fin-quant",
+        "title": "Quantitative Risk Analyst",
+        "responsibilities": [
+          "Build credit scoring algorithms",
+          "Perform Monte Carlo simulations",
+          "Automate regulatory risk reports"
+        ],
+        "requiredSkillIds": [
+          "skill-fin-modeling",
+          "skill-stats",
+          "skill-python",
+          "skill-algo-trading"
+        ],
+        "readinessCriteria": "Strong DCF + stochastic modeling + algorithmic backtesting.",
+        "entrySalary": "$90,000"
+      }
+    ],
+    "requiredSkillIds": [
+      "skill-fin-modeling",
+      "skill-algo-trading",
+      "skill-fin-compliance",
+      "skill-stats",
+      "skill-python",
+      "skill-sql"
+    ],
+    "prerequisites": [
+      "Corporate finance principles",
+      "Probability and statistics"
+    ],
+    "relatedCareerIds": [
+      "career-data-analyst",
+      "career-supply-chain-analyst"
+    ],
+    "benchmark": {
+      "requiredSkills": [
+        {
+          "skillId": "skill-fin-modeling",
+          "skillName": "Financial Modeling & Valuation",
+          "importance": "mandatory",
+          "targetProficiency": 85
+        },
+        {
+          "skillId": "skill-algo-trading",
+          "skillName": "Quantitative Risk & Algorithmic Trading",
+          "importance": "mandatory",
+          "targetProficiency": 75
+        },
+        {
+          "skillId": "skill-fin-compliance",
+          "skillName": "Anti-Money Laundering & RegTech Compliance",
+          "importance": "recommended",
+          "targetProficiency": 70
+        },
+        {
+          "skillId": "skill-python",
+          "skillName": "Python Programming",
+          "importance": "mandatory",
+          "targetProficiency": 70
+        }
+      ],
+      "prerequisiteCourses": [
+        "Financial Accounting & Statements",
+        "Derivatives & Risk Analytics"
+      ],
+      "recommendedProjects": [
+        "Dynamic DCF Valuation Engine with Sensitivity Tables",
+        "Algorithmic Pairs Trading Backtester"
+      ],
+      "emergingSkills": [
+        "High-Frequency Order Routing",
+        "DeFi Liquidity Pool Modeling"
+      ],
+      "readinessThreshold": 78
+    },
+    "iconName": "TrendingUp"
+  },
+  {
+    "id": "career-supply-chain-analyst",
+    "title": "Global Supply Chain & Operations Analyst",
+    "discipline": "commerce",
+    "category": "Operations & Logistics",
+    "description": "Optimize global procurement, warehouse throughput, freight cost models, and enterprise SAP inventory allocations.",
+    "growthRate": "+23% (High)",
+    "medianSalary": "$84,000 / \u20b99-18 LPA",
+    "scope": "E-commerce giants, international shipping lines, manufacturing plants, and retail supply chains.",
+    "subCareers": [
+      "Demand Planning Specialist",
+      "Logistics Freight Optimization Lead"
+    ],
+    "roles": [
+      {
+        "id": "role-supply-analyst",
+        "title": "Supply Chain Optimization Engineer",
+        "responsibilities": [
+          "Build safety-stock replenishment models",
+          "Map supplier lead-time variances",
+          "Configure SAP inventory modules"
+        ],
+        "requiredSkillIds": [
+          "skill-supply-chain-erp",
+          "skill-sql",
+          "skill-data-viz"
+        ],
+        "readinessCriteria": "Economic Order Quantity (EOQ) modeling, safety stock calculation, and ERP query fluency.",
+        "entrySalary": "$64,000"
+      }
+    ],
+    "requiredSkillIds": [
+      "skill-supply-chain-erp",
+      "skill-sql",
+      "skill-data-viz",
+      "skill-stats"
+    ],
+    "prerequisites": [
+      "Operations management",
+      "Spreadsheet modeling"
+    ],
+    "relatedCareerIds": [
+      "career-data-analyst",
+      "career-fintech-quant"
+    ],
+    "benchmark": {
+      "requiredSkills": [
+        {
+          "skillId": "skill-supply-chain-erp",
+          "skillName": "Supply Chain Analytics & SAP/ERP",
+          "importance": "mandatory",
+          "targetProficiency": 85
+        },
+        {
+          "skillId": "skill-sql",
+          "skillName": "SQL & Relational Databases",
+          "importance": "mandatory",
+          "targetProficiency": 80
+        },
+        {
+          "skillId": "skill-data-viz",
+          "skillName": "Data Visualization & BI",
+          "importance": "mandatory",
+          "targetProficiency": 75
+        }
+      ],
+      "prerequisiteCourses": [
+        "Operations Research",
+        "Global Logistics Management"
+      ],
+      "recommendedProjects": [
+        "Multi-Echelon Inventory Optimization Model in Python & SQL"
+      ],
+      "emergingSkills": [
+        "Digital Twin Supply Chains",
+        "Real-time GPS Freight Telematics"
+      ],
+      "readinessThreshold": 75
+    },
+    "iconName": "TrendingUp"
+  },
+  {
+    "id": "career-digital-growth-strat",
+    "title": "Digital Growth & Customer Analytics Strategist",
+    "discipline": "commerce",
+    "category": "Digital Strategy",
+    "description": "Drive customer acquisition and lifecycle retention through multi-channel attribution modeling, A/B experiments, and user cohort science.",
+    "growthRate": "+26% (Rapid)",
+    "medianSalary": "$88,000 / \u20b910-20 LPA",
+    "scope": "Direct-to-consumer (D2C) brands, SaaS tech startups, digital agencies, and media powerhouses.",
+    "subCareers": [
+      "Performance Marketing Lead",
+      "Retention & Lifecycle Manager"
+    ],
+    "roles": [
+      {
+        "id": "role-growth-lead",
+        "title": "Growth Marketing Analyst",
+        "responsibilities": [
+          "Run statistical A/B test experiments",
+          "Model customer lifetime value (LTV)",
+          "Optimize conversion funnels"
+        ],
+        "requiredSkillIds": [
+          "skill-growth-analytics",
+          "skill-data-viz",
+          "skill-stats"
+        ],
+        "readinessCriteria": "Hypothesis testing, multi-touch attribution, and retention cohort analysis.",
+        "entrySalary": "$66,000"
+      }
+    ],
+    "requiredSkillIds": [
+      "skill-growth-analytics",
+      "skill-data-viz",
+      "skill-stats",
+      "skill-sql"
+    ],
+    "prerequisites": [
+      "Principles of marketing",
+      "Basic data visualization"
+    ],
+    "relatedCareerIds": [
+      "career-data-analyst",
+      "career-uiux-systems-designer"
+    ],
+    "benchmark": {
+      "requiredSkills": [
+        {
+          "skillId": "skill-growth-analytics",
+          "skillName": "Digital Growth & Customer Analytics",
+          "importance": "mandatory",
+          "targetProficiency": 88
+        },
+        {
+          "skillId": "skill-data-viz",
+          "skillName": "Data Visualization & BI",
+          "importance": "mandatory",
+          "targetProficiency": 80
+        },
+        {
+          "skillId": "skill-stats",
+          "skillName": "Applied Statistics & Probability",
+          "importance": "recommended",
+          "targetProficiency": 70
+        }
+      ],
+      "prerequisiteCourses": [
+        "Digital Marketing & SEO",
+        "Applied Marketing Analytics"
+      ],
+      "recommendedProjects": [
+        "SaaS Acquisition Funnel & Churn Predictor Dashboard"
+      ],
+      "emergingSkills": [
+        "AI-driven Copy Personalization",
+        "First-Party Data Clean Rooms"
+      ],
+      "readinessThreshold": 76
+    },
+    "iconName": "TrendingUp"
+  },
+  {
+    "id": "career-uiux-systems-designer",
+    "title": "Product & UI/UX Systems Designer",
+    "discipline": "design_media",
+    "category": "Product Design",
+    "description": "Architect scalable multi-platform design systems, conduct empirical user research, and craft high-fidelity interactive digital experiences.",
+    "growthRate": "+22% (High)",
+    "medianSalary": "$95,000 / \u20b911-22 LPA",
+    "scope": "Tech companies, digital product studios, consumer software apps, and fin-tech platforms.",
+    "subCareers": [
+      "Design Systems Engineer",
+      "UX Researcher",
+      "Interaction Designer"
+    ],
+    "roles": [
+      {
+        "id": "role-uiux-senior",
+        "title": "Senior Product Designer",
+        "responsibilities": [
+          "Create multi-brand design tokens in Figma",
+          "Execute usability test interviews",
+          "Ensure WCAG AAA accessibility"
+        ],
+        "requiredSkillIds": [
+          "skill-design-systems",
+          "skill-ux-research"
+        ],
+        "readinessCriteria": "Figma component variables, interactive prototyping, and empirical user testing.",
+        "entrySalary": "$75,000"
+      }
+    ],
+    "requiredSkillIds": [
+      "skill-design-systems",
+      "skill-ux-research",
+      "skill-data-viz"
+    ],
+    "prerequisites": [
+      "Visual design principles",
+      "Human-computer interaction basics"
+    ],
+    "relatedCareerIds": [
+      "career-digital-growth-strat",
+      "career-game-vfx-developer"
+    ],
+    "benchmark": {
+      "requiredSkills": [
+        {
+          "skillId": "skill-design-systems",
+          "skillName": "Figma & Design Systems Engineering",
+          "importance": "mandatory",
+          "targetProficiency": 90
+        },
+        {
+          "skillId": "skill-ux-research",
+          "skillName": "User Research & Journey Mapping",
+          "importance": "mandatory",
+          "targetProficiency": 85
+        },
+        {
+          "skillId": "skill-data-viz",
+          "skillName": "Data Visualization & BI",
+          "importance": "recommended",
+          "targetProficiency": 60
+        }
+      ],
+      "prerequisiteCourses": [
+        "Human-Centered Design",
+        "Information Architecture"
+      ],
+      "recommendedProjects": [
+        "End-to-End Enterprise SaaS Design System & Interactive Prototype in Figma"
+      ],
+      "emergingSkills": [
+        "Spatial UI for Apple Vision Pro",
+        "Design-to-Code Token Automation"
+      ],
+      "readinessThreshold": 78
+    },
+    "iconName": "Layout"
+  },
+  {
+    "id": "career-game-vfx-developer",
+    "title": "Game Systems & Interactive VFX Developer",
+    "discipline": "design_media",
+    "category": "Interactive Media",
+    "description": "Develop physics-driven game mechanics, real-time procedural shaders, and 3D spatial environments in Unity and Unreal Engine.",
+    "growthRate": "+27% (Surging)",
+    "medianSalary": "$96,000 / \u20b912-25 LPA",
+    "scope": "AAA gaming studios, indie game publishers, virtual production film sets, and architectural VR visualization.",
+    "subCareers": [
+      "Technical Artist",
+      "Gameplay Systems Programmer",
+      "3D Environment Artist"
+    ],
+    "roles": [
+      {
+        "id": "role-gameplay-prog",
+        "title": "Gameplay Programmer",
+        "responsibilities": [
+          "Code character movement physics in Unity C#",
+          "Author Niagara particle systems in Unreal",
+          "Optimize draw calls"
+        ],
+        "requiredSkillIds": [
+          "skill-game-engines",
+          "skill-3d-modeling"
+        ],
+        "readinessCriteria": "Real-time 60fps frame budgeting, C# gameplay architecture, and PBR shader compilation.",
+        "entrySalary": "$72,000"
+      }
+    ],
+    "requiredSkillIds": [
+      "skill-game-engines",
+      "skill-3d-modeling",
+      "skill-python"
+    ],
+    "prerequisites": [
+      "Object-oriented programming",
+      "3D math (vectors & quaternions)"
+    ],
+    "relatedCareerIds": [
+      "career-uiux-systems-designer",
+      "career-ai-engineer"
+    ],
+    "benchmark": {
+      "requiredSkills": [
+        {
+          "skillId": "skill-game-engines",
+          "skillName": "Unity & Unreal Interactive Systems",
+          "importance": "mandatory",
+          "targetProficiency": 88
+        },
+        {
+          "skillId": "skill-3d-modeling",
+          "skillName": "3D Spatial Modeling & Shader VFX",
+          "importance": "mandatory",
+          "targetProficiency": 80
+        }
+      ],
+      "prerequisiteCourses": [
+        "Computer Graphics & Shaders",
+        "Game Mechanics Design"
+      ],
+      "recommendedProjects": [
+        "Action-Adventure Game Vertical Slice with Custom HLSL Shaders"
+      ],
+      "emergingSkills": [
+        "Procedural World Generation with Houdini",
+        "Real-time Raytracing Optimization"
+      ],
+      "readinessThreshold": 78
+    },
+    "iconName": "Layout"
+  },
+  {
+    "id": "career-computational-biologist",
+    "title": "Computational Biologist & Genomics Scientist",
+    "discipline": "arts_science",
+    "category": "Bioinformatics",
+    "description": "Analyze high-throughput DNA sequencing, model macromolecular protein structures, and accelerate drug target discovery using code.",
+    "growthRate": "+29% (High Growth)",
+    "medianSalary": "$105,000 / \u20b914-26 LPA",
+    "scope": "Biotech pharma firms, genome research institutes, precision oncology centers, and agricultural genetics labs.",
+    "subCareers": [
+      "NGS Pipeline Developer",
+      "Structural Bioinformatician"
+    ],
+    "roles": [
+      {
+        "id": "role-comp-bio",
+        "title": "Bioinformatics Pipeline Scientist",
+        "responsibilities": [
+          "Run RNA-seq differential expression",
+          "Variant call whole-exome sequencing files",
+          "Model protein-ligand docks"
+        ],
+        "requiredSkillIds": [
+          "skill-comp-bio",
+          "skill-python",
+          "skill-stats"
+        ],
+        "readinessCriteria": "NGS pipeline orchestration, Biopython scripting, and statistical significance testing.",
+        "entrySalary": "$82,000"
+      }
+    ],
+    "requiredSkillIds": [
+      "skill-comp-bio",
+      "skill-python",
+      "skill-stats",
+      "skill-sql"
+    ],
+    "prerequisites": [
+      "Genetics & Molecular Biology",
+      "Python programming"
+    ],
+    "relatedCareerIds": [
+      "career-ai-engineer",
+      "career-health-informatics"
+    ],
+    "benchmark": {
+      "requiredSkills": [
+        {
+          "skillId": "skill-comp-bio",
+          "skillName": "Computational Genomics & Bioinformatics",
+          "importance": "mandatory",
+          "targetProficiency": 90
+        },
+        {
+          "skillId": "skill-python",
+          "skillName": "Python Programming",
+          "importance": "mandatory",
+          "targetProficiency": 85
+        },
+        {
+          "skillId": "skill-stats",
+          "skillName": "Applied Statistics & Probability",
+          "importance": "mandatory",
+          "targetProficiency": 80
+        }
+      ],
+      "prerequisiteCourses": [
+        "Molecular Genetics",
+        "Algorithmic Bioinformatics"
+      ],
+      "recommendedProjects": [
+        "Automated Cancer RNA-Seq Differential Expression & Pathway Enrichment Pipeline"
+      ],
+      "emergingSkills": [
+        "Single-Cell Spatial Transcriptomics",
+        "AlphaFold Protein Folding Pipelines"
+      ],
+      "readinessThreshold": 80
+    },
+    "iconName": "Atom"
+  },
+  {
+    "id": "career-applied-math-quant",
+    "title": "Applied Quantitative Economist & Policy Analyst",
+    "discipline": "arts_science",
+    "category": "Quantitative Science",
+    "description": "Model macro-economic trends, evaluate public policy impact through econometrics, and forecast monetary market liquidity.",
+    "growthRate": "+21% (Steady)",
+    "medianSalary": "$94,000 / \u20b911-22 LPA",
+    "scope": "Central banks, international development agencies (World Bank/IMF), economic think tanks, and policy consulting.",
+    "subCareers": [
+      "Macroeconomic Forecaster",
+      "Public Policy Impact Evaluator"
+    ],
+    "roles": [
+      {
+        "id": "role-quant-econ",
+        "title": "Quantitative Policy Researcher",
+        "responsibilities": [
+          "Estimate econometric panel regressions",
+          "Conduct difference-in-differences impact assessments",
+          "Publish policy briefs"
+        ],
+        "requiredSkillIds": [
+          "skill-econometrics",
+          "skill-stats",
+          "skill-python"
+        ],
+        "readinessCriteria": "Stochastic economic modeling, instrumental variables, and econometric causal inference.",
+        "entrySalary": "$72,000"
+      }
+    ],
+    "requiredSkillIds": [
+      "skill-econometrics",
+      "skill-stats",
+      "skill-python",
+      "skill-data-viz"
+    ],
+    "prerequisites": [
+      "Micro & Macro economics",
+      "Calculus and linear algebra"
+    ],
+    "relatedCareerIds": [
+      "career-fintech-quant",
+      "career-data-analyst"
+    ],
+    "benchmark": {
+      "requiredSkills": [
+        {
+          "skillId": "skill-econometrics",
+          "skillName": "Econometric Modeling & Quantitative Policy",
+          "importance": "mandatory",
+          "targetProficiency": 88
+        },
+        {
+          "skillId": "skill-stats",
+          "skillName": "Applied Statistics & Probability",
+          "importance": "mandatory",
+          "targetProficiency": 85
+        },
+        {
+          "skillId": "skill-python",
+          "skillName": "Python Programming",
+          "importance": "recommended",
+          "targetProficiency": 70
+        }
+      ],
+      "prerequisiteCourses": [
+        "Intermediate Econometrics",
+        "Mathematical Economics"
+      ],
+      "recommendedProjects": [
+        "Empirical Policy Impact Analysis of Renewable Energy Subsidies on Industrial Output"
+      ],
+      "emergingSkills": [
+        "Machine Learning in Causal Inference",
+        "High-Frequency Inflation Nowcasting"
+      ],
+      "readinessThreshold": 78
+    },
+    "iconName": "Atom"
+  },
+  {
+    "id": "career-cyber-law-analyst",
+    "title": "Cyber Law & AI Governance Analyst",
+    "discipline": "law_governance",
+    "category": "Technology Law",
+    "description": "Ensure corporate compliance with international data privacy statutes (GDPR/DPDP), audit AI models for algorithmic bias, and draft tech IP agreements.",
+    "growthRate": "+32% (Surging Need)",
+    "medianSalary": "$110,000 / \u20b914-28 LPA",
+    "scope": "Tech corporations, international law firms, privacy consulting practices, and regulatory oversight authorities.",
+    "subCareers": [
+      "Data Protection Officer (DPO)",
+      "AI Ethics & Model Compliance Auditor"
+    ],
+    "roles": [
+      {
+        "id": "role-privacy-counsel",
+        "title": "Data Privacy Compliance Specialist",
+        "responsibilities": [
+          "Draft Data Protection Impact Assessments (DPIAs)",
+          "Audit AI model training datasets for copyright and bias",
+          "Manage cross-border data transfer compliance"
+        ],
+        "requiredSkillIds": [
+          "skill-cyber-law",
+          "skill-ai-ethics"
+        ],
+        "readinessCriteria": "GDPR/DPDP statutory fluency and algorithmic audit framework application.",
+        "entrySalary": "$85,000"
+      }
+    ],
+    "requiredSkillIds": [
+      "skill-cyber-law",
+      "skill-ai-ethics",
+      "skill-cybersec"
+    ],
+    "prerequisites": [
+      "Jurisprudence / legal fundamentals",
+      "Basic understanding of computer systems"
+    ],
+    "relatedCareerIds": [
+      "career-cybersec-architect",
+      "career-fintech-quant"
+    ],
+    "benchmark": {
+      "requiredSkills": [
+        {
+          "skillId": "skill-cyber-law",
+          "skillName": "Cyber Law, GDPR & Data Privacy Governance",
+          "importance": "mandatory",
+          "targetProficiency": 90
+        },
+        {
+          "skillId": "skill-ai-ethics",
+          "skillName": "AI Ethics, Governance & Model Auditing",
+          "importance": "mandatory",
+          "targetProficiency": 85
+        },
+        {
+          "skillId": "skill-cybersec",
+          "skillName": "Network & Cloud Security",
+          "importance": "recommended",
+          "targetProficiency": 65
+        }
+      ],
+      "prerequisiteCourses": [
+        "Cyber Law & Internet Governance",
+        "Intellectual Property in Digital Age"
+      ],
+      "recommendedProjects": [
+        "Comprehensive GDPR & AI Act Compliance Framework for Generative AI SaaS"
+      ],
+      "emergingSkills": [
+        "Synthetic Data Privacy Licensing",
+        "Autonomous Agent Liability Audits"
+      ],
+      "readinessThreshold": 78
+    },
+    "iconName": "Shield"
+  },
+  {
+    "id": "career-smart-hospitality-mgr",
+    "title": "Smart Hospitality & Revenue Strategy Manager",
+    "discipline": "hospitality",
+    "category": "Hospitality Management",
+    "description": "Leverage property management systems (PMS), dynamic room pricing algorithms, and luxury guest experience analytics to maximize hotel RevPAR.",
+    "growthRate": "+23% (Strong Rebound)",
+    "medianSalary": "$82,000 / \u20b99-18 LPA",
+    "scope": "Luxury hotel chains, integrated mega-resorts, airline hospitality networks, and boutique travel conglomerates.",
+    "subCareers": [
+      "Hotel Revenue Director",
+      "Luxury Guest Experience Architect"
+    ],
+    "roles": [
+      {
+        "id": "role-rev-mgr",
+        "title": "Hospitality Revenue Strategist",
+        "responsibilities": [
+          "Set dynamic room pricing matrices",
+          "Audit OTA channel commission costs",
+          "Monitor guest satisfaction Net Promoter Scores"
+        ],
+        "requiredSkillIds": [
+          "skill-hospitality-pms",
+          "skill-data-viz"
+        ],
+        "readinessCriteria": "RevPAR optimization, Opera PMS reporting, and yield management forecasting.",
+        "entrySalary": "$62,000"
+      }
+    ],
+    "requiredSkillIds": [
+      "skill-hospitality-pms",
+      "skill-event-logistics",
+      "skill-data-viz",
+      "skill-stats"
+    ],
+    "prerequisites": [
+      "Hospitality operations fundamentals",
+      "Commercial arithmetic"
+    ],
+    "relatedCareerIds": [
+      "career-digital-growth-strat",
+      "career-supply-chain-analyst"
+    ],
+    "benchmark": {
+      "requiredSkills": [
+        {
+          "skillId": "skill-hospitality-pms",
+          "skillName": "Hospitality PMS & Revenue Yield Management",
+          "importance": "mandatory",
+          "targetProficiency": 88
+        },
+        {
+          "skillId": "skill-event-logistics",
+          "skillName": "Event Operations & Luxury Guest Experience",
+          "importance": "mandatory",
+          "targetProficiency": 80
+        },
+        {
+          "skillId": "skill-data-viz",
+          "skillName": "Data Visualization & BI",
+          "importance": "recommended",
+          "targetProficiency": 70
+        }
+      ],
+      "prerequisiteCourses": [
+        "Hotel Revenue Management",
+        "Luxury Brand Customer Experience"
+      ],
+      "recommendedProjects": [
+        "Dynamic Hotel RevPAR Yield Pricing Model with Channel Distribution Matrix"
+      ],
+      "emergingSkills": [
+        "Keyless IoT Mobile Guest Journeys",
+        "AI Concierge Conversational Agents"
+      ],
+      "readinessThreshold": 75
+    },
+    "iconName": "Award"
   }
 ];
 
@@ -1465,104 +6087,644 @@ export const SEED_ASSESSMENTS: Assessment[] = [
 
 export const SEED_RESOURCES: Resource[] = [
   {
-    id: 'res-sql-mastery',
-    title: 'Production SQL for Analytics & Data Engineering',
-    type: 'interactive',
-    provider: 'CareerBridge Interactive Lab',
-    url: 'https://sandbox.careerbridge.io/sql-lab',
-    durationMinutes: 45,
-    difficulty: 'intermediate',
-    rating: 4.9,
-    whyRecommended: 'Hands-on browser query sandbox with instant feedback on aggregations and window partitions.',
-    embedType: 'sandbox'
+    "id": "res-ext-arm-learning-paths",
+    "title": "ARM Learning Paths: Verified Courseware",
+    "type": "course",
+    "provider": "ARM Learning Paths",
+    "url": "https://learn.arm.com/",
+    "durationMinutes": 90,
+    "difficulty": "intermediate",
+    "rating": 4.9,
+    "whyRecommended": "Verified industry platform cited in engineering placement benchmarks for ARM Learning Paths.",
+    "embedType": "external"
   },
   {
-    id: 'res-py-pandas',
-    title: 'Fast-Track Python & Pandas Vectorization',
-    type: 'video',
-    provider: 'DataCamp & CareerBridge Pro',
-    url: 'https://learn.careerbridge.io/python-vectorization',
-    durationMinutes: 35,
-    difficulty: 'intermediate',
-    rating: 4.8,
-    whyRecommended: 'Essential for accelerating DataFrame ETL pipelines by 50x without Python loop overhead.'
+    "id": "res-ext-asq-learning",
+    "title": "ASQ Learning: Verified Courseware",
+    "type": "course",
+    "provider": "ASQ Learning",
+    "url": "https://asq.org/training",
+    "durationMinutes": 90,
+    "difficulty": "intermediate",
+    "rating": 4.9,
+    "whyRecommended": "Verified industry platform cited in engineering placement benchmarks for ASQ Learning.",
+    "embedType": "external"
   },
   {
-    id: 'res-agtech-iot',
-    title: 'Deploying LoRaWAN Soil Telemetry Nodes in the Field',
-    type: 'article',
-    provider: 'AgTech Engineering Quarterly',
-    url: 'https://research.careerbridge.io/agtech-lora-blueprint',
-    durationMinutes: 25,
-    difficulty: 'intermediate',
-    rating: 4.7,
-    whyRecommended: 'Complete wiring schematic, sensor calibration curve formulas, and MQTT gateway code.'
+    "id": "res-ext-aws-skill-builder",
+    "title": "AWS Skill Builder: Verified Courseware",
+    "type": "video",
+    "provider": "AWS Skill Builder",
+    "url": "https://skillbuilder.aws/",
+    "durationMinutes": 90,
+    "difficulty": "intermediate",
+    "rating": 4.9,
+    "whyRecommended": "Verified industry platform cited in engineering placement benchmarks for AWS Skill Builder.",
+    "embedType": "external"
   },
   {
-    id: 'res-fhir-starter',
-    title: 'Building Modern Health Applications with FHIR REST APIs',
-    type: 'repo',
-    provider: 'HealthIT Open Source & CareerBridge',
-    url: 'https://github.com/careerbridge-templates/fhir-health-bridge',
-    durationMinutes: 60,
-    difficulty: 'advanced',
-    rating: 4.9,
-    whyRecommended: 'Production-ready TypeScript FHIR client with SMART-on-FHIR OAuth2 authentication.'
+    "id": "res-ext-arduino-docs",
+    "title": "Arduino Docs: Verified Courseware",
+    "type": "documentation",
+    "provider": "Arduino Docs",
+    "url": "https://docs.arduino.cc/",
+    "durationMinutes": 90,
+    "difficulty": "intermediate",
+    "rating": 4.9,
+    "whyRecommended": "Verified industry platform cited in engineering placement benchmarks for Arduino Docs.",
+    "embedType": "external"
   },
   {
-    id: 'res-dcf-valuation',
-    title: 'Wall Street 3-Statement & DCF Financial Modeling Masterclass',
-    type: 'video',
-    provider: 'CFI & FinTech Academy',
-    url: 'https://learn.careerbridge.io/fin-modeling-dcf',
-    durationMinutes: 50,
-    difficulty: 'intermediate',
-    rating: 4.9,
-    whyRecommended: 'Step-by-step Excel and Python valuation template with sensitivity tables.'
+    "id": "res-ext-aspentech-learning",
+    "title": "AspenTech Learning: Verified Courseware",
+    "type": "course",
+    "provider": "AspenTech Learning",
+    "url": "https://www.aspentech.com/en/learning",
+    "durationMinutes": 90,
+    "difficulty": "intermediate",
+    "rating": 4.9,
+    "whyRecommended": "Verified industry platform cited in engineering placement benchmarks for AspenTech Learning.",
+    "embedType": "external"
   },
   {
-    id: 'res-figma-tokens',
-    title: 'Architecting Scalable Design Tokens in Figma & Tailwind',
-    type: 'interactive',
-    provider: 'Design Systems Collective',
-    url: 'https://sandbox.careerbridge.io/design-tokens-sandbox',
-    durationMinutes: 40,
-    difficulty: 'intermediate',
-    rating: 4.8,
-    whyRecommended: 'Live playground to configure semantic color, typography, and spacing variables.'
+    "id": "res-ext-autodesk-construction-cloud-learning",
+    "title": "Autodesk Construction Cloud Learning: Verified Courseware",
+    "type": "interactive",
+    "provider": "Autodesk Construction Cloud Learning",
+    "url": "https://www.autodesk.com/learn/ondemand",
+    "durationMinutes": 90,
+    "difficulty": "intermediate",
+    "rating": 4.9,
+    "whyRecommended": "Verified industry platform cited in engineering placement benchmarks for Autodesk Construction Cloud Learning.",
+    "embedType": "external"
   },
   {
-    id: 'res-comp-bio-ngs',
-    title: 'RNA-Seq Differential Expression with Biopython & DESeq2',
-    type: 'repo',
-    provider: 'Genomics Data Science Hub',
-    url: 'https://github.com/careerbridge-templates/comp-bio-rnaseq',
-    durationMinutes: 55,
-    difficulty: 'advanced',
-    rating: 4.9,
-    whyRecommended: 'End-to-end bioinformatics pipeline from FASTQ alignment to volcano plot visualization.'
+    "id": "res-ext-autodesk-learning",
+    "title": "Autodesk Learning: Verified Courseware",
+    "type": "course",
+    "provider": "Autodesk Learning",
+    "url": "https://www.autodesk.com/learning",
+    "durationMinutes": 90,
+    "difficulty": "intermediate",
+    "rating": 4.9,
+    "whyRecommended": "Verified industry platform cited in engineering placement benchmarks for Autodesk Learning.",
+    "embedType": "external"
   },
   {
-    id: 'res-cyber-gdpr',
-    title: 'AI Governance & GDPR DPIA Risk Assessment Playbook',
-    type: 'article',
-    provider: 'International Tech Law Review',
-    url: 'https://learn.careerbridge.io/ai-governance-playbook',
-    durationMinutes: 30,
-    difficulty: 'intermediate',
-    rating: 4.8,
-    whyRecommended: 'Essential legal risk checklist for launching AI and LLM products in the EU & US.'
+    "id": "res-ext-bentley-learn",
+    "title": "Bentley Learn: Verified Courseware",
+    "type": "course",
+    "provider": "Bentley Learn",
+    "url": "https://learn.bentley.com/",
+    "durationMinutes": 90,
+    "difficulty": "intermediate",
+    "rating": 4.9,
+    "whyRecommended": "Verified industry platform cited in engineering placement benchmarks for Bentley Learn.",
+    "embedType": "external"
   },
   {
-    id: 'res-hotel-revpar',
-    title: 'Hotel RevPAR Yield Algorithms & Dynamic Pricing Blueprint',
-    type: 'article',
-    provider: 'Hospitality Analytics Institute',
-    url: 'https://learn.careerbridge.io/hotel-revpar-blueprint',
-    durationMinutes: 30,
-    difficulty: 'intermediate',
-    rating: 4.7,
-    whyRecommended: 'Learn mathematical optimization for seasonal occupancy curves and OTA channel allocation.'
+    "id": "res-ext-cisco-networking-academy",
+    "title": "Cisco Networking Academy: Verified Courseware",
+    "type": "course",
+    "provider": "Cisco Networking Academy",
+    "url": "https://www.netacad.com/",
+    "durationMinutes": 90,
+    "difficulty": "intermediate",
+    "rating": 4.9,
+    "whyRecommended": "Verified industry platform cited in engineering placement benchmarks for Cisco Networking Academy.",
+    "embedType": "external"
+  },
+  {
+    "id": "res-ext-coursera",
+    "title": "Coursera: Verified Courseware",
+    "type": "course",
+    "provider": "Coursera",
+    "url": "https://www.coursera.org/",
+    "durationMinutes": 90,
+    "difficulty": "intermediate",
+    "rating": 4.9,
+    "whyRecommended": "Verified industry platform cited in engineering placement benchmarks for Coursera.",
+    "embedType": "external"
+  },
+  {
+    "id": "res-ext-deeplearning-ai",
+    "title": "DeepLearning.AI: Verified Courseware",
+    "type": "course",
+    "provider": "DeepLearning.AI",
+    "url": "https://www.deeplearning.ai/",
+    "durationMinutes": 90,
+    "difficulty": "intermediate",
+    "rating": 4.9,
+    "whyRecommended": "Verified industry platform cited in engineering placement benchmarks for DeepLearning.AI.",
+    "embedType": "external"
+  },
+  {
+    "id": "res-ext-epa-resources",
+    "title": "EPA Resources: Verified Courseware",
+    "type": "video",
+    "provider": "EPA Resources",
+    "url": "https://www.epa.gov/education",
+    "durationMinutes": 90,
+    "difficulty": "intermediate",
+    "rating": 4.9,
+    "whyRecommended": "Verified industry platform cited in engineering placement benchmarks for EPA Resources.",
+    "embedType": "external"
+  },
+  {
+    "id": "res-ext-electrical-engineering-portal",
+    "title": "Electrical Engineering Portal: Verified Courseware",
+    "type": "video",
+    "provider": "Electrical Engineering Portal",
+    "url": "https://electrical-engineering-portal.com/",
+    "durationMinutes": 90,
+    "difficulty": "intermediate",
+    "rating": 4.9,
+    "whyRecommended": "Verified industry platform cited in engineering placement benchmarks for Electrical Engineering Portal.",
+    "embedType": "external"
+  },
+  {
+    "id": "res-ext-esri-academy",
+    "title": "Esri Academy: Verified Courseware",
+    "type": "course",
+    "provider": "Esri Academy",
+    "url": "https://www.esri.com/training/",
+    "durationMinutes": 90,
+    "difficulty": "intermediate",
+    "rating": 4.9,
+    "whyRecommended": "Verified industry platform cited in engineering placement benchmarks for Esri Academy.",
+    "embedType": "external"
+  },
+  {
+    "id": "res-ext-fao-elearning-academy",
+    "title": "FAO eLearning Academy: Verified Courseware",
+    "type": "course",
+    "provider": "FAO eLearning Academy",
+    "url": "https://elearning.fao.org/",
+    "durationMinutes": 90,
+    "difficulty": "intermediate",
+    "rating": 4.9,
+    "whyRecommended": "Verified industry platform cited in engineering placement benchmarks for FAO eLearning Academy.",
+    "embedType": "external"
+  },
+  {
+    "id": "res-ext-freertos-docs",
+    "title": "FreeRTOS Docs: Verified Courseware",
+    "type": "documentation",
+    "provider": "FreeRTOS Docs",
+    "url": "https://www.freertos.org/Documentation/",
+    "durationMinutes": 90,
+    "difficulty": "intermediate",
+    "rating": 4.9,
+    "whyRecommended": "Verified industry platform cited in engineering placement benchmarks for FreeRTOS Docs.",
+    "embedType": "external"
+  },
+  {
+    "id": "res-ext-geeksforgeeks",
+    "title": "GeeksforGeeks: Verified Courseware",
+    "type": "video",
+    "provider": "GeeksforGeeks",
+    "url": "https://www.geeksforgeeks.org/",
+    "durationMinutes": 90,
+    "difficulty": "intermediate",
+    "rating": 4.9,
+    "whyRecommended": "Verified industry platform cited in engineering placement benchmarks for GeeksforGeeks.",
+    "embedType": "external"
+  },
+  {
+    "id": "res-ext-google-career-certificates",
+    "title": "Google Career Certificates: Verified Courseware",
+    "type": "video",
+    "provider": "Google Career Certificates",
+    "url": "https://grow.google/certificates/",
+    "durationMinutes": 90,
+    "difficulty": "intermediate",
+    "rating": 4.9,
+    "whyRecommended": "Verified industry platform cited in engineering placement benchmarks for Google Career Certificates.",
+    "embedType": "external"
+  },
+  {
+    "id": "res-ext-google-cloud-skills-boost",
+    "title": "Google Cloud Skills Boost: Verified Courseware",
+    "type": "course",
+    "provider": "Google Cloud Skills Boost",
+    "url": "https://www.cloudskillsboost.google/",
+    "durationMinutes": 90,
+    "difficulty": "intermediate",
+    "rating": 4.9,
+    "whyRecommended": "Verified industry platform cited in engineering placement benchmarks for Google Cloud Skills Boost.",
+    "embedType": "external"
+  },
+  {
+    "id": "res-ext-google-data-analytics",
+    "title": "Google Data Analytics: Verified Courseware",
+    "type": "video",
+    "provider": "Google Data Analytics",
+    "url": "https://www.coursera.org/professional-certificates/google-data-analytics",
+    "durationMinutes": 90,
+    "difficulty": "intermediate",
+    "rating": 4.9,
+    "whyRecommended": "Verified industry platform cited in engineering placement benchmarks for Google Data Analytics.",
+    "embedType": "external"
+  },
+  {
+    "id": "res-ext-hdlbits",
+    "title": "HDLBits: Verified Courseware",
+    "type": "interactive",
+    "provider": "HDLBits",
+    "url": "https://hdlbits.01xz.net/wiki/Main_Page",
+    "durationMinutes": 90,
+    "difficulty": "intermediate",
+    "rating": 4.9,
+    "whyRecommended": "Verified industry platform cited in engineering placement benchmarks for HDLBits.",
+    "embedType": "external"
+  },
+  {
+    "id": "res-ext-hugging-face-learn",
+    "title": "Hugging Face Learn: Verified Courseware",
+    "type": "course",
+    "provider": "Hugging Face Learn",
+    "url": "https://huggingface.co/learn",
+    "durationMinutes": 90,
+    "difficulty": "intermediate",
+    "rating": 4.9,
+    "whyRecommended": "Verified industry platform cited in engineering placement benchmarks for Hugging Face Learn.",
+    "embedType": "external"
+  },
+  {
+    "id": "res-ext-kaggle-learn",
+    "title": "Kaggle Learn: Verified Courseware",
+    "type": "course",
+    "provider": "Kaggle Learn",
+    "url": "https://www.kaggle.com/learn",
+    "durationMinutes": 90,
+    "difficulty": "intermediate",
+    "rating": 4.9,
+    "whyRecommended": "Verified industry platform cited in engineering placement benchmarks for Kaggle Learn.",
+    "embedType": "external"
+  },
+  {
+    "id": "res-ext-keysight-university",
+    "title": "Keysight University: Verified Courseware",
+    "type": "course",
+    "provider": "Keysight University",
+    "url": "https://learn.keysight.com/",
+    "durationMinutes": 90,
+    "difficulty": "intermediate",
+    "rating": 4.9,
+    "whyRecommended": "Verified industry platform cited in engineering placement benchmarks for Keysight University.",
+    "embedType": "external"
+  },
+  {
+    "id": "res-ext-learncheme",
+    "title": "LearnChemE: Verified Courseware",
+    "type": "course",
+    "provider": "LearnChemE",
+    "url": "https://learncheme.com/",
+    "durationMinutes": 90,
+    "difficulty": "intermediate",
+    "rating": 4.9,
+    "whyRecommended": "Verified industry platform cited in engineering placement benchmarks for LearnChemE.",
+    "embedType": "external"
+  },
+  {
+    "id": "res-ext-leetcode",
+    "title": "LeetCode: Verified Courseware",
+    "type": "interactive",
+    "provider": "LeetCode",
+    "url": "https://leetcode.com/",
+    "durationMinutes": 90,
+    "difficulty": "intermediate",
+    "rating": 4.9,
+    "whyRecommended": "Verified industry platform cited in engineering placement benchmarks for LeetCode.",
+    "embedType": "external"
+  },
+  {
+    "id": "res-ext-matlab-simulink",
+    "title": "MATLAB/Simulink: Verified Courseware",
+    "type": "video",
+    "provider": "MATLAB/Simulink",
+    "url": "https://www.mathworks.com/learn/",
+    "durationMinutes": 90,
+    "difficulty": "intermediate",
+    "rating": 4.9,
+    "whyRecommended": "Verified industry platform cited in engineering placement benchmarks for MATLAB/Simulink.",
+    "embedType": "external"
+  },
+  {
+    "id": "res-ext-mit-opencourseware",
+    "title": "MIT OpenCourseWare: Verified Courseware",
+    "type": "course",
+    "provider": "MIT OpenCourseWare",
+    "url": "https://ocw.mit.edu/",
+    "durationMinutes": 90,
+    "difficulty": "intermediate",
+    "rating": 4.9,
+    "whyRecommended": "Verified industry platform cited in engineering placement benchmarks for MIT OpenCourseWare.",
+    "embedType": "external"
+  },
+  {
+    "id": "res-ext-mathworks-automotive",
+    "title": "MathWorks Automotive: Verified Courseware",
+    "type": "video",
+    "provider": "MathWorks Automotive",
+    "url": "https://www.mathworks.com/solutions/automotive.html",
+    "durationMinutes": 90,
+    "difficulty": "intermediate",
+    "rating": 4.9,
+    "whyRecommended": "Verified industry platform cited in engineering placement benchmarks for MathWorks Automotive.",
+    "embedType": "external"
+  },
+  {
+    "id": "res-ext-microsoft-learn",
+    "title": "Microsoft Learn: Verified Courseware",
+    "type": "course",
+    "provider": "Microsoft Learn",
+    "url": "https://learn.microsoft.com/training/",
+    "durationMinutes": 90,
+    "difficulty": "intermediate",
+    "rating": 4.9,
+    "whyRecommended": "Verified industry platform cited in engineering placement benchmarks for Microsoft Learn.",
+    "embedType": "external"
+  },
+  {
+    "id": "res-ext-nasa-arset",
+    "title": "NASA ARSET: Verified Courseware",
+    "type": "video",
+    "provider": "NASA ARSET",
+    "url": "https://appliedsciences.nasa.gov/what-we-do/capacity-building/arset",
+    "durationMinutes": 90,
+    "difficulty": "intermediate",
+    "rating": 4.9,
+    "whyRecommended": "Verified industry platform cited in engineering placement benchmarks for NASA ARSET.",
+    "embedType": "external"
+  },
+  {
+    "id": "res-ext-nasa-stem",
+    "title": "NASA STEM: Verified Courseware",
+    "type": "video",
+    "provider": "NASA STEM",
+    "url": "https://www.nasa.gov/stem/",
+    "durationMinutes": 90,
+    "difficulty": "intermediate",
+    "rating": 4.9,
+    "whyRecommended": "Verified industry platform cited in engineering placement benchmarks for NASA STEM.",
+    "embedType": "external"
+  },
+  {
+    "id": "res-ext-nptel",
+    "title": "NPTEL: Verified Courseware",
+    "type": "course",
+    "provider": "NPTEL",
+    "url": "https://nptel.ac.in/",
+    "durationMinutes": 90,
+    "difficulty": "intermediate",
+    "rating": 4.9,
+    "whyRecommended": "Verified industry platform cited in engineering placement benchmarks for NPTEL.",
+    "embedType": "external"
+  },
+  {
+    "id": "res-ext-portswigger-web-security-academy",
+    "title": "PortSwigger Web Security Academy: Verified Courseware",
+    "type": "course",
+    "provider": "PortSwigger Web Security Academy",
+    "url": "https://portswigger.net/web-security",
+    "durationMinutes": 90,
+    "difficulty": "intermediate",
+    "rating": 4.9,
+    "whyRecommended": "Verified industry platform cited in engineering placement benchmarks for PortSwigger Web Security Academy.",
+    "embedType": "external"
+  },
+  {
+    "id": "res-ext-primavera-training-via-oracle",
+    "title": "Primavera training via Oracle: Verified Courseware",
+    "type": "video",
+    "provider": "Primavera training via Oracle",
+    "url": "https://www.oracle.com/industries/construction-engineering/",
+    "durationMinutes": 90,
+    "difficulty": "intermediate",
+    "rating": 4.9,
+    "whyRecommended": "Verified industry platform cited in engineering placement benchmarks for Primavera training via Oracle.",
+    "embedType": "external"
+  },
+  {
+    "id": "res-ext-qgis-training-manual",
+    "title": "QGIS Training Manual: Verified Courseware",
+    "type": "documentation",
+    "provider": "QGIS Training Manual",
+    "url": "https://docs.qgis.org/latest/en/docs/training_manual/",
+    "durationMinutes": 90,
+    "difficulty": "intermediate",
+    "rating": 4.9,
+    "whyRecommended": "Verified industry platform cited in engineering placement benchmarks for QGIS Training Manual.",
+    "embedType": "external"
+  },
+  {
+    "id": "res-ext-ros-2-documentation",
+    "title": "ROS 2 Documentation: Verified Courseware",
+    "type": "documentation",
+    "provider": "ROS 2 Documentation",
+    "url": "https://docs.ros.org/",
+    "durationMinutes": 90,
+    "difficulty": "intermediate",
+    "rating": 4.9,
+    "whyRecommended": "Verified industry platform cited in engineering placement benchmarks for ROS 2 Documentation.",
+    "embedType": "external"
+  },
+  {
+    "id": "res-ext-rockwell-automation-learning",
+    "title": "Rockwell Automation Learning+: Verified Courseware",
+    "type": "course",
+    "provider": "Rockwell Automation Learning+",
+    "url": "https://www.rockwellautomation.com/en-us/support/learning.html",
+    "durationMinutes": 90,
+    "difficulty": "intermediate",
+    "rating": 4.9,
+    "whyRecommended": "Verified industry platform cited in engineering placement benchmarks for Rockwell Automation Learning+.",
+    "embedType": "external"
+  },
+  {
+    "id": "res-ext-sqlbolt",
+    "title": "SQLBolt: Verified Courseware",
+    "type": "interactive",
+    "provider": "SQLBolt",
+    "url": "https://sqlbolt.com/",
+    "durationMinutes": 90,
+    "difficulty": "intermediate",
+    "rating": 4.9,
+    "whyRecommended": "Verified industry platform cited in engineering placement benchmarks for SQLBolt.",
+    "embedType": "external"
+  },
+  {
+    "id": "res-ext-siemens-sce",
+    "title": "Siemens SCE: Verified Courseware",
+    "type": "video",
+    "provider": "Siemens SCE",
+    "url": "https://www.siemens.com/sce",
+    "durationMinutes": 90,
+    "difficulty": "intermediate",
+    "rating": 4.9,
+    "whyRecommended": "Verified industry platform cited in engineering placement benchmarks for Siemens SCE.",
+    "embedType": "external"
+  },
+  {
+    "id": "res-ext-the-construct",
+    "title": "The Construct: Verified Courseware",
+    "type": "interactive",
+    "provider": "The Construct",
+    "url": "https://www.theconstruct.ai/",
+    "durationMinutes": 90,
+    "difficulty": "intermediate",
+    "rating": 4.9,
+    "whyRecommended": "Verified industry platform cited in engineering placement benchmarks for The Construct.",
+    "embedType": "external"
+  },
+  {
+    "id": "res-ext-tryhackme",
+    "title": "TryHackMe: Verified Courseware",
+    "type": "interactive",
+    "provider": "TryHackMe",
+    "url": "https://tryhackme.com/",
+    "durationMinutes": 90,
+    "difficulty": "intermediate",
+    "rating": 4.9,
+    "whyRecommended": "Verified industry platform cited in engineering placement benchmarks for TryHackMe.",
+    "embedType": "external"
+  },
+  {
+    "id": "res-ext-vector-academy",
+    "title": "Vector Academy: Verified Courseware",
+    "type": "course",
+    "provider": "Vector Academy",
+    "url": "https://www.vector.com/int/en/know-how/academy/",
+    "durationMinutes": 90,
+    "difficulty": "intermediate",
+    "rating": 4.9,
+    "whyRecommended": "Verified industry platform cited in engineering placement benchmarks for Vector Academy.",
+    "embedType": "external"
+  },
+  {
+    "id": "res-ext-verilogpro",
+    "title": "VerilogPro: Verified Courseware",
+    "type": "video",
+    "provider": "VerilogPro",
+    "url": "https://www.verilogpro.com/",
+    "durationMinutes": 90,
+    "difficulty": "intermediate",
+    "rating": 4.9,
+    "whyRecommended": "Verified industry platform cited in engineering placement benchmarks for VerilogPro.",
+    "embedType": "external"
+  },
+  {
+    "id": "res-ext-freecodecamp",
+    "title": "freeCodeCamp: Verified Courseware",
+    "type": "interactive",
+    "provider": "freeCodeCamp",
+    "url": "https://www.freecodecamp.org/",
+    "durationMinutes": 90,
+    "difficulty": "intermediate",
+    "rating": 4.9,
+    "whyRecommended": "Verified industry platform cited in engineering placement benchmarks for freeCodeCamp.",
+    "embedType": "external"
+  },
+  {
+    "id": "res-sql-mastery",
+    "title": "Production SQL for Analytics & Data Engineering",
+    "type": "interactive",
+    "provider": "CareerBridge Interactive Lab",
+    "url": "https://sandbox.careerbridge.io/sql-lab",
+    "durationMinutes": 45,
+    "difficulty": "intermediate",
+    "rating": 4.9,
+    "whyRecommended": "Hands-on browser query sandbox with instant feedback on aggregations and window partitions.",
+    "embedType": "sandbox"
+  },
+  {
+    "id": "res-py-pandas",
+    "title": "Fast-Track Python & Pandas Vectorization",
+    "type": "video",
+    "provider": "DataCamp & CareerBridge Pro",
+    "url": "https://learn.careerbridge.io/python-vectorization",
+    "durationMinutes": 35,
+    "difficulty": "intermediate",
+    "rating": 4.8,
+    "whyRecommended": "Essential for accelerating DataFrame ETL pipelines by 50x without Python loop overhead."
+  },
+  {
+    "id": "res-agtech-iot",
+    "title": "Deploying LoRaWAN Soil Telemetry Nodes in the Field",
+    "type": "article",
+    "provider": "AgTech Engineering Quarterly",
+    "url": "https://research.careerbridge.io/agtech-lora-blueprint",
+    "durationMinutes": 25,
+    "difficulty": "intermediate",
+    "rating": 4.7,
+    "whyRecommended": "Complete wiring schematic, sensor calibration curve formulas, and MQTT gateway code."
+  },
+  {
+    "id": "res-fhir-starter",
+    "title": "Building Modern Health Applications with FHIR REST APIs",
+    "type": "repo",
+    "provider": "HealthIT Open Source & CareerBridge",
+    "url": "https://github.com/careerbridge-templates/fhir-health-bridge",
+    "durationMinutes": 60,
+    "difficulty": "advanced",
+    "rating": 4.9,
+    "whyRecommended": "Production-ready TypeScript FHIR client with SMART-on-FHIR OAuth2 authentication."
+  },
+  {
+    "id": "res-dcf-valuation",
+    "title": "Wall Street 3-Statement & DCF Financial Modeling Masterclass",
+    "type": "video",
+    "provider": "CFI & FinTech Academy",
+    "url": "https://learn.careerbridge.io/fin-modeling-dcf",
+    "durationMinutes": 50,
+    "difficulty": "intermediate",
+    "rating": 4.9,
+    "whyRecommended": "Step-by-step Excel and Python valuation template with sensitivity tables."
+  },
+  {
+    "id": "res-figma-tokens",
+    "title": "Architecting Scalable Design Tokens in Figma & Tailwind",
+    "type": "interactive",
+    "provider": "Design Systems Collective",
+    "url": "https://sandbox.careerbridge.io/design-tokens-sandbox",
+    "durationMinutes": 40,
+    "difficulty": "intermediate",
+    "rating": 4.8,
+    "whyRecommended": "Live playground to configure semantic color, typography, and spacing variables."
+  },
+  {
+    "id": "res-comp-bio-ngs",
+    "title": "RNA-Seq Differential Expression with Biopython & DESeq2",
+    "type": "repo",
+    "provider": "Genomics Data Science Hub",
+    "url": "https://github.com/careerbridge-templates/comp-bio-rnaseq",
+    "durationMinutes": 55,
+    "difficulty": "advanced",
+    "rating": 4.9,
+    "whyRecommended": "End-to-end bioinformatics pipeline from FASTQ alignment to volcano plot visualization."
+  },
+  {
+    "id": "res-cyber-gdpr",
+    "title": "AI Governance & GDPR DPIA Risk Assessment Playbook",
+    "type": "article",
+    "provider": "International Tech Law Review",
+    "url": "https://learn.careerbridge.io/ai-governance-playbook",
+    "durationMinutes": 30,
+    "difficulty": "intermediate",
+    "rating": 4.8,
+    "whyRecommended": "Essential legal risk checklist for launching AI and LLM products in the EU & US."
+  },
+  {
+    "id": "res-hotel-revpar",
+    "title": "Hotel RevPAR Yield Algorithms & Dynamic Pricing Blueprint",
+    "type": "article",
+    "provider": "Hospitality Analytics Institute",
+    "url": "https://learn.careerbridge.io/hotel-revpar-blueprint",
+    "durationMinutes": 30,
+    "difficulty": "intermediate",
+    "rating": 4.7,
+    "whyRecommended": "Learn mathematical optimization for seasonal occupancy curves and OTA channel allocation."
   }
 ];
 

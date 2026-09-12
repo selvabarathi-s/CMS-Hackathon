@@ -16,13 +16,15 @@ roadmapRouter.get('/:studentId', (req, res) => {
   const milestones = AdaptiveRoadmapService.generatePersonalizedRoadmap(profile, career);
   const nextAction = AdaptiveRoadmapService.computeNextBestAction(profile, career);
   const skillGaps = SkillGapService.calculateSkillGaps(profile, career);
+  const adaptationContext = AdaptiveRoadmapService.getAdaptationContext(profile, milestones);
 
   res.json({
     career,
     milestones,
     nextAction,
     skillGaps,
-    readiness: profile.readinessScore
+    readiness: profile.readinessScore,
+    adaptationContext
   });
 });
 
@@ -114,6 +116,7 @@ roadmapRouter.post('/:studentId/milestones/:milestoneId/status', (req, res) => {
   const milestones = AdaptiveRoadmapService.generatePersonalizedRoadmap(profile, career);
   const nextAction = AdaptiveRoadmapService.computeNextBestAction(profile, career);
   const skillGaps = SkillGapService.calculateSkillGaps(profile, career);
+  const adaptationContext = AdaptiveRoadmapService.getAdaptationContext(profile, milestones);
 
   res.json({
     success: true,
@@ -121,6 +124,41 @@ roadmapRouter.post('/:studentId/milestones/:milestoneId/status', (req, res) => {
     nextAction,
     readiness: profile.readinessScore,
     skillGaps,
+    adaptationContext,
+    profile
+  });
+});
+
+// Explicit dynamic roadmap recalibration with optional pace adjustments
+roadmapRouter.post('/:studentId/recalibrate', (req, res) => {
+  const profile = db.getProfileById(req.params.studentId);
+  if (!profile) {
+    return res.status(404).json({ error: 'Student profile not found' });
+  }
+
+  const { pace, weeklyHours } = req.body;
+  if (pace && ['steady', 'accelerated', 'intensive'].includes(pace)) {
+    profile.targetTimeline = pace;
+  }
+  if (weeklyHours && typeof weeklyHours === 'number') {
+    profile.weeklyHoursCommitted = weeklyHours;
+  }
+
+  db.saveProfile(profile);
+
+  const career = db.getCareerById(profile.targetCareerId) || db.getCareers()[0];
+  const milestones = AdaptiveRoadmapService.generatePersonalizedRoadmap(profile, career);
+  const nextAction = AdaptiveRoadmapService.computeNextBestAction(profile, career);
+  const skillGaps = SkillGapService.calculateSkillGaps(profile, career);
+  const adaptationContext = AdaptiveRoadmapService.getAdaptationContext(profile, milestones);
+
+  res.json({
+    success: true,
+    milestones,
+    nextAction,
+    skillGaps,
+    readiness: profile.readinessScore,
+    adaptationContext,
     profile
   });
 });

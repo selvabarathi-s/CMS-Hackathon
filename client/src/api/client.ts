@@ -11,7 +11,8 @@ import {
   MentorIntervention,
   CurriculumGapInsight,
   AIMessage,
-  NotificationItem
+  NotificationItem,
+  AdaptationContext
 } from '../../../shared/types.js';
 
 const API_BASE = (typeof import.meta !== 'undefined' && (import.meta as any).env && (import.meta as any).env.VITE_API_BASE) || '/api';
@@ -174,6 +175,7 @@ export const api = {
       nextAction: NextBestAction;
       skillGaps: SkillGapItem[];
       readiness: any;
+      adaptationContext?: AdaptationContext;
     }>;
   },
 
@@ -188,6 +190,24 @@ export const api = {
       milestones: RoadmapMilestone[];
       nextAction: NextBestAction;
       readiness?: any;
+      adaptationContext?: AdaptationContext;
+      profile?: StudentProfile;
+    }>;
+  },
+
+  async recalibrateRoadmap(studentId: string, options?: { pace?: string; weeklyHours?: number }) {
+    const res = await fetch(`${API_BASE}/roadmaps/${studentId}/recalibrate`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(options || {})
+    });
+    return res.json() as Promise<{
+      success: boolean;
+      milestones: RoadmapMilestone[];
+      nextAction: NextBestAction;
+      skillGaps: SkillGapItem[];
+      readiness: any;
+      adaptationContext?: AdaptationContext;
       profile?: StudentProfile;
     }>;
   },

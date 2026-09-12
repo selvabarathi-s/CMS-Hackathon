@@ -112,6 +112,10 @@ export interface RoadmapMilestone {
   projectPrompt?: ProjectPrompt;
   assessmentId?: string;
   isRemedial?: boolean;
+  isFutureReady?: boolean;
+  adaptationReason?: string;
+  phase?: 'core_foundation' | 'placement_preparation' | 'portfolio_build' | 'future_ready';
+  category?: string;
 }
 
 export interface AssessmentQuestion {
@@ -160,6 +164,8 @@ export interface Career {
   id: string;
   title: string;
   discipline: DisciplineType;
+  department?: string;
+  roleCategory?: string;
   category: string;
   description: string;
   growthRate: string;
@@ -172,6 +178,12 @@ export interface Career {
   relatedCareerIds: string[];
   benchmark: CareerBenchmark;
   iconName?: string;
+  coreCourses?: string[];
+  placementSkills?: string[];
+  futureSkills?: string[];
+  futureRelevance?: string;
+  placementPreparation?: string;
+  learningResources?: { title: string; url: string }[];
 }
 
 export interface StudentProject {
@@ -252,6 +264,21 @@ export interface NextBestAction {
   reason: string;
   actionType: 'assessment' | 'learn' | 'practice' | 'project' | 'revision';
   route: string;
+}
+
+export interface AdaptationContext {
+  mode: 'fast_track' | 'remedial_support' | 'placement_calibrated' | 'future_ready';
+  modeLabel: string;
+  modeDescription: string;
+  velocity: number;
+  pace: string;
+  totalMilestones: number;
+  completedMilestones: number;
+  remainingHours: number;
+  projectedWeeks: number;
+  remedialCount: number;
+  fastTrackCount: number;
+  futureReadyCount: number;
 }
 
 export interface CareerComparisonResult {
