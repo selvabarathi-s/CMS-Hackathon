@@ -14,7 +14,7 @@ import {
   NotificationItem
 } from '../../../shared/types.js';
 
-const API_BASE = '/api';
+const API_BASE = (typeof import.meta !== 'undefined' && (import.meta as any).env && (import.meta as any).env.VITE_API_BASE) || '/api';
 
 export const api = {
   // Auth & Account

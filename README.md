@@ -165,6 +165,28 @@ npx tsx src/e2e-browser-test.ts
 
 ---
 
+## ☁️ Deploying on Render
+
+CareerBridge is fully configured for zero-friction cloud deployment on [Render.com](https://render.com) using the included `render.yaml` specification.
+
+### Option 1: 1-Click Render Blueprint (Recommended)
+1. Push your repository to GitHub.
+2. Go to [Render Dashboard](https://dashboard.render.com/) $\rightarrow$ Click **"New +"** $\rightarrow$ **"Blueprint"**.
+3. Select your `CMS-Hackathon` repository and click **Apply**.
+
+### Option 2: Manual Web Service
+- **Environment**: `Node`
+- **Build Command**: `npm run build`
+- **Start Command**: `npm start`
+- **Environment Variables**:
+  - `NODE_ENV`: `production`
+  - `PORT`: `10000`
+- **Health Check Path**: `/api/health`
+
+📖 *For comprehensive deployment steps, architecture breakdown, and troubleshooting, refer to [RENDER_DEPLOYMENT.md](RENDER_DEPLOYMENT.md).*
+
+---
+
 ## 🔑 Demo Login Credentials & Personas
 
 | Portal | Role | Name | Login Email / ID | Password | Stream & Focus |

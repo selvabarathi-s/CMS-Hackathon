@@ -1,6 +1,9 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
+import path from 'path';
+import fs from 'fs';
+import { fileURLToPath } from 'url';
 import { authRouter } from './routes/authRoutes.js';
 import { careerRouter } from './routes/careerRoutes.js';
 import { profileRouter } from './routes/profileRoutes.js';
@@ -13,6 +16,9 @@ import { adminRouter } from './routes/adminRoutes.js';
 import { mobileRouter } from './routes/mobileRoutes.js';
 
 dotenv.config();
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 const PORT = process.env.PORT || 4000;
@@ -41,6 +47,28 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString(), platform: 'CareerBridge API v1.0' });
 });
 
+// Production Static Client Asset Hosting & SPA Fallback
+const clientDistCandidates = [
+  path.resolve(__dirname, '../../client/dist'),
+  path.resolve(__dirname, '../client/dist'),
+  path.resolve(process.cwd(), 'client/dist'),
+  path.resolve(process.cwd(), '../client/dist')
+];
+
+const clientDistPath = clientDistCandidates.find(p => fs.existsSync(p));
+
+if (clientDistPath) {
+  console.log(`📦 Serving production client assets from: ${clientDistPath}`);
+  app.use(express.static(clientDistPath));
+  app.get('*', (req, res, next) => {
+    if (req.path.startsWith('/api')) {
+      return next();
+    }
+    res.sendFile(path.join(clientDistPath, 'index.html'));
+  });
+}
+
 app.listen(PORT, () => {
-  console.log(`🚀 CareerBridge API Server running on port ${PORT}`);
+  console.log(`🚀 CareerBridge Server running on port ${PORT}`);
 });
+

@@ -1,0 +1,15 @@
+services:
+  # Unified Web Service (Serves React 19 Frontend + Express Backend API)
+  - type: web
+    name: careerbridge-platform
+    env: node
+    plan: free
+    region: oregon
+    buildCommand: npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+    healthCheckPath: /api/health
