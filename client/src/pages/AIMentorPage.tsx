@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { api } from '../api/client';
 import { AIMessage } from '../../../shared/types';
+import { MarkdownRenderer } from '../components/common/MarkdownRenderer';
 import {
   Sparkles,
   Send,
@@ -27,8 +28,9 @@ I have synchronized with your current academic performance, your target career m
       suggestedActions: [
         'How do I bridge my highest priority skill deficit?',
         'Suggest an impactful project for my resume',
-        'Explain the career scope and industry trajectory',
-        'Help me prepare for technical interviews'
+        'Help me prepare for technical interviews',
+        'Which companies are hiring for this role?',
+        'Explain the career scope and industry trajectory'
       ]
     }
   ]);
@@ -139,7 +141,11 @@ I have synchronized with your current academic performance, your target career m
                     ? 'bg-blue-600 text-white shadow-md'
                     : 'bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-200 border border-slate-200 dark:border-slate-800 shadow-sm'
                 }`}>
-                  <p className="whitespace-pre-line">{msg.content}</p>
+                  {isUser ? (
+                    <p className="whitespace-pre-line">{msg.content}</p>
+                  ) : (
+                    <MarkdownRenderer content={msg.content} />
+                  )}
                 </div>
 
                 {/* Suggested Action Chips */}

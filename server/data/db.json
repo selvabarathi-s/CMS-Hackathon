@@ -7202,21 +7202,35 @@
         {
           "skillId": "skill-statistics",
           "skillName": "skill-statistics",
-          "level": 85,
-          "verified": false,
+          "level": 100,
+          "verified": true,
           "lastAssessedAt": "2026-09-12"
         },
         {
           "skillId": "skill-pandas",
           "skillName": "skill-pandas",
-          "level": 65,
-          "verified": false,
+          "level": 100,
+          "verified": true,
           "lastAssessedAt": "2026-09-12"
         },
         {
           "skillId": "skill-scikit-learn",
           "skillName": "skill-scikit-learn",
-          "level": 65,
+          "level": 100,
+          "verified": true,
+          "lastAssessedAt": "2026-09-12"
+        },
+        {
+          "skillId": "capstone-career-data",
+          "skillName": "capstone-career-data",
+          "level": 90,
+          "verified": false,
+          "lastAssessedAt": "2026-09-12"
+        },
+        {
+          "skillId": "future-career-data",
+          "skillName": "future-career-data",
+          "level": 100,
           "verified": false,
           "lastAssessedAt": "2026-09-12"
         }
@@ -7245,6 +7259,39 @@
             "Production Deployment"
           ],
           "verified": true
+        },
+        {
+          "id": "proj-skill-statistics",
+          "title": "skill-statistics Production Showcase",
+          "description": "Applied industry implementation verifying practical capability in skill-statistics for Data Analyst & BI Specialist.",
+          "technologies": [
+            "skill-statistics",
+            "Git",
+            "Production Deployment"
+          ],
+          "verified": true
+        },
+        {
+          "id": "proj-skill-pandas",
+          "title": "skill-pandas Production Showcase",
+          "description": "Applied industry implementation verifying practical capability in skill-pandas for Data Analyst & BI Specialist.",
+          "technologies": [
+            "skill-pandas",
+            "Git",
+            "Production Deployment"
+          ],
+          "verified": true
+        },
+        {
+          "id": "proj-skill-scikit-learn",
+          "title": "skill-scikit-learn Production Showcase",
+          "description": "Applied industry implementation verifying practical capability in skill-scikit-learn for Data Analyst & BI Specialist.",
+          "technologies": [
+            "skill-scikit-learn",
+            "Git",
+            "Production Deployment"
+          ],
+          "verified": true
         }
       ],
       "certifications": [
@@ -7257,10 +7304,10 @@
       },
       "uncertaintyScore": 10,
       "readinessScore": {
-        "overallPercentage": 86,
-        "technicalScore": 78,
-        "projectScore": 75,
-        "problemSolvingScore": 84,
+        "overallPercentage": 99,
+        "technicalScore": 91,
+        "projectScore": 100,
+        "problemSolvingScore": 97,
         "softSkillScore": 75,
         "status": "career_ready"
       },
@@ -7276,7 +7323,10 @@
         "ms-skill-scikit-learn-learn",
         "ms-skill-sql-learn",
         "ms-skill-statistics-practice",
-        "ms-skill-python-build"
+        "ms-skill-pandas-practice",
+        "ms-skill-scikit-learn-practice",
+        "ms-skill-statistics-build",
+        "ms-skill-scikit-learn-build"
       ],
       "completedResourceIds": [
         "res-py-1",
@@ -8284,6 +8334,204 @@
         "role": "assistant",
         "content": "Hello Selva! As your AI Career Mentor, I'm tracking your roadmap for **AI & Machine Learning Engineer** tailored to your **B.Tech in Artificial Intelligence & Data Science** background.\n\nYou are currently **78% Career-Ready** committing ~14 hrs/week. Your fastest lever to unlock the next milestone is deploying your fine-tuned Transformer model to a cloud endpoint.\n\nHow can I help you today? You can ask me to review your resume projects, explain complex model architectures, or generate practice scenarios.",
         "timestamp": "2026-09-12T07:51:41.200Z"
+      },
+      {
+        "id": "msg-user-1789205361825",
+        "sender": "user",
+        "content": "How do I bridge my highest priority skill deficit?",
+        "timestamp": "2026-09-12T09:29:21.825Z"
+      },
+      {
+        "id": "msg-1789205361825",
+        "sender": "assistant",
+        "content": "Hello Selva! As your CareerBridge Mentor, I'm tracking your roadmap for **Data Analyst & BI Specialist** tailored to your **Artificial Intelligence & Data Science** background.\n\nYou are currently **99% Career-Ready** (career_ready) committing ~14 hrs/week. Your fastest lever to unlock the next milestone is closing the gap in **Python Programming**.\n\nHow can I help you today? You can ask me to explain why this path fits you, suggest high-impact resume projects, or generate practice scenarios.",
+        "timestamp": "2026-09-12T09:29:21.825Z",
+        "suggestedActions": [
+          "What should I learn today?",
+          "Why is this career recommended for me?",
+          "Recommend a standout project"
+        ],
+        "contextSnapshot": {
+          "careerTitle": "Data Analyst & BI Specialist",
+          "topGapSkill": "Python Programming",
+          "readiness": 99
+        }
+      },
+      {
+        "id": "msg-user-1789205364611",
+        "sender": "user",
+        "content": "Suggest an impactful project for my resume",
+        "timestamp": "2026-09-12T09:29:24.611Z"
+      },
+      {
+        "id": "msg-1789205364611",
+        "sender": "assistant",
+        "content": "To stand out to recruiters for **Data Analyst & BI Specialist** from your **Artificial Intelligence & Data Science** background, I recommend building: **\"End-to-End Data Analyst & BI Specialist Capstone System\"**.\n\nKey execution checklist:\n1. Solve a real domain problem bridging Artificial Intelligence & Data Science with industry standards.\n2. Apply **Python Programming** to demonstrate capability where candidates typically struggle.\n3. Publish code with a clean README, architectural diagram, and deployment link.",
+        "timestamp": "2026-09-12T09:29:24.611Z",
+        "suggestedActions": [
+          "View Project Brief in Roadmap",
+          "Explore GitHub Starters",
+          "Take Project Checkpoint Quiz"
+        ],
+        "contextSnapshot": {
+          "careerTitle": "Data Analyst & BI Specialist",
+          "topGapSkill": "Python Programming",
+          "readiness": 99
+        }
+      },
+      {
+        "id": "msg-user-1789206785913",
+        "sender": "user",
+        "content": "Help me prepare for technical interviews",
+        "timestamp": "2026-09-12T09:53:05.913Z"
+      },
+      {
+        "id": "msg-1789206785911",
+        "sender": "assistant",
+        "content": "### 🎯 Technical Interview Master Plan for **Data Analyst & BI Specialist**\n\nTo help you clear technical recruitment rounds for **Data Analyst & BI Specialist** from your **Artificial Intelligence & Data Science** foundation, here is your tailored 3-stage blueprint:\n\n#### 1. Core Technical Rounds Focus Areas\n- **Primary Interview Competencies**: **Python**, **SQL**, **statistics**, **pandas**, **scikit-learn**, **visualization**, **DSA**, **Java/Python/C++**, **Git**, **REST APIs**, **aptitude**, **Excel/BI**, **communication**, **case studies**.\n- **Diagnostic Lever**: Interviewers will test you extensively on **Python Programming** (your current index: **100%**). Be prepared to explain trade-offs and code live.\n- **Academic Benchmark**: Your CGPA of **8.85 / 10** qualifies you for Tier-1 engineering interview cutoffs (>7.5).\n\n#### 2. Expected Interview Questions Breakdown\n1. **Architecture & Design**: *\"How would you design a scalable data ingestion or simulation pipeline for Data Analyst & BI Specialist?\"*\n2. **Algorithmic Problem**: *\"Implement an optimized algorithm handling edge cases in Python Programming.\"*\n3. **Applied Domain**: *\"Walk me through a production obstacle you encountered in Transformer-Based Code Comprehension Engine and how you resolved it.\"*\n\n#### 3. Behavioral Round (STAR Technique)\nPrepare 2 specific stories highlighting **Situation, Task, Action, and Result** demonstrating cross-disciplinary collaboration and critical debugging under pressure.",
+        "timestamp": "2026-09-12T09:53:05.911Z",
+        "suggestedActions": [
+          "Practice Technical Assessment Drill",
+          "Suggest an impactful project for my resume",
+          "Which companies are hiring for this role?"
+        ],
+        "contextSnapshot": {
+          "careerTitle": "Data Analyst & BI Specialist",
+          "topGapSkill": "Python Programming",
+          "readiness": 99
+        }
+      },
+      {
+        "id": "msg-user-1789206982146",
+        "sender": "user",
+        "content": "Which companies are hiring for this role?",
+        "timestamp": "2026-09-12T09:56:22.146Z"
+      },
+      {
+        "id": "msg-1789206982146",
+        "sender": "assistant",
+        "content": "### 🏢 Live Placement Companies & Eligibility for **Selva**\n\nHere is your recruitment intelligence based on the Central Placement Cell data for **Data Analyst & BI Specialist**:\n\n#### 1. Active Recruitment Drives Matching Your Profile\n1. **Zoho Corporation** — Role: **Member Technical Staff (MTS) - Full Stack & Systems**\n   - **Compensation**: `undefined` | **Min CGPA**: `6.5` (Your CGPA: `8.85`)\n   - **Drive Date**: 2026-10-18 | **Status**: *ACTIVE*\n2. **Infosys Limited** — Role: **Specialist Programmer (SP) & Digital Specialist Engineer**\n   - **Compensation**: `undefined` | **Min CGPA**: `6.5` (Your CGPA: `8.85`)\n   - **Drive Date**: 2026-10-29 | **Status**: *ACTIVE*\n\n#### 2. Key Recruitment Criteria\n- **Eligibility Check**: With a **8.85 CGPA** and **99% Readiness Index**, you meet the eligibility threshold for **Zoho Corporation**.\n- **Crucial Differentiator**: Recruiters evaluate candidates on closing persistent skill deficits. Strengthening **Python Programming** will boost your shortlisting chances by ~28%.\n\n> 💡 **Next Step**: Check out the **Live Placement Drives** tab on your navigation menu to submit one-click applications directly to the college placement directorate.",
+        "timestamp": "2026-09-12T09:56:22.146Z",
+        "suggestedActions": [
+          "Help me prepare for technical interviews",
+          "Explain the career scope and industry trajectory",
+          "How do I bridge my highest priority skill deficit?"
+        ],
+        "contextSnapshot": {
+          "careerTitle": "Data Analyst & BI Specialist",
+          "topGapSkill": "Python Programming",
+          "readiness": 99
+        }
+      },
+      {
+        "id": "msg-user-1789206982176",
+        "sender": "user",
+        "content": "Suggest an impactful project for my resume",
+        "timestamp": "2026-09-12T09:56:22.176Z"
+      },
+      {
+        "id": "msg-1789206982176",
+        "sender": "assistant",
+        "content": "### 🚀 High-Impact Resume Project for **Data Analyst & BI Specialist**\n\nTo stand out to recruiters from your **Artificial Intelligence & Data Science** background, build a production-grade portfolio project:\n\n#### 📌 Recommended Project: **\"End-to-End Data Analyst & BI Specialist Capstone System\"**\n\n#### 🛠️ Architectural Blueprint\n1. **Data / Ingestion Layer**: Build a modular pipeline collecting real-world datasets relevant to engineering.\n2. **Processing & Core Logic**: Integrate **Python Programming** to demonstrate deep capability where candidates typically struggle.\n3. **Service & API**: Expose clean REST endpoints with thorough unit testing and input validation.\n4. **Interactive Dashboard / Frontend**: Provide an intuitive UI or analytics visualization demonstrating business KPIs.\n\n#### 📋 Recruiter Checklist\n- [x] Host repository on GitHub with architectural diagram, setup steps, and CI/CD workflow.\n- [x] Write clean documentation with quantifiable outcomes (*\"Improved throughput by 35%\"*).\n- [x] Include a live hosted deployment or Dockerized container link.",
+        "timestamp": "2026-09-12T09:56:22.176Z",
+        "suggestedActions": [
+          "Help me prepare for technical interviews",
+          "How do I bridge my highest priority skill deficit?",
+          "Explain the career scope and industry trajectory"
+        ],
+        "contextSnapshot": {
+          "careerTitle": "Data Analyst & BI Specialist",
+          "topGapSkill": "Python Programming",
+          "readiness": 99
+        }
+      },
+      {
+        "id": "msg-user-1789206982189",
+        "sender": "user",
+        "content": "Explain the career scope and industry trajectory",
+        "timestamp": "2026-09-12T09:56:22.189Z"
+      },
+      {
+        "id": "msg-1789206982189",
+        "sender": "assistant",
+        "content": "### 📈 Industry Scope & Career Trajectory: **Data Analyst & BI Specialist**\n\n#### 1. Market Growth & Salary Potential\n- **Industry Growth Rate**: **+32% (Very High Demand)** (High Market Demand in 2026–2030).\n- **Fresher / Campus Placement**: `$95,000 / ₹10-22 LPA`\n- **Median Experienced Level**: `$95,000 / ₹10-22 LPA`\n- **Senior / Lead Architect (5+ years)**: `₹25 - 45+ LPA`;\n\n#### 2. Industry Outlook for Artificial Intelligence & Data Science Students\nCompanies are rapidly transitioning toward automated, data-driven systems. Your interdisciplinary background in **Artificial Intelligence & Data Science** provides a unique competitive edge over pure generalists.\n\n#### 3. 5–10 Year Future-Ready Technologies\nStay ahead of industry shifts by tracking these frontier skills:\n1. **GenAI** — Crucial for long-term career longevity.\n2. **LLMs** — Crucial for long-term career longevity.\n3. **MLOps** — Crucial for long-term career longevity.\n4. **data governance** — Crucial for long-term career longevity.\n5. **AI agents** — Crucial for long-term career longevity.\n6. **cloud** — Crucial for long-term career longevity.\n7. **cybersecurity** — Crucial for long-term career longevity.\n8. **AI-assisted analytics** — Crucial for long-term career longevity.\n9. **product analytics** — Crucial for long-term career longevity.",
+        "timestamp": "2026-09-12T09:56:22.189Z",
+        "suggestedActions": [
+          "Which companies are hiring for this role?",
+          "Suggest an impactful project for my resume",
+          "What should I learn today?"
+        ],
+        "contextSnapshot": {
+          "careerTitle": "Data Analyst & BI Specialist",
+          "topGapSkill": "Python Programming",
+          "readiness": 99
+        }
+      },
+      {
+        "id": "msg-user-1789206982202",
+        "sender": "user",
+        "content": "How do I bridge my highest priority skill deficit?",
+        "timestamp": "2026-09-12T09:56:22.202Z"
+      },
+      {
+        "id": "msg-1789206982202",
+        "sender": "assistant",
+        "content": "### ⚡ Targeted Skill Deficit Mastery Sprint\n\nYour primary diagnostic focus is **Python Programming**. Here is your accelerated bridge plan:\n\n#### 1. Current Diagnostic Status\n- **Skill**: **Python Programming** (Programming)\n- **Current Proficiency**: `100%` ➔ **Target Benchmark**: `80%`\n- **Priority**: **MEDIUM** (Impact Weight: High)\n\n#### 2. 3-Phase Action Plan (14 hrs/week pace)\n1. **Foundation Review (Days 1–5)**:\n   - Study accredited courseware modules verified by Faculty Mentor **Dr. Balu Prasath**.\n   - Review syntax, core libraries, and algorithm patterns for **Python Programming**.\n2. **Hands-on Sandboxes (Days 6–15)**:\n   - Complete targeted drills in the **Assessment Arena** to convert theory into muscle memory.\n3. **Mini-Project Milestone (Days 16–25)**:\n   - Build an applied module integrating **Python Programming** into your active roadmap.\n\n> 🛡️ **Mentor Assurance**: Remember that all AI course suggestions must be audited and approved by **Dr. Balu Prasath** before unlocking for verified readiness points.",
+        "timestamp": "2026-09-12T09:56:22.202Z",
+        "suggestedActions": [
+          "Request Course for Python Programming",
+          "Suggest an impactful project for my resume",
+          "Help me prepare for technical interviews"
+        ],
+        "contextSnapshot": {
+          "careerTitle": "Data Analyst & BI Specialist",
+          "topGapSkill": "Python Programming",
+          "readiness": 99
+        }
+      },
+      {
+        "id": "msg-user-1789206982214",
+        "sender": "user",
+        "content": "Who is my mentor and how are courses approved?",
+        "timestamp": "2026-09-12T09:56:22.214Z"
+      },
+      {
+        "id": "msg-1789206982214",
+        "sender": "assistant",
+        "content": "### 👨‍🏫 Faculty Mentor Academic Quality Assurance\n\nAt CareerBridge, AI suggestions are strictly governed by your academic mentors to guarantee institutional curriculum alignment.\n\n- **Assigned Faculty Mentor**: **Dr. Balu Prasath** (*Dept. of Computer Science & Engineering*).\n- **Approval Protocol**: Any course material recommended by AI for your skill deficits enters a `Pending Review` state.\n- **Mentor Verification**: Dr. Balu Prasath audits provider rigor (Coursera, MIT OCW, Linux Foundation, NPTEL) and releases verified material directly to your **Resource Hub**.\n- **Readiness Guarantee**: Only mentor-approved courses unlock verified completion points toward your official college readiness score.",
+        "timestamp": "2026-09-12T09:56:22.214Z",
+        "suggestedActions": [
+          "What should I learn today?",
+          "Suggest an impactful project for my resume",
+          "Help me prepare for technical interviews"
+        ],
+        "contextSnapshot": {
+          "careerTitle": "Data Analyst & BI Specialist",
+          "topGapSkill": "Python Programming",
+          "readiness": 99
+        }
+      },
+      {
+        "id": "msg-user-1789206982225",
+        "sender": "user",
+        "content": "Can I switch to Cloud Architect?",
+        "timestamp": "2026-09-12T09:56:22.225Z"
+      },
+      {
+        "id": "msg-1789206982224",
+        "sender": "assistant",
+        "content": "### 🔄 Career Pivot & Transferability Analysis\n\nYou can smoothly transition from **Artificial Intelligence & Data Science** into adjacent engineering domains!\n\n#### 1. High-Overlap Adjacent Career Tracks\n\n\n#### 2. Transition Feasibility\n- **Foundational Assets**: Your core strengths in **Python Programming, Applied Statistics & Probability, Data Visualization & BI, SQL & Relational Databases, skill-statistics, skill-pandas, skill-scikit-learn, capstone-career-data, future-career-data** transfer directly.\n- **Estimated Pivot Time**: At your **accelerated pace** (~14 hrs/week), bridging remaining domain gaps typically takes **6–10 weeks**.\n\n> 💡 **Try It**: Visit the **Career Simulator & Pivot** module on your sidebar to run a live simulation comparing salary, time-to-readiness, and milestone bridges!",
+        "timestamp": "2026-09-12T09:56:22.224Z",
+        "suggestedActions": [
+          "Launch Career Simulator",
+          "Why is this career recommended for me?",
+          "How do I bridge my highest priority skill deficit?"
+        ],
+        "contextSnapshot": {
+          "careerTitle": "Data Analyst & BI Specialist",
+          "topGapSkill": "Python Programming",
+          "readiness": 99
+        }
       }
     ],
     "student-kalai": [
@@ -8311,7 +8559,7 @@
       "urgency": "urgent",
       "status": "resolved",
       "createdAt": "2026-09-12T08:47:23.038Z",
-      "upvotes": 1,
+      "upvotes": 11,
       "replies": [
         {
           "id": "reply-1789202934822",
@@ -8523,7 +8771,7 @@
       "urgency": "urgent",
       "status": "answered",
       "createdAt": "2026-09-12T07:15:00.000Z",
-      "upvotes": 24,
+      "upvotes": 35,
       "replies": [
         {
           "id": "reply-5-1",

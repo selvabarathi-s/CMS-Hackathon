@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { api } from '../api/client';
 import { useAuth } from '../context/AuthContext';
 import { DoubtQuery, DoubtReply } from '../../../shared/types';
+import { MarkdownRenderer } from '../components/common/MarkdownRenderer';
 import confetti from 'canvas-confetti';
 import {
   MessageSquare,
@@ -497,7 +498,7 @@ export const RealTimeGuidancePage: React.FC = () => {
 
             {/* Query Body */}
             <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-xs text-slate-800 dark:text-slate-200 space-y-3 leading-relaxed">
-              <p>{activeDoubt.queryText}</p>
+              <MarkdownRenderer content={activeDoubt.queryText} />
               {activeDoubt.codeSnippet && (
                 <div className="space-y-1">
                   <span className="text-[10px] font-bold uppercase text-slate-400">Attached Code:</span>
@@ -591,8 +592,8 @@ export const RealTimeGuidancePage: React.FC = () => {
                         </div>
 
                         {/* Reply Content */}
-                        <div className="text-xs text-slate-700 dark:text-slate-300 leading-relaxed whitespace-pre-line">
-                          {reply.content}
+                        <div className="text-xs text-slate-700 dark:text-slate-300 leading-relaxed">
+                          <MarkdownRenderer content={reply.content} />
                         </div>
 
                         {/* Code snippet if provided */}
