@@ -25,13 +25,13 @@ export const Sidebar: React.FC<SidebarProps> = ({ onOpenMobileCompanion }) => {
   const { user, role, profile, targetCareer } = useAuth();
 
   const navItems = [
-    { to: '/dashboard', label: 'My Dashboard', icon: Compass, roles: ['student'] },
+    { to: '/dashboard', label: 'Dashboard', icon: Compass, roles: ['student'] },
     { to: '/explore', label: 'Career Explorer', icon: Briefcase, roles: ['student', 'mentor', 'admin'] },
-    { to: '/simulator', label: 'Career Simulator & Pivot', icon: GitCompare, roles: ['student', 'mentor', 'admin'] },
-    { to: '/skills', label: 'Skill Gap Studio', icon: Layers, roles: ['student'] },
     { to: '/roadmap', label: 'Adaptive Roadmap', icon: MapPin, roles: ['student'] },
-    { to: '/assessments', label: 'Assessment Arena', icon: Award, roles: ['student'] },
     { to: '/resources', label: 'Resource Hub', icon: BookOpen, roles: ['student', 'mentor', 'admin'] },
+    { to: '/assessments', label: 'Assessment Arena', icon: Award, roles: ['student'] },
+    { to: '/skills', label: 'Skill Gap Studio', icon: Layers, roles: ['student'] },
+    { to: '/simulator', label: 'Career Simulator & Pivot', icon: GitCompare, roles: ['student', 'mentor', 'admin'] },
     { to: '/ai-mentor', label: 'AI Career Mentor', icon: Sparkles, roles: ['student', 'mentor', 'admin'], highlight: true },
     { to: '/mentor', label: 'Faculty Mentor Hub', icon: Users, roles: ['mentor', 'admin'] },
     { to: '/admin', label: 'Institutional Analytics', icon: BarChart3, roles: ['admin'] },
