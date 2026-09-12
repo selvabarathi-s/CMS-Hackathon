@@ -14,8 +14,7 @@ import {
   Users,
   BarChart3,
   Flame,
-  ArrowRight,
-  Home
+  ArrowRight
 } from 'lucide-react';
 
 interface SidebarProps {
@@ -26,7 +25,6 @@ export const Sidebar: React.FC<SidebarProps> = ({ onOpenMobileCompanion }) => {
   const { user, role, profile, targetCareer } = useAuth();
 
   const navItems = [
-    { to: '/', label: 'Public Home', icon: Home, roles: ['student', 'mentor', 'admin'] },
     { to: '/dashboard', label: 'My Dashboard', icon: Compass, roles: ['student'] },
     { to: '/explore', label: 'Career Explorer', icon: Briefcase, roles: ['student', 'mentor', 'admin'] },
     { to: '/simulator', label: 'Career Simulator & Pivot', icon: GitCompare, roles: ['student', 'mentor', 'admin'] },
